@@ -2,7 +2,8 @@ Tutoriais
 =========
 
 .. toctree::
-   
+
+   variados   
    cdo
    fortran90
    grads

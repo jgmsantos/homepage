@@ -3,42 +3,42 @@ Cursos ministrados
 
 ## Locais ministrados
 
-+ Universidade Estadual Paulista  "Júlio de Mesquita Filho" (UNESP)
++ **Universidade Estadual Paulista  "Júlio de Mesquita Filho" (UNESP)**
   + Curso ministrado para estudantes de graduação em Meteorologia.  
   + Curso ministrado para professores de graduação em Meteorologia.
 
-+ Universidade Federal de Viçosa / Departamento de Engenharia Agrícola (UFV/DEA)
++ **Universidade Federal de Viçosa / Departamento de Engenharia Agrícola (UFV/DEA)**
   + Curso ministrado para estudantes de mestrado e de doutorado em Meteorologia Aplicada do DEA.
 
-+ Universidade Federal de Campina Grande (UFCG)
++ **Universidade Federal de Campina Grande (UFCG)**
   + Curso ministrado para estudantes de mestrado e de doutorado em Meteorologia da UFCG.
 
-+ Instituto Nacional de Pesquisas Espaciais (INPE) 
++ **Instituto Nacional de Pesquisas Espaciais (INPE)** 
   + Pós-Graduação em Sensoriamento Remoto (PGSERE)  
   + Pós-Graduação em Meteorologia (PGMET)
   + Pós-Graduação em Ciência do Sistema Terrestre (PGCST)
   + Centro de Previsão de Tempo e Estudos Climáticos (CPTEC) 
   + XVII EPGMET
 
-+ Universidade Federal do Rio Grande do Norte (UFRN)
++ **Universidade Federal do Rio Grande do Norte (UFRN)**
   + Programa de Pós-Graduação em Ciências Climáticas (PPGCC)
 
-+ Centro Técnico Aeroespacial (CTA) / Instituto de Controle do Espaço Aéreo (ICEA)
++ **Centro Técnico Aeroespacial (CTA) / Instituto de Controle do Espaço Aéreo (ICEA)**
   + Curso ministrado para Meteorologistas do ICEA
 
-+ Universidade de São Paulo (USP) / Faculdade de Filosofia, Letras e Ciências Humanas (FFLCH)
++ **Universidade de São Paulo (USP) / Faculdade de Filosofia, Letras e Ciências Humanas (FFLCH)**
   + Curso ministrado para estudantes de mestrado e de doutorado da USP/FFLCH
 
-+ VI Simpósio Internacional de Climatologia (SIC)
++ **VI Simpósio Internacional de Climatologia (SIC)**
   + Curso ministrado para estudantes de mestrado e de doutorado
 
-+ Universidade Federal de Pelotas (UFPel)
++ **Universidade Federal de Pelotas (UFPel)**
   + Curso ministrado para estudantes de graduação e de mestrado
 
-+ National Center for Atmospheric Research (NCAR)
++ **National Center for Atmospheric Research (NCAR)**
   + Participação no curso de NCAR Command Language (NCL)
 
-+ Universidade Federal de Itajubá (UNIFEI)
++ **Universidade Federal de Itajubá (UNIFEI)**
   + Curso ministrado para estudantes de graduação e de mestrado
 
 ## Conteúdo programático
@@ -48,7 +48,10 @@ Cursos ministrados
 + [Conteúdo programático Linux](https://drive.google.com/open?id=1tKMjxGjzQmvgP4zE5jS3UrsyXvgATY65)
 + [Conteúdo programático NCL](https://drive.google.com/open?id=1hs_3-qfPBKojYgCC68KIK5s4rELvoNsL)
 
+
 ## Avaliação dos cursos
+
+### 2018
 
 + [Avaliação do curso de NCL realizado na UFCG - Novembro/2018](https://drive.google.com/file/d/1EQVWaXJs5Zcu_uLksCVQzCSrMkq9EVAe/view). Total de participantes = 14.
 
@@ -64,9 +67,13 @@ Cursos ministrados
 
 + [Avaliação do curso de NCL realizado no DEA/UFV - Abril/2018](https://drive.google.com/open?id=1iI21lY-3VjN8fiEuKuZRl7syYQgR_hTA). Total de participantes = 12.
 
+### 2017
+
 + [Avaliação do curso de CDO realizado no INPE/CP - Setembro/2017](https://drive.google.com/open?id=1C8fo97qkVeZPDZPooXfqfh0kGDYv4akA). Total de participantes = 18.
 
 + [Avaliação do curso de CDO realizado na UNIFEI - Agosto/2017](https://drive.google.com/open?id=1V6hjFo5Z9uqlPcqbqrYAbUgWug9WZp_g). Total de participantes = 18.
+
+### 2015
 
 + [Avaliação do curso de CDO realizado na UFPel/RADAR - Novembro/2015](https://drive.google.com/open?id=1WBQ1jw1EhoVEXpC5SW_30jrc35CSgNSm). Total de participantes = 14.
 
@@ -76,7 +83,13 @@ Cursos ministrados
 
 + [Avaliação do curso de NCL realizado na USP/FFLCH - Janeiro/2015](https://drive.google.com/open?id=1FSg-Gk-PXeNoRPnfeED2R8kSAjeRZeNo). Total de participantes = 12.
 
+
+### 2014
+
+
 + [Avaliação do curso de GrADS realizado no ICEA - Agosto/2014](https://drive.google.com/open?id=165FuaEPFf-TjzQuSIze9ieNledelzRc3). Total de participantes = 16.
+
+### 2013
 
 + [Avaliação do curso de NCL realizado na UFRN - Outubro/2013](https://drive.google.com/open?id=1t-mQokHlff2GKtmXh80rABDXg0ZPALMh). Total de participantes = 23.
 
@@ -85,3 +98,4 @@ Cursos ministrados
 + [Avaliação do curso de NCL realizado na UFRN - Julho/2013](https://drive.google.com/open?id=1cjErZ7TlDrNGkXp3mqdZRkWAnuP42YMK). Total de participantes = 21.
 
 **Total de participantes capacitados = 255**
+

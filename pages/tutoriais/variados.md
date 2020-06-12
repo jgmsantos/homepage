@@ -1,0 +1,383 @@
+Aplicações variadas
+=================================
+
+### Descompactar um arquivo para um diretório específico
+
+`tar -zxvf arquivo.tar.gz -C <nome_diretório>`
+
+### Loop com tempo
+
+1 Loop a cada 30 minutos.
+
+```
+#!/bin/bash
+
+data_inicial="202001011400" # Formato YYYYMMDDhhmm
+data_final="202001011600"   
+
+while [ ${data_inicial} -le ${data_final} ]; do
+
+    echo  ${data_inicial}
+
+    curr=`date -d "${data_inicial:0:8} ${data_inicial:8:2}:${data_inicial:10:2} 30 minutes " +"%Y%m%d %H:%M"`
+
+    # Suas instruções...
+
+    data_inicial=`date -d "${curr}" +%Y%m%d%H%M`
+ 
+    # Recorte nas variáveis para serem utilizadas para outros fins. Esse trecho é opcional.
+    ano=${data_inicial:0:4}
+    mes=${data_inicial:4:2}
+    dia=${data_inicial:6:2}
+    hora=${data_inicial:8:2}
+    min=${data_inicial:10:2}
+
+done
+
+```
+
++ O resultado será:
+
+```
+202001011400
+202001011430
+202001011500
+202001011530
+202001011600
+```
+
+2 Outro exemplo com loop, dessa vez, a cada 12 horas.
+
+```
+data_inicial="2020010100" # AAAAMMDDhh
+data_final="2020010300"
+ 
+while [ ${data_inicial} -le ${data_final} ]; do
+  
+    echo  ${data_inicial}
+
+    # Suas instruções...
+
+
+    data_inicial=`date -d "${data_inicial:0:8}  ${data_inicial:8:2}:00 12 hours " +"%Y%m%d%H"`   
+    
+done
+
+
+```
+
++ O resultado será:
+
+```
+2020010100
+2020010112
+2020010200
+2020010212
+2020010300
+```
+
+3 Loop variando dia a dia.
+
+```
+#!/bin/bash
+
+data_inicial="20200101" # Formato AAAAMMDD
+data_final="20200110"
+
+while [ ${data_inicial} -le ${data_final} ]
+do
+
+    echo ${data_inicial}
+
+    # Suas intruções...
+
+    data_inicial=`date -u +"%Y%m%d" -d "${data_inicial} 1 day "`
+done
+
+```
+
++ O resultado será:
+
+```
+20200101
+20200102
+20200103
+20200104
+20200105
+20200106
+20200107
+20200108
+20200109
+20200110
+```
+
+4 Outra opção com loop variando dia a dia.
+
+```
+#!/bin/bash
+
+data_inicial="2020010100" # Formato AAAAMMDD00
+data_final="2020011000"
+
+while [ ${data_inicial} -le ${data_final} ]
+do
+
+    echo ${data_inicial}
+
+    # Suas intruções...
+
+    data_inicial=$(date -u -d "${data_inicial:0:8} ${data_inicial:8:10}:00 24 hours" +"%Y%m%d%H")
+done
+```
++ O resultado será:
+
+```
+2020010100
+2020010200
+2020010300
+2020010400
+2020010500
+2020010600
+2020010700
+2020010800
+2020010900
+2020011000
+```
+
+### Remover caracteres estranhos no Linux
+
++ Em algumas situações quando se copiam programas feitos no Windows para o Linux, alguns caracteres indesejáveis surgem, gerando o erro abaixo. 
+
++ Supondo que o script escrito em Shell tenha sido feito no Windows com o nome de `teste.sh`. Ao tentar executá-lo no Linux, a mensagem de erro surgirá:
+
+`./teste.sh: line 2: $'\r': command not found`
+
++ Esse `\r` é o problema. E isso pode ser resolvido por meio da instalação do `dos2unix` com o comando abaixo:
+
+`sudo apt install dos2unix`
+
++ Após a instalação, basta digitar:
+
+`dos2unix teste.sh`
+
++ Para remover os caracteres estranhos. Dessa forma, é possível utilizar o seu script sem problemas.
+
+### Saber o número de núcleos do seu processador
+
++ Basta digitar no terminal do Linux o comando abaixo
+
+`nproc`
+
+### Saber qual é a versão do sistema operacioanl Linux
+
+`lsb_release -rd`
+
++ Resultado:
+
+```
+Description:    Ubuntu 18.04.3 LTS
+Release:        18.04
+```
+
+### Utilizar o wget com usuário e senha
+
+`wget -c -r http://www.siteexemplo.com.br/arquivos.zip --http-user=nome_usuario --http-passwd=senha_usuario`
+
+### Utilizar o wget para alterar o nome do arquivo.
+
++ Nesse exemplo, será feito o download do arquivo `precip.mon.mean.nc`, e deseja-se que o mesmo tenha outro nome, isto é, `prec.nc`. O comando abaixo realizará essa tarefa.
+
+`wget ftp://ftp.cdc.noaa.gov/Datasets/cmap/enh/precip.mon.mean.nc -O prec.nc`
+
+### Utilizar o rename para renomar arquivos em lote
+
++ Comando bastante útil para renomear vários arquivos de uma vez ou em lote.
+
++ Para instalar:
+
+`sudo apt-get install rename`
+
++ Exemplo de uso. Supondo que se deseja realizar algumas conversões com o `gdal`. Os arquivos de entrada possuem o seguinte nome `YYYYMMDD.tif` (são vários arquivos com datas distintas) e o `for` abaixo alterará o nome desses arquivos para `YYYYMMDD.tif.hard-typed`. A última linha mostrará o uso do comando `rename`. Nota-se que a lógica é semelhante a utilizada no `sed`, isto é, `s` para substituir de uma só vez o `.hard-typed` por `nada` ou `vazio` (`//`) em todos os arquivos.
+
+```
+for original in $(ls -1 *.tif)
+do 
+    gdal_translate -of GTiff -ot Float32 -b 1 -co "TILED=YES" ${original} ${original}.hard-typed
+done
+
+# Remove arquivos desnecessários.
+
+rm -rf *.tif
+
+# Uso do rename para renomear vários arquivos de uma vez só. O que foi feito? será substituido no nome do arquivo o ".hard-typed" por "espaço vazio" ou //.
+
+rename 's/.hard-typed//' *.hard-typed
+
+```
+
+### Utilizar o parallel no Linux
+
++ O `parallel` é excelente quando se deseja realizar várias tarefas de uma só vez. 
+
++ Para instalar o `parallel` basta digitar:
+
+`sudo apt-get install parallel`
+
+1 Exemplo de como converter arquivos em lote. No exemplo abaixo, há 90 arquivos (01/01/2019 a 31/03/2019) no formato NetCDF com o seguinte nome `RF.ANL.LAT.TOPO.AAAAMMDD00.nc`. O objetivo consiste em converter do formato NetCDF para o formato tif. Em vez de fazer um loop para converter cada arquivo individualmente, usamos o `parallel` para converter vários arquivos de uma só vez.
+
++ Mas antes, é imporantante saber o número de processadores do seu computador. Para saber isso, basta digitar no terminal do Linux o comando abaixo:
+
+`nproc`
+
++ O valor do resultado acima será utilizado na variável `num_processadores` do script abaixo. Por exemplo, o resultado foi 100, claro que não serão utilizados os 100 processadores, mas serão utilizados 30 na variável `num_processadores`.
+
+  + Observação: Nunca utilize todos os processadores do seu computador porque há grande chances de travá-lo, e com isso, a necessidade de reiniciar o sistema.
+
++ O arquivo `datas.txt` conterá a lista com os 90 arquivos de comandos abaixo (mostrando apenas algumas linhas, no total são 90 linhas de comando) que foi gerada dentro do loop do while. 
+
++ Apenas lembrando que as linhas abaixo convertem o arquivo NetCDF para tif utilizando o gdal para cada dia:
+
+```
+gdal_translate -of GTiff -a_srs EPSG:4326 RF.ANL.LAT.TOPO.2019010100.nc RF.ANL.LAT.TOPO.2019010100.tif
+gdal_translate -of GTiff -a_srs EPSG:4326 RF.ANL.LAT.TOPO.2019010200.nc RF.ANL.LAT.TOPO.2019010200.tif
+gdal_translate -of GTiff -a_srs EPSG:4326 RF.ANL.LAT.TOPO.2019010300.nc RF.ANL.LAT.TOPO.2019010300.tif
+gdal_translate -of GTiff -a_srs EPSG:4326 RF.ANL.LAT.TOPO.2019010400.nc RF.ANL.LAT.TOPO.2019010400.tif
+gdal_translate -of GTiff -a_srs EPSG:4326 RF.ANL.LAT.TOPO.2019010500.nc RF.ANL.LAT.TOPO.2019010500.tif
+.
+.
+.
+gdal_translate -of GTiff -a_srs EPSG:4326 RF.ANL.LAT.TOPO.2019032700.nc RF.ANL.LAT.TOPO.2019032700.tif
+gdal_translate -of GTiff -a_srs EPSG:4326 RF.ANL.LAT.TOPO.2019032800.nc RF.ANL.LAT.TOPO.2019032800.tif
+gdal_translate -of GTiff -a_srs EPSG:4326 RF.ANL.LAT.TOPO.2019032900.nc RF.ANL.LAT.TOPO.2019032900.tif
+gdal_translate -of GTiff -a_srs EPSG:4326 RF.ANL.LAT.TOPO.2019033000.nc RF.ANL.LAT.TOPO.2019033000.tif
+gdal_translate -of GTiff -a_srs EPSG:4326 RF.ANL.LAT.TOPO.2019033100.nc RF.ANL.LAT.TOPO.2019033100.tif
+
+```
+
++ O comando `split` divide o arquivo `datas.txt` (que contém todas as 90 linhas gerada no loop while) de forma igual, isto é, de 30 em 30 (essa foi a escolha com base no total de processadores do computador), gerando assim os seguintes arquivos abaixo. Após aplicação do `split` no `datas.txt` que contém 90 linhas de comando, foram gerados os 3 arquivos abaixo:
+
+```
+datas_aa
+datas_ab
+datas_ac
+```
+
++ Cada um desses arquivos (`datas_aa`, `datas_ab` e `datas_ac`) possui 30 linhas de comandos mudando apenas a data.
+
++ O loop da geração do comando `parallel` será feito com o comando abaixo por meio do script `comandos.sh`:
+
+```
+parallel -j 30 -- < datas_aa
+parallel -j 30 -- < datas_ab
+parallel -j 30 -- < datas_ac
+```
+
++ O script que fará tudo:
+
+```
+
+#!/bin/bash
+
+data_inicial="20190101"
+
+data_final="20191231"
+
+rm -f datas.txt # Remove o arquivo datas.txt para evitar erro.
+
+# Gera o intervalo de interesse a ser executado.
+
+while [ ${data_inicial} -le ${data_final} ]; do
+
+    echo ${data_inicial}
+
+    # Geração do arquivo datas.txt
+
+    echo "gdal_translate -of GTiff -a_srs EPSG:4326 RF.ANL.LAT.TOPO.${data_inicial}00.nc RF.ANL.LAT.TOPO.${data_inicial}00.tif" >> datas.txt
+
+data_inicial=`date -u +"%Y%m%d" -d "${data_inicial} 1 day "`
+done
+
+# Define o número de processadores a serem utilizados com base no comando acima (nproc).
+
+num_processadores="30" 
+
+# Vai gerar novos arquivos a partir de datas.txt que serão separados em 30 (num_processadores) partes iguais.
+
+split -l ${num_processadores} datas.txt datas_
+
+rm -f comandos.sh # Limpa para evitar erro.
+
+# Cria um arquivo chamado comandos.sh que contém todas as linhas de comandos para executar o parallel.
+
+for arq in $(ls -1 datas_*); do
+    echo "parallel -j ${num_processadores} -- < $arq" >> comandos.sh
+done
+
+chmod +x comandos.sh # Torna o arquivo executável.
+
+nohup ./comandos.sh & # Para executar o script.
+
+exit
+
+```
+
+Depois, basta monitorar o arquivo `nohup` com o comando:
+
+`tail -f nohup`
+
++ Vantagem de usar o `parallel` está no fato de realizar uma tarefa simples por meio `parallel` que executado vários arquivos de uma só vez.
+
+2 Esse exemplo consiste em baixar os dados de precipitação diária utilizando o `parallel`. Como afirmado anteriormente, em vez de baixar um por um arquivo, é possível baixar vários de uma só vez.
+
++ O script fictício chamado de `get_prec.sh` baixa um arquivo por vez e tem como parâmetro de entrada a data no formado `AAAAMMDD`, com isso é possível realizar o downlod de vários arquivos, claro, respeitando o número de processadores do seu cumputador.
+
+  + Exemplo de como rodar: `get_prec.sh 20200130`
+
+```
+#!/bin/bash
+
+data_inicial="20000602"
+
+data_final="20200519"
+
+export LANG=en_US.UTF-8
+
+rm -f datas.txt # Limpa para evitar erro.
+
+# Gera o intervalor de interesse a ser executado.
+
+nome_script="get_prec.sh" # Altere aqui o nome do script.
+
+# Loop no tempo para criar o arquivo datas.txt
+
+while [ ${data_inicial} -le ${data_final} ]; do
+
+    echo ${data_inicial}
+
+    echo "./${nome_script} ${data_inicial}" >> datas.txt
+
+    data_inicial=`date -u +"%Y%m%d" -d "${data_inicial} 1 day "`
+done
+
+num_processadores="40" # Número de processadores a serem utilizados.
+
+# Vai gerar novos arquivos a partir de datas.txt que serão separados em 40 (num_processadores) partes iguais.
+
+split -l ${num_processadores} datas.txt datas_
+
+rm -f comandos.sh # Limpa para evitar erro.
+
+# Cria um arquivo chamado comandos.sh que contém todas as linhas de comandos para executar em paralelo.
+
+for arq in $(ls -1 datas_*); do
+    echo "parallel -j ${num_processadores} -- < $arq" >> comandos.sh
+done
+
+chmod +x comandos.sh # Torna o arquivo executável.
+
+nohup ./comandos.sh &
+```
+
+Depois, basta monitorar o arquivo `nohup` com o comando:
+
+`tail -f nohup`
