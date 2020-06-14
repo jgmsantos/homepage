@@ -14,7 +14,7 @@ gdal
 
 ### Exemplos de uso do gdal.
 
-1 Convertendo um arquivo NetCDF para o formato binário
+1 Convertendo um arquivo NetCDF para o formato binário.
 
 + Criar o arquivo descritor (ctl) com o cdo:
 
@@ -26,19 +26,19 @@ Será criado o arquivo `input.ctl`. O `input.nc` é o seu arquivo NetCDF.
 
 `gdal_translate -of ENVI input.nc output.bin`
 
-2 Convertendo um arquivo NetCDF para o formato tif
+2 Convertendo um arquivo NetCDF para o formato tif.
 
 `gdal_translate -of GTiff -a_srs EPSG:4326 input.nc output.tif`
 
-3 Convertendo um arquivo no formato tif para NetCDF
+3 Convertendo um arquivo no formato tif para NetCDF.
 
 `gdal_translate -of netcdf -co "FORMAT=NC" input.tif output.nc`
 
-4 Convertendo um arquivo no formato NetCDF para o formato tif e compacta o arquivo (no sentido de reduzir o tamanho ocupado em disco pelo tif)
+4 Convertendo um arquivo no formato NetCDF para o formato tif e compacta o arquivo (no sentido de reduzir o tamanho ocupado em disco pelo tif).
 
 `gdal_translate -of GTiff -a_srs EPSG:4326 -co TILED=YES -co COPY_SRC_OVERVIEWS=YES -co COMPRESS=LZW input.nc output.tif`
 
-5 Convertendo um arquivo shapefile para NetCDF
+5 Convertendo um arquivo shapefile para NetCDF.
 
 `gdal_rasterize -burn 1 -of netCDF -a_nodata -999 -a_srs epsg:4326 -tr 0.01 0.01 input.shp output.nc`
 
