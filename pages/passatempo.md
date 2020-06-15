@@ -3,23 +3,23 @@ Passatempo
 
 Como passatempo, eu gosto de viajar para conhecer novos lugares e pessoas, além de ter o contato com a natureza. Por conta disso, as corridas ao ar livre, trilhas a pé e de bicicleta e os esportes radicais passaram a fazer parte da minha vida.
 
-### Vídeos de algumas atividades com esportes radicais
+### Vídeos de viagens
 
-2020
++ [Ecoparque Cassorova em Brotas](https://www.youtube.com/watch?v=l5_m1oW_Q4g)
 
-+ [Ecoparque Cassorova em Brotas. Fevereiro de 2020](https://www.youtube.com/watch?v=l5_m1oW_Q4g)
++ [Rapel no Ecoparque Cassorova em Brotas](https://www.youtube.com/watch?v=z2SOVaBZHZ8)
 
-+ [Rapel no Ecoparque Cassorova em Brotas. Fevereiro de 2020](https://www.youtube.com/watch?v=z2SOVaBZHZ8)
++ [Boia cross no Rio Jacaré Pepira em Brotas](https://www.youtube.com/watch?v=FvyvbC4xHOI)
 
-+ [Boia cross no Rio Jacaré Pepira em Brotas. Fevereiro de 2020](https://www.youtube.com/watch?v=FvyvbC4xHOI)
++ [Rafting no Rio Jacaré Pepira em Brotas](https://www.youtube.com/watch?v=DN0SaPF8fMQ)
 
-+ [Rafting no Rio Jacaré Pepira em Brotas. Fevereiro de 2020](https://www.youtube.com/watch?v=DN0SaPF8fMQ)
++ [Recanto das Cachoeiras em Brotas](https://www.youtube.com/watch?v=jQp-QwIRuAU)
 
-+ [Recanto das Cachoeiras em Brotas. Fevereiro de 2020](https://www.youtube.com/watch?v=jQp-QwIRuAU)
++ [Tirolesa em Brotas](https://www.youtube.com/watch?v=tA6xVkXyIy8)
 
-+ [Tirolesa em Brotas. Fevereiro de 2020](https://www.youtube.com/watch?v=tA6xVkXyIy8)
++ [Rafting em São Luiz do Paraitinga](https://www.youtube.com/watch?v=dGD1oNL03n8)
 
-+ [Rafting em São Luiz do Paraitinga. Fevereiro de 2020](https://www.youtube.com/watch?v=dGD1oNL03n8)
++ [Ouro Preto em Minas Gerais](https://www.youtube.com/watch?v=HsQzaZmNhG8)
 
 ### Fotos de viagens
 
