@@ -1,4 +1,7 @@
 Currículo Lattes
 ================
 
-Link para o meu CV Lattes: [Clique Aqui](http://lattes.cnpq.br/5997657584785803)
+Para acessar o meu CV Lattes, clique na imagem abaixo:
+
+[![Currículo Lattes Guilherme Martins](../images/lattes.png)](http://lattes.cnpq.br/5997657584785803)
+
