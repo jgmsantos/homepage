@@ -223,17 +223,17 @@ rename 's/.hard-typed//' *.hard-typed
 
 `sudo apt-get install parallel`
 
-1 Exemplo de como converter arquivos em lote. No exemplo abaixo, há 90 arquivos (01/01/2019 a 31/03/2019) no formato NetCDF com o seguinte nome `RF.ANL.LAT.TOPO.AAAAMMDD00.nc`. O objetivo consiste em converter do formato NetCDF para o formato tif. Em vez de fazer um loop para converter cada arquivo individualmente, usamos o `parallel` para converter vários arquivos de uma só vez.
+1 Exemplo de como converter arquivos em lote. No exemplo abaixo, há 90 arquivos (01/01/2019 a 31/03/2019) no formato NetCDF com o seguinte nome `RF.ANL.LAT.TOPO.AAAAMMDD00.nc` (AAAA = ano, MM = mês e DD = dia). O objetivo consiste em converter do formato NetCDF para o formato tif utilizando o gdal. Em vez de fazer um loop para converter cada arquivo individualmente, usamos o `parallel` para converter vários arquivos de uma só vez.
 
-+ Mas antes, é imporantante saber o número de processadores do seu computador. Para saber isso, basta digitar no terminal do Linux o comando abaixo:
++ Mas antes, é imporantante saber o número de processadores do seu computador. Para saber isso, basta digitar no terminal Linux, o comando abaixo:
 
 `nproc`
 
-+ O valor do resultado acima será utilizado na variável `num_processadores` do script abaixo. Por exemplo, o resultado foi 100, claro que não serão utilizados os 100 processadores, mas serão utilizados 30 na variável `num_processadores`.
++ O valor do resultado acima será utilizado na variável `num_processadores` do script abaixo. Por exemplo, o resultado foi 100, claro que não serão utilizados os 100 processadores, mas serão utilizados 30 (escolha aleatória) na variável `num_processadores`.
 
   + Observação: Nunca utilize todos os processadores do seu computador porque há grande chances de travá-lo, e com isso, a necessidade de reiniciar o sistema.
 
-+ O arquivo `datas.txt` conterá a lista com os 90 arquivos de comandos abaixo (mostrando apenas algumas linhas, no total são 90 linhas de comando) que foi gerada dentro do loop do while. 
++ O arquivo `datas.txt` (será criado no script abaixo) conterá a lista com os 90 arquivos (ou dias) de comandos abaixo (mostrando apenas algumas linhas, no total são 90 linhas de comando) que foi gerada dentro do loop do while (do script abaixo). 
 
 + Apenas lembrando que as linhas abaixo convertem o arquivo NetCDF para tif utilizando o gdal para cada dia:
 
@@ -254,7 +254,9 @@ gdal_translate -of GTiff -a_srs EPSG:4326 RF.ANL.LAT.TOPO.2019033100.nc RF.ANL.L
 
 ```
 
-+ O comando `split` divide o arquivo `datas.txt` (que contém todas as 90 linhas gerada no loop while) de forma igual, isto é, de 30 em 30 (essa foi a escolha com base no total de processadores do computador), gerando assim os seguintes arquivos abaixo. Após aplicação do `split` no `datas.txt` que contém 90 linhas de comando, foram gerados os 3 arquivos abaixo:
++ Como foi mencioando, em vez de fazer isso dia a dia por meio de um loop, podemos realizar essa tarefa, por exemplo, executando 30 linhas de comando por vez (`num_processadores` = "30").
+
++ O comando `split` divide o arquivo `datas.txt` (que contém todas as 90 linhas gerada no loop while) de forma igual, isto é, de 30 em 30 (essa foi a escolha com base no total de processadores do computador), gerando assim os seguintes arquivos abaixo. Após a aplicação do `split` no `datas.txt` que contém 90 linhas de comando, foram gerados os 3 arquivos abaixo:
 
 ```
 datas_aa
@@ -264,7 +266,10 @@ datas_ac
 
 + Cada um desses arquivos (`datas_aa`, `datas_ab` e `datas_ac`) possui 30 linhas de comandos mudando apenas a data.
 
-+ O loop da geração do comando `parallel` será feito com o comando abaixo por meio do script `comandos.sh`:
+    + Exemplo de uma linha de comando:
+    + gdal_translate -of GTiff -a_srs EPSG:4326 RF.ANL.LAT.TOPO.2019032700.nc RF.ANL.LAT.TOPO.2019032700.tif      
+
++ O loop da geração do comando `parallel` será feito com o comando abaixo por meio do script `comandos.sh` (gerado pelo script abaixo):
 
 ```
 parallel -j 30 -- < datas_aa
@@ -272,15 +277,15 @@ parallel -j 30 -- < datas_ab
 parallel -j 30 -- < datas_ac
 ```
 
-+ O script que fará tudo:
++ O script abaixo se chama `executa.sh` (pode ser qualquer nome) que fará todo o serviço:
 
 ```
 
 #!/bin/bash
 
-data_inicial="20190101"
+data_inicial="20190101" # Altere aui e 
 
-data_final="20191231"
+data_final="20191231" # Aqui.
 
 rm -f datas.txt # Remove o arquivo datas.txt para evitar erro.
 
@@ -325,13 +330,15 @@ Depois, basta monitorar o arquivo `nohup` com o comando:
 
 `tail -f nohup`
 
-+ Vantagem de usar o `parallel` está no fato de realizar uma tarefa simples por meio `parallel` que executado vários arquivos de uma só vez.
++ A vantagem de utilizar o `parallel` está no fato de realizar uma tarefa simples executando várias linhas de comando de uma só vez.
 
-2 Esse exemplo consiste em baixar os dados de precipitação diária utilizando o `parallel`. Como afirmado anteriormente, em vez de baixar um por um arquivo, é possível baixar vários de uma só vez.
+2 Esse exemplo consiste em baixar os dados de precipitação diária utilizando o `parallel`. Como afirmado anteriormente, em vez de baixar um arquivo por vez, é possível baixar vários de uma só vez.
 
-+ O script fictício chamado de `get_prec.sh` baixa um arquivo por vez e tem como parâmetro de entrada a data no formado `AAAAMMDD`, com isso é possível realizar o downlod de vários arquivos, claro, respeitando o número de processadores do seu cumputador.
++ O script fictício chamado de `get_prec.sh` baixa um arquivo por vez e tem como parâmetro de entrada a data no formato `AAAAMMDD`, com isso é possível realizar o downlod de vários arquivos, claro, respeitando o número de processadores do seu cumputador.
 
-  + Exemplo de como rodar: `get_prec.sh 20200130`
+  + Exemplo de como executar: `./get_prec.sh 20200130`
+
++ Porém, com o uso o `parallel` podemos baixar mais arquivos em lote de acordo conforme o script abaixo:
 
 ```
 #!/bin/bash
@@ -339,8 +346,6 @@ Depois, basta monitorar o arquivo `nohup` com o comando:
 data_inicial="20000602"
 
 data_final="20200519"
-
-export LANG=en_US.UTF-8
 
 rm -f datas.txt # Limpa para evitar erro.
 
