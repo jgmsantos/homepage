@@ -90,6 +90,18 @@ Os comentários abaixo são de pessoas anônimas que tiveram a oportunidade de r
 
 ![](../images/comentarios_cursos01.png)
 
+### Fotos dos cursos
+
++ [Curso de NCL na UFCG. Novembro/2018](https://photos.google.com/share/AF1QipMdoUFb1IwSMPNzB6XJXPJxIupoViu8hyNbYBpqtIbZEouNY0D1VTaRjrcIseXKSA?key=bDhLcGF6OUdBbnA1a2poT2xqbUM4UW41TkVNLU9B)
+
++ [Curso de NCL na UNESP/Bauru. Outubro de 2018](https://photos.google.com/share/AF1QipOhKd4U5eqlawMNR_tMZ1lKaJbK8TLVPWDM8lBi2U0cDA5KjvWQw8CiXivvHSRgwg?key=SXFUSkI5UW5LNlRoU2pKWFpGX1ZmTFR4Vnl5Y2xn)
+
++ [Curso de CDO na UNESP/Bauru. Agosto de 2018](https://photos.google.com/share/AF1QipMDuBibnQgRtSWZaqRjDoiNWXEqStgZN1Npkvh7uErYwYunS9_kdbMRjoIR1c4Zuw?key=SXRLeDNuYlMxTVd1TWlJTHRjVm5SaGZzeXdtaG9R)
+
++ [Curso de CDO na UFCG. Junho de 2018](https://photos.google.com/share/AF1QipN-T6Syv1NAVQchwFmB3aCiiKUgrMbyWID1TsWz5MJ91G3h7beHqHqGUbpvb9iZsg?key=UlJRajV2OERudWhyZE5xMDY5NnlUY3pkN1M1UHln)
+
++ [Curso de NCL no DEA/UFV. Abril de 2018](https://photos.google.com/share/AF1QipMN9HaiXzsMTlVkhotu9XqANr7urLC3PVmT4XuP8UpA7g51DLddmnqRiH8zR6UaOA?key=RVdYQkNhYnhoTTlVeFhETld4bjgtZF9rTlUxSm1R)
+
 ### Entre em contato
 
 Para mais informações de como contratar os cursos, basta clicar [aqui](contato.md) e envie o seu e-mail.
