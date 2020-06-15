@@ -25,6 +25,11 @@ A ideia consiste em disponibilizar os programas e scripts feitos por mim, colega
 .. toctree::
    :hidden:
 
+   pages/consultoria
+
+.. toctree::
+   :hidden:
+
    pages/cvlattes
 
 .. toctree::
