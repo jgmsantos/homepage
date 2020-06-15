@@ -74,12 +74,12 @@ O NCAR Command Language (NCL) foi desenvolvido pelo National Center for Atmosphe
 
 ### Informações adicionais sobre os cursos
 
-+ Duração: 3 dias para o curso de CDO e 5 dias para o de NCL (8h/dia, totalizando 40 horas).
++ Duração: 3 dias para o curso de CDO e 5 dias para o de NCL. Ambos os cursos possuem duração diária de 8 horas. Essa carga horária pode ser alterada com os participantes.
 + Total de participantes: 20 pessoas no máximo, isso é solicitado para melhor absorção do conteúdo abordado em sala.
 + Dinâmica do curso: É um curso prático, pois o assunto é explicado e logo em seguida os participantes realizam exercícios com dados reais obtidos da internet dos principais centros meteorológicos do mundo.
 + Requisito básico: Conhecimento básico em Linux (criação de diretórios, copiar e mover arquivos/diretórios, edição de arquivo texto).
 + Sistema operacional desejável: Linux. 
-+ É importante que a última versão disponível do CDO e do NCL estejam instaladas previamente.
++ É importante que a última versão do CDO e do NCL estejam instaladas previamente.
 + Procedimentos para instalação e manuais:
     + NCL: clique [aqui](./tutoriais/ncl)
     + CDO: clique [aqui](./tutoriais/cdo)
