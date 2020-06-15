@@ -1,7 +1,7 @@
 Passatempo
 ================
 
-Como passatempo, eu gosto de viajar para conhecer novos lugares e pessoas, além de ter o contato com a natureza. Por conta disso, as corridas ao ar livre, trilhas a pé e de bicicleta e os esportes radicais passaram a fazer parte da minha vida.
+Como passatempo, eu gosto de viajar, conhecer novos lugares e pessoas, além de ter o contato com a natureza. Por conta disso, as corridas ao ar livre, trilhas a pé e de bicicleta e os esportes radicais passaram a fazer parte da minha vida.
 
 ### Vídeos de viagens
 
