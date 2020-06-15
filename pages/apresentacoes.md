@@ -3,7 +3,7 @@ Apresentações
 
 #### 2020
 
-+ [Análise da Climatologia de Precipitação para Avaliação dos Períodos de Limpeza das Linhas](https://drive.google.com/open?id=1LlUwsHfh8eW26WJ-_7roawsKSD9I6-5IeUdPOPUYjzM). Fevereiro/2020
++ [Análise da Climatologia de Precipitação para Avaliação dos Períodos de Limpeza das Linhas de Transmissão](https://drive.google.com/open?id=1LlUwsHfh8eW26WJ-_7roawsKSD9I6-5IeUdPOPUYjzM). Fevereiro/2020
 
 #### 2019
 
