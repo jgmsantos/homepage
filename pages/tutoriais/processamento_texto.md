@@ -49,7 +49,7 @@ Os comandos são aplicados em arquivos no formato texto. As dicas foram obtidas 
 
 `sed 's/\./,/g' seu.arquivo.texto > out.txt`
 
-+ Transforma coluna para linha: 
++ Transforma coluna em linha: 
 
 `sed 's/  /\n/g' seu.arquivo.texto > out.txt`
 
