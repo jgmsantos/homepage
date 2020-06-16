@@ -74,6 +74,7 @@ cdo -s -output -fldsum -setmissval,0 -expr,'x=rbf>0.95' tmp.nc
 + O exemplo foi obtido do link abaixo e posteriormente adaptado:
   + [https://code.mpimet.mpg.de/boards/2/topics/8771](https://code.mpimet.mpg.de/boards/2/topics/8771)
   + Para o download dos arquivos [clique aqui](https://github.com/jgmsantos/Scripts/blob/master/CDO/01_nc2txt.zip)
+  + O `01_nc2txt.zip` contém os seguintes arquivos: `data_-17.475_-69.475`, `data_-17.525_-69.475` e `nc2txt.sh`.
 
 + O script abaixo realizará essa tarefa e possui o nome de `txt2nc.sh`. O seu conteúdo é exibido logo a seguir.
 
