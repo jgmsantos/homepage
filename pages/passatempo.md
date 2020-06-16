@@ -21,6 +21,8 @@ Como passatempo, eu gosto de viajar, conhecer novos lugares e pessoas, além de 
 
 + [Ouro Preto em Minas Gerais](https://www.youtube.com/watch?v=HsQzaZmNhG8)
 
++ [Trilha nas Montanhas Rochosas no Colorado](https://photos.app.goo.gl/dNNDuyZsHtBdkJ8V8)
+
 ### Fotos de viagens
 
 + [Búzios/RJ](https://photos.google.com/share/AF1QipM2rHz5ALeeIP4_AeLdFWjxdaKDojj7IKp4SOABuDfPiE8-4dD8YBXTJHBuKgvibw?key=ZDBVTVpPOFJhcGN2OFM5ZGFWQnBMZ1pnRUVlSGFn)
