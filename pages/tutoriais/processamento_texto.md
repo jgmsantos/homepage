@@ -63,7 +63,7 @@ Os comandos são aplicados em arquivos no formato texto. As dicas foram obtidas 
 
 `cat -n seu.arquivo.texto | awk '$1 % $2 == {print}' > out.txt`
 
-+ Transforma coluna para linha: 
++ Transforma coluna em linha: 
 
 `cat seu.arquivo.texto | awk '{gsub(/  /,"\n");print}' > out.txt`
 
@@ -73,7 +73,7 @@ Os comandos são aplicados em arquivos no formato texto. As dicas foram obtidas 
 
 ### Dicas usando o xargs
 
-+ Transforma linha para coluna: 
++ Transforma linha em coluna: 
 
 `cat seu.arquivo.texto | xargs`
 
