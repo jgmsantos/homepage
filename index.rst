@@ -38,7 +38,7 @@ Esse canal, foi totalmente
 reformulado, e hoje tem essa aparência bem mais profissional e harmônica. Estou muito feliz porque ao olhar para o passado e ver o ela 
 se tornou, sinto uma enorme satisfação em saber que as noites e os dias estudando para que esse projeto fosse concretizado valeram a pena.
 
-Pois é, apresentei um breve resumo sobre a história de como cheguei até aqui, eu quero mais, e sei que posso.
+Pois é, apresentei um breve resumo sobre a história de como cheguei até aqui por meio dessa página, eu quero mais, e sei que posso.
 
 Divirtam-se!
 
