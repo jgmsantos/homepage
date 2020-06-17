@@ -175,6 +175,104 @@ Warning: Duplicate entry of parameter -1 in out_6.nc!
 
 + Faça as devidas adaptações para os seus arquivos.
 
+7 Exemplo de como substituir todos os valores da variável chuva em uma determinada latitude (`-9.75`) por um novo valor. Por exemplo, o arquivo `area.nc` representa as 
+informações de chuva com o seguinte domínio: `lat = -9.75 a -8.25` e `lon = -55.75 a -54.25` para apenas um tempo, isto é,  esse arquivo é um dado é espacial. A sua forma tabular pode ser obtida com o comando abaixo:
+
+`cdo outputtab,nohead,value,lat,lon area.nc`.
+
+O resultado é mostrado abaixo. Lembrando que a primeira coluna é chuva, a segunda coluna é a latitude e a terceira coluna a longitude.
+
+```
+ 11.3766  -9.75 -55.75   
+ 5.92187  -9.75 -55.25   
+ 2.93238  -9.75 -54.75   
+ 3.02412  -9.75 -54.25   
+ 7.97423  -9.25 -55.75   
+ 6.41053  -9.25 -55.25   
+ 4.56245  -9.25 -54.75   
+ 3.48293  -9.25 -54.25   
+ 9.39731  -8.75 -55.75   
+ 7.69693  -8.75 -55.25   
+ 5.17428  -8.75 -54.75   
+ 3.52867  -8.75 -54.25  
+ 71.4464  -8.25 -55.75   
+ 60.8246  -8.25 -55.25   
+ 38.8118  -8.25 -54.75   
+ 16.1115  -8.25 -54.25   
+```
+Realizando a substituição dos valors de chuva no arquivo `area.nc` na latitiude `-9.75` pelo valor `100`. Para isso, será utilizado o operador ternário `"?:"` que funciona 
+como uma estrutura condicional `if-then-else`. O valor da latitude tem que existir no seu arquivo.
+
+O comando abaixo realiza essa tarefa. Como interpretar o comando? Será verificada a latitude `-9.75` da variável do seu arquivo `area.nc` que se chama `rain` (`cdo pardes area.nc` para ver o nome da variável). Quando a latitude for encontrada, o seu valor de chuva será substituído pelo novo valor 100, e no caso contrário, pelo valor da variável `rain`. O resultado será armazenado em `output.nc`. 
+
++ **Observação:** Apenas lembrando que somente o valor da precipitação na latitude escolhida será alterada.
+
+Comando do CDO para realizar essa tarefa:
+
++ **var:** é um nome qualquer para o arquivo que srá armazenado em `output.nc`. Pode-se utilizar qualquer nome.
++ **rain:** é o nome da variável do arquivo `area.nc`.
+
+`cdo -expr,'var=((clat(rain)==-9.75) ? 100 : rain)' area.nc output.nc`
+
++ Para ver o resultado, basta digitar: 
+
+`cdo outputtab,nohead,value,lat,lon output.nc`
+
++ Compare o resultado com o arquivo original `area.nc`. Nota-se que apenas os valores de chuva na latitude `-9.75` foram modificados para o valor `100`. 
+
++ Altere a latitude de acordo com a sua necessidade.
+
+```
+     100  -9.75 -55.75  
+     100  -9.75 -55.25  
+     100  -9.75 -54.75  
+     100  -9.75 -54.25  
+ 7.97423  -9.25 -55.75  
+ 6.41053  -9.25 -55.25  
+ 4.56245  -9.25 -54.75  
+ 3.48293  -9.25 -54.25  
+ 9.39731  -8.75 -55.75  
+ 7.69693  -8.75 -55.25  
+ 5.17428  -8.75 -54.75  
+ 3.52867  -8.75 -54.25  
+ 71.4464  -8.25 -55.75  
+ 60.8246  -8.25 -55.25  
+ 38.8118  -8.25 -54.75  
+ 16.1115  -8.25 -54.25  
+```
+8 Alterando apenas um ponto de latitude e de longitude. Nesse exemplo, será alterado o valor da `longitude = -55.25` e `latitude = -9.75`. Lembrando que o dado é espacial.
+
++ **var:** é um nome qualquer para o arquivo que srá armazenado em `output.nc`. Pode-se utilizar qualquer nome.
++ **rain:** é o nome da variável do arquivo `area.nc`.
+
++ Comando a ser utilizado é:
+
+`cdo -expr,'var=((clon(rain)==-55.25 && clat(rain)==-9.75) ? 100 : rain)' area.nc output.nc`
+
+Para ver o resultado:
+
+`cdo outputtab,value,lat,lon output.nc`
+
+ 11.3766  -9.75 -55.75 
+     100  -9.75 -55.25 
+ 2.93238  -9.75 -54.75 
+ 3.02412  -9.75 -54.25 
+ 7.97423  -9.25 -55.75 
+ 6.41053  -9.25 -55.25 
+ 4.56245  -9.25 -54.75 
+ 3.48293  -9.25 -54.25 
+ 9.39731  -8.75 -55.75 
+ 7.69693  -8.75 -55.25 
+ 5.17428  -8.75 -54.75 
+ 3.52867  -8.75 -54.25 
+ 71.4464  -8.25 -55.75 
+ 60.8246  -8.25 -55.25 
+ 38.8118  -8.25 -54.75 
+ 16.1115  -8.25 -54.25 
+
++ Compare o resultado com o arquivo original `area.nc`.
+
+
 ### Vídeo aula de CDO
 
 + [Dia 1 - 25 Outubro de 2018](https://www.youtube.com/watch?v=9IQ9fNlnkUo&t=1232s)
