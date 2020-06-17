@@ -247,9 +247,9 @@ Comando do CDO para realizar essa tarefa:
 8 Alterando apenas um ponto de latitude e de longitude. Nesse exemplo, será alterado o valor da `longitude = -55.25` e `latitude = -9.75`. Lembrando que o dado é espacial.
 
 + **var:** é um nome qualquer para o arquivo que srá armazenado em `output.nc`. Pode-se utilizar qualquer nome.
-+ **rain:** é o nome da variável do arquivo `area.nc`.
++ **rain:** é o nome da variável do arquivo `area.nc`. 
 
-+ Comando a ser utilizado é:
++ O comando a ser utilizado é:
 
 `cdo -expr,'var=((clon(rain)==-55.25 && clat(rain)==-9.75) ? 100 : rain)' area.nc output.nc`
 
