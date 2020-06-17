@@ -51,7 +51,9 @@ Cursos ministrados
 
 ## Avaliação dos cursos
 
-### 2018
+**Total de participantes capacitados = 255**
+
+2018
 
 + [Avaliação do curso de NCL realizado na UFCG - Novembro/2018](https://drive.google.com/file/d/1EQVWaXJs5Zcu_uLksCVQzCSrMkq9EVAe/view). Total de participantes = 14.
 
@@ -67,13 +69,13 @@ Cursos ministrados
 
 + [Avaliação do curso de NCL realizado no DEA/UFV - Abril/2018](https://drive.google.com/open?id=1iI21lY-3VjN8fiEuKuZRl7syYQgR_hTA). Total de participantes = 12.
 
-### 2017
+2017
 
 + [Avaliação do curso de CDO realizado no INPE/CP - Setembro/2017](https://drive.google.com/open?id=1C8fo97qkVeZPDZPooXfqfh0kGDYv4akA). Total de participantes = 18.
 
 + [Avaliação do curso de CDO realizado na UNIFEI - Agosto/2017](https://drive.google.com/open?id=1V6hjFo5Z9uqlPcqbqrYAbUgWug9WZp_g). Total de participantes = 18.
 
-### 2015
+2015
 
 + [Avaliação do curso de CDO realizado na UFPel/RADAR - Novembro/2015](https://drive.google.com/open?id=1WBQ1jw1EhoVEXpC5SW_30jrc35CSgNSm). Total de participantes = 14.
 
@@ -84,12 +86,12 @@ Cursos ministrados
 + [Avaliação do curso de NCL realizado na USP/FFLCH - Janeiro/2015](https://drive.google.com/open?id=1FSg-Gk-PXeNoRPnfeED2R8kSAjeRZeNo). Total de participantes = 12.
 
 
-### 2014
+2014
 
 
 + [Avaliação do curso de GrADS realizado no ICEA - Agosto/2014](https://drive.google.com/open?id=165FuaEPFf-TjzQuSIze9ieNledelzRc3). Total de participantes = 16.
 
-### 2013
+2013
 
 + [Avaliação do curso de NCL realizado na UFRN - Outubro/2013](https://drive.google.com/open?id=1t-mQokHlff2GKtmXh80rABDXg0ZPALMh). Total de participantes = 23.
 
@@ -97,5 +99,5 @@ Cursos ministrados
 
 + [Avaliação do curso de NCL realizado na UFRN - Julho/2013](https://drive.google.com/open?id=1cjErZ7TlDrNGkXp3mqdZRkWAnuP42YMK). Total de participantes = 21.
 
-**Total de participantes capacitados = 255**
+
 
