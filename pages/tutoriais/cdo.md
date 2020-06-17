@@ -176,13 +176,15 @@ Warning: Duplicate entry of parameter -1 in out_6.nc!
 + Faça as devidas adaptações para os seus arquivos.
 
 7 Exemplo de como substituir todos os valores da variável chuva em uma determinada latitude (`-9.75`) por um novo valor. Por exemplo, o arquivo `area.nc` representa as 
-informações de chuva com o seguinte domínio: `lat = -9.75 a -8.25` e `lon = -55.75 a -54.25` para apenas um tempo, isto é,  esse arquivo é um dado é espacial. A sua forma tabular pode ser obtida com o comando abaixo:
+informações de chuva com o seguinte domínio: `lat = -9.75 a -8.25` e `lon = -55.75 a -54.25` para apenas um tempo, isto é,  esse arquivo é um dado é espacial. 
 
 + [Clique aqui](https://github.com/jgmsantos/Scripts/blob/master/NetCDF/area.nc) para realizar o download do arquivo `area.nc`
 
++ A sua forma tabular pode ser obtida com o comando abaixo:
+
 `cdo outputtab,nohead,value,lat,lon area.nc`
 
-O resultado é mostrado abaixo. Lembrando que a primeira coluna é chuva, a segunda coluna é a latitude e a terceira coluna a longitude.
++ O resultado é mostrado abaixo. Apenas lembrando que a primeira coluna é chuva, a segunda coluna é a latitude e a terceira coluna a longitude.
 
 ```
  11.3766  -9.75 -55.75   

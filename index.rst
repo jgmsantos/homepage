@@ -15,7 +15,7 @@ Bem-vindo à minha página. Aqui você encontrará informações sobre programa�
 
 A ideia consiste em disponibilizar os programas e scripts feitos por mim, colegas, amigos e obtidos da internet. Com isso, espero ajudar as pessoas que possuem dificuldades em programação.
 
-Última atualização: 12/06/2020.
+Última atualização: 17/06/2020.
 
 .. toctree::
    :hidden:
