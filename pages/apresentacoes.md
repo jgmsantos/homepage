@@ -3,13 +3,13 @@ Apresentações
 
 2020
 
-+ [Análise da Climatologia de Precipitação para Avaliação dos Períodos de Limpeza das Linhas de Transmissão](https://drive.google.com/open?id=1LlUwsHfh8eW26WJ-_7roawsKSD9I6-5IeUdPOPUYjzM). [Fotos do evento](https://photos.app.goo.gl/S62FGUYBu2pAxMhe9). Fevereiro/2020
++ [Análise da Climatologia de Precipitação para Avaliação dos Períodos de Limpeza das Linhas de Transmissão](https://drive.google.com/open?id=1LlUwsHfh8eW26WJ-_7roawsKSD9I6-5IeUdPOPUYjzM). [Fotos do evento](https://photos.app.goo.gl/S62FGUYBu2pAxMhe9). Fevereiro/2020.
 
 2019
 
 + [Produtos Meteorológicos do Programa Queimadas do INPE - Experimentos de campo, focos de queimadas e risco de fogo](https://drive.google.com/open?id=1WauM82u7HArAFk8SdsFJ6_mfU1qP5kM8aqNlxKBTeQ0). [Fotos do evento](https://photos.app.goo.gl/46z747KrtbQQ6z8P6). Julho/2019.
 
-+ [Risco de Fogo na Vegetação](https://drive.google.com/open?id=1cxCgY3ehcG0EgwBdAZBTHCtqP5eddp0L30e4MB4qA_4). Julho/2019
++ [Risco de Fogo na Vegetação](https://drive.google.com/open?id=1cxCgY3ehcG0EgwBdAZBTHCtqP5eddp0L30e4MB4qA_4). Julho/2019.
 
 + [Informações Meteorológicas do Programa Queimadas do INPE](https://drive.google.com/open?id=1td_v1y3aJ5uiD_icgPBLERze4hQS0BR4HprCvKrb2IQ). Junho/2019.
 
@@ -19,7 +19,7 @@ Apresentações
 
 + [Ferramentas computacionais para meteorologia - Como tudo começou](https://drive.google.com/open?id=1fFJekV3tQlE06_H82MIUniA1O2yvFfM9RrZsRKDNceU). Abril/2019.
 
-+ [Risco de Fogo na Vegetação](https://drive.google.com/open?id=1adL45Vmy1DS8CxaTbBT_wZxcBCyOij_ectbVxjGlRDY). [Fotos do evento](https://photos.app.goo.gl/PuiZK6JZLV7xiof36). Fevereiro/2019
++ [Risco de Fogo na Vegetação](https://drive.google.com/open?id=1adL45Vmy1DS8CxaTbBT_wZxcBCyOij_ectbVxjGlRDY). [Fotos do evento](https://photos.app.goo.gl/PuiZK6JZLV7xiof36). Fevereiro/2019.
 
 2018
 
