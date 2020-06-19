@@ -26,7 +26,7 @@ Será criado o diretório `wgrib2`, entre nele e copie o executável `wgrib2` pa
 
 Adicione o caminho onde está o executável `wgrib2` na sua variável de ambiente `PATH` que está no arquivo `.bashrc`. Não esqueça de atualizar o `.bashrc` digitando `source .bashrc`. Isso é feito no seu diretório `home`.
 
-+ Exemplos de uso do whgib2 podem ser encontrados em:
++ Exemplos de uso do wgrib2 podem ser encontrados em:
 
 	+ [http://www.cpc.ncep.noaa.gov/products/wesley/wgrib2/netcdf.html](http://www.cpc.ncep.noaa.gov/products/wesley/wgrib2/netcdf.html)
 
