@@ -40,7 +40,7 @@ se tornou, sinto uma enorme satisfação em saber que as noites e os dias estuda
 
 Pois é, apresentei um breve resumo sobre a história de como cheguei até aqui por meio dessa página, eu quero mais, e sei que posso.
 
-Divirtam-se!
+Divirta-se!
 
 Última atualização: 17/06/2020.
 
