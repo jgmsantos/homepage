@@ -3,7 +3,7 @@ Climatologia
 
 ### Focos de queimadas
 
-#### Climatologia dos focos de queimadas.
+#### Climatologia dos focos de queimadas
 
 Os focos são do satélite AQUA e os mesmo foram reamostrados para uma grade regular de 25 km x 25 km. O  período utilizado foi de 2003 a 2018.
 
@@ -15,17 +15,17 @@ Abaixo é mostrada a climatologia por cada estado brasileiro. No topo de cada ba
 
 ![](../images/climatologia/fig01b.png)
 
-#### Meses de ocorrência dos focos de queimadas.
+#### Meses de ocorrência dos focos de queimadas
 
 A imagem abaixo mostra apenas a localização média dos focos de queimadas do sensor do MODIS abordo do satélite AQUA. A figura foi gerada a partir da média mensal referente aos anos de 2003 a 2018. Os focos apresentam resolução espacial 25 km x 25 km.
 
 ![](../images/climatologia/fig02.png)
 
-#### Animação dos meses de ocorrência dos focos de queimadas.
+#### Animação dos meses de ocorrência dos focos de queimadas
 
 ![](../images/climatologia/fig03.gif)
 
-#### Painel dos meses de maior ocorrência dos focos de queimadas separados por meses.
+#### Painel dos meses de maior ocorrência dos focos de queimadas separados por meses
 
 ![](../images/climatologia/fig04.png)
 
