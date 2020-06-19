@@ -57,6 +57,11 @@ Divirtam-se!
 .. toctree::
    :hidden:
 
+   pages/climatologia
+
+.. toctree::
+   :hidden:
+
    pages/cvlattes
 
 .. toctree::
