@@ -105,7 +105,7 @@ Os comandos são aplicados em arquivos no formato texto. As dicas foram obtidas 
 	
 + [Advanced Bash-Scripting Guide](http://tldp.org/LDP/abs/html/string-manipulation.html)
 
-#### Exemplos de scrips em Shell
+#### Exemplos de scripts em Shell
 
 1 Uso do loop `while read`
 
