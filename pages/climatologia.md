@@ -3,6 +3,8 @@ Climatologia
 
 ### Focos de queimadas
 
++ As figuras abaixo fazem parte do artigo disponível [aqui](https://periodicos.ufpe.br/revistas/rbgfe/article/view/243584).
+
 #### Climatologia dos focos de queimadas
 
 Os focos são do satélite AQUA e os mesmo foram reamostrados para uma grade regular de 25 km x 25 km. O  período utilizado foi de 2003 a 2018.
