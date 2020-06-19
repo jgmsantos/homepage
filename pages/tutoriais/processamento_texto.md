@@ -152,12 +152,14 @@ done < 01lat_lon.txt
 
 + O GRACE é um produto de estimativa de umidade do solo baseado em observações de armazenamento de água terrestre derivadas do satélite Gravity Recovery and Climate Experiment Follow On (GRACE-FO) e integradas a outras observações, usando um modelo numérico sofisticado de processos de água e energia da superfície terrestre.
 + Descreve as condições atuais de umidade ou seca expressa como um percentil - probabilidade de ocorrência de seca ou não para um determinado local e época do ano.
-+ São disponibilizadas 3 variávei: Groundwater Percentile (gws), 
++ São disponibilizadas 3 variáveis: Groundwater Percentile (gws), 
 Root Zone Soil Moisture Percentile (rtzsm) e Surface Soil Moisture Percentile (sfsm).
 Disponibilidade: a cada 7 dias (3 de fevereiro de 2003 - atual).
 + Atualização: mais ou menos 3 dias.
 + Resolução: global: 25 km x 25 km e EUA: 12,5 km x 12,5 km.
-+ Link: https://nasagrace.unl.edu/globaldata
++ Link: [https://nasagrace.unl.edu/globaldata](https://nasagrace.unl.edu/globaldata).
 
++ Requisitos para executar o script:
+    + [CDO](https://guilherme.readthedocs.io/en/latest/pages/tutoriais/cdo.html) e [gdal](https://guilherme.readthedocs.io/en/latest/pages/tutoriais/gdal.html).
 + [Clique aqui](https://github.com/jgmsantos/Scripts/tree/master/SHELL) para realizar o download do script `02get_data_NASA_GRACE.sh`. NÃO DEIXE DE LER AS INSTRUÇÕES PARA EXECUTAR ADEQUADAMENTE O SCRIPT.
 
