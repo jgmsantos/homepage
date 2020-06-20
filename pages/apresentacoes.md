@@ -29,6 +29,8 @@ Apresentações
 
 + [Eventos El Niño e La Niña e sua relação com focos de queima no Brasil](https://drive.google.com/open?id=1O1ml1JUiIenc7zK_YL8qf4CiSOJ3aHRV8SiMdj-x9Tg). Fevereiro/2018.
 
+2013
+
 + [Curso básico de Linux](https://drive.google.com/open?id=1ju1bNWycTJ-eF__81VPpLMl3LxMNunB3). Julho/2013.
 
 2010
