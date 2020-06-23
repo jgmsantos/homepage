@@ -33,7 +33,7 @@ Apresentações
 
 + [Curso básico de Linux](https://drive.google.com/open?id=1ju1bNWycTJ-eF__81VPpLMl3LxMNunB3). Julho/2013.
 
-+ [Clamate Data Operatos (CDO)](http://satelite.cptec.inpe.br/repositorio9/wcrp/presentations/23/23012018_1400.pdf).
++ [Clamate Data Operatos (CDO)](http://satelite.cptec.inpe.br/repositorio9/wcrp/presentations/23/23012018_1400.pdf). Janeiro/2018.
 
 2010
 
