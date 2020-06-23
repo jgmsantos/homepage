@@ -33,6 +33,8 @@ Apresentações
 
 + [Curso básico de Linux](https://drive.google.com/open?id=1ju1bNWycTJ-eF__81VPpLMl3LxMNunB3). Julho/2013.
 
++ [Clamate Data Operatos (CDO)](http://satelite.cptec.inpe.br/repositorio9/wcrp/presentations/23/23012018_1400.pdf).
+
 2010
 
 + [Fontes de Dados Meteorológicos e Climáticos](https://drive.google.com/open?id=1tuyfBPHsHyfuFN3c3Caxe-9MhMl-Esmb). Julho/2010.
