@@ -277,6 +277,75 @@ Para ver o resultado:
 ```
 + Compare o resultado com o arquivo original `area.nc`.
 
+### Índices Climáticos utilizando o CDO
+
++ [Clique aqui](https://github.com/jgmsantos/Scripts/tree/master/NetCDF) para realizar o download do arquivo de precipitação `prec.med.espacial.nc`.
+
++ [Clique aqui](https://github.com/jgmsantos/Scripts/tree/master/NetCDF) para realizar o download do arquivo de precipitação `temp.med.espacial.nc`. 
+
+1 ECACDD (Consecutive dry days index per time period ou índice de dias secos consecutivos por período)
+
+Retorna a quantidade de dias secos consecutivos em que a precipitação (mm/dia) foi menor que um determinado limiar (R), o padrão é 1 mm/dia. Uma variável adicional é fornecida, trata-se do número de períodos secos. 
+
++ Duas variáveis são retornadas:
+  + `consecutive_dry_days_index_per_time_period`
+  + `number_of_cdd_periods_with_more_than_5days_per_time_period`
+
++ Sintaxe: `cdo eca_cdd,R,N input.nc output.nc`
+
+Onde:
+
++ `R`: Representa o limiar de precipitação em mm/dia. Todo o valor de precipitação menor que esse limiar será considerado. O valor padrão de uso é R = 1 mm/dia.
++ `N`: Representa quantas vezes o limiar de precipitação foi excedido. O valor padrão de uso é N = 5.
+
+A série abaixo representa 31 valores (dias 01 a 31) de precipitação para um determinado mês que será utilizada para facilitar o entendimento.
+
+```
+dia01 3.04614
+dia02 2.98772
+dia03 3.11760
+dia04 3.36420
+dia05 3.08065
+dia06 2.74675
+dia07 2.55087
+dia08 1.82483
+dia09 1.96171
+dia10 2.09543
+dia11 1.86413
+dia12 2.17233
+dia13 1.77234
+dia14 1.58769
+dia15 3.34800
+dia16 3.12167
+dia17 2.08523
+dia18 1.99947
+dia19 2.10749
+dia20 2.41033
+dia20 2.80767
+dia22 2.95542
+dia23 4.15026
+dia24 4.49258
+dia25 3.33465
+dia26 3.24766
+dia27 2.78279
+dia28 2.59603
+dia29 3.24640
+dia30 2.59884
+dia31 3.36611
+```
+
++ Exemplo: Deseja-se quantificar o número de dias consecutivos secos em que a precitação foi menor que 3 mm/dia. Além disso, quantos períodos de até 4 dias foram contabilizados?
+
+`cdo -s eca_cdd,3,4 prec.med.espacial.nc out.n`
+
++ Resultado:
+
+  + `consecutive_dry_days_index_per_time_period` = 9
+  + `number_of_cdd_periods_with_more_than_5days_per_time_period` = 2
+
++ Explicação: 
+  + A contagem de acordo com o limiar de precipitação, isto é, menor que 3 mm/dia começou a partir do dia 06 e foi até o dia 14, totalizando assim, 9 dias.
+  + O valor 2 representa a quantidade de períodos em que esse limiar de 3 mm/dia foi excedido. A contagem considera para o primeiro período do dia 06 a 14, e o segundo, do dia 17 a 22, totalizando assim, dois períodos.
 
 ### Vídeo aula de CDO
 
