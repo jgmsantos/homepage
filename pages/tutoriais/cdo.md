@@ -281,7 +281,7 @@ Para ver o resultado:
 
 + [Clique aqui](https://github.com/jgmsantos/Scripts/tree/master/NetCDF) para realizar o download do arquivo de precipitação `prec.med.espacial.nc`.
 
-+ [Clique aqui](https://github.com/jgmsantos/Scripts/tree/master/NetCDF) para realizar o download do arquivo de precipitação `temp.med.espacial.nc`. 
++ [Clique aqui](https://github.com/jgmsantos/Scripts/tree/master/NetCDF) para realizar o download do arquivo de temperatura `temp.med.espacial.nc`. 
 
 1 ECACDD (Consecutive dry days index per time period ou índice de dias secos consecutivos por período)
 
