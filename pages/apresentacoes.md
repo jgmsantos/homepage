@@ -29,7 +29,7 @@ Apresentações
 
 + [Eventos El Niño e La Niña e sua relação com focos de queima no Brasil](https://drive.google.com/open?id=1O1ml1JUiIenc7zK_YL8qf4CiSOJ3aHRV8SiMdj-x9Tg). Fevereiro/2018.
 
-+ [Clamate Data Operatos (CDO)](http://satelite.cptec.inpe.br/repositorio9/wcrp/presentations/23/23012018_1400.pdf). Janeiro/2018.
++ [Climate Data Operatos (CDO)](http://satelite.cptec.inpe.br/repositorio9/wcrp/presentations/23/23012018_1400.pdf). Janeiro/2018.
 
 2013
 
