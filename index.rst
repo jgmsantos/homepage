@@ -48,36 +48,42 @@ Divirta-se!
    :hidden:
    
    pages/autor
+   :hidden:
 
 .. toctree::
    :hidden:
 
    pages/consultoria
+   :hidden:
 
 .. toctree::
    :hidden:
 
    pages/climatologia
+   :hidden:
 
 .. toctree::
    :hidden:
 
    pages/cvlattes
-
+   :hidden:
 .. toctree::
    :hidden:
 
    pages/apresentacoes
-   
+   :hidden:
+
 .. toctree::
    :hidden:
    
    pages/cursos_ministrados
+   :hidden:
 
 .. toctree::
    :hidden:
    
    pages/tutoriais/index
+   :hidden:
 
 .. toctree::
    :hidden:
@@ -88,4 +94,4 @@ Divirta-se!
    :hidden:
    
    pages/contato
-   
+   :hidden:
