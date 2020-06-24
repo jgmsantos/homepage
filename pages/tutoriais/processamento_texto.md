@@ -163,10 +163,11 @@ Disponibilidade: a cada 7 dias (3 de fevereiro de 2003 - atual).
     + [CDO](https://guilherme.readthedocs.io/en/latest/pages/tutoriais/cdo.html) e [gdal](https://guilherme.readthedocs.io/en/latest/pages/tutoriais/gdal.html).
 + [Clique aqui](https://github.com/jgmsantos/Scripts/tree/master/SHELL) para realizar o download do script `02get_data_NASA_GRACE.sh`. NÃO DEIXE DE LER AS INSTRUÇÕES PARA EXECUTAR ADEQUADAMENTE O SCRIPT.
 
-3 Script `03limpa_cmip5.sh` feito em Shell conserta a data do modelo HADGEM2-ES. Essse modelo possui dados diários totalizando apenas 360 dias. O objeto foi corrigir essas datas acrescentando o dia 31 aos meses que possuem essa quantidade de datas. Criou-se apenas o dia 31 com valores UNDEF. Para anos bissexto, esse modelo mostra o dia 01 de março duplicado, e para anos normais, os dias 01 e 02 são duplicados, e os mesmos são removidos. 
+3 Script `03limpa_cmip5.sh` feito em Shell conserta a data do modelo HADGEM2-ES. Essse modelo possui dados diários totalizando apenas 360 dias por ano. O objetivo foi corrigir essas datas acrescentando o dia 31 aos meses que possuem apenas essa quantidade de datas, em outras palavras, criou-se apenas o dia 31 com valores UNDEF. Para ano bissexto (366 dias), esse modelo mostra o dia 01 de março duplicado, e para anos normais (365 dias), os dias 01 e 02 são duplicados, e os mesmos são removidos. 
 
 + NÃO DEIXE DE LER O SCRIPT PARA MAIS INFORMAÇÕES.
-+ O script é demonstrado abaixo e o seu download pode ser feito [clicando aqui](https://github.com/jgmsantos/Scripts/blob/master/SHELL/03limpa_cmip5.sh). 
++ O script é demonstrado abaixo e o seu download pode ser feito [clicando aqui](https://github.com/jgmsantos/Scripts/blob/master/SHELL/03limpa_cmip5.sh).
++ Requisitos: ncdump e CDO instalados. O ncdump já vem instalado nativamente quando se tem a biblioteca NetCDF. 
 + Baixe o arquivo `03limpa_cmip5.sh`.
 + Sinta-se livre para realizar modificações e ao realizá-las, compartilhe conosco.
 
@@ -313,9 +314,7 @@ echo " Tempo gasto: $tempo "
 
 ```
 
-+ Ao executar o script: `./limpa.sh`
-
-+ Parte do resultado para o cenário historical é:
++ Ao executar o script`03limpa_cmip5.sh`, parte do resultado para o cenário historical é mostrado na tela do seu computador com a seguinte mensagem:
 
 ```
 historical 1975
@@ -327,3 +326,8 @@ historical 1975
 19751030 19751031 12:00:00
 19751230 19751231 12:00:00
 ```
+
+Os arquivos de saída terão os seguintes nomes: 
++ `prec.HADGEM2-ES.historical.corrigido.nc`
++ `prec.HADGEM2-ES.rcp26.corrigido.nc`
++ `prec.HADGEM2-ES.rcp85.corrigido.nc`
