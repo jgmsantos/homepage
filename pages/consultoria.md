@@ -1,6 +1,8 @@
 Consultoria
 ================
 
+Você já pensou na possibilidade de colaborar para a continuidade desse trabalho antes de pedir um programa pronto para resolver as suas tarefas? Pois é, gerar toda essa informação requer um esforço tremendo porque está associado diretamente com fato de que tenho que estudar muito, e além disso, pagar pessoas e cursos para me atualizar e sempre disponibilizar informações relevantes. Pense nisso!
+
 ### Curso de Climate Data Operators (CDO)
 
 O Climate Data Operatros (CDO) foi desenvolvido no Max-Planck-Institut für Meteorologie e representa um conjunto de comandos estatísticos e aritméticos úteis para processar dados atmosféricos no formato GRIB e NetCDF. 
