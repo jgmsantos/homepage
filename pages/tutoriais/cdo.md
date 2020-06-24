@@ -336,9 +336,9 @@ dia30 2.59884
 dia31 3.36611
 ```
 
-+ Exemplo1: Deseja-se quantificar o número de dias consecutivos secos em que a precitação foi menor que 3 mm/dia. Além disso, quantos períodos de até 4 dias foram contabilizados?
++ Exemplo1: Deseja-se quantificar o número de dias consecutivos secos em que a precitação foi menor que 3 mm/dia. Além disso, quantos períodos de até 4 dias foram contabilizados? Não esqueça de realizar o download do arquivo `prec.med.espacial.nc` para testar diferente configurações de valores.
 
-`cdo -s eca_cdd,3,4 prec.med.espacial.nc out.n`
+`cdo -s eca_cdd,3,4 prec.med.espacial.nc output.nc`
 
 + Resultado:
 
