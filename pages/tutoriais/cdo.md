@@ -279,11 +279,13 @@ Para ver o resultado:
 
 ### Índices Climáticos utilizando o CDO
 
++ [Clique aqui](https://code.mpimet.mpg.de/projects/cdo/embedded/cdo_eca.pdf) para realizar o download da documentação sobre os índices climáticos.
+
 + [Clique aqui](https://github.com/jgmsantos/Scripts/tree/master/NetCDF) para realizar o download do arquivo de precipitação `prec.med.espacial.nc`.
 
 + [Clique aqui](https://github.com/jgmsantos/Scripts/tree/master/NetCDF) para realizar o download do arquivo de temperatura `temp.med.espacial.nc`. 
 
-1 ECACDD (Consecutive dry days index per time period ou índice de dias secos consecutivos por período)
+**1 ECACDD (Consecutive dry days index per time period ou índice de dias secos consecutivos por período)**
 
 Retorna a quantidade de dias secos consecutivos em que a precipitação (mm/dia) foi menor que um determinado limiar (R), o padrão é 1 mm/dia. Uma variável adicional é fornecida, trata-se do número de períodos secos. 
 
@@ -334,7 +336,7 @@ dia30 2.59884
 dia31 3.36611
 ```
 
-+ Exemplo: Deseja-se quantificar o número de dias consecutivos secos em que a precitação foi menor que 3 mm/dia. Além disso, quantos períodos de até 4 dias foram contabilizados?
++ Exemplo1: Deseja-se quantificar o número de dias consecutivos secos em que a precitação foi menor que 3 mm/dia. Além disso, quantos períodos de até 4 dias foram contabilizados?
 
 `cdo -s eca_cdd,3,4 prec.med.espacial.nc out.n`
 
