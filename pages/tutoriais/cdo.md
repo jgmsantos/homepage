@@ -26,7 +26,7 @@ Climate Data Operators (CDO)
 
 ### Exemplos de uso com o CDO
 
-1. O exemplo abaixo compara dois conjunto de dados espaciais (temperatura [ºC] e precipitação [mm/dia]) que possuem o mesmo domínio espacial, isto é, o mesmo número de pontos de latitude e longitude no intervalo de 28 dias. Lembrando que esse arquivo é apenas um exemplo, ele poderia ter qualquer comprimento temporal. Quando a precipitação for menor ou igual (`lec`) a 10 mm/dia, o conjunto de dados será convertido para valores 1 (condição verdadeira) e 0 (condição falsa). O mesmo ocorre com o operador `gec`, isto é, quando a temperatura for maior igual a 30C, o conjunto de dados receberá o valor 1, caso contrário, receberá o valor 0. Em outras palavras, serão criados dois conjuntos de dados com valores 0 e 1. O operador `mul` multiplicará os dois conjunto de dados, isto é, a matriz de dados de 0 e 1, e por fim, somará todos os 28 dias ou tempos gerando assim um arquivo com o total de dias quando a condição acima for satisfeita simultaneamente.
+1 O exemplo abaixo compara dois conjunto de dados espaciais (temperatura [ºC] e precipitação [mm/dia]) que possuem o mesmo domínio espacial, isto é, o mesmo número de pontos de latitude e longitude no intervalo de 28 dias. Lembrando que esse arquivo é apenas um exemplo, ele poderia ter qualquer comprimento temporal. Quando a precipitação for menor ou igual (`lec`) a 10 mm/dia, o conjunto de dados será convertido para valores 1 (condição verdadeira) e 0 (condição falsa). O mesmo ocorre com o operador `gec`, isto é, quando a temperatura for maior igual a 30C, o conjunto de dados receberá o valor 1, caso contrário, receberá o valor 0. Em outras palavras, serão criados dois conjuntos de dados com valores 0 e 1. O operador `mul` multiplicará os dois conjunto de dados, isto é, a matriz de dados de 0 e 1, e por fim, somará todos os 28 dias ou tempos gerando assim um arquivo com o total de dias quando a condição acima for satisfeita simultaneamente.
 
 + Os arquivos `temp.MT.nc` e `prec.MT.nc` possuem o mesmo domínio espacial e 28 dias (01 a 28 de maio de 2020).
 + Esse exemplo poderia ser aplicado para qualquer comprimento temporal.
@@ -38,15 +38,15 @@ O resultado pode ser visualizado abaixo:
 
 ![](../../images/cdo_fig01_MT.png)
 
-2. Alterar o nome da variável de vários arquivos em lote no formato NetCDF. É feito um loop utilizando o `for` em todos os arquivos NetCDF (`*.nc`), em seguida, com o uso do CDO por meio do operador `chname` altera-se o nome da variável do arquivo de `nome_antigo` para `nome_novo`. 
+2 Alterar o nome da variável de vários arquivos em lote no formato NetCDF. É feito um loop utilizando o `for` em todos os arquivos NetCDF (`*.nc`), em seguida, com o uso do CDO por meio do operador `chname` altera-se o nome da variável do arquivo de `nome_antigo` para `nome_novo`. 
 
 `for arquivo in $(ls -1 *.nc); do cdo -s chname,nome_antigo,nome_novo $arquivo $arquivo; done`
 
-3. Verificar o nome da variável dos arquivos NetCDF utilizando o loop `for`.
+3 Verificar o nome da variável dos arquivos NetCDF utilizando o loop `for`.
 
 `for arquivo in $(ls -1 *.nc); do cdo -s pardes $arquivo; done`
 
-4. Substitui espaço por vírgula e substitui a primeira ocorrência de vírgula por “nada”.
+4 Substitui espaço por vírgula e substitui a primeira ocorrência de vírgula por “nada”.
 
 + O comando abaixo do CDO utilizando o operador `showlevel` do CDO mostrará a seguinte informação:
 
@@ -60,7 +60,7 @@ O resultado pode ser visualizado abaixo:
 
 `cdo -s showlevel vwnd.nc | tr ' ' ',' | sed 's/,//'`
 
-5. Utilizando a variável risco de fogo para obter o total de píxeis para cada categoria. O nome da variável do arquivo `tmp.nc` se chama `rbf` e a variável `x` pode ser qualquer nome.
+5 Utilizando a variável risco de fogo para obter o total de píxeis para cada categoria. O nome da variável do arquivo `tmp.nc` se chama `rbf` e a variável `x` pode ser qualquer nome.
 ```
 cdo -s -output -fldsum -setmissval,0 -expr,'x=rbf<=0.15' tmp.nc
 cdo -s -output -fldsum -setmissval,0 -expr,'x=rbf>0.15 && rbf<=0.40' tmp.nc
@@ -69,7 +69,7 @@ cdo -s -output -fldsum -setmissval,0 -expr,'x=rbf>0.70 && rbf<=0.95' tmp.nc
 cdo -s -output -fldsum -setmissval,0 -expr,'x=rbf>0.95' tmp.nc
 ```
 
-6. O objetivo do script abaixo consiste em converter vários  arquivos no formato texto com 6 colunas com resolução temporal a cada 3 hora, isto é, uma série temporal para o formato NetCDF. O arquivo não apresenta nível vertical.
+6 O objetivo do script abaixo consiste em converter vários  arquivos no formato texto com 6 colunas com resolução temporal a cada 3 hora, isto é, uma série temporal para o formato NetCDF. O arquivo não apresenta nível vertical.
 
 + O exemplo foi obtido do link abaixo e posteriormente adaptado:
   + [https://code.mpimet.mpg.de/boards/2/topics/8771](https://code.mpimet.mpg.de/boards/2/topics/8771)
@@ -175,7 +175,7 @@ Warning: Duplicate entry of parameter -1 in out_6.nc!
 
 + Faça as devidas adaptações para os seus arquivos.
 
-7. Exemplo de como substituir todos os valores da variável chuva em uma determinada latitude (`-9.75`) por um novo valor. Por exemplo, o arquivo `area.nc` representa as 
+7 Exemplo de como substituir todos os valores da variável chuva em uma determinada latitude (`-9.75`) por um novo valor. Por exemplo, o arquivo `area.nc` representa as 
 informações de chuva com o seguinte domínio: `lat = -9.75 a -8.25` e `lon = -55.75 a -54.25` para apenas um tempo, isto é,  esse arquivo é um dado é espacial. 
 
 + [Clique aqui](https://github.com/jgmsantos/Scripts/blob/master/NetCDF/area.nc) para realizar o download do arquivo `area.nc`
@@ -244,7 +244,7 @@ Comando do CDO para realizar essa tarefa:
  38.8118  -8.25 -54.75  
  16.1115  -8.25 -54.25  
 ```
-8. Alterando apenas um ponto de latitude e de longitude. Nesse exemplo, será alterado o valor da `longitude = -55.25` e `latitude = -9.75`. Lembrando que o dado é espacial.
+8 Alterando apenas um ponto de latitude e de longitude. Nesse exemplo, será alterado o valor da `longitude = -55.25` e `latitude = -9.75`. Lembrando que o dado é espacial.
 
 + **var:** é um nome qualquer para o arquivo que srá armazenado em `output.nc`. Pode-se utilizar qualquer nome.
 + **rain:** é o nome da variável do arquivo `area.nc`. 
@@ -293,7 +293,7 @@ Antes de tudo, escolha adequadamente consultando a tabela abaixo o melhor índic
 
 + [Clique aqui](https://github.com/jgmsantos/Scripts/tree/master/NetCDF) para realizar o download do arquivo de temperatura `temp.med.espacial.nc`.
 
-**1. ECACDD (Consecutive dry days index per time period ou índice de dias secos consecutivos por período)**
+**1 ECACDD (Consecutive dry days index per time period ou índice de dias secos consecutivos por período)**
 
 Retorna a quantidade de dias secos consecutivos em que a precipitação (mm/dia) foi menor que um determinado limiar (R), o padrão é R= 1 mm/dia. Uma variável adicional é fornecida, trata-se do quantidade ou número de períodos secos maior que N dias.
 
@@ -358,7 +358,7 @@ dia31 3.36611
   + A contagem de acordo com o limiar de precipitação, isto é, menor que 3 mm/dia começou a partir do dia 06 e foi até o dia 14, totalizando assim, 9 dias.
   + O valor 2 representa a quantidade de períodos em que esse limiar de 3 mm/dia foi excedido. A contagem considera para o primeiro período do dia 06 a 14, e o segundo, do dia 17 a 22, totalizando assim, dois períodos.
 
-**2. ECACSU (Consecutive summer days index per time period ou índice consecutivo de dias de verão por período)**
+**2 ECACSU (Consecutive summer days index per time period ou índice consecutivo de dias de verão por período)**
 
 Retorna a quantidade de dias consecutivos em que a temperatura (Kelvin) foi maior que um determinado limiar (T), o padrão é T= 25ºC. Uma variável adicional é fornecida, trata-se do quantidade ou número de períodos de verão maior que N dias.
 
@@ -461,7 +461,7 @@ dia31 22.6148
   + A contagem de acordo com o limiar de temperatura, isto é, maior que 22.6ºC começou a partir do dia 25 e foi até o dia 28, totalizando assim, 4 dias.
   + O valor 1 representa a quantidade de períodos em que esse limiar de 22.6ºC foi excedido. A contagem considera apenas um período, isto é, do dia 25 a 28, por isso, o valor 1.
 
-**3. ECACWD (Consecutive wet days index per time period ou índice consecutivo de dias úmidos por período)**
+**3 ECACWD (Consecutive wet days index per time period ou índice consecutivo de dias úmidos por período)**
 
 Retorna a quantidade de dias consecutivos úmidos em que a precipitação (mm/dia) foi maior que um determinado limiar (R), o padrão é R = 1 mm/dia. Uma variável adicional é fornecida, trata-se do quantidade ou número de períodos úmidos maior que N dias.
 
@@ -526,7 +526,7 @@ dia31 3.36611
   + A contagem de acordo com o limiar de precipitação, isto é, maior que 3.5 mm/dia começou a partir do dia 23 e foi até o dia 24, totalizando assim, 2 dias.
   + O valor 0 representa a quantidade de períodos em que esse limiar de 3.5 mm/dia foi excedido. A contagem considerou que não houve período em que esse limar fosse ultrapassado, por isso, o valor 0.
 
-**4. ECAETR (Intra-period extreme temperature range ou faixa de temperatura extrema)**
+**4 ECAETR (Intra-period extreme temperature range ou faixa de temperatura extrema)**
 
 Dada duas séries de temperatura máxima e mínima, a faixa de temperatura extema representa a diferença entre o valor máximo de temperatura e o valor mínimo de temperatura mínima, em outras palavras, R = Max(T)-Min(T). A unidade é a mesma do arquivo utilizado.
 
@@ -588,7 +588,7 @@ dia31	16.0	15.3
   + A partir da série temporal da temperatura máxima, obtém-se o seu maior valor, que é 26ºC. Por outro lado, o valor mínimo da temperatura mínima é de 15.2ºC. Basta calcular a diferença entre a (Tmax - Tmin) que será obtido o valor 10.800ºC.
 
 
-**5. ECAPD (Precipitation days index per time period ou índice de dias de precipitação por período)**
+**5 ECAPD (Precipitation days index per time period ou índice de dias de precipitação por período)**
 
 Retorna a quantidade de dias com chuva quando o valor de precipitação (mm/dia) foi maior que um determinado limiar (x).
 
@@ -661,7 +661,7 @@ dia31	33.7
 + Explicação: 
   + Para a Forma 1, houve apenas um dia (dia24) com chuva maior que 42 mm/dia. Para a Forma 2 que considera 10 mm/dia, foi retornado um total de 31 dias, ou seja todo o mês, a chuva ultrassou esse limiar. E por fim, a Forma 3 que consideral o limiar de 20 mm/dia, foram detectados 25 dias com chuva acima desse limiar.
 
-**6. ECARR1 (Wet days index per time period ou índice de dias úmidos por período)**
+**6 ECARR1 (Wet days index per time period ou índice de dias úmidos por período)**
 
 Retorna a quantidade de dias com chuva quando o valor de precipitação (mm/dia) foi maior que um determinado limiar (R). O R é opcional, e possui valor padrão R = 1 mm/dia.
 
@@ -721,7 +721,7 @@ dia31	33.7
 + Explicação: 
   + Apenas os dias 23 e 24 foram maiores que o limiar selecionado (40 mm/dia), totalizando assim dois dias.
 
-**7. ECARX1DAY (Highest one day precipitation amount per time period ou quantidade máxima de precipitação de um dia por período de tempo)**
+**7 ECARX1DAY (Highest one day precipitation amount per time period ou quantidade máxima de precipitação de um dia por período de tempo)**
 
 Retorna a maior quantidade de precipitação (mm/dia) da série.
 
@@ -780,7 +780,7 @@ dia31	33.7
 + Explicação: 
   + O maior valor de precipitação da série ocorre no dia 24, isto é, 44.9.
 
-**8. ECARX5DAY (Highest five-day precipitation amount per time period ou quantidade mais alta de precipitação em cinco dias por período)**
+**8 ECARX5DAY (Highest five-day precipitation amount per time period ou quantidade mais alta de precipitação em cinco dias por período)**
 
 Retorna a maior quantidade de precipitação (mm/dia) da série e a quantidade de 5 períodos com precipitação total maior que `x` mm. O valor padrão de `x = 50 mm/dia`. Esse parâmetro é opcional.
 
@@ -843,7 +843,7 @@ dia31	33.7
 + Explicação: 
   + O maior valor de precipitação da série ocorre no dia 24, isto é, 44.9 mm/dia. Outra ponto é, quantos dias com chuva estiveram acima deste limiar? Apenas 2 dias, isto é, os dias 23 e 24.
 
-**9. ECASU (Summer days index per time period ou índice de dias de verão por período)**
+**9 ECASU (Summer days index per time period ou índice de dias de verão por período)**
 
 Retorna a quantidade de dias em que a temperatura (Kelvin) foi maior que um determinado limiar (T), o padrão é T= 25ºC.
 
@@ -942,7 +942,7 @@ dia31 22.6148
 + Explicação: 
   + A contagem de acordo com o limiar de temperatura, isto é, maior que 22.6ºC foi identificado nos dias 25, 26, 27, 28 e 31, totalizando assim, 5 dias.
 
-**10. ECATR (Tropical nights index per time period ou índice de noites tropicais por período)**
+**10 ECATR (Tropical nights index per time period ou índice de noites tropicais por período)**
 
 Retorna a quantidade de dias em que a temperatura mínima (Kelvin) foi maior que um determinado limiar (T), o padrão é T= 20ºC.
 
