@@ -243,6 +243,14 @@ O trecho do código `$(basename $nome_arquivo .nc)` imprime apenas o nome do arq
 
 `IGBP_c6_MAPBIOMA_v3_2008_001_RF_cnew`
 
+O trecho abaixo:
+
+`$(basename $nome_arquivo .nc).tif`
+
+é o mesmo que:
+
+`IGBP_c6_MAPBIOMA_v3_2006_001_RF_cnew.tif`
+
 
 ### Utilizar o parallel no Linux
 
