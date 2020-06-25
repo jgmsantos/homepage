@@ -665,7 +665,7 @@ Retorna a quantidade de dias com chuva quando o valor de precipitação (mm/dia)
 
 Onde:
 
-+ `R` é um valor real. Representa o miliar de chuva a ser considerado (mm/dia).
++ `R` é um valor real. Representa o limiar de chuva a ser considerado (mm/dia).
 
 A série abaixo representa 31 valores (dias 01 a 31) de precipitação para um determinado mês que será utilizada para facilitar o entendimento. A unidade utilizada é mm/dia.
 
