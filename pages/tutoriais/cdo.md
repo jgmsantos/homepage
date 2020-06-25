@@ -283,12 +283,13 @@ Para ver o resultado:
 
 + [Clique aqui](https://github.com/jgmsantos/Scripts/tree/master/NetCDF) para realizar o download do arquivo de precipitação `prec.med.espacial.nc`.
 
-+ [Clique aqui](https://github.com/jgmsantos/Scripts/tree/master/NetCDF) para realizar o download do arquivo de temperatura `temp.med.espacial.nc`. 
++ [Clique aqui](https://github.com/jgmsantos/Scripts/tree/master/NetCDF) para realizar o download do arquivo de temperatura `temp.med.espacial.nc`.
 
 **1 ECACDD (Consecutive dry days index per time period ou índice de dias secos consecutivos por período)**
 
-Retorna a quantidade de dias secos consecutivos em que a precipitação (mm/dia) foi menor que um determinado limiar (R), o padrão é 1 mm/dia. Uma variável adicional é fornecida, trata-se do quantidade ou número de períodos secos maior que N dias.
+Retorna a quantidade de dias secos consecutivos em que a precipitação (mm/dia) foi menor que um determinado limiar (R), o padrão é R= 1 mm/dia. Uma variável adicional é fornecida, trata-se do quantidade ou número de períodos secos maior que N dias.
 
++ O arquivo de saída terá sempre a última data do arquivo.
 + Duas variáveis são retornadas:
   + `consecutive_dry_days_index_per_time_period`
   + `number_of_cdd_periods_with_more_than_5days_per_time_period`
@@ -351,10 +352,11 @@ dia31 3.36611
 
 **2 ECACSU (Consecutive summer days index per time period ou índice consecutivo de dias de verão por período)**
 
-Retorna a quantidade de dias em que a temperatura (Kelvin) foi maior que um determinado limiar (T), o padrão é 25ºC. Uma variável adicional é fornecida, trata-se do quantidade ou número de períodos de verão maior que N dias.
+Retorna a quantidade de dias em que a temperatura (Kelvin) foi maior que um determinado limiar (T), o padrão é T= 25ºC. Uma variável adicional é fornecida, trata-se do quantidade ou número de períodos de verão maior que N dias.
 
 + **Importante: O arquivo a ser utilizado deve estar em Kelvin.**
 
++ O arquivo de saída terá sempre a última data do arquivo.
 + Duas variáveis são retornadas:
   + `consecutive_summer_days_index_per_time_period`
   + `number_of_csu_periods_with_more_than_5days_per_time_period`
@@ -450,6 +452,131 @@ dia31 22.6148
 + Explicação: 
   + A contagem de acordo com o limiar de temperatura, isto é, maior que 22,6ºC começou a partir do dia 25 e foi até o dia 28, totalizando assim, 4 dias.
   + O valor 1 representa a quantidade de períodos em que esse limiar de 22,6ºC foi excedido. A contagem considera apenas um período, isto é, do dia 25 a 28, por isso, o valor 1.
+
+### ECACWD (Consecutive wet days index per time period ou índice consecutivo de dias úmidos por período) 
+
+Retorna a quantidade de dias consecutivos úmidos em que a precipitação (mm/dia) foi maior que um determinado limiar (R), o padrão é R = 1 mm/dia. Uma variável adicional é fornecida, trata-se do quantidade ou número de períodos úmidos maior que N dias.
+
++ O arquivo de saída terá sempre a última data do arquivo.
++ Duas variáveis são retornadas:
+  + `consecutive_wet_days_index_per_time_period`
+  + `number_of_cwd_periods_with_more_than_5days_per_time_period`
+
++ Sintaxe: `cdo eca_cwd,R,N input.nc output.nc`
+
+Onde:
+
++ `R`: Valor real. Representa o limiar de precipitação em mm/dia. Todo o valor de precipitação maior que esse limiar será considerado. O valor padrão de uso é R = 1 mm/dia.
++ `N`: Valor inteiro. Representa quantas vezes o limiar de precipitação foi excedido. O valor padrão de uso é N = 5.
+
+A série abaixo representa 31 valores (dias 01 a 31) de precipitação para um determinado mês que será utilizada para facilitar o entendimento.
+
+```
+dia01 3.04614
+dia02 2.98772
+dia03 3.11760
+dia04 3.36420
+dia05 3.08065
+dia06 2.74675
+dia07 2.55087
+dia08 1.82483
+dia09 1.96171
+dia10 2.09543
+dia11 1.86413
+dia12 2.17233
+dia13 1.77234
+dia14 1.58769
+dia15 3.34800
+dia16 3.12167
+dia17 2.08523
+dia18 1.99947
+dia19 2.10749
+dia20 2.41033
+dia21 2.80767
+dia22 2.95542
+dia23 4.15026
+dia24 4.49258
+dia25 3.33465
+dia26 3.24766
+dia27 2.78279
+dia28 2.59603
+dia29 3.24640
+dia30 2.59884
+dia31 3.36611
+```
+
++ Exemplo1: Deseja-se quantificar o número de dias consecutivos úmidos em que a precitação foi maior que 3.5 mm/dia. Além disso, quantos períodos de até 5 dias foram contabilizados? Não esqueça de realizar o download do arquivo `prec.med.espacial.nc` para testar diferente configurações de valores.
+
+`cdo -s eca_cwd,3.5,5 prec.med.espacial.nc output.nc`
+
++ Resultado:
+
+  + `consecutive_wet_days_index_per_time_period` = 2
+  + `number_of_cwd_periods_with_more_than_5days_per_time_period` = 0
+
++ Explicação: 
+  + A contagem de acordo com o limiar de precipitação, isto é, maior que 3,5 mm/dia começou a partir do dia 23 e foi até o dia 24, totalizando assim, 2 dias.
+  + O valor 0 representa a quantidade de períodos em que esse limiar de 3.5 mm/dia foi excedido. A contagem considerou que não houve período em que esse limar fosse ultrapsso, por isso, o valor 0.
+
+### ECAETR (Intra-period extreme temperature range ou faixa de temperatura extrema) ###
+
+Dada duas séries de temperatura máxima e mínima, a faixa de temperatura extema representa a diferença entre o valor máximo de temperatura e o valor mínimo de temperatura mínima, em outras palavras, R = Max(T)-Min(T). A unidade é a mesma do arquivo utilizado.
+
++ O arquivo de saída terá sempre a última data do arquivo.
++ Apenas uma variável é retornada:
+  + `intra_period_extreme_temperature_range`
+
++ Sintaxe: `cdo eca_etr tmax.nc tmin.nc`
+
+Onde:
+
++ `tmax` e `tmin` deve ter a mesma unidade.
+
+A série abaixo representa 31 valores (dias 01 a 31) de temperatura máxima (2 coluna) e mínima (3 coluna) para um determinado mês que será utilizada para facilitar o entendimento. A unidade utilizada é graus Celsius.
+
+```
+dia01	20.1	19.5
+dia02	20.2	19.4
+dia03	19.4	18.7
+dia04	18.7	18.2
+dia05	18.3	17.5
+dia06	17.6	16.8
+dia07	16.8	16.1
+dia08	16.1	15.3
+dia09	16.1	15.2
+dia10	16.1	15.4
+dia11	16.0	15.6
+dia12	16.1	15.4
+dia13	16.8	15.5
+dia14	19.5	16.8
+dia15	21.9	19.4
+dia16	22.4	21.6
+dia17	24.4	21.7
+dia18	25.3	23.8
+dia19	26.0	24.2
+dia20	25.4	23.7
+dia21	24.3	23.2
+dia22	23.2	21.7
+dia23	21.8	20.4
+dia24	20.5	19.7
+dia25	20.4	19.7
+dia26	20.0	18.8
+dia27	19.1	18.3
+dia28	18.3	17.6
+dia29	17.6	16.9
+dia30	16.9	15.9
+dia31	16.0	15.3
+```
++ Exemplo1: Deseja-se saber variação de temperatura a partir da temperatura máxima e mínima. Foram utilizados dois arquivos, `tmax.nc` e o `tmin.nc`.
+
+`cdo -s eca_etr tmax.nc tmin.nc output.nc`
+
++ Resultado:
+
+  + `intra_period_extreme_temperature_range` = 10.800
+
++ Explicação: 
+  + A partir da série temporal da temperatura máxima, obtém-se o seu maior valor, que é 26,0ºC. Por outro lado, o valor mínimo da temperatura mínima é de 15,2ºC. Basta calcular a diferença entre a (Tmax - Tmin) que será obtido o valor 10.800ºC.
 
 ### Vídeo aula de CDO
 
