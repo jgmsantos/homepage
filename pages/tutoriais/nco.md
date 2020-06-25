@@ -16,49 +16,49 @@ netCDF Operators (NCO)
 
 ### Exemplos de uso com o nco
 
-1 Apagar o atributo `long_name` da variável `precip`. São utilizadas aspas duplas duas vezes.
+1. Apagar o atributo `long_name` da variável `precip`. São utilizadas aspas duplas duas vezes.
 
 `ncatted -a long_name,precip,d,c,"" input.nc output.nc`
 
-2 Alterar o nome da variável `precip` para `prec`.
+2. Alterar o nome da variável `precip` para `prec`.
 
 `ncrename -v precip,prec input.nc output.nc`
 
-3 Alterar o nome de uma dimensão (nome que está entre os parênteses na figura acima). Exemplo: alterar o nome da dimensão `lat` para `latitude`.
+3. Alterar o nome de uma dimensão (nome que está entre os parênteses na figura acima). Exemplo: alterar o nome da dimensão `lat` para `latitude`.
 
 `ncrename -d lat,latitude input.nc output.nc`
 
-3 Alterar o nome da variável `[-v]` (`latitude` para `lat` e `longitude para `lon`) e sua dimensão `[-d]` (`latitude` para `lat` e `longitude` para `lon`).
+4. Alterar o nome da variável `[-v]` (`latitude` para `lat` e `longitude para `lon`) e sua dimensão `[-d]` (`latitude` para `lat` e `longitude` para `lon`).
 
 `ncrename -v latitude,lat -v longitude,lon -d latitude,lat -d longitude,lon input.nc output.nc`
 
-4 Alterar o nome do atributo `units` da variável `precip` de `mm/day` para `mm dia-1`.
+5. Alterar o nome do atributo `units` da variável `precip` de `mm/day` para `mm dia-1`.
 
 `ncatted -a units,precip,o,c,"mm dia-1" input.nc output.nc`
 
-5 Alterar o calendário da variável `time` para `standard`.
+6. Alterar o calendário da variável `time` para `standard`.
 
 `ncatted -a calendar,time,m,c,"standard" input.nc output.nc`
 
-6 Criar o atributo `missing_value` ou `_FillValue` para a variável `precip`. Caso não adicione a váriável `precip` no comando abaixo, serão criados os valores `missing_value` e `_FillValue` para todas as variáveis do arquivo. O valor `-999` fica a critério de cada um.
+7. Criar o atributo `missing_value` ou `_FillValue` para a variável `precip`. Caso não adicione a váriável `precip` no comando abaixo, serão criados os valores `missing_value` e `_FillValue` para todas as variáveis do arquivo. O valor `-999` fica a critério de cada um.
 
 `ncatted -O -a _FillValue,precip,o,f,-999 -a missing_value,precip,o,f,-999 input.nc output.nc`
  
-7 Reordenar as dimensões da variável `precip` que se encotram na seguinte ordem `precip(time,lat,lon)` para `precip(lat,lon,time)`.
+8. Reordenar as dimensões da variável `precip` que se encotram na seguinte ordem `precip(time,lat,lon)` para `precip(lat,lon,time)`.
 
 `ncpdq -a lat,lon,time input.nc output.n`
 
-8 Criar vários atributos (`standard_name`, `missing_value`, `_FillValue`,`precip` e `units`) de uma só vez para a variável `precip`.
+9. Criar vários atributos (`standard_name`, `missing_value`, `_FillValue`,`precip` e `units`) de uma só vez para a variável `precip`.
 
 `ncatted -O -a standard_name,precip,c,c,"Precipitacao" -O -a missing_value,precip,c,f,-999 -O -a _FillValue,precip,c,f,-999 -O -a units,precip,c,c,"mm/day" input.nc output.nc`
 
-9 Apagar a variável e a dimensão `time` do arquivo.
+10. Apagar a variável e a dimensão `time` do arquivo.
 
 `ncks -C -O -x -v time input.nc output1.nc`
 
 `ncwa -a time output1.nc output2.nc`
 
-10 Criar atributos para a dimensão nível vertical. 
+11. Criar atributos para a dimensão nível vertical. 
 
   + Ao tentar visualizar o arquivo ATM.perfil.nc, a distribuição vertical dos níveis é: 100 200 300 400 500 600 700 800 850 900 950 1000. Porém, deseja-se que o primeiro nível vertical seja 1000 hPa e não 100 hPa. Isso ocorre porque está faltando um atributo na variável `lev` que define qual o sentido que o nível vertical deve aumentar ou diminuir. Sabe-se que o nível vertical aumenta em direção a superfície terrestre, portanto, deve-se criar o atributo `positve` com o valor `down` para visualizar de forma correta os níveis verticais.
   
@@ -80,7 +80,7 @@ netCDF Operators (NCO)
 
 ![](../../images/nco_fig03.png)
    
-11 Criar a dimensão lat e lon no arquivo para plotar no GrADS.
+12. Criar a dimensão lat e lon no arquivo para plotar no GrADS.
 
   + Ao tentar abrir o arquivo maosodarS1.b1.20140301.000000.cdf no GrADS, a mensagem abaixo aparecerá. Esse arquivo é uma série temporal, logo possui apenas um ponto de latitude e um ponto de longitude.
   

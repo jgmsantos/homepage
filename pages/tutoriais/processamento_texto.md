@@ -5,85 +5,85 @@ Os comandos são aplicados em arquivos no formato texto. As dicas foram obtidas 
 
 ### Dicas utilizando o sed
 
-+ Deleta as linhas em branco de um arquivo: 
+1. Deleta as linhas em branco de um arquivo: 
 
 `sed '/^$/d' seu.arquivo.texto > out.txt`
 
-+ Deleta a partir da linha 3 de duas em duas linhas: 
+2. Deleta a partir da linha 3 de duas em duas linhas: 
 
 `sed '3~2d' seu.arquivo.texto > out.txt`
 
-+ Imprime as linhas pares: 
+3. Imprime as linhas pares: 
 
 `sed '1~2d' seu.arquivo.texto > out.txt`
 
-+ Imprime as linhas ímpares: 
+4. Imprime as linhas ímpares: 
 
 `sed '2~2d' seu.arquivo.texto > out.txt`
 
-+ Imprime uma linha específica. Exemplo: Imprime somente a linha 27: 
+5. Imprime uma linha específica. Exemplo: Imprime somente a linha 27: 
 
 `sed '27!d' seu.arquivo.texto > out.txt`
 
-+ Imprime  um intervalo de linhas. Exemplo: Imprime da linha 10 até 15: 
+6. Imprime  um intervalo de linhas. Exemplo: Imprime da linha 10 até 15: 
 
 `sed '10,15!d' seu.arquivo.texto > out.txt`
 
-+ Realiza substituição de texto no arquivo (opção "g" substitui em todo o arquivo): 
+7. Realiza substituição de texto no arquivo (opção "g" substitui em todo o arquivo): 
 
 `sed 's/zonal wind/vento zonal/g' seu.arquivo.texto > out.txt`
 
-+ Realiza substituição no próprio arquivo (opção "-i"): 
+8. Realiza substituição no próprio arquivo (opção "-i"): 
 
 `sed -i 's/\./,/g' seu.arquivo.texto`
 
-+ Substitui TAB por nada no início da linha:
+9. Substitui TAB por nada no início da linha:
 
 `sed 's/^[ \t]*//' seu.arquivo.texto > out.txt`
 
-+ Substitui a palavra "texto" por nada: 
+10. Substitui a palavra "texto" por nada: 
 
 `sed 's/texto//g' seu.arquivo.texto > out.txt`
 
-+ Substitui ponto (.) por vírgula (,): 
+11. Substitui ponto (.) por vírgula (,): 
 
 `sed 's/\./,/g' seu.arquivo.texto > out.txt`
 
-+ Transforma coluna em linha: 
+12. Transforma coluna em linha: 
 
 `sed 's/  /\n/g' seu.arquivo.texto > out.txt`
 
 ### Dicas utilizando o AWK
 
-+ Imprime as linhas pares de um arquivo: 
+1. Imprime as linhas pares de um arquivo: 
 
 `cat -n seu.arquivo.texto | awk '$1 % $2 != {print}' > out.txt`
 
-+ Imprime as linhas ímpares de um arquivo: 
+2. Imprime as linhas ímpares de um arquivo: 
 
 `cat -n seu.arquivo.texto | awk '$1 % $2 == {print}' > out.txt`
 
-+ Transforma coluna em linha: 
+3. Transforma coluna em linha: 
 
 `cat seu.arquivo.texto | awk '{gsub(/  /,"\n");print}' > out.txt`
 
-+ Deleta a coluna 1 ($1) de um arquivo texto: 
+4. Deleta a coluna 1 ($1) de um arquivo texto: 
 
 `cat seu.arquivo.texto | awk '{$1=""; print}' > out.txt`
 
 ### Dicas usando o xargs
 
-+ Transforma linha em coluna: 
+1. Transforma linha em coluna: 
 
 `cat seu.arquivo.texto | xargs`
 
 ### Dicas usando o find
 
-+ Excluir arquivos vazios no diretório corrente (.): 
+1. Excluir arquivos vazios no diretório corrente (.): 
 
 `find . -type f -empty | xargs rm`
 
-+ Excluir diretório vazios no diretório corrente (.): 
+2. Excluir diretório vazios no diretório corrente (.): 
 
 `find . -type d -empty | xargs rm -rf`
 
@@ -107,7 +107,7 @@ Os comandos são aplicados em arquivos no formato texto. As dicas foram obtidas 
 
 #### Exemplos de scripts em Shell
 
-1 Uso do loop `while read`
+1. Uso do loop `while read`
 
 + O arquivo abaixo (`01lat_lon.txt`) possui 3 colunas (longitude, latitude e um código do local) e 15 linhas. O objetivo consiste em realizar um loop em cada linha do arquivo texto para demonstrar o uso do `while read`.
 + [Clique aqui](https://github.com/jgmsantos/Scripts/tree/master/SHELL) para realizar o download do script `01loop.sh`.
@@ -148,7 +148,7 @@ while read linha ; do
 done < 01lat_lon.txt
 ```
 
-2 Baixar dados de umidade do solo do produto GRACE da NASA utilizando o wget.
+2. Baixar dados de umidade do solo do produto GRACE da NASA utilizando o wget.
 
 + O GRACE é um produto de estimativa de umidade do solo baseado em observações de armazenamento de água terrestre derivadas do satélite Gravity Recovery and Climate Experiment Follow On (GRACE-FO) e integradas a outras observações, usando um modelo numérico sofisticado de processos de água e energia da superfície terrestre.
 + Descreve as condições atuais de umidade ou seca expressa como um percentil - probabilidade de ocorrência de seca ou não para um determinado local e época do ano.
@@ -163,7 +163,7 @@ Disponibilidade: a cada 7 dias (3 de fevereiro de 2003 - atual).
     + [CDO](https://guilherme.readthedocs.io/en/latest/pages/tutoriais/cdo.html) e [gdal](https://guilherme.readthedocs.io/en/latest/pages/tutoriais/gdal.html).
 + [Clique aqui](https://github.com/jgmsantos/Scripts/tree/master/SHELL) para realizar o download do script `02get_data_NASA_GRACE.sh`. NÃO DEIXE DE LER AS INSTRUÇÕES PARA EXECUTAR ADEQUADAMENTE O SCRIPT.
 
-3 Script `03limpa_cmip5.sh` feito em Shell conserta a data do modelo HADGEM2-ES. Essse modelo possui dados diários totalizando apenas 360 dias por ano. O objetivo foi corrigir essas datas acrescentando o dia 31 aos meses que possuem apenas essa quantidade de datas, em outras palavras, criou-se apenas o dia 31 com valores UNDEF. Para ano bissexto (366 dias), esse modelo mostra o dia 01 de março duplicado, e para anos normais (365 dias), os dias 01 e 02 são duplicados, e os mesmos são removidos. 
+3. Script `03limpa_cmip5.sh` feito em Shell conserta a data do modelo HADGEM2-ES. Essse modelo possui dados diários totalizando apenas 360 dias por ano. O objetivo foi corrigir essas datas acrescentando o dia 31 aos meses que possuem apenas essa quantidade de datas, em outras palavras, criou-se apenas o dia 31 com valores UNDEF. Para ano bissexto (366 dias), esse modelo mostra o dia 01 de março duplicado, e para anos normais (365 dias), os dias 01 e 02 são duplicados, e os mesmos são removidos. 
 
 + NÃO DEIXE DE LER O SCRIPT PARA MAIS INFORMAÇÕES.
 + O script é demonstrado abaixo e o seu download pode ser feito [clicando aqui](https://github.com/jgmsantos/Scripts/blob/master/SHELL/03limpa_cmip5.sh).

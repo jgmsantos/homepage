@@ -34,19 +34,19 @@ Adicione o caminho onde está o executável `wgrib2` na sua variável de ambient
 
 #### Exemplos de uso do wgrib2
 
-1 Visualizar informações sobre o arquivo:
+1. Visualizar informações sobre o arquivo:
 
 `wgrib2 input.grb2`
 
-2 Converter grib2 para NetCDF:
+2. Converter grib2 para NetCDF:
 
 `wgrib2 gfs.t18z.pgrb2.0p25.anl -netcdf output.nc`
 
-3 Selecionar uma variável `(‘:TMP:’)` de interesse e salva no formato NetCDF:
+3. Selecionar uma variável `(‘:TMP:’)` de interesse e salva no formato NetCDF:
 
 ` wgrib2 -match ':TMP:' gfs.t18z.pgrb2.0p25.anl -netcdf output.nc`
 
-4 Selecionar uma variável de interesse e recortar o dado em um domínio particular:
+4. Selecionar uma variável de interesse e recortar o dado em um domínio particular:
 
 + Link: [https://www.cpc.ncep.noaa.gov/products/wesley/wgrib2/lola.html](https://www.cpc.ncep.noaa.gov/products/wesley/wgrib2/lola.html)
 

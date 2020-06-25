@@ -26,7 +26,7 @@ Climate Data Operators (CDO)
 
 ### Exemplos de uso com o CDO
 
-1 O exemplo abaixo compara dois conjunto de dados espaciais (temperatura [ºC] e precipitação [mm/dia]) que possuem o mesmo domínio espacial, isto é, o mesmo número de pontos de latitude e longitude no intervalo de 28 dias. Lembrando que esse arquivo é apenas um exemplo, ele poderia ter qualquer comprimento temporal. Quando a precipitação for menor ou igual (`lec`) a 10 mm/dia, o conjunto de dados será convertido para valores 1 (condição verdadeira) e 0 (condição falsa). O mesmo ocorre com o operador `gec`, isto é, quando a temperatura for maior igual a 30C, o conjunto de dados receberá o valor 1, caso contrário, receberá o valor 0. Em outras palavras, serão criados dois conjuntos de dados com valores 0 e 1. O operador `mul` multiplicará os dois conjunto de dados, isto é, a matriz de dados de 0 e 1, e por fim, somará todos os 28 dias ou tempos gerando assim um arquivo com o total de dias quando a condição acima for satisfeita simultaneamente.
+1. O exemplo abaixo compara dois conjunto de dados espaciais (temperatura [ºC] e precipitação [mm/dia]) que possuem o mesmo domínio espacial, isto é, o mesmo número de pontos de latitude e longitude no intervalo de 28 dias. Lembrando que esse arquivo é apenas um exemplo, ele poderia ter qualquer comprimento temporal. Quando a precipitação for menor ou igual (`lec`) a 10 mm/dia, o conjunto de dados será convertido para valores 1 (condição verdadeira) e 0 (condição falsa). O mesmo ocorre com o operador `gec`, isto é, quando a temperatura for maior igual a 30C, o conjunto de dados receberá o valor 1, caso contrário, receberá o valor 0. Em outras palavras, serão criados dois conjuntos de dados com valores 0 e 1. O operador `mul` multiplicará os dois conjunto de dados, isto é, a matriz de dados de 0 e 1, e por fim, somará todos os 28 dias ou tempos gerando assim um arquivo com o total de dias quando a condição acima for satisfeita simultaneamente.
 
 + Os arquivos `temp.MT.nc` e `prec.MT.nc` possuem o mesmo domínio espacial e 28 dias (01 a 28 de maio de 2020).
 + Esse exemplo poderia ser aplicado para qualquer comprimento temporal.
@@ -38,15 +38,15 @@ O resultado pode ser visualizado abaixo:
 
 ![](../../images/cdo_fig01_MT.png)
 
-2 Alterar o nome da variável de vários arquivos em lote no formato NetCDF. É feito um loop utilizando o `for` em todos os arquivos NetCDF (`*.nc`), em seguida, com o uso do CDO por meio do operador `chname` altera-se o nome da variável do arquivo de `nome_antigo` para `nome_novo`. 
+2. Alterar o nome da variável de vários arquivos em lote no formato NetCDF. É feito um loop utilizando o `for` em todos os arquivos NetCDF (`*.nc`), em seguida, com o uso do CDO por meio do operador `chname` altera-se o nome da variável do arquivo de `nome_antigo` para `nome_novo`. 
 
 `for arquivo in $(ls -1 *.nc); do cdo -s chname,nome_antigo,nome_novo $arquivo $arquivo; done`
 
-3 Verificar o nome da variável dos arquivos NetCDF utilizando o loop `for`.
+3. Verificar o nome da variável dos arquivos NetCDF utilizando o loop `for`.
 
 `for arquivo in $(ls -1 *.nc); do cdo -s pardes $arquivo; done`
 
-4 Substitui espaço por vírgula e substitui a primeira ocorrência de vírgula por “nada”.
+4. Substitui espaço por vírgula e substitui a primeira ocorrência de vírgula por “nada”.
 
 + O comando abaixo do CDO utilizando o operador `showlevel` do CDO mostrará a seguinte informação:
 
@@ -60,7 +60,7 @@ O resultado pode ser visualizado abaixo:
 
 `cdo -s showlevel vwnd.nc | tr ' ' ',' | sed 's/,//'`
 
-5 Utilizando a variável risco de fogo para obter o total de píxeis para cada categoria. O nome da variável do arquivo `tmp.nc` se chama `rbf` e a variável `x` pode ser qualquer nome.
+5. Utilizando a variável risco de fogo para obter o total de píxeis para cada categoria. O nome da variável do arquivo `tmp.nc` se chama `rbf` e a variável `x` pode ser qualquer nome.
 ```
 cdo -s -output -fldsum -setmissval,0 -expr,'x=rbf<=0.15' tmp.nc
 cdo -s -output -fldsum -setmissval,0 -expr,'x=rbf>0.15 && rbf<=0.40' tmp.nc
@@ -69,7 +69,7 @@ cdo -s -output -fldsum -setmissval,0 -expr,'x=rbf>0.70 && rbf<=0.95' tmp.nc
 cdo -s -output -fldsum -setmissval,0 -expr,'x=rbf>0.95' tmp.nc
 ```
 
-6 O objetivo do script abaixo consiste em converter vários  arquivos no formato texto com 6 colunas com resolução temporal a cada 3 hora, isto é, uma série temporal para o formato NetCDF. O arquivo não apresenta nível vertical.
+6. O objetivo do script abaixo consiste em converter vários  arquivos no formato texto com 6 colunas com resolução temporal a cada 3 hora, isto é, uma série temporal para o formato NetCDF. O arquivo não apresenta nível vertical.
 
 + O exemplo foi obtido do link abaixo e posteriormente adaptado:
   + [https://code.mpimet.mpg.de/boards/2/topics/8771](https://code.mpimet.mpg.de/boards/2/topics/8771)
@@ -175,7 +175,7 @@ Warning: Duplicate entry of parameter -1 in out_6.nc!
 
 + Faça as devidas adaptações para os seus arquivos.
 
-7 Exemplo de como substituir todos os valores da variável chuva em uma determinada latitude (`-9.75`) por um novo valor. Por exemplo, o arquivo `area.nc` representa as 
+7. Exemplo de como substituir todos os valores da variável chuva em uma determinada latitude (`-9.75`) por um novo valor. Por exemplo, o arquivo `area.nc` representa as 
 informações de chuva com o seguinte domínio: `lat = -9.75 a -8.25` e `lon = -55.75 a -54.25` para apenas um tempo, isto é,  esse arquivo é um dado é espacial. 
 
 + [Clique aqui](https://github.com/jgmsantos/Scripts/blob/master/NetCDF/area.nc) para realizar o download do arquivo `area.nc`
@@ -244,7 +244,7 @@ Comando do CDO para realizar essa tarefa:
  38.8118  -8.25 -54.75  
  16.1115  -8.25 -54.25  
 ```
-8 Alterando apenas um ponto de latitude e de longitude. Nesse exemplo, será alterado o valor da `longitude = -55.25` e `latitude = -9.75`. Lembrando que o dado é espacial.
+8. Alterando apenas um ponto de latitude e de longitude. Nesse exemplo, será alterado o valor da `longitude = -55.25` e `latitude = -9.75`. Lembrando que o dado é espacial.
 
 + **var:** é um nome qualquer para o arquivo que srá armazenado em `output.nc`. Pode-se utilizar qualquer nome.
 + **rain:** é o nome da variável do arquivo `area.nc`. 
