@@ -88,7 +88,7 @@ cdo -s -output -fldsum -setmissval,0 -expr,'x=rbf>0.95' tmp.nc
 
 + Não se preocupe com as mensagens de Warning (Aviso) que vão aparecer.
 
-```
+```bash
 #!/bin/bash
 
 rm -f estacao_???.nc # Remove os arquivos para não gerar error.

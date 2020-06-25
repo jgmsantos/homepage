@@ -9,7 +9,7 @@ Aplicações variadas
 
 1 Loop a cada 30 minutos.
 
-```
+```bash
 #!/bin/bash
 
 data_inicial="202001011400" # Formato YYYYMMDDhhmm
@@ -48,7 +48,7 @@ done
 
 2 Outro exemplo com loop, dessa vez, a cada 12 horas.
 
-```
+```bash
 data_inicial="2020010100" # AAAAMMDDhh
 data_final="2020010300"
  
@@ -78,7 +78,7 @@ done
 
 3 Loop variando dia a dia.
 
-```
+```bash
 #!/bin/bash
 
 data_inicial="20200101" # Formato AAAAMMDD
@@ -113,7 +113,7 @@ done
 
 4 Outra opção com loop variando dia a dia.
 
-```
+```bash
 #!/bin/bash
 
 data_inicial="2020010100" # Formato AAAAMMDD00
@@ -199,7 +199,9 @@ Release:        18.04
 
 + Exemplo de uso. Supondo que se deseja realizar algumas conversões com o `gdal`. Os arquivos de entrada possuem o seguinte nome `YYYYMMDD.tif` (são vários arquivos com datas distintas) e o `for` abaixo alterará o nome desses arquivos para `YYYYMMDD.tif.hard-typed`. A última linha mostrará o uso do comando `rename`. Nota-se que a lógica é semelhante a utilizada no `sed`, isto é, `s` para substituir de uma só vez o `.hard-typed` por `nada` ou `vazio` (`//`) em todos os arquivos.
 
-```
+```bash
+#!/bin/bash
+
 for original in $(ls -1 *.tif)
 do 
     gdal_translate -of GTiff -ot Float32 -b 1 -co "TILED=YES" ${original} ${original}.hard-typed
@@ -279,7 +281,7 @@ parallel -j 30 -- < datas_ac
 
 + O script abaixo se chama `executa.sh` (pode ser qualquer nome) que fará todo o serviço:
 
-```
+```bash
 
 #!/bin/bash
 
@@ -340,7 +342,7 @@ Depois, basta monitorar o arquivo `nohup` com o comando:
 
 + Porém, com o uso o `parallel` podemos baixar mais arquivos em lote de acordo conforme o script abaixo:
 
-```
+```bash
 #!/bin/bash
 
 data_inicial="20000602"

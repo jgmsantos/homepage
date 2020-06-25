@@ -171,7 +171,7 @@ Disponibilidade: a cada 7 dias (3 de fevereiro de 2003 - atual).
 + Baixe o arquivo `03limpa_cmip5.sh`.
 + Sinta-se livre para realizar modificações e ao realizá-las, compartilhe conosco.
 
-```
+```bash
 #!/bin/bash
 
 #########################################
