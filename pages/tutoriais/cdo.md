@@ -287,7 +287,7 @@ Para ver o resultado:
 
 **1 ECACDD (Consecutive dry days index per time period ou índice de dias secos consecutivos por período)**
 
-Retorna a quantidade de dias secos consecutivos em que a precipitação (mm/dia) foi menor que um determinado limiar (R), o padrão é 1 mm/dia. Uma variável adicional é fornecida, trata-se do número de períodos secos. 
+Retorna a quantidade de dias secos consecutivos em que a precipitação (mm/dia) foi menor que um determinado limiar (R), o padrão é 1 mm/dia. Uma variável adicional é fornecida, trata-se do quantidade ou número de períodos secos maior que N dias.
 
 + Duas variáveis são retornadas:
   + `consecutive_dry_days_index_per_time_period`
@@ -297,8 +297,8 @@ Retorna a quantidade de dias secos consecutivos em que a precipitação (mm/dia)
 
 Onde:
 
-+ `R`: Representa o limiar de precipitação em mm/dia. Todo o valor de precipitação menor que esse limiar será considerado. O valor padrão de uso é R = 1 mm/dia.
-+ `N`: Representa quantas vezes o limiar de precipitação foi excedido. O valor padrão de uso é N = 5.
++ `R`: Valor real. Representa o limiar de precipitação em mm/dia. Todo o valor de precipitação menor que esse limiar será considerado. O valor padrão de uso é R = 1 mm/dia.
++ `N`: Valor inteiro. Representa quantas vezes o limiar de precipitação foi excedido. O valor padrão de uso é N = 5.
 
 A série abaixo representa 31 valores (dias 01 a 31) de precipitação para um determinado mês que será utilizada para facilitar o entendimento.
 
@@ -348,6 +348,108 @@ dia31 3.36611
 + Explicação: 
   + A contagem de acordo com o limiar de precipitação, isto é, menor que 3 mm/dia começou a partir do dia 06 e foi até o dia 14, totalizando assim, 9 dias.
   + O valor 2 representa a quantidade de períodos em que esse limiar de 3 mm/dia foi excedido. A contagem considera para o primeiro período do dia 06 a 14, e o segundo, do dia 17 a 22, totalizando assim, dois períodos.
+
+**2 ECACSU (Consecutive summer days index per time period ou índice consecutivo de dias de verão por período)**
+
+Retorna a quantidade de dias em que a temperatura (Kelvin) foi maior que um determinado limiar (T), o padrão é 25ºC. Uma variável adicional é fornecida, trata-se do quantidade ou número de períodos de verão maior que N dias.
+
++ **Importante: O arquivo a ser utilizado deve estar em Kelvin.**
+
++ Duas variáveis são retornadas:
+  + `consecutive_summer_days_index_per_time_period`
+  + `number_of_csu_periods_with_more_than_5days_per_time_period`
+
++ Sintaxe: `cdo eca_csu,T,N input.nc output.nc`
+
+Onde:
+
++ `T`: Valor real. Representa o limiar de temperatura (ºC). Todo o valor de temperatura maior que esse limiar será considerado. O valor padrão de uso é T = 25ºC.
+  + **Importante: Esse valor é dado em graus Celsius.**
++ `N`: Representa quantas vezes o limiar de temperatura foi excedido. O valor padrão de uso é N = 5.
+
+**Série de temperatua em Kelvin. Essa série será utilizada para calcular o índice.**
+
+```
+dia01 295.116
+dia02 295.153
+dia03 295.248
+dia04 295.177
+dia05 295.234
+dia06 295.27
+dia07 295.322
+dia08 295.413
+dia09 295.574
+dia10 295.67
+dia11 295.625
+dia12 295.623
+dia13 295.507
+dia14 295.658
+dia15 295.718
+dia16 295.571
+dia17 295.54
+dia18 295.695
+dia19 295.725
+dia20 295.643
+dia21 295.357
+dia22 295.213
+dia23 295.416
+dia24 295.645
+dia25 295.799
+dia26 295.945
+dia27 295.832
+dia28 295.751
+dia29 295.624
+dia30 295.645
+dia31 295.765
+```
+
+A série acima foi convertida para graus Celsius para melhor entendimento do cálculo, somente isso! Lembrando que esse índice utiliza a temperatura em Kelvin, e não em Celsius.
+
+```
+dia01 21.966
+dia02 22.0031
+dia03 22.0978
+dia04 22.0268
+dia05 22.0836
+dia06 22.1197
+dia07 22.1722
+dia08 22.2628
+dia09 22.4235
+dia10 22.5202
+dia11 22.4749
+dia12 22.4726
+dia13 22.3574
+dia14 22.5084
+dia15 22.5678
+dia16 22.4205
+dia17 22.3902
+dia18 22.5454
+dia19 22.5746
+dia20 22.4934
+dia21 22.2071
+dia22 22.0632
+dia23 22.2659
+dia24 22.4952
+dia25 22.6491
+dia26 22.795
+dia27 22.6822
+dia28 22.6014
+dia29 22.4739
+dia30 22.4953
+dia31 22.6148
+```
++ Exemplo1: Deseja-se quantificar o número de dias consecutivos em que o limiar de temperatura foi maior que 22,6ºC. Além disso, quantos períodos de até 3 dias foram contabilizados? Não esqueça de realizar o download do arquivo `temp.med.espacial.nc` para testar diferente configurações de valores.
+
+`cdo -s eca_csu,22.6,3 temp.med.espacial.nc output.nc`
+
++ Resultado:
+
+  + `consecutive_summer_days_index_per_time_period` = 4
+  + `number_of_csu_periods_with_more_than_3days_per_time_period` = 1
+
++ Explicação: 
+  + A contagem de acordo com o limiar de temperatura, isto é, maior que 22,6ºC começou a partir do dia 25 e foi até o dia 28, totalizando assim, 4 dias.
+  + O valor 1 representa a quantidade de períodos em que esse limiar de 22,6ºC foi excedido. A contagem considera apenas um período, isto é, do dia 25 a 28, por isso, o valor 1.
 
 ### Vídeo aula de CDO
 
