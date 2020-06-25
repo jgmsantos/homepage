@@ -285,7 +285,7 @@ Antes de tudo, escolha adequadamente consultando a tabela abaixo o melhor índic
 
 **Importante2:** Os exemplos abaixo foram aplicados em uma série temporal, mas poderia ser usado um arquivo com informações espaciais.
 
- Índice    | Precipitação | Temperatura  
+ Índice    | Precipitação | Temperatura
 -----------|:------------:|:------------:
 eca_cdd    |      X       |      -       
 eca_csu    |      -       |      X       
