@@ -652,7 +652,7 @@ dia31	33.7
 + Explicação: 
   + Para a Forma 1, houve apenas um dia (dia24) com chuva maior que 42 mm/dia. Para a Forma 2 que considera 10 mm/dia, foi retornado um total de 31 dias, ou seja todo o mês, a chuva ultrassou esse limiar. E por fim, a Forma 3 que consideral o limiar de 20 mm/dia, foram detectados 25 dias com chuva acima desse limiar.
 
-6 ECARR1 (Wet days index per time period ou índice de dias úmidos por período)
+**5 ECARR1 (Wet days index per time period ou índice de dias úmidos por período)**
 
 Retorna a quantidade de dias com chuva quando o valor de precipitação (mm/dia) foi maior que um determinado limiar (R). O R é opcional, e possui valor padrão R = 1 mm/dia.
 
@@ -711,7 +711,7 @@ dia31	33.7
 + Explicação: 
   + Apenas os dias 23 e 24 foram maiores que o limiar selecionado (40 mm/dia), totalizando assim dois dias.
 
-### ECARX1DAY (Highest one day precipitation amount per time period ou quantidade máxima de precipitação de um dia por período de tempo)
+**6 ECARX1DAY (Highest one day precipitation amount per time period ou quantidade máxima de precipitação de um dia por período de tempo)**
 
 Retorna a maior quantidade de precipitação (mm/dia) da série.
 
@@ -769,7 +769,7 @@ dia31	33.7
 + Explicação: 
   + O maior valor de precipitação da série ocorre no dia 24, isto é, 44.9.
 
-### ECARX5DAY (Highest five-day precipitation amount per time period ou quantidade mais alta de precipitação em cinco dias por período)
+**7 ECARX5DAY (Highest five-day precipitation amount per time period ou quantidade mais alta de precipitação em cinco dias por período)**
 
 Retorna a maior quantidade de precipitação (mm/dia) da série e a quantidade de 5 períodos com precipitação total maior que `x` mm. O valor padrão de `x = 50 mm/dia`. Esse parâmetro é opcional.
 
