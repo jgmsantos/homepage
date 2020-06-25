@@ -279,6 +279,21 @@ Para ver o resultado:
 
 ### Índices Climáticos utilizando o CDO
 
+Antes de tudo, escolha adequadamente consultando a tabela abaixo o melhor índice a ser utilizado de acordo com o seu dado:
+
+| Índice    | Precipitação | Temperatura  |
+|-----------|:------------:|:------------:|
+|eca_cdd    |      X       |      -       |
+|eca_csu    |      -       |      X       |
+|eca_cwd    |      X       |      -       |
+|eca_etr    |      -       |      X       |
+|eca_rr1    |      -       |      X       |
+|eca_rx1day |      X       |      -       |
+|eca_rx5day |      X       |      -       |
+|eca_su     |      -       |      X       |
+|eca_tr     |      X       |      -       |
+
+
 + [Clique aqui](https://code.mpimet.mpg.de/projects/cdo/embedded/cdo_eca.pdf) para realizar o download da documentação sobre os índices climáticos.
 
 + [Clique aqui](https://github.com/jgmsantos/Scripts/tree/master/NetCDF) para realizar o download do arquivo de precipitação `prec.med.espacial.nc`.
@@ -337,7 +352,7 @@ dia30 2.59884
 dia31 3.36611
 ```
 
-+ Exemplo1: Deseja-se quantificar o número de dias consecutivos secos em que a precitação foi menor que 3 mm/dia. Além disso, quantos períodos de até 4 dias foram contabilizados? Não esqueça de realizar o download do arquivo `prec.med.espacial.nc` para testar diferente configurações de valores.
++ Exemplo1: Deseja-se quantificar o número de dias consecutivos secos em que a precitação foi menor que 3 mm/dia. Além disso, quantos períodos de até 4 dias foram contabilizados? Não esqueça de realizar o download do arquivo `prec.med.espacial.nc` para testar diferentes configurações de valores.
 
 `cdo -s eca_cdd,3,4 prec.med.espacial.nc output.nc`
 
@@ -352,7 +367,7 @@ dia31 3.36611
 
 **2 ECACSU (Consecutive summer days index per time period ou índice consecutivo de dias de verão por período)**
 
-Retorna a quantidade de dias em que a temperatura (Kelvin) foi maior que um determinado limiar (T), o padrão é T= 25ºC. Uma variável adicional é fornecida, trata-se do quantidade ou número de períodos de verão maior que N dias.
+Retorna a quantidade de dias consecutivos em que a temperatura (Kelvin) foi maior que um determinado limiar (T), o padrão é T= 25ºC. Uma variável adicional é fornecida, trata-se do quantidade ou número de períodos de verão maior que N dias.
 
 + **Importante: O arquivo a ser utilizado deve estar em Kelvin.**
 
@@ -440,7 +455,7 @@ dia29 22.4739
 dia30 22.4953
 dia31 22.6148
 ```
-+ Exemplo1: Deseja-se quantificar o número de dias consecutivos em que o limiar de temperatura foi maior que 22.6ºC. Além disso, quantos períodos de até 3 dias foram contabilizados? Não esqueça de realizar o download do arquivo `temp.med.espacial.nc` para testar diferente configurações de valores.
++ Exemplo1: Deseja-se quantificar o número de dias consecutivos em que o limiar de temperatura foi maior que 22.6ºC. Além disso, quantos períodos de até 3 dias foram contabilizados? Não esqueça de realizar o download do arquivo `temp.med.espacial.nc` para testar diferentes configurações de valores.
 
 `cdo -s eca_csu,22.6,3 temp.med.espacial.nc output.nc`
 
@@ -505,7 +520,7 @@ dia30 2.59884
 dia31 3.36611
 ```
 
-+ Exemplo1: Deseja-se quantificar o número de dias consecutivos úmidos em que a precitação foi maior que 3.5 mm/dia. Além disso, quantos períodos de até 5 dias foram contabilizados? Não esqueça de realizar o download do arquivo `prec.med.espacial.nc` para testar diferente configurações de valores.
++ Exemplo1: Deseja-se quantificar o número de dias consecutivos úmidos em que a precitação foi maior que 3.5 mm/dia. Além disso, quantos períodos de até 5 dias foram contabilizados? Não esqueça de realizar o download do arquivo `prec.med.espacial.nc` para testar diferentes configurações de valores.
 
 `cdo -s eca_cwd,3.5,5 prec.med.espacial.nc output.nc`
 
@@ -835,6 +850,204 @@ dia31	33.7
 
 + Explicação: 
   + O maior valor de precipitação da série ocorre no dia 24, isto é, 44.9 mm/dia. Outra ponto é, quantos dias com chuva estiveram acima deste limiar? Apenas 2 dias, isto é, os dias 23 e 24.
+
+**8 ECASU (Summer days index per time period ou índice de dias de verão por período)**
+
+Retorna a quantidade de dias em que a temperatura (Kelvin) foi maior que um determinado limiar (T), o padrão é T= 25ºC.
+
++ **Importante: O arquivo a ser utilizado deve estar em Kelvin.**
+
++ O arquivo de saída terá sempre a última data do arquivo.
++ Duas variáveis são retornadas:
+  + `summer_days_index_per_time_period`
+
++ Sintaxe: `cdo eca_su,T input.nc output.nc`
+
+Onde:
+
++ `T`: Valor real. Representa o limiar de temperatura (ºC). Todo o valor de temperatura maior que esse limiar será considerado. O valor padrão de uso é T = 25ºC.
+  + **Importante: Esse valor é dado em graus Celsius.**
+
+**Série de temperatua em Kelvin. Essa série será utilizada para calcular o índice.**
+
+```
+dia01 295.116
+dia02 295.153
+dia03 295.248
+dia04 295.177
+dia05 295.234
+dia06 295.27
+dia07 295.322
+dia08 295.413
+dia09 295.574
+dia10 295.67
+dia11 295.625
+dia12 295.623
+dia13 295.507
+dia14 295.658
+dia15 295.718
+dia16 295.571
+dia17 295.54
+dia18 295.695
+dia19 295.725
+dia20 295.643
+dia21 295.357
+dia22 295.213
+dia23 295.416
+dia24 295.645
+dia25 295.799
+dia26 295.945
+dia27 295.832
+dia28 295.751
+dia29 295.624
+dia30 295.645
+dia31 295.765
+```
+
+A série acima foi convertida para graus Celsius para melhor entendimento do cálculo, somente isso! Lembrando que esse índice utiliza a temperatura em Kelvin, e não em Celsius.
+
+```
+dia01 21.966
+dia02 22.0031
+dia03 22.0978
+dia04 22.0268
+dia05 22.0836
+dia06 22.1197
+dia07 22.1722
+dia08 22.2628
+dia09 22.4235
+dia10 22.5202
+dia11 22.4749
+dia12 22.4726
+dia13 22.3574
+dia14 22.5084
+dia15 22.5678
+dia16 22.4205
+dia17 22.3902
+dia18 22.5454
+dia19 22.5746
+dia20 22.4934
+dia21 22.2071
+dia22 22.0632
+dia23 22.2659
+dia24 22.4952
+dia25 22.6491
+dia26 22.795
+dia27 22.6822
+dia28 22.6014
+dia29 22.4739
+dia30 22.4953
+dia31 22.6148
+```
++ Exemplo1: Deseja-se quantificar o número de dias em que o limiar de temperatura foi maior que 22.6ºC. Não esqueça de realizar o download do arquivo `temp.med.espacial.nc` para testar diferentes configurações de valores.
+
+`cdo -s eca_su,22.6 temp.med.espacial.nc output.nc`
+
++ Resultado:
+
+  + `summer_days_index_per_time_period` = 5
+
++ Explicação: 
+  + A contagem de acordo com o limiar de temperatura, isto é, maior que 22.6ºC foi identificado nos dias 25, 26, 27, 28 e 31, totalizando assim, 5 dias.
+
+**9 ECATR (Tropical nights index per time period ou índice de noites tropicais por período)**
+
+Retorna a quantidade de dias em que a temperatura mínima (Kelvin) foi maior que um determinado limiar (T), o padrão é T= 20ºC.
+
++ **Importante: O arquivo a ser utilizado deve estar em Kelvin.**
+
++ O arquivo de saída terá sempre a última data do arquivo.
++ Apenas uma variável é retornada:
+  + `tropical_nights_index_per_time_period`
+
++ Sintaxe: `cdo eca_tr,T input.nc output.nc`
+
+Onde:
+
++ `T`: Valor real. Representa o limiar de temperatura mínima (ºC). Todo o valor de temperatura mínima maior que esse limiar será considerado. O valor padrão de uso é T = 20ºC.
+  + **Importante: Esse valor é dado em graus Celsius.**
+
+**Série de temperatua em Kelvin. Essa série será utilizada para calcular o índice.**
+
+```
+dia01 295.116
+dia02 295.153
+dia03 295.248
+dia04 295.177
+dia05 295.234
+dia06 295.27
+dia07 295.322
+dia08 295.413
+dia09 295.574
+dia10 295.67
+dia11 295.625
+dia12 295.623
+dia13 295.507
+dia14 295.658
+dia15 295.718
+dia16 295.571
+dia17 295.54
+dia18 295.695
+dia19 295.725
+dia20 295.643
+dia21 295.357
+dia22 295.213
+dia23 295.416
+dia24 295.645
+dia25 295.799
+dia26 295.945
+dia27 295.832
+dia28 295.751
+dia29 295.624
+dia30 295.645
+dia31 295.765
+```
+
+A série acima foi convertida para graus Celsius para melhor entendimento do cálculo, somente isso! Lembrando que esse índice utiliza a temperatura em Kelvin, e não em Celsius.
+
+```
+dia01 21.966
+dia02 22.0031
+dia03 22.0978
+dia04 22.0268
+dia05 22.0836
+dia06 22.1197
+dia07 22.1722
+dia08 22.2628
+dia09 22.4235
+dia10 22.5202
+dia11 22.4749
+dia12 22.4726
+dia13 22.3574
+dia14 22.5084
+dia15 22.5678
+dia16 22.4205
+dia17 22.3902
+dia18 22.5454
+dia19 22.5746
+dia20 22.4934
+dia21 22.2071
+dia22 22.0632
+dia23 22.2659
+dia24 22.4952
+dia25 22.6491
+dia26 22.795
+dia27 22.6822
+dia28 22.6014
+dia29 22.4739
+dia30 22.4953
+dia31 22.6148
+```
++ Exemplo1: Deseja-se quantificar o número de dias em que o limiar de temperatura foi maior que 22.6ºC. Não esqueça de realizar o download do arquivo `temp.med.espacial.nc` para testar diferentes configurações de valores.
+
+`cdo -s eca_tr,22.6 temp.med.espacial.nc output.nc`
+
++ Resultado:
+
+  + `tropical_nights_index_per_time_period` = 5
+
++ Explicação: 
+  + A contagem de acordo com o limiar de temperatura, isto é, maior que 22.6ºC foi identificado nos dias 25, 26, 27, 28 e 31, totalizando assim, 5 dias.
 
 ### Vídeo aula de CDO
 
