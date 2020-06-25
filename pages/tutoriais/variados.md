@@ -320,9 +320,9 @@ parallel -j 30 -- < datas_ac
 
 #!/bin/bash
 
-data_inicial="20190101" # Altere aui e 
+data_inicial="20190101"
 
-data_final="20191231" # Aqui.
+data_final="20191231"
 
 rm -f datas.txt # Remove o arquivo datas.txt para evitar erro.
 
