@@ -295,7 +295,7 @@ Antes de tudo, escolha adequadamente consultando a tabela abaixo o melhor índic
 
 **1 ECACDD (Consecutive dry days index per time period ou índice de dias secos consecutivos por período)**
 
-Retorna a quantidade de dias secos consecutivos em que a precipitação (mm/dia) foi menor que um determinado limiar (R), o padrão é R= 1 mm/dia. Uma variável adicional é fornecida, trata-se do quantidade ou número de períodos secos maior que N dias.
+Retorna a quantidade de dias secos consecutivos quando a precipitação (mm/dia) for menor que um determinado limiar (R), o padrão é R= 1 mm/dia. Uma variável adicional é fornecida, trata-se do quantidade ou número de períodos secos maior que N dias.
 
 + O arquivo de saída terá sempre a última data do arquivo.
 + Duas variáveis são retornadas:
@@ -360,7 +360,7 @@ dia31 3.36611
 
 **2 ECACSU (Consecutive summer days index per time period ou índice consecutivo de dias de verão por período)**
 
-Retorna a quantidade de dias consecutivos em que a temperatura (Kelvin) foi maior que um determinado limiar (T), o padrão é T= 25ºC. Uma variável adicional é fornecida, trata-se do quantidade ou número de períodos de verão maior que N dias.
+Retorna a quantidade de dias consecutivos quando a temperatura (Kelvin) for maior que um determinado limiar (T), o padrão é T= 25ºC. Uma variável adicional é fornecida, trata-se do quantidade ou número de períodos de verão maior que N dias.
 
 + **Importante: O arquivo a ser utilizado deve estar em Kelvin.**
 
@@ -463,7 +463,7 @@ dia31 22.6148
 
 **3 ECACWD (Consecutive wet days index per time period ou índice consecutivo de dias úmidos por período)**
 
-Retorna a quantidade de dias consecutivos úmidos em que a precipitação (mm/dia) foi maior que um determinado limiar (R), o padrão é R = 1 mm/dia. Uma variável adicional é fornecida, trata-se do quantidade ou número de períodos úmidos maior que N dias.
+Retorna a quantidade de dias consecutivos úmidos quando a precipitação (mm/dia) for maior que um determinado limiar (R), o padrão é R = 1 mm/dia. Uma variável adicional é fornecida, trata-se do quantidade ou número de períodos úmidos maior que N dias.
 
 + O arquivo de saída terá sempre a última data do arquivo.
 + Duas variáveis são retornadas:
@@ -590,7 +590,7 @@ dia31	16.0	15.3
 
 **5 ECAPD (Precipitation days index per time period ou índice de dias de precipitação por período)**
 
-Retorna a quantidade de dias com chuva quando o valor de precipitação (mm/dia) foi maior que um determinado limiar (x).
+Retorna a quantidade de dias com chuva quando o valor de precipitação (mm/dia) for maior que um determinado limiar (x).
 
 + [Clique aqui](https://github.com/jgmsantos/Scripts/tree/master/NetCDF) para realizar o download do arquivo `ppt.nc`.
 + O arquivo de saída terá sempre a última data do arquivo.
@@ -663,7 +663,7 @@ dia31	33.7
 
 **6 ECARR1 (Wet days index per time period ou índice de dias úmidos por período)**
 
-Retorna a quantidade de dias com chuva quando o valor de precipitação (mm/dia) foi maior que um determinado limiar (R). O R é opcional, e possui valor padrão R = 1 mm/dia.
+Retorna a quantidade de dias com chuva quando o valor de precipitação (mm/dia) for maior que um determinado limiar (R). O R é opcional, e possui valor padrão R = 1 mm/dia.
 
 + [Clique aqui](https://github.com/jgmsantos/Scripts/tree/master/NetCDF) para realizar o download do arquivo `ppt.nc`.
 + O arquivo de saída terá sempre a última data do arquivo.
@@ -723,7 +723,7 @@ dia31	33.7
 
 **7 ECARX1DAY (Highest one day precipitation amount per time period ou quantidade máxima de precipitação de um dia por período de tempo)**
 
-Retorna a maior quantidade de precipitação (mm/dia) da série.
+Retorna o maior valor de precipitação (mm/dia) da série.
 
 + [Clique aqui](https://github.com/jgmsantos/Scripts/tree/master/NetCDF) para realizar o download do arquivo `ppt.nc`.
 + O arquivo de saída terá sempre a última data do arquivo.
@@ -845,7 +845,7 @@ dia31	33.7
 
 **9 ECASU (Summer days index per time period ou índice de dias de verão por período)**
 
-Retorna a quantidade de dias em que a temperatura (Kelvin) foi maior que um determinado limiar (T), o padrão é T= 25ºC.
+Retorna a quantidade de dias quando a temperatura (Kelvin) for maior que um determinado limiar (T), o padrão é T= 25ºC.
 
 + **Importante: O arquivo a ser utilizado deve estar em Kelvin.**
 
@@ -944,7 +944,7 @@ dia31 22.6148
 
 **10 ECATR (Tropical nights index per time period ou índice de noites tropicais por período)**
 
-Retorna a quantidade de dias em que a temperatura mínima (Kelvin) foi maior que um determinado limiar (T), o padrão é T= 20ºC.
+Retorna a quantidade de dias quando a temperatura mínima (Kelvin) for maior que um determinado limiar (T), o padrão é T= 20ºC.
 
 + **Importante: O arquivo a ser utilizado deve estar em Kelvin.**
 
