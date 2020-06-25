@@ -516,7 +516,7 @@ dia31 3.36611
 
 + Explicação: 
   + A contagem de acordo com o limiar de precipitação, isto é, maior que 3,5 mm/dia começou a partir do dia 23 e foi até o dia 24, totalizando assim, 2 dias.
-  + O valor 0 representa a quantidade de períodos em que esse limiar de 3.5 mm/dia foi excedido. A contagem considerou que não houve período em que esse limar fosse ultrapsso, por isso, o valor 0.
+  + O valor 0 representa a quantidade de períodos em que esse limiar de 3.5 mm/dia foi excedido. A contagem considerou que não houve período em que esse limar fosse ultrapassado, por isso, o valor 0.
 
 **4 ECAETR (Intra-period extreme temperature range ou faixa de temperatura extrema)**
 
