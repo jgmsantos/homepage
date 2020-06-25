@@ -216,6 +216,33 @@ rm -rf *.tif
 rename 's/.hard-typed//' *.hard-typed
 
 ```
+### Forma alternativa de renomear arquivos em lote usando o loop for e basename
+
+Imagine a seguinte lista de arquivos (6 no total) no formato NetCDF:
+
+```
+IGBP_c6_MAPBIOMA_v3_2001_001_RF_cnew.nc
+IGBP_c6_MAPBIOMA_v3_2002_001_RF_cnew.nc
+IGBP_c6_MAPBIOMA_v3_2003_001_RF_cnew.nc
+IGBP_c6_MAPBIOMA_v3_2004_001_RF_cnew.nc
+IGBP_c6_MAPBIOMA_v3_2005_001_RF_cnew.nc
+IGBP_c6_MAPBIOMA_v3_2006_001_RF_cnew.nc
+```
+O objetivo consiste em converter do formato [NetCDF para o formato tif](https://guilherme.readthedocs.io/en/latest/pages/tutoriais/gdal.html#exemplos-de-uso-do-gdal) utilizando o `gdal`. Lembrando que isso é apenas um exemplo de como utilizar a lógica do loop `for` e o uso do `basename` para obter apenas o nome do arquivo sem sua extensão.
+
+Esse procedimento é feito com o script abaixo:
+
+```bash
+for nome_arquivo in *.nc
+do 
+    gdal_translate -of GTiff -a_srs EPSG:4326 $nome_arquivo $(basename $nome_arquivo .nc).tif
+done
+```
+
+O trecho do código `$(basename $nome_arquivo .nc)` imprime apenas o nome do arquivo sem sua extensão, lembrando que esse é o nome do arquivo de saída, resultando em:
+
+`IGBP_c6_MAPBIOMA_v3_2008_001_RF_cnew`
+
 
 ### Utilizar o parallel no Linux
 
