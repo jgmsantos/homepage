@@ -522,6 +522,7 @@ dia31 3.36611
 
 Dada duas séries de temperatura máxima e mínima, a faixa de temperatura extema representa a diferença entre o valor máximo de temperatura e o valor mínimo de temperatura mínima, em outras palavras, R = Max(T)-Min(T). A unidade é a mesma do arquivo utilizado.
 
++ [Clique aqui](https://github.com/jgmsantos/Scripts/tree/master/NetCDF) para realizar o download dos arquivos `tmax.nc` e `tmin.nc`.
 + O arquivo de saída terá sempre a última data do arquivo.
 + Apenas uma variável é retornada:
   + `intra_period_extreme_temperature_range`
@@ -530,7 +531,7 @@ Dada duas séries de temperatura máxima e mínima, a faixa de temperatura extem
 
 Onde:
 
-+ `tmax` e `tmin` deve ter a mesma unidade.
++ `tmax` e `tmin` devem ter a mesma unidade.
 
 A série abaixo representa 31 valores (dias 01 a 31) de temperatura máxima (2 coluna) e mínima (3 coluna) para um determinado mês que será utilizada para facilitar o entendimento. A unidade utilizada é graus Celsius.
 
@@ -583,6 +584,7 @@ dia31	16.0	15.3
 
 Retorna a quantidade de dias com chuva quando o valor de precipitação (mm/dia) foi maior que um determinado limiar (x).
 
++ [Clique aqui](https://github.com/jgmsantos/Scripts/tree/master/NetCDF) para realizar o download do arquivo `ppt.nc`.
 + O arquivo de saída terá sempre a última data do arquivo.
 + Apenas uma variável é retornada:
   + `precipitation_days_index_per_time_period`
@@ -656,6 +658,7 @@ dia31	33.7
 
 Retorna a quantidade de dias com chuva quando o valor de precipitação (mm/dia) foi maior que um determinado limiar (R). O R é opcional, e possui valor padrão R = 1 mm/dia.
 
++ [Clique aqui](https://github.com/jgmsantos/Scripts/tree/master/NetCDF) para realizar o download do arquivo `ppt.nc`.
 + O arquivo de saída terá sempre a última data do arquivo.
 + Apenas uma variável é retornada:
   + `wet_days_index_per_time_period`
@@ -715,6 +718,7 @@ dia31	33.7
 
 Retorna a maior quantidade de precipitação (mm/dia) da série.
 
++ [Clique aqui](https://github.com/jgmsantos/Scripts/tree/master/NetCDF) para realizar o download do arquivo `ppt.nc`.
 + O arquivo de saída terá sempre a última data do arquivo.
 + Apenas uma variável é retornada:
   + `highest_one_day_precipitation_amount_per_time_period`
