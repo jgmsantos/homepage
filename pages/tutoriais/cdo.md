@@ -26,7 +26,7 @@ Climate Data Operators (CDO)
 
 ### Exemplos de uso com o CDO
 
-1 O exemplo abaixo compara dois conjunto de dados espaciais (temperatura [C] e precipitação [mm/dia]) que possuem o mesmo domínio espacial, isto é, o mesmo número de pontos de latitude e longitude no intervalo de 28 dias. Lembrando que esse arquivo é apenas um exemplo, ele poderia ter qualquer comprimento temporal. Quando a precipitação for menor ou igual (`lec`) a 10 mm/dia, o conjunto de dados será convertido para valores 1 (condição verdadeira) e 0 (condição falsa). O mesmo ocorre com o operador `gec`, isto é, quando a temperatura for maior igual a 30C, o conjunto de dados receberá o valor 1, caso contrário, receberá o valor 0. Em outras palavras, serão criados dois conjuntos de dados com valores 0 e 1. O operador `mul` multiplicará os dois conjunto de dados, isto é, a matriz de dados de 0 e 1, e por fim, somará todos os 28 dias ou tempos gerando assim um arquivo com o total de dias quando a condição acima for satisfeita simultaneamente.
+1 O exemplo abaixo compara dois conjunto de dados espaciais (temperatura [ºC] e precipitação [mm/dia]) que possuem o mesmo domínio espacial, isto é, o mesmo número de pontos de latitude e longitude no intervalo de 28 dias. Lembrando que esse arquivo é apenas um exemplo, ele poderia ter qualquer comprimento temporal. Quando a precipitação for menor ou igual (`lec`) a 10 mm/dia, o conjunto de dados será convertido para valores 1 (condição verdadeira) e 0 (condição falsa). O mesmo ocorre com o operador `gec`, isto é, quando a temperatura for maior igual a 30C, o conjunto de dados receberá o valor 1, caso contrário, receberá o valor 0. Em outras palavras, serão criados dois conjuntos de dados com valores 0 e 1. O operador `mul` multiplicará os dois conjunto de dados, isto é, a matriz de dados de 0 e 1, e por fim, somará todos os 28 dias ou tempos gerando assim um arquivo com o total de dias quando a condição acima for satisfeita simultaneamente.
 
 + Os arquivos `temp.MT.nc` e `prec.MT.nc` possuem o mesmo domínio espacial e 28 dias (01 a 28 de maio de 2020).
 + Esse exemplo poderia ser aplicado para qualquer comprimento temporal.
@@ -182,7 +182,7 @@ informações de chuva com o seguinte domínio: `lat = -9.75 a -8.25` e `lon = -
 
 + A sua forma tabular pode ser obtida com o comando abaixo:
 
-`cdo outputtab,nohead,value,lat,lon area.nc`
+`cdo -s outputtab,nohead,value,lat,lon area.nc`
 
 + O resultado é mostrado abaixo. Apenas lembrando que a primeira coluna é chuva, a segunda coluna é a latitude e a terceira coluna a longitude.
 
@@ -207,7 +207,7 @@ informações de chuva com o seguinte domínio: `lat = -9.75 a -8.25` e `lon = -
 Realizando a substituição dos valors de chuva no arquivo `area.nc` na latitiude `-9.75` pelo valor `100`. Para isso, será utilizado o operador ternário `"?:"` que funciona 
 como uma estrutura condicional `if-then-else`. O valor da latitude tem que existir no seu arquivo.
 
-O comando abaixo realiza essa tarefa. Como interpretar o comando? Será verificada a latitude `-9.75` da variável do seu arquivo `area.nc` que se chama `rain` (`cdo pardes area.nc` para ver o nome da variável). Quando a latitude for encontrada, o seu valor de chuva será substituído pelo novo valor 100, e no caso contrário, pelo valor da variável `rain`. O resultado será armazenado em `output.nc`. 
+O comando abaixo realiza essa tarefa. Como interpretar o comando? Será verificada a latitude `-9.75` da variável do seu arquivo `area.nc` que se chama `rain` (`cdo -s pardes area.nc` para ver o nome da variável). Quando a latitude for encontrada, o seu valor de chuva será substituído pelo novo valor 100, e no caso contrário, pelo valor da variável `rain`. O resultado será armazenado em `output.nc`. 
 
 + **Observação:** Apenas lembrando que somente o valor da precipitação na latitude escolhida será alterada.
 
@@ -216,11 +216,11 @@ Comando do CDO para realizar essa tarefa:
 + **var:** é um nome qualquer para o arquivo que srá armazenado em `output.nc`. Pode-se utilizar qualquer nome.
 + **rain:** é o nome da variável do arquivo `area.nc`.
 
-`cdo -expr,'var=((clat(rain)==-9.75) ? 100 : rain)' area.nc output.nc`
+`cdo -s -expr,'var=((clat(rain)==-9.75) ? 100 : rain)' area.nc output.nc`
 
 + Para ver o resultado, basta digitar: 
 
-`cdo outputtab,nohead,value,lat,lon output.nc`
+`cdo -s outputtab,nohead,value,lat,lon output.nc`
 
 + Compare o resultado com o arquivo original `area.nc`. Nota-se que apenas os valores de chuva na latitude `-9.75` foram modificados para o valor `100`. 
 
@@ -251,11 +251,11 @@ Comando do CDO para realizar essa tarefa:
 
 + O comando a ser utilizado é:
 
-`cdo -expr,'var=((clon(rain)==-55.25 && clat(rain)==-9.75) ? 100 : rain)' area.nc output.nc`
+`cdo -s -expr,'var=((clon(rain)==-55.25 && clat(rain)==-9.75) ? 100 : rain)' area.nc output.nc`
 
 Para ver o resultado:
 
-`cdo outputtab,value,lat,lon output.nc`
+`cdo -s outputtab,value,lat,lon output.nc`
 
 ```
  11.3766  -9.75 -55.75 
