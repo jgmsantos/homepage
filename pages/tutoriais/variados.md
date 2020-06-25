@@ -164,7 +164,7 @@ done
 
 ### Saber o número de núcleos do seu processador
 
-+ Basta digitar no terminal do Linux o comando abaixo
++ Basta digitar no terminal do Linux o comando abaixo:
 
 `nproc`
 
