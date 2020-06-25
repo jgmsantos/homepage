@@ -285,17 +285,17 @@ Antes de tudo, escolha adequadamente consultando a tabela abaixo o melhor índic
 
 **Importante2:** Os exemplos abaixo foram aplicados em uma série temporal, mas poderia ser usado um arquivo com informações espaciais.
 
- Índice    | Precipitação | Temperatura
------------|:------------:|:------------:
-eca_cdd    |      X       |      -       
-eca_csu    |      -       |      X       
-eca_cwd    |      X       |      -       
-eca_etr    |      -       |      X       
-eca_rr1    |      -       |      X       
-eca_rx1day |      X       |      -       
-eca_rx5day |      X       |      -       
-eca_su     |      -       |      X       
-eca_tr     |      X       |      -       
+| Índice    | Precipitação | Temperatura  |
+|-----------|:------------:|:------------:|
+|eca_cdd    |      X       |      -       |
+|eca_csu    |      -       |      X       |
+|eca_cwd    |      X       |      -       |
+|eca_etr    |      -       |      X       |
+|eca_rr1    |      -       |      X       |
+|eca_rx1day |      X       |      -       |
+|eca_rx5day |      X       |      -       |
+|eca_su     |      -       |      X       |
+|eca_tr     |      X       |      -       |
 
 
 + [Clique aqui](https://code.mpimet.mpg.de/projects/cdo/embedded/cdo_eca.pdf) para realizar o download da documentação sobre os índices climáticos.
