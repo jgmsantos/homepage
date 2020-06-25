@@ -350,7 +350,7 @@ dia31 3.36611
   + A contagem de acordo com o limiar de precipitação, isto é, menor que 3 mm/dia começou a partir do dia 06 e foi até o dia 14, totalizando assim, 9 dias.
   + O valor 2 representa a quantidade de períodos em que esse limiar de 3 mm/dia foi excedido. A contagem considera para o primeiro período do dia 06 a 14, e o segundo, do dia 17 a 22, totalizando assim, dois períodos.
 
-### ECACSU (Consecutive summer days index per time period ou índice consecutivo de dias de verão por período)
+**2 ECACSU (Consecutive summer days index per time period ou índice consecutivo de dias de verão por período)**
 
 Retorna a quantidade de dias em que a temperatura (Kelvin) foi maior que um determinado limiar (T), o padrão é T= 25ºC. Uma variável adicional é fornecida, trata-se do quantidade ou número de períodos de verão maior que N dias.
 
@@ -453,7 +453,7 @@ dia31 22.6148
   + A contagem de acordo com o limiar de temperatura, isto é, maior que 22,6ºC começou a partir do dia 25 e foi até o dia 28, totalizando assim, 4 dias.
   + O valor 1 representa a quantidade de períodos em que esse limiar de 22,6ºC foi excedido. A contagem considera apenas um período, isto é, do dia 25 a 28, por isso, o valor 1.
 
-### ECACWD (Consecutive wet days index per time period ou índice consecutivo de dias úmidos por período) 
+**ECACWD (Consecutive wet days index per time period ou índice consecutivo de dias úmidos por período)**
 
 Retorna a quantidade de dias consecutivos úmidos em que a precipitação (mm/dia) foi maior que um determinado limiar (R), o padrão é R = 1 mm/dia. Uma variável adicional é fornecida, trata-se do quantidade ou número de períodos úmidos maior que N dias.
 
@@ -518,7 +518,7 @@ dia31 3.36611
   + A contagem de acordo com o limiar de precipitação, isto é, maior que 3,5 mm/dia começou a partir do dia 23 e foi até o dia 24, totalizando assim, 2 dias.
   + O valor 0 representa a quantidade de períodos em que esse limiar de 3.5 mm/dia foi excedido. A contagem considerou que não houve período em que esse limar fosse ultrapsso, por isso, o valor 0.
 
-### ECAETR (Intra-period extreme temperature range ou faixa de temperatura extrema) ###
+**ECAETR (Intra-period extreme temperature range ou faixa de temperatura extrema)**
 
 Dada duas séries de temperatura máxima e mínima, a faixa de temperatura extema representa a diferença entre o valor máximo de temperatura e o valor mínimo de temperatura mínima, em outras palavras, R = Max(T)-Min(T). A unidade é a mesma do arquivo utilizado.
 
