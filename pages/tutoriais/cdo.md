@@ -293,7 +293,7 @@ Antes de tudo, escolha adequadamente consultando a tabela abaixo o melhor índic
 
 + [Clique aqui](https://github.com/jgmsantos/Scripts/tree/master/NetCDF) para realizar o download do arquivo de temperatura `temp.med.espacial.nc`.
 
-**1 ECACDD (Consecutive dry days index per time period ou índice de dias secos consecutivos por período)**
+**1. ECACDD (Consecutive dry days index per time period ou índice de dias secos consecutivos por período)**
 
 Retorna a quantidade de dias secos consecutivos em que a precipitação (mm/dia) foi menor que um determinado limiar (R), o padrão é R= 1 mm/dia. Uma variável adicional é fornecida, trata-se do quantidade ou número de períodos secos maior que N dias.
 
@@ -358,7 +358,7 @@ dia31 3.36611
   + A contagem de acordo com o limiar de precipitação, isto é, menor que 3 mm/dia começou a partir do dia 06 e foi até o dia 14, totalizando assim, 9 dias.
   + O valor 2 representa a quantidade de períodos em que esse limiar de 3 mm/dia foi excedido. A contagem considera para o primeiro período do dia 06 a 14, e o segundo, do dia 17 a 22, totalizando assim, dois períodos.
 
-**2 ECACSU (Consecutive summer days index per time period ou índice consecutivo de dias de verão por período)**
+**2. ECACSU (Consecutive summer days index per time period ou índice consecutivo de dias de verão por período)**
 
 Retorna a quantidade de dias consecutivos em que a temperatura (Kelvin) foi maior que um determinado limiar (T), o padrão é T= 25ºC. Uma variável adicional é fornecida, trata-se do quantidade ou número de períodos de verão maior que N dias.
 
@@ -461,7 +461,7 @@ dia31 22.6148
   + A contagem de acordo com o limiar de temperatura, isto é, maior que 22.6ºC começou a partir do dia 25 e foi até o dia 28, totalizando assim, 4 dias.
   + O valor 1 representa a quantidade de períodos em que esse limiar de 22.6ºC foi excedido. A contagem considera apenas um período, isto é, do dia 25 a 28, por isso, o valor 1.
 
-**3 ECACWD (Consecutive wet days index per time period ou índice consecutivo de dias úmidos por período)**
+**3. ECACWD (Consecutive wet days index per time period ou índice consecutivo de dias úmidos por período)**
 
 Retorna a quantidade de dias consecutivos úmidos em que a precipitação (mm/dia) foi maior que um determinado limiar (R), o padrão é R = 1 mm/dia. Uma variável adicional é fornecida, trata-se do quantidade ou número de períodos úmidos maior que N dias.
 
@@ -526,7 +526,7 @@ dia31 3.36611
   + A contagem de acordo com o limiar de precipitação, isto é, maior que 3.5 mm/dia começou a partir do dia 23 e foi até o dia 24, totalizando assim, 2 dias.
   + O valor 0 representa a quantidade de períodos em que esse limiar de 3.5 mm/dia foi excedido. A contagem considerou que não houve período em que esse limar fosse ultrapassado, por isso, o valor 0.
 
-**4 ECAETR (Intra-period extreme temperature range ou faixa de temperatura extrema)**
+**4. ECAETR (Intra-period extreme temperature range ou faixa de temperatura extrema)**
 
 Dada duas séries de temperatura máxima e mínima, a faixa de temperatura extema representa a diferença entre o valor máximo de temperatura e o valor mínimo de temperatura mínima, em outras palavras, R = Max(T)-Min(T). A unidade é a mesma do arquivo utilizado.
 
@@ -588,7 +588,7 @@ dia31	16.0	15.3
   + A partir da série temporal da temperatura máxima, obtém-se o seu maior valor, que é 26ºC. Por outro lado, o valor mínimo da temperatura mínima é de 15.2ºC. Basta calcular a diferença entre a (Tmax - Tmin) que será obtido o valor 10.800ºC.
 
 
-5 ECAPD (Precipitation days index per time period ou índice de dias de precipitação por período)
+**5. ECAPD (Precipitation days index per time period ou índice de dias de precipitação por período)**
 
 Retorna a quantidade de dias com chuva quando o valor de precipitação (mm/dia) foi maior que um determinado limiar (x).
 
@@ -597,13 +597,12 @@ Retorna a quantidade de dias com chuva quando o valor de precipitação (mm/dia)
 + Apenas uma variável é retornada:
   + `precipitation_days_index_per_time_period`
 
-
 + Sintaxe1: O usuário pode definir um limiar de precipitação.
   + `cdo eca_pd,x input.nc output.nc`
-+ Sintaxe2: Já considera o limiar maior que 10 mm.
++ Sintaxe2: Considera o limiar maior que 10 mm.
   + `cdo eca_r10mm input.nc output.nc`
-+ Sintaxe3: Já considera o limiar maior que 20 mm.
-  + `cdo eca_r10mm input.nc output.nc`
++ Sintaxe3: Considera o limiar maior que 20 mm.
+  + `cdo eca_r20mm input.nc output.nc`
 
 Onde:
 
@@ -662,7 +661,7 @@ dia31	33.7
 + Explicação: 
   + Para a Forma 1, houve apenas um dia (dia24) com chuva maior que 42 mm/dia. Para a Forma 2 que considera 10 mm/dia, foi retornado um total de 31 dias, ou seja todo o mês, a chuva ultrassou esse limiar. E por fim, a Forma 3 que consideral o limiar de 20 mm/dia, foram detectados 25 dias com chuva acima desse limiar.
 
-**5 ECARR1 (Wet days index per time period ou índice de dias úmidos por período)**
+**6. ECARR1 (Wet days index per time period ou índice de dias úmidos por período)**
 
 Retorna a quantidade de dias com chuva quando o valor de precipitação (mm/dia) foi maior que um determinado limiar (R). O R é opcional, e possui valor padrão R = 1 mm/dia.
 
@@ -722,7 +721,7 @@ dia31	33.7
 + Explicação: 
   + Apenas os dias 23 e 24 foram maiores que o limiar selecionado (40 mm/dia), totalizando assim dois dias.
 
-**6 ECARX1DAY (Highest one day precipitation amount per time period ou quantidade máxima de precipitação de um dia por período de tempo)**
+**7. ECARX1DAY (Highest one day precipitation amount per time period ou quantidade máxima de precipitação de um dia por período de tempo)**
 
 Retorna a maior quantidade de precipitação (mm/dia) da série.
 
@@ -781,7 +780,7 @@ dia31	33.7
 + Explicação: 
   + O maior valor de precipitação da série ocorre no dia 24, isto é, 44.9.
 
-**7 ECARX5DAY (Highest five-day precipitation amount per time period ou quantidade mais alta de precipitação em cinco dias por período)**
+**8. ECARX5DAY (Highest five-day precipitation amount per time period ou quantidade mais alta de precipitação em cinco dias por período)**
 
 Retorna a maior quantidade de precipitação (mm/dia) da série e a quantidade de 5 períodos com precipitação total maior que `x` mm. O valor padrão de `x = 50 mm/dia`. Esse parâmetro é opcional.
 
@@ -844,7 +843,7 @@ dia31	33.7
 + Explicação: 
   + O maior valor de precipitação da série ocorre no dia 24, isto é, 44.9 mm/dia. Outra ponto é, quantos dias com chuva estiveram acima deste limiar? Apenas 2 dias, isto é, os dias 23 e 24.
 
-**8 ECASU (Summer days index per time period ou índice de dias de verão por período)**
+**9. ECASU (Summer days index per time period ou índice de dias de verão por período)**
 
 Retorna a quantidade de dias em que a temperatura (Kelvin) foi maior que um determinado limiar (T), o padrão é T= 25ºC.
 
@@ -943,7 +942,7 @@ dia31 22.6148
 + Explicação: 
   + A contagem de acordo com o limiar de temperatura, isto é, maior que 22.6ºC foi identificado nos dias 25, 26, 27, 28 e 31, totalizando assim, 5 dias.
 
-**9 ECATR (Tropical nights index per time period ou índice de noites tropicais por período)**
+**10. ECATR (Tropical nights index per time period ou índice de noites tropicais por período)**
 
 Retorna a quantidade de dias em que a temperatura mínima (Kelvin) foi maior que um determinado limiar (T), o padrão é T= 20ºC.
 
