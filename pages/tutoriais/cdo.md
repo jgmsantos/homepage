@@ -281,6 +281,10 @@ Para ver o resultado:
 
 Antes de tudo, escolha adequadamente consultando a tabela abaixo o melhor índice a ser utilizado de acordo com o seu dado:
 
+**Importante1:** Os dados utilizados nos índices são diários. Os exemplos abaixo foram aplicados numa série temporal, mas poderia ser usado um arquivo com informações espaciais.
+
+**Importante2:** Os exemplos abaixo foram aplicados em uma série temporal, mas poderia ser usado um arquivo com informações espaciais.
+
 | Índice    | Precipitação | Temperatura  |
 |-----------|:------------:|:------------:|
 |eca_cdd    |      X       |      -       |
