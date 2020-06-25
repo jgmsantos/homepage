@@ -106,4 +106,4 @@ Os comentários abaixo são de pessoas anônimas que tiveram a oportunidade de r
 
 ### Entre em contato
 
-Para mais informações de como solicitar os cursos, basta clicar [aqui](contato.md) e envie o seu e-mail.
+Para mais informações de como solicitar os cursos, basta [clicar aqui](contato.md) e envie o seu e-mail.
