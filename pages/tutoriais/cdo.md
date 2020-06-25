@@ -578,6 +578,260 @@ dia31	16.0	15.3
 + Explicação: 
   + A partir da série temporal da temperatura máxima, obtém-se o seu maior valor, que é 26,0ºC. Por outro lado, o valor mínimo da temperatura mínima é de 15,2ºC. Basta calcular a diferença entre a (Tmax - Tmin) que será obtido o valor 10.800ºC.
 
+
+5 ECAPD (Precipitation days index per time period ou índice de dias de precipitação por período)
+
+Retorna a quantidade de dias com chuva quando o valor de precipitação (mm/dia) foi maior que um determinado limiar (x).
+
++ O arquivo de saída terá sempre a última data do arquivo.
++ Apenas uma variável é retornada:
+  + `precipitation_days_index_per_time_period`
+
+
++ Sintaxe1: O usuário pode definir um limiar de precipitação.
+  + `cdo eca_pd,x input.nc output.nc`
++ Sintaxe2: Já considera o limiar maior que 10 mm.
+  + `cdo eca_r10mm input.nc output.nc`
++ Sintaxe3: Já considera o limiar maior que 20 mm.
+  + `cdo eca_r10mm input.nc output.nc`
+
+Onde:
+
++ `x` é um valor real. Representa o miliar de chuva a ser considerado (mm/dia).
+
+A série abaixo representa 31 valores (dias 01 a 31) de precipitação para um determinado mês que será utilizada para facilitar o entendimento. A unidade utilizada é mm/dia.
+
+```
+dia01	30.5
+dia02	29.9
+dia03	31.2
+dia04	33.6
+dia05	30.8
+dia06	27.5
+dia07	25.5
+dia08	18.2
+dia09	19.6
+dia10	21.0
+dia11	18.6
+dia12	21.7
+dia13	17.7
+dia14	15.9
+dia15	33.5
+dia16	31.2
+dia17	20.9
+dia18	20.0
+dia19	21.1
+dia20	24.1
+dia21	28.1
+dia22	29.6
+dia23	41.5
+dia24	44.9
+dia25	33.3
+dia26	32.5
+dia27	27.8
+dia28	26.0
+dia29	32.5
+dia30	26.0
+dia31	33.7
+```
+
++ Exemplo1: Deseja-se saber a quantidade de dias em que a chuva ultrapassou um determinado limiar. Foi utilizado o arquivo `ppt.nc`.
+
++ Forma 1:
+`cdo -s eca_pd,42 ppt.nc output.nc`
+  + Resultado: `precipitation_days_index_per_time_period` = 1
+
++ Forma 2:
+`cdo -s eca_r10mm ppt.nc output.nc`
+  + Resultado: `heavy_precipitation_days_index_per_time_period` = 31
+
++ Forma 3:
+`cdo -s eca_r20mm ppt.nc output.nc`
+  + Resultado: `very_heavy_precipitation_days_index_per_time_period` = 25
+
++ Explicação: 
+  + Para a Forma 1, houve apenas um dia (dia24) com chuva maior que 42 mm/dia. Para a Forma 2 que considera 10 mm/dia, foi retornado um total de 31 dias, ou seja todo o mês, a chuva ultrassou esse limiar. E por fim, a Forma 3 que consideral o limiar de 20 mm/dia, foram detectados 25 dias com chuva acima desse limiar.
+
+6 ECARR1 (Wet days index per time period ou índice de dias úmidos por período)
+
+Retorna a quantidade de dias com chuva quando o valor de precipitação (mm/dia) foi maior que um determinado limiar (R). O R é opcional, e possui valor padrão R = 1 mm/dia.
+
++ O arquivo de saída terá sempre a última data do arquivo.
++ Apenas uma variável é retornada:
+  + `wet_days_index_per_time_period`
+
++ Sintaxe:
+  + `cdo eca_rr1,R input.nc output.nc`
+
+Onde:
+
++ `R` é um valor real. Representa o miliar de chuva a ser considerado (mm/dia).
+
+A série abaixo representa 31 valores (dias 01 a 31) de precipitação para um determinado mês que será utilizada para facilitar o entendimento. A unidade utilizada é mm/dia.
+
+```
+dia01	30.5
+dia02	29.9
+dia03	31.2
+dia04	33.6
+dia05	30.8
+dia06	27.5
+dia07	25.5
+dia08	18.2
+dia09	19.6
+dia10	21.0
+dia11	18.6
+dia12	21.7
+dia13	17.7
+dia14	15.9
+dia15	33.5
+dia16	31.2
+dia17	20.9
+dia18	20.0
+dia19	21.1
+dia20	24.1
+dia21	28.1
+dia22	29.6
+dia23	41.5
+dia24	44.9
+dia25	33.3
+dia26	32.5
+dia27	27.8
+dia28	26.0
+dia29	32.5
+dia30	26.0
+dia31	33.7
+```
+
++ Exemplo1: Deseja-se saber a quantidade de dias em que a chuva ultrapassou um determinado limiar. Foi utilizado o arquivo `ppt.nc`.
+
+`cdo -s eca_rr1,40 ppt.nc output.nc`
+  + Resultado: `wet_days_index_per_time_period` = 2
+
++ Explicação: 
+  + Apenas os dias 23 e 24 foram maiores que o limiar selecionado (40 mm/dia), totalizando assim dois dias.
+
+### ECARX1DAY (Highest one day precipitation amount per time period ou quantidade máxima de precipitação de um dia por período de tempo)
+
+Retorna a maior quantidade de precipitação (mm/dia) da série.
+
++ O arquivo de saída terá sempre a última data do arquivo.
++ Apenas uma variável é retornada:
+  + `highest_one_day_precipitation_amount_per_time_period`
+
++ Sintaxe:
+  + Forma 1: Realiza o cálculo para toda a série.
+  + `cdo eca_rx1day input.nc output.nc`
+  + Forma 2: Realiza o cálculo para todos os meses, por meio do parâmetro `m`.
+  + `cdo eca_rx1day,m input.nc output.nc`
+
+A série abaixo representa 31 valores (dias 01 a 31) de precipitação para um determinado mês que será utilizada para facilitar o entendimento. A unidade utilizada é mm/dia.
+
+```
+dia01	30.5
+dia02	29.9
+dia03	31.2
+dia04	33.6
+dia05	30.8
+dia06	27.5
+dia07	25.5
+dia08	18.2
+dia09	19.6
+dia10	21.0
+dia11	18.6
+dia12	21.7
+dia13	17.7
+dia14	15.9
+dia15	33.5
+dia16	31.2
+dia17	20.9
+dia18	20.0
+dia19	21.1
+dia20	24.1
+dia21	28.1
+dia22	29.6
+dia23	41.5
+dia24	44.9
+dia25	33.3
+dia26	32.5
+dia27	27.8
+dia28	26.0
+dia29	32.5
+dia30	26.0
+dia31	33.7
+```
+
++ Exemplo1: Deseja-se saber qual é a maior quantidade precipitação da série analisada? Foi utilizado o arquivo `ppt.nc`.
+
+`cdo -s eca_rx1day ppt.nc output.nc`
+  + Resultado: `highest_one_day_precipitation_amount_per_time_period` = 44.9
+
++ Explicação: 
+  + O maior valor de precipitação da série ocorre no dia 24, isto é, 44.9.
+
+### ECARX5DAY (Highest five-day precipitation amount per time period ou quantidade mais alta de precipitação em cinco dias por período)
+
+Retorna a maior quantidade de precipitação (mm/dia) da série e a quantidade de 5 períodos com precipitação total maior que `x` mm. O valor padrão de `x = 50 mm/dia`. Esse parâmetro é opcional.
+
++ O arquivo de saída terá sempre a última data do arquivo.
++ Duas variáveis são retornadas:
+  + `highest_five_day_precipitation_amount_per_time_period`
+  + `number_of_5day_heavy_precipitation_periods_per_time_period`
+
++ Sintaxe:
+  + Forma1 : `cdo eca_rx5day input.nc output.nc`
+  + Forma2 : `cdo eca_rx5day,x input.nc output.nc`
+  
+Onde:
+
++ `x` é um valor real. Representa o miliar de chuva a ser considerado (mm/dia).
+
+A série abaixo representa 31 valores (dias 01 a 31) de precipitação para um determinado mês que será utilizada para facilitar o entendimento. A unidade utilizada é mm/dia.
+
+```
+dia01	30.5
+dia02	29.9
+dia03	31.2
+dia04	33.6
+dia05	30.8
+dia06	27.5
+dia07	25.5
+dia08	18.2
+dia09	19.6
+dia10	21.0
+dia11	18.6
+dia12	21.7
+dia13	17.7
+dia14	15.9
+dia15	33.5
+dia16	31.2
+dia17	20.9
+dia18	20.0
+dia19	21.1
+dia20	24.1
+dia21	28.1
+dia22	29.6
+dia23	41.5
+dia24	44.9
+dia25	33.3
+dia26	32.5
+dia27	27.8
+dia28	26.0
+dia29	32.5
+dia30	26.0
+dia31	33.7
+```
+
++ Exemplo 1: Deseja-se saber qual é a maior quantidade precipitação da série analisada? Foi utilizado o arquivo `ppt.nc`.
+
+`cdo -s eca_rx5day,35 ppt.nc output.nc`
+
+  + Resultado: `highest_five_day_precipitation_amount_per_time_period` = 44.9 mm/dia no dia 24
+  + Resultado: `number_of_5day_heavy_precipitation_periods_per_time_period` = 2
+
++ Explicação: 
+  + O maior valor de precipitação da série ocorre no dia 24, isto é, 44.9 mm/dia. Outra ponto é, quantos dias com chuva estiveram acima deste limiar? Apenas 2 dias, isto é, os dias 23 e 24.
+
 ### Vídeo aula de CDO
 
 + [Dia 1 - 25 Outubro de 2018](https://www.youtube.com/watch?v=9IQ9fNlnkUo&t=1232s)
