@@ -350,7 +350,7 @@ dia31 3.36611
   + A contagem de acordo com o limiar de precipitação, isto é, menor que 3 mm/dia começou a partir do dia 06 e foi até o dia 14, totalizando assim, 9 dias.
   + O valor 2 representa a quantidade de períodos em que esse limiar de 3 mm/dia foi excedido. A contagem considera para o primeiro período do dia 06 a 14, e o segundo, do dia 17 a 22, totalizando assim, dois períodos.
 
-**2 ECACSU (Consecutive summer days index per time period ou índice consecutivo de dias de verão por período)**
+### ECACSU (Consecutive summer days index per time period ou índice consecutivo de dias de verão por período)
 
 Retorna a quantidade de dias em que a temperatura (Kelvin) foi maior que um determinado limiar (T), o padrão é T= 25ºC. Uma variável adicional é fornecida, trata-se do quantidade ou número de períodos de verão maior que N dias.
 
