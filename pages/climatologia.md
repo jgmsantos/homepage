@@ -27,7 +27,7 @@ A imagem abaixo mostra apenas a localização média dos focos de queimadas do s
 
 ![](../images/climatologia/fig03.gif)
 
-#### Painel dos meses de maior ocorrência dos focos de queimadas separados por meses
+#### Painel dos meses com maior ocorrência dos focos de queimadas
 
 ![](../images/climatologia/fig04.png)
 
