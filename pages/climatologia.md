@@ -41,7 +41,7 @@ Fonte dos dados de focos de queimadas: [INPE/Queimadas](http://queimadas.dgi.inp
 
 #### Focos de queimadas por biomas brasileiros
 
-Os focos de queimadas são do satélite AQUA. O gráfico abaixo representa a média mensal entre os anos de 2003 a 2018.
+Os focos de queimadas são do satélite AQUA. O gráfico abaixo representa a média mensal entre os anos de 2003 e 2018.
 
 ![](../images/climatologia/fig07.png)
 
