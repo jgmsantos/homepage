@@ -39,6 +39,10 @@ A partir dos dados diários de focos de queimadas no período de 2003 a 2018, o 
 
 Fonte dos dados de focos de queimadas: [INPE/Queimadas](http://queimadas.dgi.inpe.br/queimadas).
 
+#### Focos de queimadas por biomas brasileiros
+
+![](../images/climatologia/fig07.png)
+
 ### Precipitação
 
 A climatologia mensal de precipitação no período de 1981 a 2010 foi obtida do [CPC](https://psl.noaa.gov/data/gridded/data.cmap.html) Merged Analysis of Precipitation. O produto apresenta resolução horizontal de 2,5° latitude x 2,5° longitude.
