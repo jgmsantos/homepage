@@ -3,7 +3,7 @@ Climatologia
 
 ### Focos de queimadas
 
-+ As figuras abaixo fazem parte do artigo disponível [aqui](https://periodicos.ufpe.br/revistas/rbgfe/article/view/243584).
++ Algumas das figuras abaixo fazem parte do artigo disponível [aqui](https://periodicos.ufpe.br/revistas/rbgfe/article/view/243584).
 
 #### Climatologia dos focos de queimadas
 
