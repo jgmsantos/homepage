@@ -352,7 +352,7 @@ dia31 3.36611
 + Resultado:
 
   + `consecutive_dry_days_index_per_time_period` = 9
-  + `number_of_cdd_periods_with_more_than_5days_per_time_period` = 2
+  + `number_of_cdd_periods_with_more_than_4days_per_time_period` = 2
 
 + Explicação: 
   + A contagem de acordo com o limiar de precipitação, isto é, menor que 3 mm/dia começou a partir do dia 06 e foi até o dia 14, totalizando assim, 9 dias.
