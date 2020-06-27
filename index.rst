@@ -88,6 +88,12 @@ Divirta-se!
 .. toctree::
    :hidden:
    
+   pages/scripts
+   :hidden:
+
+.. toctree::
+   :hidden:
+   
    pages/passatempo
 
 .. toctree::
