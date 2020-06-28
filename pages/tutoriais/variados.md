@@ -233,6 +233,8 @@ O objetivo consiste em converter do formato [NetCDF para o formato tif](https://
 Esse procedimento é feito com o script abaixo:
 
 ```bash
+#!/bin/bash
+
 for nome_arquivo in *.nc
 do 
     gdal_translate -of GTiff -a_srs EPSG:4326 $nome_arquivo $(basename $nome_arquivo .nc).tif
