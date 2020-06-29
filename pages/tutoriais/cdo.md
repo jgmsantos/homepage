@@ -283,7 +283,7 @@ Antes de tudo, escolha adequadamente consultando a tabela abaixo o melhor índic
 
 **Importante1:** Os dados utilizados nos índices são diários.
 
-**Importante2:** Os exemplos abaixo foram aplicados em uma série temporal, mas poderiam ser usados um arquivo espacial.
+**Importante2:** Os exemplos abaixo foram aplicados em uma série temporal. Os índices podem ser utilizados um arquivo espacial.
 
 ![](../../images/tabela.png)
 
