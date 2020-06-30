@@ -302,6 +302,16 @@ Antes de tudo, escolha adequadamente consultando a tabela abaixo o melhor índic
 |eca_tr     |      -       |      X       |
 ```
 
+```eval_rst
++------------+------------+-----------+ 
+| Header 1   | Header 2   | Header 3  | 
++============+============+===========+ 
+| body row 1 | column 2   | column 3  | 
++------------+------------+-----------+ 
+| body row 2 | Cells may span columns.| 
++------------+------------+-----------+ 
+```
+
 + [Clique aqui](https://code.mpimet.mpg.de/projects/cdo/embedded/cdo_eca.pdf) para realizar o download da documentação sobre os índices climáticos.
 
 + [Clique aqui](https://github.com/jgmsantos/Scripts/tree/master/NetCDF) para realizar o download do arquivo de precipitação `prec.med.espacial.nc`.
