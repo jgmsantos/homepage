@@ -295,7 +295,7 @@ Antes de tudo, escolha adequadamente consultando a tabela abaixo o melhor índic
 
 **1 ECACDD (Consecutive dry days index per time period ou índice de dias secos consecutivos por período)**
 
-! Retorna a quantidade de dias secos consecutivos quando a precipitação (mm/dia) for menor que um determinado limiar (R), o padrão é R= 1 mm/dia. Uma variável adicional é fornecida, trata-se do quantidade ou número de períodos secos maior que N dias.
+Retorna a quantidade de dias secos consecutivos quando a precipitação (mm/dia) for menor que um determinado limiar (R), o padrão é R= 1 mm/dia. Uma variável adicional é fornecida, trata-se do quantidade ou número de períodos secos maior que N dias.
 
 + O arquivo de saída terá sempre a última data do arquivo.
 + Duas variáveis são retornadas:
