@@ -4,7 +4,7 @@ Climate Data Operators (CDO)
 ### Tutorias
 
 + [Introdução ao Climate Data Operators (CDO). Autor: Guilherme Martins. Versão oficial](http://mtc-m21b.sid.inpe.br/col/sid.inpe.br/mtc-m21b/2016/11.18.17.34/doc/publicacao.pdf)
-  + [Download alternativo para o tutorial acima. Versão sendo atualizada constantemente](https://drive.google.com/open?id=15UT8bdlLlwxwazTvRk2IK28oys89Z4nl)
+  + [Download alternativo para o tutorial acima. **Versão sendo atualizada constantemente**](https://drive.google.com/open?id=15UT8bdlLlwxwazTvRk2IK28oys89Z4nl)
 
 + [CDO Reference Card](https://code.zmaw.de/projects/cdo/embedded/cdo_refcard.pdf)
 
@@ -295,7 +295,7 @@ Antes de tudo, escolha adequadamente consultando a tabela abaixo o melhor índic
 
 **1 ECACDD (Consecutive dry days index per time period ou índice de dias secos consecutivos por período)**
 
-Retorna a quantidade de dias secos consecutivos quando a precipitação (mm/dia) for menor que um determinado limiar (R), o padrão é R= 1 mm/dia. Uma variável adicional é fornecida, trata-se do quantidade ou número de períodos secos maior que N dias.
+! Retorna a quantidade de dias secos consecutivos quando a precipitação (mm/dia) for menor que um determinado limiar (R), o padrão é R= 1 mm/dia. Uma variável adicional é fornecida, trata-se do quantidade ou número de períodos secos maior que N dias.
 
 + O arquivo de saída terá sempre a última data do arquivo.
 + Duas variáveis são retornadas:
