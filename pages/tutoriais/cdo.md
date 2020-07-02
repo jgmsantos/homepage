@@ -448,7 +448,7 @@ dia29 22.4739
 dia30 22.4953
 dia31 22.6148
 ```
-+ Exemplo1: Deseja-se quantificar o número de dias consecutivos em que o limiar de temperatura foi maior que 22.6ºC. Além disso, quantos períodos de até 3 dias foram contabilizados? Não esqueça de realizar o download do arquivo `temp.med.espacial.nc` para testar diferentes configurações de valores.
++ Exemplo1: Deseja-se quantificar o número de dias consecutivos em que o limiar de temperatura foi maior que 22.6ºC. Além disso, quantos períodos de mais de 3 dias foram contabilizados? Não esqueça de realizar o download do arquivo `temp.med.espacial.nc` para testar diferentes configurações de valores.
 
 `cdo -s eca_csu,22.6,3 temp.med.espacial.nc output.nc`
 
@@ -463,7 +463,7 @@ dia31 22.6148
 
 **3 ECACWD (Consecutive wet days index per time period ou índice consecutivo de dias úmidos por período)**
 
-Retorna a quantidade de dias consecutivos úmidos quando a precipitação (mm/dia) for maior que um determinado limiar (R), o padrão é R = 1 mm/dia. Uma variável adicional é fornecida, trata-se do quantidade ou número de períodos úmidos maior que N dias.
+Retorna a quantidade de dias consecutivos úmidos quando a precipitação (mm/dia) for maior que um determinado limiar (R), o padrão é R = 1 mm/dia. Uma variável adicional é fornecida, trata-se da quantidade ou o número de períodos úmidos maior que N dias.
 
 + O arquivo de saída terá sempre a última data do arquivo.
 + Duas variáveis são retornadas:
@@ -513,7 +513,7 @@ dia30 2.59884
 dia31 3.36611
 ```
 
-+ Exemplo1: Deseja-se quantificar o número de dias consecutivos úmidos em que a precitação foi maior que 3.5 mm/dia. Além disso, quantos períodos de até 5 dias foram contabilizados? Não esqueça de realizar o download do arquivo `prec.med.espacial.nc` para testar diferentes configurações de valores.
++ Exemplo1: Deseja-se quantificar o número de dias consecutivos úmidos em que a precitação foi maior que 3.5 mm/dia. Além disso, quantos períodos maior que 5 dias foram contabilizados? Não esqueça de realizar o download do arquivo `prec.med.espacial.nc` para testar diferentes configurações de valores.
 
 `cdo -s eca_cwd,3.5,5 prec.med.espacial.nc output.nc`
 
@@ -524,11 +524,11 @@ dia31 3.36611
 
 + Explicação: 
   + A contagem de acordo com o limiar de precipitação, isto é, maior que 3.5 mm/dia começou a partir do dia 23 e foi até o dia 24, totalizando assim, 2 dias.
-  + O valor 0 representa a quantidade de períodos em que esse limiar de 3.5 mm/dia foi excedido. A contagem considerou que não houve período em que esse limar fosse ultrapassado, por isso, o valor 0.
+  + O valor 0 representa a quantidade de períodos em que esse limiar de 3.5 mm/dia foi excedido. A contagem considerou que não houve período em que esse limiar fosse ultrapassado, por isso, o valor 0.
 
 **4 ECAETR (Intra-period extreme temperature range ou faixa de temperatura extrema)**
 
-Dada duas séries de temperatura máxima e mínima, a faixa de temperatura extema representa a diferença entre o valor máximo de temperatura e o valor mínimo de temperatura mínima, em outras palavras, R = Max(T)-Min(T). A unidade é a mesma do arquivo utilizado.
+Dada duas séries de temperaturas máxima e mínima, a faixa de temperatura extrema representa a diferença entre o valor máximo e mínimo de temperatura, em outras palavras, R = Max(T)-Min(T). A unidade é a mesma do arquivo utilizado.
 
 + [Clique aqui](https://github.com/jgmsantos/Scripts/tree/master/NetCDF) para realizar o download dos arquivos `tmax.nc` e `tmin.nc`.
 + O arquivo de saída terá sempre a última data do arquivo.
@@ -576,7 +576,7 @@ dia29	17.6	16.9
 dia30	16.9	15.9
 dia31	16.0	15.3
 ```
-+ Exemplo1: Deseja-se saber variação de temperatura a partir da temperatura máxima e mínima. Foram utilizados dois arquivos, `tmax.nc` e o `tmin.nc`.
++ Exemplo1: Deseja-se saber a variação de temperatura a partir da temperatura máxima e mínima. Foram utilizados dois arquivos, `tmax.nc` e o `tmin.nc`.
 
 `cdo -s eca_etr tmax.nc tmin.nc output.nc`
 
@@ -585,7 +585,7 @@ dia31	16.0	15.3
   + `intra_period_extreme_temperature_range` = 10.800
 
 + Explicação: 
-  + A partir da série temporal da temperatura máxima, obtém-se o seu maior valor, que é 26ºC. Por outro lado, o valor mínimo da temperatura mínima é de 15.2ºC. Basta calcular a diferença entre a (Tmax - Tmin) que será obtido o valor 10.800ºC.
+  + A partir da série temporal de temperatura máxima, obtém-se o seu maior valor, que é 26ºC. Por outro lado, o valor mínimo da temperatura mínima é de 15.2ºC. Basta calcular a diferença entre (Tmax - Tmin) que será obtido o valor 10.800ºC.
 
 
 **5 ECAPD (Precipitation days index per time period ou índice de dias de precipitação por período)**
@@ -719,7 +719,7 @@ dia31	33.7
   + Resultado: `wet_days_index_per_time_period` = 2
 
 + Explicação: 
-  + Apenas os dias 23 e 24 foram maiores que o limiar selecionado (40 mm/dia), totalizando assim dois dias.
+  + Apenas os dias 23 e 24 foram maiores que o limiar selecionado (40 mm/dia), totalizando assim, dois dias.
 
 **7 ECARX1DAY (Highest one day precipitation amount per time period ou quantidade máxima de precipitação de um dia por período de tempo)**
 
@@ -772,7 +772,7 @@ dia30	26.0
 dia31	33.7
 ```
 
-+ Exemplo1: Deseja-se saber qual é a maior quantidade precipitação da série analisada? Foi utilizado o arquivo `ppt.nc`.
++ Exemplo1: Qual é a maior quantidade precipitação da série analisada? Foi utilizado o arquivo `ppt.nc`.
 
 `cdo -s eca_rx1day ppt.nc output.nc`
   + Resultado: `highest_one_day_precipitation_amount_per_time_period` = 44.9
@@ -795,7 +795,7 @@ Retorna a maior quantidade de precipitação (mm/dia) da série e a quantidade d
   
 Onde:
 
-+ `x` é um valor real. Representa o miliar de chuva a ser considerado (mm/dia).
++ `x` é um valor real. Representa o limiar de chuva a ser considerado (mm/dia).
 
 A série abaixo representa 31 valores (dias 01 a 31) de precipitação para um determinado mês que será utilizada para facilitar o entendimento. A unidade utilizada é mm/dia.
 
@@ -833,7 +833,7 @@ dia30	26.0
 dia31	33.7
 ```
 
-+ Exemplo 1: Deseja-se saber qual é a maior quantidade precipitação da série analisada? Foi utilizado o arquivo `ppt.nc`.
++ Exemplo 1: Qual é a maior quantidade precipitação da série analisada? Foi utilizado o arquivo `ppt.nc`.
 
 `cdo -s eca_rx5day,35 ppt.nc output.nc`
 
@@ -931,7 +931,7 @@ dia29 22.4739
 dia30 22.4953
 dia31 22.6148
 ```
-+ Exemplo1: Deseja-se quantificar o número de dias em que o limiar de temperatura foi maior que 22.6ºC. Não esqueça de realizar o download do arquivo `temp.med.espacial.nc` para testar diferentes configurações de valores.
++ Exemplo1: Deseja-se quantificar o número de dias em que o limiar de temperatura foi maior que 22.6ºC. Não se esqueça de realizar o download do arquivo `temp.med.espacial.nc` para testar diferentes configurações de valores.
 
 `cdo -s eca_su,22.6 temp.med.espacial.nc output.nc`
 
