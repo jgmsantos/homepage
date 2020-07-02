@@ -360,7 +360,7 @@ dia31 3.36611
 
 **2 ECACSU (Consecutive summer days index per time period ou índice consecutivo de dias de verão por período)**
 
-Retorna a quantidade de dias consecutivos quando a temperatura (Kelvin) for maior que um determinado limiar (T), o padrão é T= 25ºC. Uma variável adicional é fornecida, trata-se do quantidade ou número de períodos de verão maior que N dias.
+Retorna a quantidade de dias consecutivos quando a temperatura (Kelvin) for maior que um determinado limiar (T), o padrão é T= 25ºC. Uma variável adicional é fornecida, trata-se da quantidade ou número de períodos de verão maior que N dias.
 
 + **Importante: O arquivo a ser utilizado deve estar em Kelvin.**
 
