@@ -73,3 +73,5 @@ html_static_path = ['_static']
 # documentation.
 #
 html_theme_options = {'collapse_navigation':True}
+
+markdown.markdown(some_text, extensions=[MyExtClass(), 'myext', 'path.to.my.ext:MyExtClass'])
