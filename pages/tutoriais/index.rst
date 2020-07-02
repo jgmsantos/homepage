@@ -3,6 +3,7 @@ Tutoriais
 
 .. toctree::
 
+   variados
    cdo
    fortran90
    grads
@@ -12,5 +13,4 @@ Tutoriais
    ncl
    processamento_texto
    shell
-   variados   
    wgrib2
