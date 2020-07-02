@@ -659,7 +659,7 @@ dia31	33.7
   + Resultado: `very_heavy_precipitation_days_index_per_time_period` = 25
 
 + Explicação: 
-  + Para a Forma 1, houve apenas um dia (dia24) com chuva maior que 42 mm/dia. Para a Forma 2 que considera 10 mm/dia, foi retornado um total de 31 dias, ou seja todo o mês, a chuva ultrassou esse limiar. E por fim, a Forma 3 que consideral o limiar de 20 mm/dia, foram detectados 25 dias com chuva acima desse limiar.
+  + Para a Forma 1, houve apenas um dia (dia24) com chuva maior que 42 mm/dia. Para a Forma 2 que considera 10 mm/dia, foi retornado um total de 31 dias, ou seja todo o mês, a chuva ultrassou esse limiar. E por fim, a Forma 3 que considera o limiar de 20 mm/dia, foram detectados 25 dias com chuva acima desse limiar.
 
 **6 ECARR1 (Wet days index per time period ou índice de dias úmidos por período)**
 
