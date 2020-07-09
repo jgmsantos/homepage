@@ -3,6 +3,8 @@ Apresentações
 
 2020
 
++ [Live - Computação aplicada à Meteorologia](https://youtu.be/68Gf1hYNacQ). Julho/2020.
+
 + [Análise da Climatologia de Precipitação para Avaliação dos Períodos de Limpeza das Linhas de Transmissão](https://drive.google.com/open?id=1LlUwsHfh8eW26WJ-_7roawsKSD9I6-5IeUdPOPUYjzM). [Fotos do evento](https://photos.app.goo.gl/S62FGUYBu2pAxMhe9). Fevereiro/2020.
 
 2019
