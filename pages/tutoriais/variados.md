@@ -430,11 +430,11 @@ Depois, basta monitorar o arquivo `nohup` com o comando:
 
 O `pwdx` é nativo do Linux e é excelente para identificar qual o diretório que um determinado processo foi executado.
 
-+ Sintaxe: `pwdx PID`
++ Sintaxe: `sudo pwdx PID`
 + O `PID` (Process Identifier) é um número de identificação que o sistema fornece quando se executa um processo. Por exemplo, ao executar um programa, o mesmo gerará um PID. 
 + Como saber o PID de um processo? Basta utilizar o `htop`, e verificar a primeira coluna desse comando.
     + Para instalar o `htop` basta digitar: `sudo apt install htop`
 + Exemplo de uso:
-    + `pwdx 3859`
+    + `sudo pwdx 3859`
     + Será retornado o diretório do processo PID: 3859.
     + Exemplo de retorno: `/mnt/produtos/meteorologia`
