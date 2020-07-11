@@ -11,6 +11,8 @@ Desenvolvi habilidades em manipulação e visualização de saídas dos modelos 
 
 Atualmente, trabalho no [Programa de Monitoramento de Queimadas](http://queimadas.dgi.inpe.br/queimadas/portal) do Instituto Nacional de Pesquisas Espaciais ([INPE](http://www.inpe.br/)) e sou responsável pelo desenvolvimento e melhorias do modelo de risco diário de fogo para América do Sul, criação de boletins meteorológicos mensais e geração de avisos meteorológicos.
 
+[Clica aqui](https://github.com/jgmsantos/homepage/blob/master/images/minha_historia.pdf) é possível ver um resumo da minha trajetória profissional desde a época da faculdade até os dias atuais.
+
 **Interesses profissionais:**
 
 + NCAR Command Language (NCL)
