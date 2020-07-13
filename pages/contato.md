@@ -19,7 +19,7 @@ Para dúvidas, sugestões ou críticas:
 
 <p align="center">
   <p align="center">
-    <a href="https://twitter.com/Guilher91294960" alt="Twitter"><img src="https://github.com/jgmsantos/homepage/blob/master/images/social/twitter.svg"></a>
+    <a href="https://twitter.com/Guilher91294960" alt="Twitter"><img src="https://github.com/jgmsantos/homepage/blob/master/images/social/twitter.png"></a>
     <a href="https://twitter.com/Guilher91294960" 
   </p>
 </p>
