@@ -7,19 +7,14 @@ Para dúvidas, sugestões ou críticas:
 
 + Skype: guilherme.martins.
 
-+ [LinkedIn](https://www.linkedin.com/in/guilherme-martins-7239241a5)
++ [Google Scholar](https://scholar.google.com.br/citations?view_op=list_works&hl=pt-BR&user=_IlcTwEAAAAJ)
 
-+ [Researchgate](https://www.researchgate.net/profile/Guilherme_Martins6)
++ [LinkedIn](https://www.linkedin.com/in/guilherme-martins-7239241a5)
 
 + [ORCID](https://orcid.org/0000-0001-7693-3673)
 
-+ [Google Scholar](https://scholar.google.com.br/citations?view_op=list_works&hl=pt-BR&user=_IlcTwEAAAAJ)
++ [Researchgate](https://www.researchgate.net/profile/Guilherme_Martins6)
 
 + [YouTube](https://www.youtube.com/channel/UC0kPlByyzQsyJd9iXqlOxcQ?view_as=subscriber)
 
-<p align="center">
-  <p align="center">
-    <a href="https://twitter.com/Guilher91294960" alt="Twitter"><img src="https://github.com/jgmsantos/homepage/blob/master/images/social/twitter.png"></a>
-    <a href="https://twitter.com/Guilher91294960" 
-  </p>
-</p>
++ [Twitter](https://twitter.com/Guilher91294960)
