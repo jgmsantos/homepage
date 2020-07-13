@@ -16,3 +16,14 @@ Para dúvidas, sugestões ou críticas:
 + [Google Scholar](https://scholar.google.com.br/citations?view_op=list_works&hl=pt-BR&user=_IlcTwEAAAAJ)
 
 + [YouTube](https://www.youtube.com/channel/UC0kPlByyzQsyJd9iXqlOxcQ?view_as=subscriber)
+
+<hr>
+<p align="center">
+  <i>Let's connect and chat! Open to anyone on Earth under the Sun and Moon.</i>
+
+  <p align="center">
+    <a href="https://twitter.com/Guilher91294960" alt="Twitter"><img src="https://github.com/imdhruv99/imdhruv99/blob/master/readme/twitter-fill.svg"></a>
+    <a href="https://twitter.com/Guilher91294960" 
+  </p>
+
+</p>
