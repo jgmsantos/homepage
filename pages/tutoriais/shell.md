@@ -77,7 +77,7 @@ Disponibilidade: a cada 7 dias (3 de fevereiro de 2003 - atual).
 
 3 Script `03limpa_cmip5.sh` feito em Shell conserta a data do modelo HADGEM2-ES. Essse modelo possui dados diários totalizando apenas 360 dias por ano. O objetivo foi corrigir essas datas acrescentando o dia 31 aos meses que possuem apenas essa quantidade de datas, em outras palavras, criou-se apenas o dia 31 com valores UNDEF. Para ano bissexto (366 dias), esse modelo mostra o dia 01 de março duplicado, e para anos normais (365 dias), os dias 01 e 02 são duplicados, e os mesmos são removidos. 
 
-+ NÃO DEIXE DE LER O SCRIPT PARA MAIS INFORMAÇÕES.
++ **NÃO DEIXE DE LER O SCRIPT PARA MAIS INFORMAÇÕES.**
 + O script é demonstrado abaixo e o seu download pode ser feito [clicando aqui](https://github.com/jgmsantos/Scripts/blob/master/SHELL/03limpa_cmip5.sh).
 + Requisitos: ncdump e CDO instalados. O ncdump já vem instalado nativamente quando se tem a biblioteca NetCDF. 
 + Baixe o arquivo `03limpa_cmip5.sh`.
