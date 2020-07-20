@@ -1041,6 +1041,82 @@ dia31 22.6148
 + Explicação: 
   + A contagem de acordo com o limiar de temperatura, isto é, maior que 22.6ºC foi identificado nos dias 25, 26, 27, 28 e 31, totalizando assim, 5 dias.
 
+### Preencher uma série temporal com dados ausentes
+
+O arquivo (`RF.serie.2019.2020.nc`) abaixo possui a seguinte descrição:
+
+```
+    -1 :       Date     Time   Level Gridsize    Miss :     Minimum        Mean     Maximum : Parameter name
+     1 : 2019-01-01 00:00:00       0        1       0 :                 0.32735             : rbf
+     2 : 2019-02-01 00:00:00       0        1       0 :                 0.32749             : rbf
+     3 : 2019-03-01 00:00:00       0        1       0 :                 0.37153             : rbf
+     4 : 2019-04-01 00:00:00       0        1       0 :                 0.31629             : rbf
+     5 : 2019-05-01 00:00:00       0        1       0 :                 0.42684             : rbf
+     6 : 2019-06-01 00:00:00       0        1       0 :                 0.78590             : rbf
+     7 : 2019-07-01 00:00:00       0        1       0 :                 0.63605             : rbf
+     8 : 2019-08-01 00:00:00       0        1       0 :                 0.76745             : rbf
+     9 : 2019-09-01 00:00:00       0        1       0 :                 0.77284             : rbf
+    10 : 2019-10-01 00:00:00       0        1       0 :                 0.53810             : rbf
+    11 : 2019-11-01 00:00:00       0        1       0 :                 0.25542             : rbf
+    12 : 2019-12-01 00:00:00       0        1       0 :                 0.10599             : rbf
+    13 : 2020-01-01 00:00:00       0        1       0 :                 0.24178             : rbf
+    14 : 2020-02-01 00:00:00       0        1       0 :                 0.14035             : rbf
+    15 : 2020-03-01 00:00:00       0        1       0 :                 0.47496             : rbf
+    16 : 2020-04-01 00:00:00       0        1       0 :                 0.67511             : rbf
+    17 : 2020-05-01 00:00:00       0        1       0 :                 0.42278             : rbf
+    18 : 2020-06-01 00:00:00       0        1       0 :                 0.75047             : rbf
+    19 : 2020-07-01 00:00:00       0        1       0 :                 0.86487             : rbf
+```
+Essse arquivo vai até julho de 2020. A ideia é complementar com os demais meses faltantes, isto é, agosto, setembro, outubro, novembro e dezembro. E para fazermos isso, utilizamos o comando abaixo:
+
+`cdo -s -f nc -settaxis,2020-08-01,00:00:00,1mon -setmissval,-999 -duplicate,5 -const,-999,RF.serie.2019.2020.nc out.nc`
+
++ Explicação:
+  + O operador `const` cria um campo com valores constante, neste caso, o valor será de -999. O arquivo será utilizado como base para criar a grade de interesse.
+  + O operador `duplicate` duplica 5 vezes ou tempos (agosto, setembro, outubro, novembro e dezembro = 5 meses) o campo que será criado.
+  + O `setmissval` converte o valor `-999` para valor ausente.
+  + O `settaxis` define uma data, neste caso, a data será a continuação dos meses faltantes, isto é, agosto, setembro, outubro, novembro e dezembro.
+  + O `out.nc` será o arquivo com as novas modificações.
+
+Agora, basta juntar os arquivos (`RF.serie.2019.2020.nc` e `out.nc`) para termos os meses completos com o comando abaixo:
+
+`cdo -s -O mergetime RF.serie.2019.2020.nc out.nc saida.nc`
+
+Agora, basta digitar:
+
+`cdo -s infon saida.nc`
+
+Os meses de agosto até dezembro estão com valores ausentes (nan).
+
+E o resultado será:
+
+```
+    -1 :       Date     Time   Level Gridsize    Miss :     Minimum        Mean     Maximum : Parameter name
+     1 : 2019-01-01 00:00:00       0        1       0 :                 0.32735             : rbf
+     2 : 2019-02-01 00:00:00       0        1       0 :                 0.32749             : rbf
+     3 : 2019-03-01 00:00:00       0        1       0 :                 0.37153             : rbf
+     4 : 2019-04-01 00:00:00       0        1       0 :                 0.31629             : rbf
+     5 : 2019-05-01 00:00:00       0        1       0 :                 0.42684             : rbf
+     6 : 2019-06-01 00:00:00       0        1       0 :                 0.78590             : rbf
+     7 : 2019-07-01 00:00:00       0        1       0 :                 0.63605             : rbf
+     8 : 2019-08-01 00:00:00       0        1       0 :                 0.76745             : rbf
+     9 : 2019-09-01 00:00:00       0        1       0 :                 0.77284             : rbf
+    10 : 2019-10-01 00:00:00       0        1       0 :                 0.53810             : rbf
+    11 : 2019-11-01 00:00:00       0        1       0 :                 0.25542             : rbf
+    12 : 2019-12-01 00:00:00       0        1       0 :                 0.10599             : rbf
+    13 : 2020-01-01 00:00:00       0        1       0 :                 0.24178             : rbf
+    14 : 2020-02-01 00:00:00       0        1       0 :                 0.14035             : rbf
+    15 : 2020-03-01 00:00:00       0        1       0 :                 0.47496             : rbf
+    16 : 2020-04-01 00:00:00       0        1       0 :                 0.67511             : rbf
+    17 : 2020-05-01 00:00:00       0        1       0 :                 0.42278             : rbf
+    18 : 2020-06-01 00:00:00       0        1       0 :                 0.75047             : rbf
+    19 : 2020-07-01 00:00:00       0        1       0 :                 0.86487             : rbf
+    20 : 2020-08-01 00:00:00       0        1       1 :                     nan             : rbf
+    21 : 2020-09-01 00:00:00       0        1       1 :                     nan             : rbf
+    22 : 2020-10-01 00:00:00       0        1       1 :                     nan             : rbf
+    23 : 2020-11-01 00:00:00       0        1       1 :                     nan             : rbf
+    24 : 2020-12-01 00:00:00       0        1       1 :                     nan             : rbf
+```
 ### Vídeo aula de CDO
 
 + 2020
