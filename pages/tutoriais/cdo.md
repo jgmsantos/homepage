@@ -1121,7 +1121,7 @@ E o resultado será:
 
 + 2020
 
-  + [Descomplicando o CDO - Aula 1](https://youtu.be/4KgrgsGt9pw). Julho de 2020.
+  + [Playlits de CDO](https://www.youtube.com/playlist?list=PLGveZDDSWu_7G2ZrM_u8AQD8KNzd1vSwT). Julho de 2020.
 
 + 2018
   + [Dia 1 - 25 Outubro de 2018](https://www.youtube.com/watch?v=9IQ9fNlnkUo&t=1232s)
