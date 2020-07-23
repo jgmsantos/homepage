@@ -3,7 +3,7 @@ Contato
 
 Para dúvidas, sugestões ou críticas:
 
-+ E-mail: jgmsantos@gmail.com ou guilherme.martins@inpe.br
++ E-mail: <jgmsantos@gmail.com> ou <guilherme.martins@inpe.br>
 
 + Skype: guilherme.martins.
 
