@@ -3,7 +3,7 @@ Apresentações
 
 2020
 
-+ [Temporada 2020 de queimadas no bioma Pantanal](https://docs.google.com/presentation/d/1fRUcp28bR8QotHKvWfAdzB4vjAcs5UQioiWkl8a0c50/edit?usp=sharing). Julho/2020.
++ [Temporada 2020 de queimadas no bioma Pantanal](https://docs.google.com/presentation/d/13-FQL5Yg0l7zU83X-S9ai82vohvyWe5EGT2URPsCetI/edit?usp=sharing). Julho/2020.
 
 + [Live - Computação aplicada à Meteorologia](https://youtu.be/68Gf1hYNacQ). Julho/2020.
 
