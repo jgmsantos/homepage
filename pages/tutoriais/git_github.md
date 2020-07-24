@@ -146,7 +146,9 @@ O resultado será:
 
 ![](../../images/gitfig/git04.png)
 
-Note que há 3 cores em vermelho, isso significa que esses arquivos precisam ser adicionados.
+Note que há 3 cores em vermelho, isso significa que esses arquivos precisam ser adicionados ao repositório.
+
+Para atualizar os arquivos no repositório, utiliza o `git add <nome_arquivo>` ou quando se deseja atualizar vários arquivos de uma vez só, utiliza-se `git add .`.
 
 O comando abaixo fará essa tarefa:
 
@@ -154,7 +156,12 @@ O comando abaixo fará essa tarefa:
 git add .
 ```
 
-Nota-se que a cor dos arquivos mudou de vermelho para verde. Isso mostra que os nossos arquivos já estão prontos para fazer o commit.
+Sempre que uma alteração seja realiza, é sempre bom checar com o:
+
+```
+git status
+```
+Nota-se que a cor dos arquivos mudaram de vermelho para verde. Isso mostra que os arquivos já estão prontos para fazer o commit.
 
 ![](../../images/gitfig/git05.png)
 
@@ -163,22 +170,60 @@ Nota-se que a cor dos arquivos mudou de vermelho para verde. Isso mostra que os 
 
 + O Commit (snapshot) representa o envio ou a submissão de arquivos que estão sendo trakeados para o status staged.
 
-+ Cada commit gera um `hash ID` ou um código que é muito imporante para restaurar um projeto para um determinado ponto para realizar uma tarefa específica.
++ Cada commit gera um `hash ID` ou um código que é muito imporante para restaurar um projeto para um determinado ponto e para realizar uma tarefa específica.
 
 + Para se fazer um commit, basta digitar:
 ```
-git commit -m "Mensagem sobre explicação do que está sendo feito"
+git commit -m "Enviando novos arquivos"
 ```
+
+Serão mostras as informações abaixo:
+
+![](../../images/gitfig/git06.png)
+
+
 E depois, usar o:
 
 ```
 git status
 ```
 
+Agora é o momento de submeter as alterações ao repositório externo. Isso é feito com o comando abaixo.
+
+```
+git push -u origin master
+```
+
+Se tudo ocorreu bem, será mostrada a imagem abaixo:
+
+![](../../images/gitfig/git07.png)
 
 
+### Uso do Clone e do Pull
 
-# Instalando o Visual Studio Code no Windows
++ O clone simplemesmente cria uma cópia de um repositório do Github no seu computador.
+
++ Uma boa prática é criar na sua máquina local um diretório (`mkdir teste`) para clonar o repositório.
+
++ O resositório a ser clonado é:
+   + https://github.com/jgmsantos/Scripts.git
+
++ É necessária a criação do diretório `teste` no `Download` para fazer o clone.
+
++ A imagem abaixo é referente ao repositório descrito acima. A ideia é baixar tudo que tem nele para a máquina local.
+
++ 
+![](../../images/gitfig/git08.png)
+
+```
+git init
+git clone https://github.com/jgmsantos/Scripts.git
+git status
+git remote -v
+```
+
+
+### Instalando o Visual Studio Code no Windows
 
 O Visual Studio Code é excelente para trabalhar em conjunto com o Git e Github pois fornece uma interface gráfica amigável.
 
