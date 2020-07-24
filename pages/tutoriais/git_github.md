@@ -1,0 +1,198 @@
+Git e Github
+====================
+
+### Uma breve história
+
+O Git-SCM (Source Control Management ou Gerenciamento de controle de fonte) foi criado pelo [Linus Torvalds](https://github.com/torvalds) (conhecido como o criado do Linux) em 7 de abril de 2005 com o objetivo de auxiliar no desenvolvimento do Sistema Operacional Linux.
+
+Durante o desenvolvimento de um software queremos saber:
+
+1. O que mudou?
+2. Quando mudou?
+3. Por que mudou?
+4. Quem fez a mudança?
+5. Podemos reproduzir esta mudança?
+
+É o Git tem essa funcionalidade de realizar todo este rastreamento.
+
+### Diferença entre Git e Github
+
+**Para ficar claro, Git não é Github.**
+
+**O que é Git?**
+
++ É um sistema de controle de versão de código descentralizado. Cada repositório Git é um nó em uma rede descentralizada e diferentes nós podem se comunicar na rede.
+
+**O que é Github?**
+
++ É uma plataforma Web que serve como um repositório de código que utiliza recursos do Git para que possamos centralizar nossos repositórios na internet, fazendo com que possamos ter um portfólio de códigos e projetos que podem ser públicos ou privados. O Github é um servidor de repositórios Git que surgiu em 2008.
+
++ **Quem usa Github?** Google, NASA, Facebook, LinkedIn, NetFlix, Spotify, são alguns exemplos de empresas que fazem uso desta plataforma.
+
+### Instalando o Git no Windows
+
+Para instalar, basta acessar o site abaixo:
+
++ [https://git-scm.com](https://git-scm.com)
+
+E realizar o Download do arquivo.
+
+Execute o arquivo salvo no seu computador e clique em `Next` e quando aparecer a janela abaixo:
+
+![](instalacao_git01.png)
+
+Selecione as opções destacadas em vermelho e clique em `Next` até finalizar a instalação.
+
+Para saber a versão do Git instalada, basta digitar o comando abaixo no console do Windows:
+
+```
+git --version
+```
+
+A versão utilizada nesta instalação é a:
+
+```
+git version 2.17.1
+```
+
+### Inicializando um repositório Git
+
++ O `git init` é utilizado para inicializar o Git em um determinado repositório. Por exemplo, crie um diretório onde será armazenado o repositório a ser trabalhado.
+
++ Ao criar o diretório, entre nele e digite o comando abaixo:
+
+```
+git init
+```
+
+Será mostrada a imagem abaixo:
+
+![](../../images/gitfig/git01.png)
+
+
+Ao digitar o comando acima, digite no terminal o comando `ls -a` para ver arquivos e diretórios ocultos do sistema. Ao digitar este comando, será mostrado o diretório `.git`. Este diretório possui arquivos de configuração e outros diretórios que são utilizados para diferentes processos e para enviar o seu projeto para o Github. 
+
+Dentro do diretório `.git` existe um arquivo chamado `config`. Como o nome diz, é um arquivo de configuração que será editado posteriormente.
+
+![](../../images/gitfig/git02.png)
+
+E depois, digite o comando abaixo para obter informações sobre o repositório criado.
+
+```
+git status
+```
+
+Será mostrada a imagem abaixo:
+
+![](../../images/gitfig/git03.png)
+
+Isso significa que que está tudo certo.
+
+### Registrando um usuário e o seu e-mail
+
++ Uma boa prática a ser feita é registrar um nome de usuário e o seu e-mail. 
+
++ Estas informações são utilizadas para saber quem está trabalhando em um determinado projeto. 
+
++ Caso essas informações não sejam fornecidas, no momento de enviar as alterações para o Github, será retornado erro, por isso, a importância de realizar essa criação.
+
++ Há duas manerias de fazer esse registro, isto é, **local** (necessidade de autenticação) ou **global** (não há necessidade de autenticação).
+
++ E quando usar um ou outro? Caso seja utilizado um computador público, utiliza-se o `git config`. Por outro lado, caso o computador seja particular, utiliza-se o `git config --global`.
+
++ Vamos que ao interessa. Lembrando que foi criado um diretório chamado `projeto` e os comandos abaixo sáo digitados dentro dele.
+
+**1. Para configurar localmente um repositório:**
+```
+git config user.name "Guilherme Martins"
+```
+```
+git config user.email "jgmsantos@gmail.com"
+```
+**2. Para configurar globalmente um repositório:**
+
+Toda vez que o usuário criar um repositório, o mesmo será reconhecido pelo Git não sendo necessário toda vez que criar um repositório inserir as informações de usuário e e-mail.
+
+```
+git config --global user.name "Curupira de Jesus"
+```
+```
+git config --global user.email "Curupira de Jesus"
+```
+
+### Criando o arquivo .gitignore
+
+Como o próprio nome diz, o `.gitignore` é um arquivo no formato texto que será utilizado para ignorar arquivos ou diretórios. Deve-se criar este arquivo no mesmo local do repositório.
+
+Ao criar esse arquivo, a primeita tarefa que deve ser feita é de verificar o seu status, digitando o comando:
+
+```
+git status
+```
+
+### Adicionando arquivos no repositório
+
++ Criuou-se o arquivo `git_github.md` que será editado dentro do diretório `pages/tutoriais` .
+
++ Criou-se um subdiretório (`gitfig`) no diretório `images` e foram adicionandas algumas imagens.
+
++ Agora, digita-se o comando abaixo para verificar o status das modificações:
+
+```
+git status
+```
+
+O resultado será:
+
+![](../../images/gitfig/git04.png)
+
+Note que há 3 cores em vermelho, isso significa que esses arquivos precisam ser adicionados.
+
+O comando abaixo fará essa tarefa:
+
+```
+git add .
+```
+
+Nota-se que a cor dos arquivos mudou de vermelho para verde. Isso mostra que os nossos arquivos já estão prontos para fazer o commit.
+
+![](../../images/gitfig/git05.png)
+
+
+### Realizando um commit
+
++ O Commit (snapshot) representa o envio ou a submissão de arquivos que estão sendo trakeados para o status staged.
+
++ Cada commit gera um `hash ID` ou um código que é muito imporante para restaurar um projeto para um determinado ponto para realizar uma tarefa específica.
+
++ Para se fazer um commit, basta digitar:
+```
+git commit -m "Mensagem sobre explicação do que está sendo feito"
+```
+E depois, usar o:
+
+```
+git status
+```
+
+
+
+
+# Instalando o Visual Studio Code no Windows
+
+O Visual Studio Code é excelente para trabalhar em conjunto com o Git e Github pois fornece uma interface gráfica amigável.
+
+Os exemplos a seguir utilizarão esta ferramenta.
+
+Acesse o link abaixo:
+
+[https://code.visualstudio.com](https://code.visualstudio.com/)
+
+E clique em `Download for Windows`.
+
+Execute o arquivo salvo no seu computador e clique em `Next` e quando aparecer a janela abaixo:
+
+![](instalacao_vsc01.png)
+
+Selecione as opções destacadas em vermelho e clique em `Próximo` até finalizar a instalação.
+

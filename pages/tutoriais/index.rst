@@ -6,6 +6,7 @@ Tutoriais
    variados
    cdo
    fortran90
+   git_github
    grads
    gdal
    meteorologia
