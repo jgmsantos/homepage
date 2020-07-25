@@ -39,7 +39,7 @@ E realizar o Download do arquivo.
 
 Execute o arquivo salvo no seu computador e clique em `Next` e quando aparecer a janela abaixo:
 
-![](instalacao_git01.png)
+![](../../images/gitfig/instalacao_git01.png)
 
 Selecione as opções destacadas em vermelho e clique em `Next` até finalizar a instalação.
 
@@ -237,7 +237,7 @@ E clique em `Download for Windows`.
 
 Execute o arquivo salvo no seu computador e clique em `Next` e quando aparecer a janela abaixo:
 
-![](instalacao_vsc01.png)
+![](../../images/gitfig/instalacao_vsc01.png)
 
 Selecione as opções destacadas em vermelho e clique em `Próximo` até finalizar a instalação.
 
