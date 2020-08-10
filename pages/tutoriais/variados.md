@@ -426,6 +426,43 @@ Depois, basta monitorar o arquivo `nohup` com o comando:
 
 `tail -f nohup &`
 
+3 Outra forma de utilizar o parallel. Neste exemplo, será feito o uso do operador mergetime para juntar vários dias de um determinado ano.
+
+```bash
+#!/bin/bash
+
+for ano in $(seq 2010 2018)
+do
+    echo "cdo -s -O mergetime RF.${ano}????00.nc tmp01.RF.${ano}.nc" >> lista.txt
+done
+
+nohup parallel -j 12 < lista1.txt > lista1.log
+
+```
+
+O valor `12` veio a partir do comando `nproc` que digita-se no terminal. O valor obtido divide-se por 2.
+
+Por exemplo, ao digitar o `nproc` foi retornado o valor `24`, e 24/2 = 12. 
+
+Este número representa o número de núcleos do seu computador. 
+
+**Se você usar todos os núcleos, é bem provável que a sua máquina possa travar.**
+
+O arquivo `lista.txt` terá o seguinte conteúdo.
+
+```
+cdo -s mergtime RF.2010????00.nc tmp01.RF.2010.nc
+cdo -s mergtime RF.2011????00.nc tmp01.RF.2011.nc
+cdo -s mergtime RF.2012????00.nc tmp01.RF.2012.nc
+cdo -s mergtime RF.2013????00.nc tmp01.RF.2013.nc
+cdo -s mergtime RF.2014????00.nc tmp01.RF.2014.nc
+cdo -s mergtime RF.2015????00.nc tmp01.RF.2015.nc
+cdo -s mergtime RF.2016????00.nc tmp01.RF.2016.nc
+cdo -s mergtime RF.2017????00.nc tmp01.RF.2017.nc
+cdo -s mergtime RF.2018????00.nc tmp01.RF.2018.nc
+```
+Qual a vantagem de se fazer isso? Em vez de gerar um loop para cada ano, os 9 comandos serão executados de uma vez só, economizando tempo de máquina.
+
 ### Localizar onde está sendo executado um comando
 
 O `pwdx` é nativo do Linux e é excelente para identificar qual o diretório que um determinado processo foi executado.
