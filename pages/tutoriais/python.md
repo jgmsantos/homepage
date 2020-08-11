@@ -9,7 +9,7 @@ Ao executar o instalador, selecione a opção **Add Python to PATH**.
 
 ### Instalando o PyCharm
 
-o PyCharm será utilizada para criar os programas em Python.
+o PyCharm é uma IDE (*Integrated Development Environment* ou Ambiente de Desenvolvimento Integrado) que será utilizada para criar os programas em Python.
 
 [https://www.jetbrains.com/pt-br/pycharm/download/#section=windows](https://www.jetbrains.com/pt-br/pycharm/download/#section=windows)
 
@@ -89,3 +89,61 @@ Para entrar em um ambiente virtual, basta digitar:
 A vantagem de fazer tudo isso, consiste em evitar conflitos nos programas Python utilizando versões diferentes, pois este procedimento mantém a mesma versão do Python mesmo que o seu sistema seja atualizado.
 
 Feito todos os passos, agora começa a brincadeira com o PyCharm.
+
+### Iniciando em Python - Um pouco sobre PEP (Python Enhancement Proposals)
+
+Uma boa prática é ler sobre as PEP 8:
+
+[https://www.python.org/dev/peps](https://www.python.org/dev/peps)
+
+A PEP 8 (link abaixo) é um guia de estilo de codificação em Python, ou seja, como escrever um programa de forma adequada:
+
+[https://www.python.org/dev/peps/pep-0008](https://www.python.org/dev/peps/pep-0008)
+
+Exemplos de PEP 8:
+
+- Utilize sempre 4 espaços para identação em vez de TAB. O TAB pode ter configurações diferentes em computadores distintos.
+- Utilize sempre letras minúsculas separadas por `_` para funções ou variáveis.
+- Utilize sempre duas linhas em branco para separar funções e definições de classe com duas linhas em branco.
+- Métodos dentro de uma classe devem separados por uma única linha em branco.
+- Imports devem ser feitos em linhas separadas.
+  - `import sys`
+  - `import os`
+- Os imports são sempre declarados no topo do script.
+
+### Iniciando em Python
+
+Utilitários Python (`dir` e `help`) para auxiliar na programação.
+
+`dir`: Apresenta todos os atributos/propriedades e funções/métodos disponíveis
+para determinado tipo de dado ou variável.
+
+dir(tipo de dado ou variável)
+
+- Exemplo: Com o Python ativo, digitar no terminal o comando abaixo:
+
+`>>> dir("Meteorologia")`
+
+![](../../images/python_tutorial/fig01.png)
+
+Ao digitar este comando serão mostradas todas as opções que podem ser utilizadas com o tipo `"Meteorologia"`.
+
+Por exemplo, deseja-se saber o que um determinado comando faz, como no exemplo, para isso, utiliza-se o help.
+
+`>>> "Meteorologia".upper`
+
+`help`: Apresenta a documentação/como utilizar os atributos/propriedades e funções/métodos disponíveis para determinado tipo de dado ou variável.
+
+`>>> help("Meteorologia".upper)`
+
+![](../../images/python_tutorial/fig02.png)
+
+Será mostrado o que o comando faz.
+
+Ao digitar o comando abaixo:
+
+`>>> "Meteorologia".upper()`
+
+![](../../images/python_tutorial/fig03.png)
+
+Toda a string foi convertida para o formato maiúsculo.
