@@ -1166,6 +1166,8 @@ O resultado do arquivo tmp02.nc.
 
 ```bash
 ncatted -O -a _FillValue,precip,d,c,"" -a missing_value,precip,d,c,"" tmp02.nc tmp03.nc
+
+# Utiliza-se o operador ternário. Neste caso, é feito o seguinte, quando precip < 0, recebe, o valor 0, caso contrário, recebe o valor de precip.
 cdo -s expr,"tmp=(precip < 0)?0:precip" tmp03.nc tmp04.nc
 
 # Insere as informações do arquivo tmp02.nc no arquivo tmp01.nc.
