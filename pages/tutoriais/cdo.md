@@ -1117,6 +1117,67 @@ E o resultado será:
     23 : 2020-11-01 00:00:00       0        1       1 :                     nan             : rbf
     24 : 2020-12-01 00:00:00       0        1       1 :                     nan             : rbf
 ```
+
+### Substituir um conjunto de dados por outro
+
+Neste exemplo, serão utilizados dois conjuntos de dados de precipitação, `GPCP_PREC_JAN2019.nc` e o `CMAP_PREC_JAN2019.nc`. O objetivo consiste em recortar um retângulo do CMAP (BASE2) e substituir no GPCP (BASE1). O script abaixo realiza esta tarefa.
+
+Uma imagem do arquivo do GPGP.
+
+![](../../images/grads/fig01.png)
+
+Uma imagem do arquivo do CMAP.
+
+![](../../images/grads/fig02.png)
+
+```bash
+#!/bin/bash
+
+BASE1="GPCP_PREC_JAN2019.nc"
+BASE2="CMAP_PREC_JAN2019.nc"
+AREA="-180,-120,-30,0" # LonW,LonE,LatS,LatN.
+
+rm -f tmp??.nc # Remove arquivos desnecessários.
+
+# Definindo uma área a ser recortada do arquivo GPCP_PREC_JAN2019.nc.
+# A área definida terá valor constante igual a zero (conforme definido no operador setclonlatbox), os demais pontos ficam com valores inalterados. Isso facilitará a operação com o arquivo GPCP_PREC_JAN2019.nc que será substituído pelo retângulo criado.
+
+cdo -s setclonlatbox,0,${AREA} ${BASE1} tmp01.nc
+
+# Recortando a área do arquivo CMAP_PREC_JAN2019.nc. O recorte deste arquivo será utilizado para substituir os valores do retângulo do arquivo GPCP_PREC_JAN2019.nc.
+# O masklonlatbox mostra apenas valores no retângulo definido, os demais pontos do domínio recebem valores UNDEF.
+```
+
+O resultado do arquivo tmp01.nc.
+
+![](../../images/grads/fig03.png)
+
+```bash
+cdo -s masklonlatbox,${AREA} ${BASE2} tmp02.nc
+
+# Foi necessário deletar os atributos _FillValue e missing_value para fazer a junção dos arquivos GPCP_PREC_JAN2019.nc e CMAP_PREC_JAN2019.nc.
+# O nome precip abaixo é o nome da variável do seu arquivo.
+```
+
+O resultado do arquivo tmp02.nc.
+
+![](../../images/grads/fig04.png)
+
+
+```bash
+ncatted -O -a _FillValue,precip,d,c,"" -a missing_value,precip,d,c,"" tmp02.nc tmp03.nc
+cdo -s expr,"tmp=(precip < 0)?0:precip" tmp03.nc tmp04.nc
+
+# Insere as informações do arquivo tmp02.nc no arquivo tmp01.nc.
+cdo -s add tmp01.nc tmp04.nc out.nc
+
+rm -f tmp??.nc # Remove arquivos desnecessários.
+```
+
+O resultado do arquivo out.nc.
+
+![](../../images/grads/fig05.png)
+
 ### Vídeo aula de CDO
 
 + 2020
