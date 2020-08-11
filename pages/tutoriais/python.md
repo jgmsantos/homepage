@@ -1,4 +1,4 @@
-Python no Windows
+Python para Windows
 =================================
 
 ### Instalando o Python
