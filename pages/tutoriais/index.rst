@@ -12,6 +12,7 @@ Tutoriais
    meteorologia
    nco
    ncl
+   python
    processamento_texto
    shell
    wgrib2
