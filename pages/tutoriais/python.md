@@ -1,15 +1,13 @@
-Python
+Python no Windows
 =================================
 
-### Instalação do PyCharm no Windows
-
-#### Instalando o Python
+### Instalando o Python
 
 [https://www.python.org/downloads/](https://www.python.org/downloads/)
 
 Ao executar o instalador, selecione a opção **Add Python to PATH**.
 
-#### Instalando o PyCharm
+### Instalando o PyCharm
 
 o PyCharm será utilizada para criar os programas em Python.
 
@@ -19,7 +17,7 @@ Basta clicar em **Baixar** na sessão **Community**.
 
 Ao instalar o PyCharm, marque em **Create Associations** a opção `.py`.
 
-#### Definindo variáveis de ambiente no Windows.
+### Definindo variáveis de ambiente no Windows.
 
 Vá para o seu usuário no Windows e digite na barra de endereço:
 
@@ -54,7 +52,7 @@ Valor da variável `%USERPROFILE%\Envs`
 
 Basta clicar em `OK` e depois fechar tudo.
 
-#### Criando ambientes virtuais
+### Criando ambientes virtuais
 
 Isto foi feito para criar ambientes virtuais no Python para deixar a instalação padrão do Python intocável, pois é uma prática muito boa em programação trabalhar com ambientais virtuais.
 
