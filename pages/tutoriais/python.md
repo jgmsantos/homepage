@@ -17,7 +17,7 @@ Basta clicar em **Baixar** na sessão **Community**.
 
 Ao instalar o PyCharm, marque em **Create Associations** a opção `.py`.
 
-### Definindo variáveis de ambiente no Windows.
+### Definindo variáveis de ambiente no Windows
 
 Vá para o seu usuário no Windows e digite na barra de endereço:
 
