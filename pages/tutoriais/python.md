@@ -157,6 +157,7 @@ Existem dois tipos:
     - Exemplo:
     ```python
     num = 2
+
     print(num)
     print(type(num))
     ````
@@ -165,6 +166,7 @@ Existem dois tipos:
     - Exemplo:
     ```python
     numero = 2
+
     if numero > 10:
         novo = numero + 10
 
@@ -183,6 +185,7 @@ O `Python` é uma liguagem de `tipagem dinâmica`. Isso siginifica que ao declar
 
 ```python
 temperatura = 30
+
 if temperatura < 40:
     print("Temperatura menor que 40 graus Celsius")
 ```
@@ -191,6 +194,7 @@ if temperatura < 40:
 
 ```python
 temperatura = 45
+
 if temperatura < 40:
     print("Temperatura menor que 40 graus Celsius") # Sempre utilizar quatro espaços. Caso contrários será retornado erro.
 else:
@@ -201,6 +205,7 @@ else:
 
 ```python
 temperatura = 50
+
 if temperatura < 30:
     print("Temperatura menor que 30 graus Celsius")
 elif temperatura == 50:
