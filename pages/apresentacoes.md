@@ -3,7 +3,9 @@ Apresentações
 
 2020
 
-+ [Temporada de queimadas 2020 no bioma Pantanal](https://docs.google.com/presentation/d/13-FQL5Yg0l7zU83X-S9ai82vohvyWe5EGT2URPsCetI/edit?usp=sharing). Julho/2020.
++ [Temporada de queimadas 2020 no bioma Amazônia](https://docs.google.com/presentation/d/1HLVjWAS03nlCoNtLHgoqefcRNjTw7i_VLusVVfRupgk/edit?usp=sharing). Agosto/2020.
+
++ [Live - Período Seco e Queimadas](https://www.youtube.com/watch?v=Saw1SaVfg7w&t=8s). Agosto/2020.
 
 + [Live - Computação aplicada à Meteorologia](https://youtu.be/68Gf1hYNacQ). Julho/2020.
 
