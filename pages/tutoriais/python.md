@@ -147,3 +147,198 @@ Ao digitar o comando abaixo:
 ![](../../images/python_tutorial/fig03.png)
 
 Toda a string foi convertida para o formato maiúsculo.
+
+### Sobre variáveis em Python
+
+Existem dois tipos:
+
+- Váriáveis globais:
+    - Variáveis globais são reconhecidas, ou seja, seu escopo compreende todo o programa.
+    - Exemplo:
+    ```python
+    num = 2
+    print(num)
+    print(type(num))
+    ````
+- Variáveis locais:
+    - Variáveis locais são reconhecidas apenas no bloco onde foram declaradas, ou seja, seu escopo está limitado ao bloco onde foi declarada.
+    - Exemplo:
+    ```python
+    numero = 2
+    if numero > 10:
+        novo = numero + 10
+
+    print(novo)
+    ```
+    - Será gerado erro porque a variável `novo` faz parte do contexto da estrutura condicional `if`.
+
+- Para declarar variáveis em Python, utiliza-se:
+    - `nome_da_variavel = valor_da_variavel`
+
+O `Python` é uma liguagem de `tipagem dinâmica`. Isso siginifica que ao declarar uma variável, não há necessidade de informar o tipo da variável.
+
+### Estrutura condicional
+
+- Estrutura if:
+
+```python
+temperatura = 30
+if temperatura < 40:
+    print("Temperatura menor que 40 graus Celsius")
+```
+
+- Estrutura if-else:
+
+```python
+temperatura = 45
+if temperatura < 40:
+    print("Temperatura menor que 40 graus Celsius") # Sempre utilizar quatro espaços. Caso contrários será retornado erro.
+else:
+    print("Temperatura maior que 40 graus Celsius") # Sempre utilizar quatro espaços. Caso contrários será retornado erro.
+```
+
+- Estrutura if-elif-else:
+
+```python
+temperatura = 50
+if temperatura < 30:
+    print("Temperatura menor que 30 graus Celsius")
+elif temperatura == 50:
+    print("Temperatura igual a 50 graus Celsius")
+else:
+    print("Temperatura maior que 30 graus Celsius")
+```
+
+É possível utilizar vários `elif` que dependerá da condição.
+
+### Estrutura lógica
+
+- Estruturas lógicas: `and` (e), `or` (ou), `not` (não) e `is` (é).
+- Operadores unários, isto é, dependem apenas de um valor:
+    - `not`
+- Operadores binários:
+    - `and`, `or` e `is`
+- Regras de funcionamento:
+  - Para o `and`, ambos os valores devem ser `True`.
+  - Para o `or`, um ou outro valor precisa ser `True`.
+  - Para o `not`, o valor do booleano (`True` ou `False`) é invertido, ou seja, se for `True`, vira `False`, e vice-versa.
+  - Para o `is`, o valor é comparado com outro valor.
+
+- Exemplo de uso do `and`:
+
+```python
+umidade_relativa = 80
+temperatura = 20
+
+if umidade_relativa <= 30 and temperatura >= 40:
+    print("Condição perigosa")
+else:
+    print("Condição favorável")
+```
+
+- Exemplo de uso do `or`:
+```python
+umidade_relativa = 80
+temperatura = 45
+
+if umidade_relativa <= 30 or temperatura >= 40:
+    print("Condição perigosa")
+else:
+    print("Condição favorável")
+```
+
+- Exemplo de uso do `not`:
+```python
+umidade_relativa = 80
+
+if not umidade_relativa <= 30:
+    print("Umidade relativa alta")
+else:
+    print("Umidade relativa baixa")
+```
+
+- Exemplo de uso do `is`:
+```python
+umidade_relativa = 80
+
+if (umidade_relativa <= 30) is False:
+    print("Umidade relativa alta")
+else:
+    print("Umidade relativa baixa")
+```
+
+O trecho `(umidade_relativa <= 30)` é `False`, logo `False is False`? Verdade, por isso, `print("Umidade relativa alta")`
+
+### Estrutura de repetição
+
+#### Loop for
+
+- Loop: É uma estrutura de repetição.
+- Utilizamos loops para iterar sobre sequências ou sobre valores iteráveis.
+- Loop `for` (para).
+- `for`: É uma dessas estruturas.
+- Exemplo1:
+```python
+nome = "Meteorologia"
+
+for letra in nome:
+    print(letra)
+```
+
+- Exemplo2:
+```python
+for numero in range(1, 10): # O último número é exclusivo.
+    print(numero)
+```
+
+#### Loop while
+
+- O bloco do `while` será repetido enquando a `expressão_booleana` for verdadeira. Expressão booleana é toda expressão onde o resultado é `True` (verdadeiro) ou `False` (falso).
+- Em um loop while é importante que cuidemos do critério de parada para não causar um loop infinito.
+
+```python
+Exemplo1: Compara o valor 10 com o 5.
+
+num = 10
+print(num < 5) # False
+```
+
+```python
+Exemplo2: Imprime os valores de 1 a 9, lembrando que o último valor é exclusivo.
+
+numero = 1
+
+while numero < 10:
+    print(numero)
+    numero = numero + 1
+```
+
+```python
+Exemplo3: Enquanto o usuário não digitar sim, o loop será executado.
+
+resposta = ''
+
+while resposta != 'sim':
+    resposta = input("Já acabou Jéssica?")
+```
+
+#### break
+
+- Utilização do `break` para sair de loops de maneira projetada.
+- Exemplo1:
+```python
+for numero in range(1, 11):
+    if numero == 6:
+        break
+    else:
+        print(numero)
+print('Sai do loop') # print está fora do bloco for.
+```
+
+- Exemplo2:
+```python
+while True:
+    comando = input("Digite 'sair' para sair")
+    if comando == 'sair':
+        break
+```
