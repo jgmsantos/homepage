@@ -568,7 +568,7 @@ print(nome) # Egua, moleque
 nome = ['Egua', 'moleque']
 nome = '$'.join(nome) # Separa os elementos da lista por $.
 print(nome) # Egua$moleque
-```python
+```
 
 - Pode-se colocar qualquer tipo de dado em uma lista, inclusive misturando estes dados:
 
