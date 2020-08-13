@@ -1,13 +1,13 @@
-Python para Windows
+Python
 =================================
 
-### Instalando o Python
+### Instalando o Python no Windows
 
 [https://www.python.org/downloads/](https://www.python.org/downloads/)
 
 Ao executar o instalador, selecione a opção **Add Python to PATH**.
 
-### Instalando o PyCharm
+### Instalando o PyCharm no Windows
 
 o PyCharm é uma IDE (*Integrated Development Environment* ou Ambiente de Desenvolvimento Integrado) que será utilizada para criar os programas em Python.
 
@@ -347,3 +347,423 @@ while True:
     if comando == 'sair':
         break
 ```
+
+### Coleções em Python
+
+#### Listas
+
+Listas em Python funcionam como vetores/matrizes (arrays) em outras linguagens, com a diferença de serem dinâmico e também de poder colocar qualquer tipo de dado.
+
+Em Python:
+- As listas em Python são representadas por `[]`.
+- **Dinâmico**: Não possui tamanho fixo, ou seja, pode-se criar a lista e adicionar elementos a ela;
+- **Qualquer tipo de dado**: Não possuem tipo de dado fixo, ou seja, pode-se colocar qualquer tipo de dado.
+- **Listas são mutaveis:** elas podem mudar constantemente
+
+Exemplos de listas:
+
+```python
+lista1 = [1, 99, 4, 27, 15] # Lista de inteiros.
+lista2 = ['M', 'e', 't', 'e', 'o', 'r', 'o', 'l', 'o', 'g', 'i', 'a'] # Lista de strings.
+lista3 = [] # Lista vazia.
+lista4 = list(range(11)) # Cria uma lista com 10 elementos (0 a 10) do tipo inteiro.
+lista5 = list('Meteorologia') # Lista de strings.
+```
+Aplicações utilizando lista:
+
+- Localizar um número dentro da lista:
+
+```python
+Podemos facilmente checar se determinado valor estã contido na lista
+lista = list(range(11))
+num = 7
+
+if num in lista:
+    print(f'Encontrei o numero {num}')
+else:
+    print(f'Nao encontrei o numero {num}')
+```
+
+- Ordenar uma lista:
+
+```python
+lista = [1, 99, 4, 27, 15]
+lista.sort() # Ordena primeiro.
+print(lista)
+```
+
+- Contar o número de ocorrências de um valor em uma lista: 
+
+```python
+lista = [1, 99, 4, 27, 15]
+print(lista.count(1)) # 2 ocorrências para o valor 1.
+```
+
+```python
+lista = [1, 99, 4, 1, 15]
+print(lista.count(1)) # 2 ocorrências para o valor 1.
+```
+
+- Adicionar elementos em listas
+  - Para adicionar valores em listas, utilizamos a função `append`.
+
+```python
+lista = [1, 99, 4, 27, 15]
+print(lista)
+lista.append(42)
+print(lista)
+```
+
+- Com append, somente é possível adicionar 1 elemento por vez;
+
+```python
+lista = [1, 99, 4, 27, 15]
+print(lista)
+lista.append([8, 3, 11]) # Coloca a lista dentro de uma lista.
+print(lista)
+```
+
+- Para verificar se uma lista está dentro de uma lista:
+
+```python
+lista = [1, 99, 4, 27, 15, [2, 7, 8]]
+if [2, 7, 8] in lista:
+    print("Encontrei a lista")
+else:
+    print("Não encontrei a lista")
+```
+
+- Adicionar elementos em uma lista utilizando o `extent`:
+  - O valor inserido ficará sempre no fim da lista. 
+
+```python
+lista = [1, 99, 4, 27, 15]
+lista.extend([123, 44, 67])
+print(lista)
+```
+- Inserir elementos em uma lista informando a posição com o uso do `insert`:
+  - Pode-se inserir um novo elemento na lista informando a posição do índice.
+  - Insere na posição 2 o valor -999.
+  - Isso não substitui o valor inicial. O mesmo será deslocado para a direita da lista.
+  - É possível misturar diferentes tipos, isto é, números e strings, por exemplo.
+
+```python
+lista = [1, 99, 4, 27, 15] # Índice 0 1 2 3 4
+lista.insert(2, -999) # No índice 2, insere o valor -999.
+print(lista)
+```
+
+```python
+lista = [1, 99, 4, 27, 15] # Índice 0 1 2 3 4
+lista.insert(3, 'Temperatura') # No índice 3, insere o valor 'Temperatura'.
+print(lista)
+```
+
+- Juntar duas listas utilizando o `extend`:
+
+```python
+lista1 = [1, 99, 4, 27, 15]
+lista2 = [2, 6, 7]
+lista1.extend(lista2)
+print(lista1)
+```
+
+- Inverter os valores de uma lista utilizando o `reverse`:
+- Forma 1:
+
+```python
+lista = [1, 99, 4, 27, 15]
+lista.reverse()
+print(lista)
+```
+- Forma 2:
+```python
+lista = [1, 99, 4, 27, 15]
+print(lista[::-1])
+```
+
+- Copiar uma lista utilizando o `copy`:
+
+```python
+lista = [1, 99, 4, 27, 15]
+lista1 = lista.copy()
+print(lista1)
+```
+
+- Contar o número de elementos de uma lista utilizando o `len`:
+
+```python
+lista = [1, 99, 4, 27, 15]
+print(len(lista))
+```
+
+- Remover e retornar o último elemento de uma lista com a função `pop`:
+
+```python
+lista = [1, 99, 4, 27, 15]
+print(lista)
+lista.pop()
+print(lista)
+```
+
+- Remover o elemento da lista pelo seu índice:
+  - **Observação1**: Os elementos a direita deste índice serão deslocados para esquerda.
+  - **Observação2**: Se não houver elemento no índice informado será retornado o erro `IndexError`.
+
+```python
+lista = [1, 99, 4, 27, 15] # Índice 0 1 2 3 4
+print(lista)
+lista.pop(2) # Remove o valor 4 da lista que encontra-se no índice 2.
+print(lista)
+```
+
+- Remover (limpar) todos os elementos de uma lista utilizando o `clear`:
+
+```python
+lista = [1, 99, 4, 27, 15]
+print(lista)
+lista.clear()
+print(lista)
+```
+
+- Repetir elementos em uma lista:
+
+```python
+lista = [1, 2, 3]
+print(lista)
+lista = lista * 3 # Repete a lista 3 vezes.
+print(lista)
+```
+
+- Converter uma string para uma lista utilizando o `split`:
+  - **Observação**: Por padrão, o `split` separa os elementos da lista pelo espaço entre elas.
+
+```python
+nome = 'Egua moleque'
+print(nome)
+nome = nome.split()
+print(nome) # ['Egua', 'moleque']
+```
+
+Outro exemplo utilizando um separador, neste caso, a `,`:
+
+```python
+nome = 'Egua, moleque'
+print(nome)
+nome = nome.split(',') # O separador entre as palavras é a vírgula.
+print(nome) # ['Egua', 'moleque']
+```
+
+- A partir da lista `nome`, coloca espaço entre cada elemento dela e depois tranforma em uma string utilizando o `join`:
+
+```python
+nome = ['Egua', 'moleque']
+nome = ' '.join(nome)
+print(nome) # Egua, moleque
+```
+
+- Adiciona `$` entre cada elemento da lista e tranforma em uma string:
+
+```python
+nome = ['Egua', 'moleque']
+nome = '$'.join(nome) # Separa os elementos da lista por $.
+print(nome) # Egua$moleque
+```python
+
+- Pode-se colocar qualquer tipo de dado em uma lista, inclusive misturando estes dados:
+
+```python
+lista = [1, 2.34, True, 'Tempo', 'd', [1, 2, 3], 4534567]
+print(lista)
+print(type(lista))
+```
+
+- Iterando sobre lista:
+- Utilizando o `for`.
+
+```python
+# Exemplo: Imprimindo os valores de uma lista.
+lista = [1, 2, 3, 4]
+for elemento in lista:
+    print(elemento)
+```
+
+```python
+# Exemplo2: Somando elementos de uma lista.
+lista = [1, 2, 3, 4]
+soma = 0
+
+for elemento in lista:
+    print(elemento)
+    soma = soma + elemento
+print(soma) # 10
+```
+
+```python
+# Exemplo3: Somando strings.
+lista = ['e', 'g', 'u', 'a']
+soma = ''
+for elemento in lista:
+    print(elemento)
+    soma = soma + elemento
+print(soma)
+```
+
+- Utilizando o `while`.
+
+```python
+carrinho = []  # Lista vazia que receberá os valores.
+produto = ''  # Uma variável do tipo string para armazenar os produtos.
+
+while produto != 'sair':
+    print("Adicione um produto na lista ou digite 'sair' para sair: ")
+    produto = input()
+    if produto != 'sair':
+        carrinho.append(produto)
+
+for produto in carrinho:
+    print(produto)
+```
+
+- Acessar os valores de uma lista de forma indexada:
+
+```python
+#           0         1         2        3
+cores = ['verde', 'amarelo', 'azul', 'branco']
+
+print(cores[0])   # verde
+print(cores[1])   # amarelo
+print(cores[2])   # azul
+print(cores[3])   # branco
+```
+
+- Fazer acesso aos elementos de uma lista de forma indexada inversa:
+
+```python
+print(cores[-1])   # branco
+print(cores[-2])   # azul
+print(cores[-3])   # amarelo
+print(cores[-4])   # verde
+print(cores[-5])   # IndexError: List index out of range
+```
+
+- Gerar índice em um `for` com o `enumerate`:
+  - O `enumerate` gera pares chave/valor. Coloca chave no índice e o valor na variavel cor.
+ - O resultado do `enumerate` será `[(0, 'verde'), (1, 'amarelo'), (2, 'azul'), (3, 'branco')]`.
+
+```python
+# Exemplo de uso.
+cores = ['verde', 'amarelo', 'azul', 'branco']
+
+for indice, cor in enumerate(cores):
+    print(indice, cor)
+```
+
+- Listar aceitam valores repetidos:
+  - Algumas coleções não aceitam repetição.
+
+```python
+lista = []  # Cria uma lista vazia.
+lista.append(42)
+lista.append(42)
+lista.append(33)
+lista.append(33)
+lista.append(42)
+
+print(lista)
+```
+
+- Encontrar o índice de um elemento na lista utilizando o `ìndex`:
+
+```python
+# Caso o valor não esteja na lista será retornado erro (ValueError).
+lista = [5, 6, 7, 8, 10]
+print(lista.index(6)) # Em qual índice está o valor 6? 1
+```
+
+- Retornar o índice do primeiro elemento encontrado:
+```python
+#  O valor 5 tem duas repetições.
+numeros = [5, 6, 7, 5, 8]
+print(numeros.index(5)) # 0
+```
+
+- Fazer busca dentro de um range, ou seja, qual índice começar a busca:
+
+```python
+#          0  1  2  3  4  5
+numeros = [5, 6, 7, 5, 8, 9]
+print(numeros.index(5, 1))  # Busca o valor 5 na lista a partir do índice 1. Resultado: 3.
+print(numeros.index(5, 2))  # Busca o valor 5 na lista a partir do índice 2. Resultado: 3.
+print(numeros.index(5, 3))  # Busca o valor 5 na lista a partir do índice 3. Resultado: 3.
+print(numeros.index(5, 4))  # Busca o valor 5 na lista a partir do índice 4. Gera erro porque não está na lista => ValueError: 5 is not in list
+
+```
+
+- Pode-se fazer busca dentro de um range (início/fim):
+
+```python
+#          0  1  2  3  4  5  6
+numeros = [5, 6, 7, 5, 8, 9, 10]
+print(numeros.index(8, 3, 6)) # Busca o indice do valor 8 entre os indices 3 e 6. Resultado: 4.
+```
+
+- Algumas operações matemáticas:
+```python
+# Soma*, valor máximo*, valor mínimo*, tamanho
+# *Somente se os valores forem inteiros ou reais
+
+lista = [1, 2, 3, 4, 5, 6]
+
+print(sum(lista))
+print(max(lista))
+print(min(lista))
+print(len(lista))  # Qualquer tipo de dado
+```
+
+- Transformar lista em tupla:
+
+```python
+lista = [1, 2, 3, 4, 5, 6]
+print(lista)
+print(type(lista))
+
+# Os parênteses caracterizam a tupla.
+tupla = tuple(lista)
+print(tupla)
+print(type(tupla))
+```
+
+- Copiando uma lista para outra (Shallow copy e Deep Copy)
+
+   - Forma 1: Deep Copy
+
+```python
+lista = [1, 2, 3]
+print(lista)  # [1, 2, 3]
+
+nova = lista.copy() # Criando uma nova lista.
+print(nova)  # [1, 2, 3]
+
+nova.append(4) # Adiciona o valor 4 a lista nova.
+
+print(lista)  # [1, 2, 3]
+print(nova)  # [1, 2, 3, 4]
+```
+- Ao utilizar `lista.copy()` copia-se os dados da lista para uma nova lista, mas elas ficaram totalmente independentes, ou seja, modificando uma lista, não afeta a outra. Isso em Python é chamado de `Deep Copy` (cópia profunda).
+
+- Forma 2: Shallow Copy
+
+```python
+lista = [1, 2, 3]
+print(lista)  # [1, 2, 3]
+
+nova = lista  # Cópia de lista para nova.
+print(nova)  # [1, 2, 3]
+
+nova.append(4)
+
+print(lista)  # [1, 2, 3, 4]
+print(nova)  # [1, 2, 3, 4]
+```
+- Ao utilizar a cópia via atribuição, copia-se os dados da lista para a nova a lista, mas após realizar a modificação em uma das listas, essa modificação se reflete em ambas as listas. Isso em Python é chamado de `Shallow Copy`.
