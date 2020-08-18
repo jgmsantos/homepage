@@ -767,3 +767,116 @@ print(lista)  # [1, 2, 3, 4]
 print(nova)  # [1, 2, 3, 4]
 ```
 - Ao utilizar a cópia via atribuição, copia-se os dados da lista para a nova a lista, mas após realizar a modificação em uma das listas, essa modificação se reflete em ambas as listas. Isso em Python é chamado de `Shallow Copy`.
+
+#### Tuplas
+
+- Tuplas são bastante parecidas com listas.
+- Utiliza-se tuplas sempre que não há necessidade de modificar os dados contidos em uma coleção.
+- Qual a razão de utilizar tuplas?
+  - Tuplas são mais rápidas do que listas.
+  - Tuplas deixam o seu código mais seguro, isso porque trabalhar com elementos imutáveis deixa o seu cõdigo mais seguro.
+- Existem basicamente duas diferenças básicas:
+  - As tuplas são representadas por parênteses ().
+  - `As tuplas são imutáveis`. Isso significa que ao se criar uma tupla ela não muda. Toda operação em uma tupla gera uma nova tupla.
+  - A indexação em tuplas é a mesma feita em listas.
+- Exemplos de tuplas:
+
+```python
+tupla1 = (1, 2, 3)
+print(type(tupla1))
+
+# É o mesmo que:
+tupla1 = 1, 2, 3
+```
+
+**Observação**: Tuplas com 1 elemento
+
+```python
+tupla1 = (4)  # Isso não é uma tupla.
+print(tupla1)
+print(type(tupla1))
+
+tupla2 = (4,)  # Isso é uma tupla
+print(tupla2)
+print(type(tupla2))
+
+tupla3 = 4,  # Isso é uma tupla
+print(tupla3)
+print(type(tupla3))
+```
+
+**Conclusão**: Conclui-se que  tuplas são definidas pela vírgula e não pelo uso do parênteses.
+
+- Podemos gerar uma tupla dinamicamente com `range(início,fim,passo)`:
+
+```python
+tupla = tuple(range(4))
+print(tupla)  # (0, 1, 2, 3)
+print(type(tupla))
+```
+
+- Desempacotamento de tupla:
+
+```python
+# Gera erro (ValueError) se colocar um número diferente de elementos para desempacotar.
+tupla = ('Meteorologia', 'Previsão de tempo')
+curso, funcao = tupla
+print(curso)
+print(funcao)
+```
+
+```python
+# Concatenação (juntar) de tuplas
+tupla1 = (1, 2, 3)
+print(tupla1)  # (1, 2, 3)
+
+tupla2 = (4, 5, 6)
+print(tupla2)  # (4, 5, 6)
+
+print(tupla1 + tupla2)  # Tuplas são imutáveis.
+
+print(tupla1)
+print(tupla2)
+
+tupla3 = tupla1 + tupla2  # Pode-se criar uma nova tupla.
+
+print(tupla3)  # (1, 2, 3, 4, 5, 6)
+print(tupla2)
+print(tupla1)
+
+# Tuplas são imutáveis, mas pode-se sobrescrever seus valores.
+tupla1 = tupla1 + tupla2  # (1, 2, 3, 4, 5, 6)
+print(tupla1)
+```
+
+- Verificar se determinado elementos estã contido na tupla:
+```python 
+tupla = (1, 2, 3)
+print(3 in tupla)  # True
+```
+
+- Iterando sobre uma tupla:
+
+```python
+tupla = (1, 2, 3)
+
+for n in tupla:
+    print(n)
+
+# Obtendo o índice e valor da tupla.
+
+for indice, valor in enumerate(tupla):
+    print(indice, valor)
+```
+
+- Contando elementos dentro de uma tupla:
+```python
+tupla = ('a', 'b', 'c', 'd', 'e', 'a', 'b')
+print(tupla.count('a'))  # 2
+```
+
+- Converte string para tupla:
+```python
+curso = tuple('Meteorologia')
+print(curso)  # ('M', 'e', 't', 'e', 'o', 'r', 'o', 'l', 'o', 'g', 'i', 'a')
+```
