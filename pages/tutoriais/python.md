@@ -1019,7 +1019,7 @@ novo['d'] = 4
 print(d)
 print(novo)
 ```
-#### Tipo None
+### Tipo None
 
 - O tipo de dado `None` em Python representa o tipo sem tipo, ou poderia ser conhecido também como tipo vazio, porém falar  que é um tipo sem tipo é mais apropriado.
 - O tipo `None` é sempre especificado com a primeira letra maiúscula.
