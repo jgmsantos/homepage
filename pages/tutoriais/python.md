@@ -880,3 +880,161 @@ print(tupla.count('a'))  # 2
 curso = tuple('Meteorologia')
 print(curso)  # ('M', 'e', 't', 'e', 'o', 'r', 'o', 'l', 'o', 'g', 'i', 'a')
 ```
+
+### Dicionários
+
+- Em algumas linguagens de progrmação, os dicionários Python são conhecidos por mapas.
+- Dicionários são coleções do tipo chave/valor.
+- Dicionários são representados por `chaves {}`.
+- Sobre dicionários:
+    - Chaves e valor são separados por `'chave:valor'`;
+    - Tanto chave quanto valor podem ser de qualquer tipo de dado;
+    - Pode-se misturar tipos de dados.
+
+- Exemplos:
+```python
+# Exemplo:
+variaveis = {'Temp': '30', 'UR': '80', 'Prec': '10'}
+print(variaveis)
+print(type(variaveis))  # <class 'dict'>
+
+```
+
+- Acessando as informações utilizando a chave:
+
+```python
+# Exemplo: Acessando as informações utilizando a chave.
+# Forma 1:
+variaveis = {'Temp': '30', 'UR': '80', 'Prec': '10'}
+print(variaveis)
+print(variaveis['Temp'])
+print(variaveis['VV'])  # KeyError: 'VV'
+
+# Acesso via get:
+# Forma 2: Acessando via get (Forma Remocomendada).
+# Caso o get não encontre o objeto com a chave informada será retornado o valor None e será gerado erro KeyError.
+print(variaveis.get('UR'))
+print(variaveis.get('VV'))  # None
+```
+
+- Pode-se definir um valor padrão para o caso de não encontrar o objeto com a chave informada:
+
+```python
+# Exemplo: Pode-se definir um valor padrão para o caso de não encontrar o objeto com a chave informada.
+variaveis = {'Temp': '30', 'UR': '80', 'Prec': '10'}
+nome = variaveis.get('VV', 'Não encontrado')  # Procurar pelo 'Prec', e caso não ache, retorna 'Não encontrado'
+print(f'Valor da variável {nome}')
+```
+
+- Pode-se utilizar qualquer tipo de dado (int, float, boolean), inclusive lista, tupla, dicionário com chaves de dicionários.
+
+- Tuplas são bastante interessante de serem utilizadas como chave de dicionários, pois as mesmas são imutáveis.
+```python
+localidades = {
+    (35.6895, 39.6917): 'Escritorio em Tókio',
+    (40.7128, 74.0060): 'Escritorio em Nova York',
+    (37.7749, 122.4195): 'Escritorio em São Paulo',
+}
+
+print(localidades)
+print(type(localidades))
+```
+
+- Adicionar elementos em um dicionário:
+
+```python
+# Exemplo: Adicionar elementos em um dicionário.
+receita = {'jan': 100, 'fev': 120, 'mar': 300}
+print(receita)
+print(type(receita))
+
+# Forma 1: Forma mais comum
+receita['abr'] = 350
+print(receita)
+
+# Forma 2:
+novo_dado = {'maio': 500}
+receita.update(novo_dado)
+print(receita)
+```
+- Atualizando dados em um dicionário:
+
+```python
+# Atualizando dados em um dicionário
+# Forma 1:
+receita = {'jan': 100, 'fev': 120, 'mar': 300}
+receita['maio'] = 550
+print(receita)
+
+# Forma 2
+receita.update({'maio': 600})
+print(receita)
+```
+
+- **Conclusão1:** A forma de adicionar novos elementos ou atualizar dados em um dicionário é a mesma.
+- **Conclusão2:** Em dicionário não pode ter chaves repetidas.
+- Remover dados de um dicionário:
+
+```python
+# Exemplo: Remover dados de um dicionário.
+receita = {'jan': 100, 'fev': 120, 'mar': 300}
+print(receita)
+
+# Forma 1: Forma mais comum.
+ret = receita.pop('mar')
+print(ret)
+print(receita)
+```
+- **Observação 1:** É preciso informar sempre a chave, e caso não se encontre o elemento, um KeyError é informado.
+- **Observação 2:** Ao remover um objeto, o valor desse objeto é sempre retornado.
+- **Observação 3:** O valor removido é retornado.
+
+```python
+# Forma 2:
+del receita['fev']
+print(receita)
+del receita['fev']  # Erro => KeyError: 'fev' porque não existe mais na chave
+print(receita)
+```
+- Neste caso o valor removido não é retornado.
+- Imagine que você tem comércio eletrônico, onde temos um carrinho de compra onde adicionamos produtos.
+- Copiando um dicionário para outro:
+
+```python
+# Exemplo: Copiando um dicionário para outro.
+# Forma 1: Deep Copy.
+d = dict(a=1, b=2, c=3)  # Não usual
+novo = d.copy()
+print(novo)
+
+novo['d'] = 4
+print(d)
+print(novo)
+
+# Forma 2 - Shallow Copy
+d = dict(a=1, b=2, c=3)  # Não usual
+novo = d
+print(novo)
+novo['d'] = 4
+print(d)
+print(novo)
+```
+#### Tipo None
+
+- O tipo de dado `None` em Python representa o tipo sem tipo, ou poderia ser conhecido também como tipo vazio, porém falar  que é um tipo sem tipo é mais apropriado.
+- O tipo `None` é sempre especificado com a primeira letra maiúscula.
+- Quando utilizar `None`?
+  - Utiliza-se `None` quando deseja-se criar uma variável e inicializá-la com um tipo sem tipo, antes de receber um valor final.
+- O tipo `None` em Python é sempre considerado `False`.
+
+```python
+# Exemplo:
+numeros = None
+
+print(numeros)
+print(type(numeros))
+
+numeros = (1.44, 1.34, 5.67)
+print(numeros)
+print(type(numeros))
+```
