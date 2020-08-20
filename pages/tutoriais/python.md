@@ -1038,3 +1038,114 @@ numeros = (1.44, 1.34, 5.67)
 print(numeros)
 print(type(numeros))
 ```
+
+### Conjuntos
+
+- Conjuntos em qualquer linguagem de programação, faz referência à Teoria dos Conjuntos da Matemática.
+- No Python, os conjuntos são chamados de `Sets`.
+- `Sets` (Conjuntos) não possuem valores duplicados;
+- `Sets` (Conjuntos) não possuem valores ordenados;
+- Os elementos não são acessados via índice, ou seja, conjuntos não são indexados.
+
+Conjuntos são bons para se utilizar quando há necessidade armazenar elementos, porém a sua ordenação não é importante.
+
+Os conjuntos são referenciados em Python com chaves ` {}`.
+
+- Diferença entre Conjuntos (Sets) e Mapas (Dicionários) em Python:
+  - Um dicionário tem chave/valor.
+  - Um mapa tem apenas valor.
+
+Definindo um conjunto:
+
+```python
+# Forma 1:
+s = set({1, 2, 3, 2, 2})  # Repare nos valores repetidos.
+print(s)  # {1, 2, 3}
+print(type(s))  # <class 'set'>
+```
+
+Ao criar um conjunto, caso seja adicionado um valor já existente, o mesmo será ignorado sem gerar erro e não fará parte  do conjunto.
+
+```python
+# Forma 2: Mais comum.
+s = {1, 2, 3, 2, 2}  # Repare nos valores repetidos.
+print(s)  # {1, 2, 3}
+print(type(s))  # <class 'set'>
+```
+
+- Usos interessantes com Sets
+-  Adicionando elementos em um conjunto:
+
+```python
+s = {1, 2, 3}
+print(s)
+s.add(4)
+s.add(4)  # Duplicidade não gera erro. Simplesmente, é ignorado e não é adicionado no conjunto.
+print(s)
+```
+
+- Remover elementos de um conjunto.
+
+```python
+
+s = {1, 2, 3}
+print(s)
+# Forma 1:
+s.remove(3)  # Não é indice (conjuntos não são indexados). Informa-se o valor a ser removido. Nenhum valor é retornado.
+print(s)
+
+# Remover um elemento que não está no set.
+s.remove(33)  # KeyError: 33
+
+# Caso o valor não seja encontrado será gerado KeyError: 33.
+
+# Forma 2:
+s = {1, 2, 3}
+print(s)
+s.discard(2)
+print(s)
+s.discard(22)
+
+# Se o valor não for encontrado nenhum erro é gerado.
+```
+
+- Métodos matemáticos de Conjuntos
+
+Imagine que há dois conjuntos: Um contendo estudantes de Python e um outro contendo estudantes do curso de Java.
+
+- Precisa-se gerar um conjunto com nomes de estudantes únicos.
+
+```python
+estudantes_python = {'Marcos', 'Patricia', 'Ellen', 'Pedro', 'Julia', 'Guilherme'}
+estudantes_java = {'Fernando', 'Gustavo', 'Julia', 'Ana', 'Patricia'}
+
+# Veja que alguns alunos que estudam Python também estudam Java.
+
+# Forma 1: Utilizando union - Mais recomendado.
+unicos = estudantes_python.union(estudantes_java)
+print(unicos)
+```
+
+- Gerar um conjunto de estudantes que estão em ambos os cursos.
+
+```python
+estudantes_python = {'Marcos', 'Patricia', 'Ellen', 'Pedro', 'Julia', 'Guilherme'}
+estudantes_java = {'Fernando', 'Gustavo', 'Julia', 'Ana', 'Patricia'}
+
+ambos = estudantes_python.intersection(estudantes_java)
+print(ambos)
+```
+
+- Gerar um conjunto de estudantes que não estão no outro curso.
+
+```python
+estudantes_python = {'Marcos', 'Patricia', 'Ellen', 'Pedro', 'Julia', 'Guilherme'}
+estudantes_java = {'Fernando', 'Gustavo', 'Julia', 'Ana', 'Patricia'}
+
+so_python = estudantes_python.difference(estudantes_java)
+print(so_python)
+
+so_java = estudantes_java.difference(estudantes_python)
+print(so_java)
+```
+
