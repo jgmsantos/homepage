@@ -1073,7 +1073,7 @@ print(s)  # {1, 2, 3}
 print(type(s))  # <class 'set'>
 ```
 
-- Usos interessantes com Sets
+- Usos interessantes com Sets:
 -  Adicionando elementos em um conjunto:
 
 ```python
@@ -1084,7 +1084,7 @@ s.add(4)  # Duplicidade não gera erro. Simplesmente, é ignorado e não é adic
 print(s)
 ```
 
-- Remover elementos de um conjunto.
+- Remover elementos de um conjunto:
 
 ```python
 
@@ -1109,7 +1109,7 @@ s.discard(22)
 # Se o valor não for encontrado nenhum erro é gerado.
 ```
 
-- Métodos matemáticos de Conjuntos
+- Métodos matemáticos de Conjuntos:
 
 Imagine que há dois conjuntos: Um contendo estudantes de Python e um outro contendo estudantes do curso de Java.
 
@@ -1126,7 +1126,7 @@ unicos = estudantes_python.union(estudantes_java)
 print(unicos)
 ```
 
-- Gerar um conjunto de estudantes que estão em ambos os cursos.
+- Gerar um conjunto de estudantes que estão em ambos os cursos:
 
 ```python
 estudantes_python = {'Marcos', 'Patricia', 'Ellen', 'Pedro', 'Julia', 'Guilherme'}
@@ -1136,7 +1136,7 @@ ambos = estudantes_python.intersection(estudantes_java)
 print(ambos)
 ```
 
-- Gerar um conjunto de estudantes que não estão no outro curso.
+- Gerar um conjunto de estudantes que não estão no outro curso:
 
 ```python
 estudantes_python = {'Marcos', 'Patricia', 'Ellen', 'Pedro', 'Julia', 'Guilherme'}
