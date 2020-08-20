@@ -1043,8 +1043,8 @@ print(type(numeros))
 
 - Conjuntos em qualquer linguagem de programação, faz referência à Teoria dos Conjuntos da Matemática.
 - No Python, os conjuntos são chamados de `Sets`.
-- `Sets` (Conjuntos) não possuem valores duplicados;
-- `Sets` (Conjuntos) não possuem valores ordenados;
+- `Sets` (Conjuntos) não possuem valores duplicados.
+- `Sets` (Conjuntos) não possuem valores ordenados.
 - Os elementos não são acessados via índice, ou seja, conjuntos não são indexados.
 
 Conjuntos são bons para se utilizar quando há necessidade armazenar elementos, porém a sua ordenação não é importante.
