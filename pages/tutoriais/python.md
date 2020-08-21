@@ -1267,9 +1267,10 @@ print(f'Retorno de {quadrado_7()}')  # É o mesmo que a linha de cima.
 ```
 
 Algumas considerações sobre o `return`.
-1 O `return` finaliza a função, ou seja, ela sai da execução da função.
-2 Pode-se em uma função, diferentes `returns`.
-3 Pode-se em uma função retornanr qualquer tipo de dado, e até mesmo múltiplos valores.
+
+- O `return` finaliza a função, ou seja, ela sai da execução da função.
+- Pode-se em uma função, diferentes `returns`.
+- Pode-se em uma função retornanr qualquer tipo de dado, e até mesmo múltiplos valores.
 
 ```python
 # Exemplo 1: O `return` finaliza a função, ou seja, ela sai da execução da função.
@@ -1317,13 +1318,6 @@ Funções com parâmetros (de entrada).
 - Qual a diferença entre parâmetros e argumentos?
   - `Parametros` são variaveis declaradas na definição de uma função.
   - `Argumentos` são dados passados durante a execução de uma função.
-
-# A ordem dos parametros importa!
-
-nome = 'Felicity'
-sobrenome = 'Jones'
-
-print(nome_completo(nome, sobrenome))
 
 Exemplos:
 
