@@ -1149,3 +1149,220 @@ so_java = estudantes_java.difference(estudantes_python)
 print(so_java)
 ```
 
+### Collections Counter
+
+Recebe um iterável como parâmetro e cria um objeto do tipo `Collections Counter` que é parecido com um dicionário, contendo como chave o elemento da lista  passada como parâmetro e como valor a quantidade de ocorrência desse elemento.
+
+Mais informações sobre `Collections` podem ser obtidas em: [https://docs.python.org/3.8/library/collections.html](https://docs.python.org/3.8/library/collections.html)
+
+- Exemplos de uso de `Counter`:
+```python
+# Exemplo 1: Utilizando uma lista.
+from collections import Counter
+lista = [1, 1, 1, 2, 2, 3, 3, 10, 10, 11]
+print(lista)
+res = Counter(lista)  # <class 'collections.Counter'>
+print(type(res))
+print(res)  # Counter({1: 3, 2: 2, 3: 2, 10: 2, 11: 1})
+```
+
+Para cada elemento da lista, o `Counter` criou uma chave e colocou como valor a quantidade de ocorrências.
+
+```python
+# Exemplo 2: Utilizando uma string.
+from collections import Counter
+print(Counter('Meteorologia'))  # Counter({'o': 3, 'e': 2, 'M': 1, 't': 1, 'r': 1, 'l': 1, 'g': 1, 'i': 1, 'a': 1})
+```
+
+Tratando um texto com o `Counter`:
+
+```python
+# Exemplo 3: Tratanto um texto.
+from collections import Counter
+texto = """A Meteorologia é fascinante fascinante demais"""
+palavras = texto.split()
+print(palavras)
+res = Counter(palavras)
+print(res)
+
+# Econtrando as duas palavras com mais ocorrência.
+print(res.most_common(2))  # [('fascinante', 2), ('A', 1)]
+```
+
+### Funções em Python
+
+#### Definindo funções
+
+- Funções são pequenos trechos de código que realizam tarefas específicas.
+- Pode ou não receber entrada de dados e retornar uma saída de dados.
+- Muito úteis para executar procedimentos similares por repetidas vezes.
+- Ao se escrever uma função que realiza várias tarefas dentro dela, e bom fazer uma verificação para que a função seja simplificada.
+
+Em Python, a forma geral de definir uma função é:
+
+```Python
+def nome_da_função(parametros_de_entrada):
+    bloco_da_função
+```
+
+Onde:
+`nome_da_função`: Sempre com letras maiúsculas, e se for nome composto, separar por underline (Snake Case).
+`parametro_de_entrada`: Opcionais, onde tendo mais de um, deve-se separar por virgula, podendo ser opcionais ou não. 
+`bloco_da_função`: Chamado de corpo da função ou implementação, é onde o processamento da função acontece. Neste bloco, pode ter ou não retorno da função.
+
+Para definir uma função, utiliza-se a palavra reservada `def` informando ao Python que está sendo definida uma função. Utiliza-se o dois pontos `:` que é utilizado em Python para definir blocos.
+
+Algumas observações sobre função:
+
+- Dentro da função pode-se utilizar outras funções.
+- A função abaixo executa apenas uma tarefa, ou seja, ela imprime `oi`.
+- Esta função não recebe nenhum parâmetro de entrada.
+- Esta função não retorna nada.
+
+```python
+def hello():  # Não tem nenhum parâmetro de entrada.
+    print("Égua mano, té doido!")  # Bloco da função.
+
+# Chamada de execução.
+hello()  # Égua mano, té doido!
+```
+
+Nunca esqueca de utilizar o `()` ao executar uma função.
+- Exemplo: 
+
+```python
+# Forma errado.
+hello
+```
+
+```python
+# Forma correta.
+hello()  # () e junto ao nome da função.
+```
+
+#### Funções com retorno
+
+```python
+numeros = [1, 2, 3]
+ret_pop = numeros.pop()  # O pop remove o último número da lista.
+print(f'Retorno de pop: {ret_pop}')  # Retorno de pop: 3
+ret_pr = print(numeros)  # [1, 2]
+print(f'Retorno de print: {ret_pr}')  # Retorno de print: None
+```
+
+- Quando uma função não retorna nenhum valor, o resultado será `None`.
+- Funções Python que retornam valores, devem retorná-los com a palavra reservada `return`.
+- Não necessariamente cria-se uma variavel para receber o retorno de uma função. Pode-se passar a execução da função para outras funções.
+
+Exemplo:
+
+```python
+def quadrado_7():
+    return 7*7
+
+# Cria-se uma variável para receber o retorno da função.
+ret = quadrado_7()
+print(f'Retorno de {ret}')
+print(f'Retorno de {quadrado_7()}')  # É o mesmo que a linha de cima.
+```
+
+Algumas considerações sobre o `return`.
+1 O `return` finaliza a função, ou seja, ela sai da execução da função.
+2 Pode-se em uma função, diferentes `returns`.
+3 Pode-se em uma função retornanr qualquer tipo de dado, e até mesmo múltiplos valores.
+
+```python
+# Exemplo 1: O `return` finaliza a função, ou seja, ela sai da execução da função.
+def diz_oi():
+    return 'oi!'
+    print('Estou sendo executado após o retorno')  # Esta linha nunca será executada.
+
+print(diz_oi())
+```
+
+```python
+# Exemplo 2: Pode-se em uma função, diferentes `returns`.
+def nova_funcao():
+    variavel = None
+    if variavel:
+        return 4
+    elif variavel is None:
+        return 3.2
+    return 'b'
+
+print(nova_funcao())  # 3.2
+```
+
+```python
+# Exemplo 3: Pode-se em uma função retornanr qualquer tipo de dado, e até mesmo múltiplos valores.
+def outra_funcao():
+    return 2, 3, 4, 5
+
+print(outra_funcao())  # (2, 3, 4, 5)
+print(type(outra_funcao()))  # <class 'tuple'>
+```
+
+#### Funções com parâmetro
+
+Funções com parâmetros (de entrada).
+
+- Funções que recebem dados para serem processados dentro da mesma.
+- Pensar em um programa qualquer, geralmente tem-se: entrada -> processamdo -> saída.
+- Sobre fuções, sabe-se que:
+  - Não possuem entrada.
+  - Não possuem saída.
+  - Possuem entrada, mas não possuem saída.
+  - Não possuem entrada, mas possuem saída.
+  - Possuem entrada e saída.
+- Qual a diferença entre parâmetros e argumentos?
+  - `Parametros` são variaveis declaradas na definição de uma função.
+  - `Argumentos` são dados passados durante a execução de uma função.
+
+# A ordem dos parametros importa!
+
+nome = 'Felicity'
+sobrenome = 'Jones'
+
+print(nome_completo(nome, sobrenome))
+
+Exemplos:
+
+```python
+# Caso o parâmetro (numero) não seja informado, será retornado erro (TypeError), ou seja, ele é obrigatório.
+def quadrado(numero):
+    return return numero ** 2  # numero elevado ao quadrado.
+
+print(quadrado(5))  # 25
+print(quadrado(10))  # 100
+
+# Outra forma de imprimir o valor da função:
+ret = quadrado(2)  # Armazena a função em uma variável.
+print(ret)
+```
+
+Funções podem ter `n` parâmetros de entrada, ou seja, pode-se receber como entrada em uma função quantos parâmetros forem necessários. Eles são separados por vírgula.
+
+```python
+def soma(a, b):
+    return a + b
+
+print(soma(2, 5))  # 7
+
+# Outro exemplo:
+
+def outra(num1, b, msg):
+    return (num1 + b) * msg
+
+print(outra(3, 2, 'Meteorologia '))  # 3 + 2 = 5, e com isso, a palavra (Meteorologia) será repetida 5 vezes.
+```
+- A ordem dos parâmetros é importante.
+
+```python
+def nome_completo(nome, sobrenome):  # Evitar nomes do tipo string1, string2.
+    return f'Seu nome completo é {nome} {sobrenome}'
+
+nome = 'Andirobaldo'
+sobrenome = 'Curio'
+
+print(nome_completo(nome, sobrenome))  # Seu nome completo é Andirobaldo Curio
+```
