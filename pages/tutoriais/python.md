@@ -1360,3 +1360,148 @@ sobrenome = 'Curio'
 
 print(nome_completo(nome, sobrenome))  # Seu nome completo é Andirobaldo Curio
 ```
+
+### Funções com Docstrings
+
+São úteis quando se deseja fornecer informações detalhadas sobre a função e seus parâmetros.
+```python
+def tk2tc(tk):
+    """
+    Função que ao fornecer a temperatura em Kelvin, retorna o valor em graus Celsius.
+    :param tk: Temperatura em Kelvin.
+    :return: Retorna o valor da temperatura em graus Celsius.
+    """
+    return tk - 273.15
+
+print(tk2tc(300))
+help(tk2tc)  # Mostra como a função deve ser utilizada. É o help da função criada.
+```
+
+### Como entender o *args?
+
+- O `*args` é um parâmetro como outro qualquer (parâmetro de entrada de uma função). Isso significa que pode ser chamada de qualquer coisa, desde que começe com asterisco.
+- Por convenção, a comunidade Python decidiu adotar dessa forma, portando utiliza-se `*args` para definí-lo.
+- Mas o que é o `*args`?
+  - O parâmetro `*args` é utilizado em uma função, coloca os valores extras informados como entrada em uma tupla. Lembrando que tuplas são imutáveis.
+
+Exemplo:
+
+```python
+def soma_numeros(*args):  # Para declarar, utiliza-se *.
+    return sum(args)  # Soma todos os elementos.
+
+print(soma_numeros())  # 0
+print(soma_numeros(1, 2, 3))  # 6
+print(soma_numeros(1, 2, 3, 4))  # 10
+```
+
+Outro exemplo, desta vez utiliza-se uma lista:
+
+```python
+def soma_numeros(*args):
+    return sum(args)
+
+numeros = [1, 2, 3, 4, 5, 6, 7]  # Lista com os valores.
+
+# Gera erro:
+print(soma_numeros(numeros))  # TypeError: unsupported operand type(s) for +: 'int' and 'list'
+
+# Para corrigir este erro, utiliza-se o *:
+print(soma_numeros(*numeros))  # 28
+```
+
+```python
+# Pode-se utilizar com tupla:
+numeros = (1, 2, 3, 4, 5, 6, 7)  # Tupla com os valores.
+print(soma_numeros(*numeros))  # 28
+
+# Pode-se utilizar com Set (cojunto):
+numeros = {1, 2, 3, 4, 5, 6, 7}  # Set (conjunto) de valores.
+print(soma_numeros(*numeros))  # 28
+```
+
+**Importante:** Só não funciona com dicionário porque o mesmo utiliza `chave:valor`.
+
+O asterisco serve para que informe ao Python que está sendo passado como argumento uma coleção de dados (lista, tupla e set). Dessa forma, o Python saberá que precisa desempacotar estes dados.
+
+### Como entender o **kwargs?
+
+Este é só mais um parâmetro, mas diferente do `args` que coloca os valores extras em uma tupla, o `**kwargs` exige que sejam utilizados parâmetros nomeados, e transforma esses parâmetros extras em um dicionario.
+
+Ao utilizar funções nas funções pode-se ter nesta ordem:
+- Parâmetros obrigatórios.
+- `*args`.
+- Parâmetros default (parâmetros não obrigatórios).
+- `**kwargs`.
+
+```python
+def minha_funcao(idade, nome, *args, solteiro=False, **kwargs):
+    print(f'{nome} tem {idade} anos')
+    print(args)
+    if solteiro:
+        print('Solteiro')
+    else:
+        print('Casado')
+    print(kwargs)
+
+minha_funcao(8, 'Julia')  # Apenas parâmetros obrigatórios = 8, 'Julia'.
+minha_funcao(18, 'Felicity', 4, 5, 3, solteiro=True)  # Parâmetros obrigatórios = 18, 'Felicity'; *args = 4, 5, 3; alterando o valor de solteiro.
+minha_funcao(34, 'Felipe', eu='Nao', voce='Vai')  # Parâmetros obrigatórios = 34, 'Felipe'; **kwargs = eu='Nao', voce='Vai'.
+minha_funcao(19, 'Carla', 9, 4, 3, java=False, python=True)  # Parâmetros obrigatórios = 19, 'Carla'; *args = 9, 4, 3; **kwargs = java=False, python=True.
+```
+Entendo porque é interessante manter a ordem dos parametros na declaração.
+
+Função com a ordem correta dos parâmetros:
+
+```python
+def mostra_info(a, b, *args, instrutor='Geek', **kwargs):
+    return [a, b, args, instrutos, kwargs]
+
+print(mostra_info(1, 2, 3, sobrenome='University', cargo='Instrutor'))
+```
+O que está sendo feito?
+
+```python
+a = 1
+b = 3
+args = (3,)
+instrutor = 'Geek'
+kwargs = {'sobrenome': 'University', 'cargo', 'Instrutor'}
+```
+
+Descompactando com `**kwargs`:
+
+```python
+def mostra_nome(**kwargs):
+    return f"{kwargs['nome']} {kwargs['sobrenome']}"
+
+nomes = {'nome': 'Felicity', 'sobrenome': 'Jones'}
+
+# Forma errada:
+print(mostra_nome(nomes))  # TypeError: mostra_nome() takes 0 positional arguments but 1 was given
+
+# Forma correta: Utiliza-se o **.
+print(mostra_nome(**nomes))
+```
+
+Uma observação sobre dicionários:
+
+```python
+def soma_multiplos_numeros(a, b, c):
+    print(a + b + c)
+
+dicionario = dict(a=1, b=2, c=3)
+soma_multiplos_numeros(**dicionario)  # 6
+```
+
+O nome das chaves em um dicionário deve ser os mesmos dos parâmetros da função, se for diferente, será retornado erro.
+
+```python
+def soma_multiplos_numeros(a, b, c):
+    print(a + b + c)
+
+dicionario = dict(d=1, e=2, f=3)  
+soma_multiplos_numeros(**dicionario)  # TypeError: soma_multiplos_numeros() got an unexpected keyword argument 'd'
+```
+
+O erro ocorreu porque houve mudança no nome dos parâmetros na variável `dicionario`, o correto é `a, b, c` e não `d, e, f`.
