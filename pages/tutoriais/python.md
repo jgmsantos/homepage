@@ -1449,7 +1449,7 @@ minha_funcao(18, 'Felicity', 4, 5, 3, solteiro=True)  # Parâmetros obrigatório
 minha_funcao(34, 'Felipe', eu='Nao', voce='Vai')  # Parâmetros obrigatórios = 34, 'Felipe'; **kwargs = eu='Nao', voce='Vai'.
 minha_funcao(19, 'Carla', 9, 4, 3, java=False, python=True)  # Parâmetros obrigatórios = 19, 'Carla'; *args = 9, 4, 3; **kwargs = java=False, python=True.
 ```
-Entendo porque é interessante manter a ordem dos parametros na declaração.
+Entendo porque é interessante manter a ordem dos parâmetros na declaração.
 
 Função com a ordem correta dos parâmetros:
 
