@@ -1505,3 +1505,118 @@ soma_multiplos_numeros(**dicionario)  # TypeError: soma_multiplos_numeros() got 
 ```
 
 O erro ocorreu porque houve mudança no nome dos parâmetros na variável `dicionario`, o correto é `a, b, c` e não `d, e, f`.
+
+### List Comprehensions
+
+Utilizando `List Comprehension` pode-se gerar novas listas com dados processados a partir de outro iterável.
+
+- Sintaxe da List Comprehension
+```python
+[dado for dado in iteravel ]
+```
+
+Exemplos:
+
+```python
+# Exemplo de uso do List Comprehensions:
+numeros = [1, 2, 3, 4, 5]
+res = [numero * 10 for numero in numeros]
+print(res)  # [10, 20, 30, 40, 50]
+```
+
+Para enter melhor o que está acontecendo divide-se a a expressão em duas partes:
+- A primeira parte: `for numero in numeros`.
+- A segunda parte: `numero * 10`.
+
+```python
+# Exemplo usando função:
+numeros = [1, 2, 3, 4, 5]
+
+def funcao(valor):
+    return valor * valor
+
+res = [funcao(numero) for numero in numeros]
+print(res)  # [1, 4, 9, 16, 25]
+```
+
+```python
+# Exemplo utilizando loop:
+numeros_dobrados = []  # Lista vazia para armazenar os valores.
+
+for numero in [1, 2, 3, 4, 5]:
+    numeros_dobrados.append(numero * 2)  # Armazena o resultado na lista que antes era vazia.
+
+print(numeros_dobrados)  # [2, 4, 6, 8, 10]
+```
+
+```python
+# Utilizando List Comprehension - Muito melhor que usar loop:
+print([numero * 2 for numero in [1, 2, 3, 4, 5]])  # [2, 4, 6, 8, 10]
+```
+
+É possível adicionar estruturas condicionais lógicas as `List Comprehensions`.
+
+```python
+numeros = [1, 2, 3, 4, 5, 6]
+
+# Qualquer número par, o módulo de 2 é zero, e o zero em Python é False. E o not False é igual a True.
+pares = [numero for numero in numeros if not numero % 2]
+
+# Qualquer número ímpar, o módulo de 2 é 1, e 1 em Python é True.
+impares = [numero for numero in numeros if numero % 2]
+
+print(pares)  # [2, 4, 6]
+print(impares)  # [1, 3, 5]
+```
+
+Outro exemplo:
+
+```python
+numeros = [1, 2, 3, 4, 5, 6]
+
+res = [numero * 2 if numero % 2 == 0 else numero /2 for numero in numeros]
+print(res)  # [0.5, 4, 1.5, 8, 2.5, 12]
+```
+
+### Funções lambdas
+
+Conhecidas por expressões Lambdas, ou simplesmente Lambdas, são funções sem nome, ou seja, funções anônimas.
+
+Em funções Python pode-se ter nenhuma ou várias entradas. Em Lambdas ocorre o mesmo.
+
+- Representacao generica da funcao lambda:
+  - `n = lambda: x1, x2, ..., xn: <expressao>`
+
+Exemplos:
+
+```python
+amar = lambda: 'Como não amar Python?'
+
+uma = lambda x: 3 * x + 1
+
+duas = lambda x, y: (x * y) ** 0.5
+
+tres = lambda x, y, z: 3 / (1 / x + 1 / y + 1 / z)
+```
+
+```python
+print(amar())  # Como não amar Python?
+print(uma(6))  # 19
+print(duas(5, 7))  # 5.916079783099616
+print(tres(3, 6, 9))  # 4.909090909090908
+```
+
+Outro exemplo:
+
+```python
+# Função quadrática
+# f(x) = a * x ** 2 + b * x + c
+
+# Definindo uma função
+def geradora_funcao_quadratica(a, b, c):
+    """Retorna a função quadratica f(x) = a * x ** 2 + b * x + c"""
+    return lambda x: a * x ** 2 + b * x + c
+
+# a = 3, b = 1, c = 1 e x = 2.
+print(geradora_funcao_quadratica(3, 1, 1)(2))
+```
