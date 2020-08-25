@@ -1584,7 +1584,7 @@ Conhecidas por expressões Lambdas, ou simplesmente Lambdas, são funções sem 
 
 Em funções Python pode-se ter nenhuma ou várias entradas. Em Lambdas ocorre o mesmo.
 
-- Representacao generica da funcao lambda:
+- Representação genérica da função lambda:
   - `n = lambda: x1, x2, ..., xn: <expressao>`
 
 Exemplos:
