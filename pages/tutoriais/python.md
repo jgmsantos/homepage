@@ -1620,3 +1620,191 @@ def geradora_funcao_quadratica(a, b, c):
 # a = 3, b = 1, c = 1 e x = 2.
 print(geradora_funcao_quadratica(3, 1, 1)(2))
 ```
+
+### Fuções integradas 
+
+#### Map
+
+Com o `map` é possível realizar o mapeamento de valores para função.
+
+`Map` (mapeia uma função para um iterável) é uma função que recebe dois parâmetros: o primeiro é a função, o segundo, um iterável, o resultado do map é do tipo `map object`.
+
+Os resultados do `map` são colocados em um `map object` que pode ser convertido para uma lista, tupla, dicionário, depende do interesse do usuário.
+
+Exemplo:
+
+```python
+# Forma 1: Usando map.
+import math
+
+def area(r):
+    return math.pi * (r ** 2)  # Calcula o raio.
+
+raios = [2, 5, 7.1, 0.3, 10, 44]
+
+areas = map(area, raios)  # Pega os valores de cada raio, exemplo, raio = 2 e aplica na função area e retorna o resultado.
+
+print(areas)  # map object
+print(type(areas))  # class 'map'
+print(list(areas))  # [12.566370614359172, 78.53981633974483, 158.36768566746147, 0.2827433388230814, 314.1592653589793, 6082.12337734984]
+```
+
+Outro exemplo:
+
+```python
+# Forma 2: Usando map com lambda.
+import math
+
+raios = [2, 5, 7.1, 0.3, 10, 44]
+
+print(list(map(lambda r: math.pi * (r ** 2), raios)))  # [12.566370614359172, 78.53981633974483, 158.36768566746147, 0.2827433388230814, 314.1592653589793, 6082.12337734984]
+```
+
+**Observação:** Após o uso da função `map()`, depois da primeira utilização do resultado ele zera. Isso é interessante porque limpa a memória da máquina.
+
+Outro exemplo:
+
+```python
+# Uma lista contendo tuplas.
+cidades = [('Berlim', 29), ('Cairo', 36), ('Buenos Aires', 19), ('Los Angeles', 26), ('Tokio', 27), ('Nova York', 28), ('Londres', 22)]
+
+print(cidades)
+
+# Converter de Celsius para Farenheit:
+# f = 9/5 * c + 32
+
+# Usando a função Lambda:
+
+c_para_f = lambda dado: (dado[0], (9/5) * dado[1] + 32)
+
+print(list(map(c_para_f,cidades)))  # A função map (c_para_f) recebe apena um parâmetro, por outro lado, o lambda recebe varios.
+```
+
+#### Filter
+
+Serve para filtrar dados de uma determinada coleção.
+
+Assim como a função `map()`, a `filter()` recebe dois parâmetros, sendo uma função e um iterável.
+
+Qual a diferença entre `map()` e `filter()`?
+
+- `map()`: Recebe dois parâmetros, uma função e um iterável e retorna um objeto mapeando a função para cada elemento do iterável.
+  - O `map()` retorna outros valores que não sejam booleano. A função será aplicada nos dados e retorna um valor.
+- O `filter()` recebe dois parâmetros, uma função e um iterável e retorna um objeto filtrando apenas os elementos de acordo com a função.
+  - O `filter()` retorna valore booleanos (True ou False), faz com que o dado seja ou não selecionado.
+
+```python
+import statistics  # Biblioteca para trabalhar com dados estatísticos.
+
+# Dados coletados de algum sensor.
+dados = [1.3, 2.7, 0.8, 4.1, 4.3, -0.1]
+
+# Calculando a média dos dados utilizando a função mean().
+media = statistics.mean(dados)
+
+print(f'Media: {media}')  # Media: 2.183333333333333
+
+res = filter(lambda valor: valor > media, dados)  # valor > media => Gera True ou False, caso True compara com os valores da variável 'dados' e depois manda o resultado numérico para função lambda.
+
+print(type(res))  # <class 'filter'>
+
+print(list(res))  # [2.7, 4.1, 4.3]
+
+print(list(res))  # [] -> Lista Vazia
+```
+
+**Observação:** Assim como na função `map()`, após serem utilizados os dados de `filter()`, eles são excluídos da memória.
+
+Se colocar mais um `print`, a lista estará vazia, o valor fica na memória para ser utilizado apenas uma vez.
+
+```python
+# Filtrar dados ausentes.
+paises = ['', 'Argentina', '', 'Brasil', 'Chile', '', 'Colombia', '', 'Equador', '', '', 'Venezuela']
+
+print(paises)  # ['', 'Argentina', '', 'Brasil', 'Chile', '', 'Colombia', '', 'Equador', '', '', 'Venezuela']
+res = filter(None, paises)
+print(list(res))  # ['Argentina', 'Brasil', 'Chile', 'Colombia', 'Equador', 'Venezuela']
+```
+
+Outra forma de realizar a tarefa acima:
+
+```python
+# Filtrar dados ausentes.
+paises = ['', 'Argentina', '', 'Brasil', 'Chile', '', 'Colombia', '', 'Equador', '', '', 'Venezuela']
+
+# Forma 1
+res = filter(lambda pais: len(pais) > 0, paises)  # A função len() conta os caracteres, no caso das  '', é igual a zero.
+print(list(res))
+
+# Forma 2
+res = filter(None, paises)  # Este método é melhor.
+print(list(res))
+
+# Forma 3
+res = filter(lambda pais: pais != '', paises)
+
+print(list(res))
+```
+
+Como combinar `filter()` e `map()`?
+
+```python
+# Deve-se criar uma lista contendo 'Sua instrutora é' + nome, desde que o nome tenha menos de cinco caracteres.
+
+nomes = ['Vanessa', 'Ana', 'Maria']
+
+lista = list(map(lambda nome: f'Sua instrutora é {nome}', filter(lambda nome: len(nome) < 5, nomes)))
+
+print(lista)  # ['Sua instrutora é Ana']
+```
+
+#### All
+
+O `all()` é uma função booleana que retorna `True` se todos os elementos do iterável são verdadeiros ou ainda se o iterável está vazio.
+
+- Um iterável vazio convertido em boolean é `False`, mas o `all()` entende como `True`.
+
+Exemplos:
+
+```python
+print(all([0, 1, 2, 3, 4]))  # Todos os números são verdadeitos? False, por que o valor 0 é False.
+
+print(all([1, 2, 3, 4]))  # Todos os números são verdadeitos? True
+
+print(all([]))  # Todos os números são verdadeitos? True.
+
+print(all((0, 1, 2, 3, 4)))  # Todos os números são verdadeitos? False
+
+print(all({0, 1, 2, 3, 4}))  # Todos os números são verdadeitos? False
+
+print(all('Meteorologia'))  # Todos os números são verdadeitos? True
+```
+
+Outro exemplo:
+
+```python
+# Verifica se a primeira letra começa com 'C'.
+# Neste exemplo utiliza também List Comprehensions ([]).
+nomes = ['Carlos', 'Camila', 'Carla', 'Cassiano', 'Cristina']
+
+print(all([nome[0] == 'C' for nome in nomes]))
+```
+
+#### Any
+
+O `any()` retorna `True` se qualquer elemento do iterável for verdadeiro. Se o iterável estiver vazio, retorna `False`.
+
+Exemplos:
+
+```python
+print(any([0, 1, 2, 3, 4]))  # True
+
+print(any([0, False, {}, (), []]))  # False
+
+nomes = ['Carlos', 'Camila', 'Carla', 'Cassiano', 'Cristina', 'Vanessa']
+
+print(any([nome[0] == 'C' for nome in nomes]))  # False
+
+print(any([num for num in [4, 2, 10, 8, 9] if num % 2 ==0]))  # True
+```
+
