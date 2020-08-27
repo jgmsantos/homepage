@@ -31,10 +31,6 @@ Resultado:
 
 ![](../../images/imagemagick/fig01c.png)
 
-Adicionando uma legenda a fig01b.png
-
-![](../../images/imagemagick/fig01b.png)
-
 2 Criando painel de figuras.
 
 São utilizados 4 arquivos separados: `fig01.png`, `fig02.png`, `fig03.png` e `fig04.png`. Após remover os espaços excedentes com o  `trim`, cria-se o painel.
