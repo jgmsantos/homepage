@@ -9,6 +9,7 @@ Tutoriais
    git_github
    grads
    gdal
+   imagemagick
    meteorologia
    nco
    ncl
