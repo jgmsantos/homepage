@@ -1808,3 +1808,217 @@ print(any([nome[0] == 'C' for nome in nomes]))  # False
 print(any([num for num in [4, 2, 10, 8, 9] if num % 2 ==0]))  # True
 ```
 
+#### Sorted
+
+Utiliza-se `sorted()` com qualquer iterável. Como o próprio nome diz, `sorted()` serve para ordenar.
+
+O `sorted()` SEMPRE retorna uma lista com os elementos do iterável ordenados.
+
+**Observação:** O `sort()` só funciona com lista, não confundir com o `sorted()`.
+
+Qual a diferença entre `sort()` e `sorted()`?
+- O `sort()` modifica a própria lista enquanto que o `sorted()` não modifica a lista, ele retorna uma nova lista com os novos elementos, a lista original se mantém intacta. 
+
+Exemplos:
+
+```python
+# Ordenar do menor para o maior.
+numeros = [6, 1, 8, 2]  # Pode ser uma tupla numeros = (6, 1, 8, 2)
+print(numeros)  # 
+print(sorted(numeros))  # [1, 2, 6, 8]
+```
+
+Outro exemplo: Adicionando parâmetros ao sorted.
+```python
+# Ordena do maior para o menor.
+numeros = [6, 1, 8, 2]
+print(sorted(numeros, reverse=True))  # [8, 6, 2, 1]
+```
+
+#### Min e max
+
+O `max()` retorna o maior valor em um iterável ou o maior de dois ou mais elementos. O `min()` faz o contrário de `max()`.
+
+Exemplos:
+
+```python
+# Valor máximo de uma lista.
+lista = [1, 8, 4, 99, 34, 129]  # Pode usar tupla(), set{}.
+print(max(lista))  # 129
+```
+
+Outro exemplo:
+
+```python
+dicionario = {'a': 1, 'b': 8, 'c': 4, 'd': 99, 'e': 34, 'f': 129}
+print(max(dicionario))  # f, ele imprime a chave "f" porque ele ordena pela ordem das letras.
+
+dicionario = {'a': 1, 'b': 8, 'c': 4, 'd': 99, 'e': 34, 'f': 129}
+print(max(dicionario.values()))  # Impre pela ordem dos valores que resulta em 129.
+```
+
+Imprime o menor valor entre dois números.
+
+```python
+print(min(3, 34))  # 3
+```
+
+Imprime pela ordem do nome:
+
+```python
+nomes = ['Arya', 'Samson', 'Dora', 'Tim', 'Ollivander']
+
+print(max(nomes))  # Tim
+print(min(nomes))  # Arya
+
+# Obtém o nome com a maior quantidade de caracteres.
+print(max(nomes, key=lambda nome: len(nome)))  # Ollivander
+print(min(nomes, key=lambda nome: len(nome)))  # Tim
+```
+
+#### len
+
+o `len()` Retorna o tamanho, ou seja, o número de itens de um iterável.
+
+Exemplos:
+
+```python
+print(len('Meteorologia'))  # 12 caracteres
+
+print(len([1, 2, 3, 4, 5]))  # Lista: 5 elementos.
+
+print(len((1, 2, 3, 4, 5,)))  # Tupla: 5 elementos.
+
+print(len({1, 2, 3, 4, 5}))  # Set: 5 elementos.
+
+print(len({'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}))  # Dicionário: 5 elementos.
+```
+
+#### abs
+
+O `abs()` retorna o valor positivo de um número inteiro ou real.
+
+Exemplos:
+
+```python
+print(abs(-5))  # 5
+print(abs(3.14))  # 3.14
+print(abs(-3.14))  # 3.14
+```
+
+#### sum
+
+O `sum()` recebe como parâmetro um iterável, podendo receber um valor inicial, e retornar a soma dos elementos, incluindo o valor inicial.
+
+O valor inicial default é igual a zero.
+
+Exemplos:
+
+```python
+print(sum([1, 2, 3, 4, 5]))  # 15
+
+print(sum([1, 2, 3, 4, 5],5))  # 20
+
+print(sum([3.145, 5.678]))  # 8.823
+
+print(sum((1, 2, 3, 4, 5)))  # Tupla: 15
+
+print(sum({1, 2, 3, 4, 5}))  # Set: 15
+
+print(sum({'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}.values()))  # Dicionário: 15
+```
+
+#### round
+
+O `round()` retorna um número arredondado para n dígito de precisão após a casa decimal. Se a precisão nõa for informada, retorna o inteiro mais próximo da entrada.
+
+Exemplos:
+
+```python
+print(round(10.2))  # 10
+
+print(round(10.5))  # 10
+
+print(round(10.6))  # 11
+
+print(round(1.2121212121, 2))  # Uso com duas casa decimais: 1.21
+
+print(round(1.21999999, 2))  # # Uso com duas casa decimais: 1.22
+
+print(round(1.21999999))  # 1
+```
+
+#### zip
+
+O `zip()` cria um iterável (Zip Object) que agrega elementos de cada um dos iteráveis passados como entrada em pares.
+
+Exemplos:
+
+```python
+lista1 = [1, 2, 3]
+lista2 = [4, 5, 6]
+
+zip1 = zip(lista1, lista2)
+
+print(zip1)  # <zip object at 0x007E6B28>
+print(type(zip1))  # <class 'zip'>
+print(list(zip1))  # [(1, 4), (2, 5), (3, 6)]
+```
+Outro exemplo:
+
+O `zip()` utiliza como parâmetro o menor tamanho em iterável. Isso significa que se estiver trabalhando com iteráveis de tamanhos diferentes, irá parar quando os elementos do menor iterável acabar.
+
+```python
+lista1 = [1, 2, 3]
+lista2 = [4, 5, 6]
+lista3 = [7, 8, 9, 10, 11]
+
+zip1 = zip(lista1, lista2, lista3)
+
+print(list(zip1))  # [(1, 4, 7), (2, 5, 8), (3, 6, 9)]
+```
+
+Pode-se utilizar diferentes iteráveis com o `zip()`.
+
+```python
+tupla = (1, 2, 3, 4, 5)
+lista = [6, 7, 8, 9, 10]
+dicionario = {'a': 11, 'b': 12, 'c': 13, 'd': 14, 'e': 15}
+
+zt = zip(tupla, lista, dicionario.values())
+
+print(list(zt))
+```
+
+Lista de tuplas:
+
+```python
+dados = [(0, 1), (1, 2), (2, 3), (3, 4), (4, 5)]
+
+# Faz o desempacotamento utilizando o *.
+print(list(zip(*dados)))  # [(0, 1, 2, 3, 4), (1, 2, 3, 4, 5)]
+```
+
+Exemplos mais complexos:
+
+```python
+prova1 = [80, 91, 78]
+prova2 = [98, 89, 53]
+alunos = ['maria', 'pedro', 'carla']
+
+final = {dado[0]: max(dado[1], dado[2]) for dado in zip(alunos, prova1, prova2)}
+
+print(final)  # {'maria': 98, 'pedro': 91, 'carla': 78}
+```
+
+Podemos utilizar o map:
+
+```python
+prova1 = [80, 91, 78]
+prova2 = [98, 89, 53]
+alunos = ['maria', 'pedro', 'carla']
+
+final = zip(alunos, map(lambda nota: max(nota), zip(prova1, prova2)))
+
+print(dict(final))  # {'maria': 98, 'pedro': 91, 'carla': 78}
+```
