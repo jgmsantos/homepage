@@ -6,7 +6,7 @@ Link oficial: [https://imagemagick.org/index.php](https://imagemagick.org/index.
 
 1 Remover espaços excedentes na figura.
 
-A figura01a possui espaços excedentes e o objetivo consiste em removê-los.
+A figura01a.png possui espaços excedentes e o objetivo consiste em removê-los.
 
 ![](../../images/imagemagick/fig01a.png)
 
@@ -18,10 +18,10 @@ Resultado:
 
 ![](../../images/imagemagick/fig01b.png)
 
-Os espaços excenderes foram removidos.
+Os espaços excedentes foram removidos.
 
-Aproveitando a figura01b (sem espaços excendetes), é possível deixar o fundo transparente, basta digitar o comando abaixo:
-- Apenas o fundo branco ficará transparente.
+Aproveitando a figura01b.png (sem espaços excedentes), é possível deixar o fundo transparente, basta digitar o comando abaixo:
+- Apenas o fundo branco ficará transparente (`-transparent white`).
 
 Comando a ser utilizado:
 
@@ -30,6 +30,10 @@ Comando a ser utilizado:
 Resultado:
 
 ![](../../images/imagemagick/fig01c.png)
+
+Adicionando uma legenda a fig01b.png
+
+![](../../images/imagemagick/fig01b.png)
 
 2 Criando painel de figuras.
 
