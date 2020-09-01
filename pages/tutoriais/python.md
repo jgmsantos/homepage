@@ -2022,3 +2022,180 @@ final = zip(alunos, map(lambda nota: max(nota), zip(prova1, prova2)))
 
 print(dict(final))  # {'maria': 98, 'pedro': 91, 'carla': 78}
 ```
+
+### Mensagens e tratamento de erro em Python
+
+#### Raise
+
+O `raise` não é uma função. É uma palavra reservada assim como o `def` ou qualquer outra em Python.
+
+Para simplificar, pense no `raise` como sendo útil para que possamos criar nossas próprias exceções e mensagens de erro.
+
+O `raise` assim como o `return`, finaliza a função, ou seja, nada após o `raise` será executado.
+
+A forma geral de utilização é:
+
+```python
+raise TipoDoErro('Mensagem de erro')
+
+# Onde TipoDoErro é o tipo de erro que se deseja criar.
+```
+
+Exemplo:
+
+```python
+def colore(texto, cor):
+    if type(texto) is not str:
+        raise TypeError('texto precisa ser uma string')
+    if type(cor) is not str:
+        raise TypeError('cor precisa ser uma string')
+    print(f'O texo {texto} será impresso na cor {cor}')
+
+colore('Meteorologia', 'verde')  # O texo Meteorologia será impresso na cor verde
+
+colore('Meteorologia', 3)  # TypeError: cor precisa ser uma string
+```
+
+A partir do exemplo acima, ficou mais fácil identificar qual dos parâmetros está com problemas por conta do `raise`.
+
+Outro exemplo:
+
+```python
+def colore(texto, cor):
+    cores = ('verde', 'amarelo', 'azul', 'branco')  # Tupla de cores.
+    if type(texto) is not str:
+        raise TypeError('texto precisa ser uma string')
+    if type(cor) is not str:
+        raise TypeError('cor precisa ser uma string')
+    if cor not in cores:
+        raise ValueError(f'A cor precisa ser uma entre {cores}')
+    print(f'O texo {texto} será impresso na cor {cor}')
+
+colore('Geek', 'azul')  # Tudo ok!
+
+colore('Geek', 'preto')  # ValueError: A cor precisa ser uma entre ('verde', 'amarelo', 'azul', 'branco')
+```
+
+#### Bloco try/except
+
+Utiliza-se o bloco `try`/`except` para tratar erros que podem ocorrer no código. Previnindo assim que o programa para de funcionar e o usuário receba mensagens de erro inesperadas.
+
+A forma geral é:
+
+```python
+try:
+    // execução problemática -> tente fazer isso, caso não consiga.
+except
+    // o que deve ser feito em caso de problema -> faça isso.
+```
+
+Exemplo:
+
+```python
+# Exemplo 1 - Tratando um erro genérico.
+# O erro era:
+
+temp()  # NameError: name 'temp' is not defined
+
+# Solução para o erro acima:
+try:
+    temp()
+except:
+    print('Deu algum problema...')
+```
+
+O que está sendo feito? Tente executar a função `temp()`, caso você encontre erros, imprima a mensagem de erro.
+
+Outro exemplo:
+
+```python
+# Exemplo 2 - Tratando um erro genérico.
+
+try:
+    len(5)
+except:
+    print('Deu algum problema...')
+```
+
+Tratar erro de forma genérica não é a melhor forma de tratamento de erro. O ideal é sempre tratar de forma específica.
+
+```python
+# Exemplo 3 - Tratando um erro específico.
+# O erro é por causa de tentar uma função inexistente, isto é, temp(). O erro gerado é do tipo NameError.
+
+try:
+    temp()
+except NameError:
+    print('Você está usando uma função inexistente')
+```
+
+```python
+# Exemplo 4 - Tratando um erro específico.
+
+try:
+    len(5)  # TypeError: object of type 'int' has no len()
+except TypeError:
+    print('c usando uma função inexistente')
+```
+
+```python
+# Exemplo 5 - Tratando um erro específico com detalhes do erro.
+
+try:
+    len(5)  # TypeError: object of type 'int' has no len()
+except TypeError as err:
+    print(f'A aplicação gerou o seguinte erro {err}')  # A aplicação gerou o seguinte erro object of type 'int' has no len()
+
+```
+
+É possível efetuar diversos tratamentos de erro de uma vez.
+
+```python
+try:
+    temp()
+except NameError as erra:
+    print(f'Deu NameError: {erra}')  # Este foi o bloco executado. Os demais não serão executados.
+except TypeError as errb:
+    print(f'Deu TypeError: {errb}')
+except:
+    print('Deu um erro diferente')
+```
+
+#### Bloco try/except/else/finally
+
+Este bloco deve ser utilizado em toda entrada do usuário.
+
+O `else` será executado somente se não ocorrer o erro.
+
+O uso de `else` e `finally` não é comum.
+
+O bloco `finally` é sempre executado. Independente se houve exceção ou não. O `finally`, geralmente, é utilizado para fechar ou desalocar recursos.
+
+Exemplo:
+
+```python
+try:
+    num = int(input('Informe um número'))  # num = 7
+except ValueError:
+    print('Valor incorreto')
+else:
+    # O else somente será executado se o erro não existir.
+    print(f'Você digitou {num}')  # Você digitou 7
+```
+
+Exemplo mais complexo. Você responsável pela entrada das suas funções, então, trate-as!
+
+```python
+def dividir(a, b):
+    try:
+        return int(a) / int(b)
+    except ValueError:
+        return 'Valor incorreto'
+    except ZeroDivisionError:
+        return 'Não é possível realizar divisão por zero'
+
+num1 = input('Informe o primeito número: ')
+num2 = input('Informe o segundo número: ')
+
+print(dividir(num1, num2))
+```
