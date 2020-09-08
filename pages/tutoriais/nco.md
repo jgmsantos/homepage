@@ -101,3 +101,7 @@ netCDF Operators (NCO)
   + O valor 1 em `defdim("lon",1)` representa um ponto de longitude, e o mesmo se aplica em `defdim("lat",1)`, isto é, um ponto de latitude uma vez que esse arquivo é uma série temporal, logo `lon = 1` e `lat = 1`.
   
   + O valor `-60` em `lon[lon]=-60` e `-10` em `lat[lat]=-10` representam um valor qualquer de `lon` e `lat`, respectivamente. Escolha um valor de sua preferência.
+
+  13 Remover os atributos globais.
+
+  `ncatted -h -a history,global,d,, input.nc output.nc`
