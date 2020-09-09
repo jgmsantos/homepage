@@ -53,6 +53,10 @@ Cursos ministrados
 
 **Total de participantes capacitados = 255**
 
+2020
+
++ [Avaliação do curso de CDO realizado virtualmente - Setembro/2020](...). Total de participantes = xx.
+
 2018
 
 + [Avaliação do curso de NCL realizado na UFCG - Novembro/2018](https://drive.google.com/file/d/1EQVWaXJs5Zcu_uLksCVQzCSrMkq9EVAe/view). Total de participantes = 14.
