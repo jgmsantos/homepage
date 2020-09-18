@@ -1192,6 +1192,14 @@ arquivo de precipitação do GPCP.
 
 ![](../../images/grads/fig05.png)
 
+### Diferença entre o tempo posterior e o anterior
+
+Com o operador `deltat` (disponível somente a partir da versão 1.9) é possível fazer a diferença entre o tempo posterior e anterior de uma variável. Basta usar o comando abaixo:
+
+- Exemplo: t1 vale 89 e t2, 54. Logo, dt = t2 - t1 = 54-89 = -35. Simples! 
+
+`cdo deltat input.nc output.nc`
+
 ### Vídeo aula de CDO
 
 + 2020
