@@ -13,6 +13,8 @@ Atualmente, trabalho no [Programa de Monitoramento de Queimadas](http://queimada
 
 [Clica aqui](https://github.com/jgmsantos/homepage/blob/master/images/minha_historia.pdf) para ver um resumo da minha trajetória profissional desde a época da faculdade até os dias atuais.
 
+[Neste vídeo](https://www.youtube.com/watch?v=jIRlQgz59-A&t=11s&ab_channel=GuilhermeMartins) eu relato toda a minha experiência acadêmica desde a graduação até o doutorado.
+
 **Interesses profissionais:**
 
 + NCAR Command Language (NCL)
