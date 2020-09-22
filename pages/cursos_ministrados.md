@@ -55,8 +55,8 @@ Cursos ministrados
 
 2020
 
-+ [Avaliação do curso de CDO realizado virtualmente - Setembro/2020](...). Total de participantes = 88.
-  + Para ver o levantamento de inscritos [clique aqui](https://drive.google.com/file/d/1hazZpPBzSF7G0R095smo7WvV_Q8UuNr4/view?usp=sharing).
++ [Avaliação do curso de CDO realizado virtualmente - Setembro/2020](...). Total de participantes = 90.
+  + Para ver o levantamento dos inscritos [clique aqui](https://drive.google.com/file/d/1hazZpPBzSF7G0R095smo7WvV_Q8UuNr4/view?usp=sharing).
 
 2018
 
