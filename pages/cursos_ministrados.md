@@ -51,7 +51,7 @@ Cursos ministrados
 
 ## Avaliação dos cursos
 
-**Total de participantes capacitados = 255**
+**Total de participantes capacitados = 345**
 
 2020
 
