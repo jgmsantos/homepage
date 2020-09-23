@@ -88,6 +88,11 @@ O NCAR Command Language (NCL) foi desenvolvido pelo National Center for Atmosphe
 
 ### Comentários dos participantes
 
+Os comentários abaixo são de pessoas anônimas que tiveram a oportunidade de realizar o curso de CDO virtualmente no dia 22/09/2020.
+
+![](../images/comentarios_cursos02.png)
+![](../images/comentarios_cursos03.png)
+
 Os comentários abaixo são de pessoas anônimas que tiveram a oportunidade de realizar o curso de NCL na UFCG em novembro de 2018.
 
 ![](../images/comentarios_cursos01.png)

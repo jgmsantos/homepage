@@ -1204,6 +1204,8 @@ Com o operador `deltat` (disponível somente a partir da versão 1.9) é possív
 
 + 2020
 
+  + [Curso Básico de Climate Data Operatros (CDO)](https://youtu.be/UengFa5BGP0). Setembro de 2020.
+
   + [Playlists de CDO](https://www.youtube.com/playlist?list=PLGveZDDSWu_7G2ZrM_u8AQD8KNzd1vSwT). Julho de 2020.
 
 + 2018
