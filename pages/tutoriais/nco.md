@@ -106,7 +106,7 @@ netCDF Operators (NCO)
 
   `ncatted -h -a history,global,d,, input.nc output.nc`
 
-14 Remover os atributos globais.
+14 Remover dimensões indesejadas
 
 Ao tentar manipular dados do ERA5 com o CDO em alguns casos surgirão alguns erros. Isso ocorre porque no NetCDF tem uma dimensão chamada `expver` que precisa ser removida. Isso é feito utilizando o nco conforme demonstrado na figura abaixo:
 
