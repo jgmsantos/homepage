@@ -12,7 +12,7 @@ netCDF Operators (NCO)
 
 + As informações abaixo ou atributos foram obtidas com o comando `ncdump -h arquivo.nc`. O arquivo `arquivo.nc` é um nome fictício. É mostrado abaixo apenas um pequeno trecho da saída desse comando.
 
-![](../../images/nco_fig01.png)
+![](../../images/nco/nco_fig01.png)
 
 ### Exemplos de uso com o nco
 
@@ -66,7 +66,7 @@ netCDF Operators (NCO)
   
   + Nota-se que a variável `lev` tem apenas o atributo `axis = "Z"`. 
 
-![](../../images/nco_fig02.png)
+![](../../images/nco/nco_fig02.png)
    
   + Serão criados os atributos `positive`, `units` e `long_name` na variável `lev` que terão valores `down`,`millibar` e `Level`, respectivamente. Tudo isso é feito no arquivo `ATM.perfil.nc`, ele não será apagado. O novo arquivo (tmp.nc) terá todas as novas modificações desejadas.
 
@@ -78,7 +78,7 @@ netCDF Operators (NCO)
 
   + A variável `lev` que antes só tinha o atributo `axis = "Z"`, agora possui 3 novos atributos (`positive`, `units` e `long_name`), e o responsável pela correta visualização dos níveis verticais é o atributo `positive = "down"`. Os demais atributos servem para fornecer informações adicionais sobre a variável `lev`.
 
-![](../../images/nco_fig03.png)
+![](../../images/nco/nco_fig03.png)
    
 12 Criar a dimensão lat e lon no arquivo para plotar no GrADS.
 
@@ -86,7 +86,7 @@ netCDF Operators (NCO)
   
   + Esse arquivo está disponível [clicando aqui](https://drive.google.com/open?id=1bNrCZRfvM5C1eALTUI7VsAzkuFd29jJr)
 
-![](../../images/nco_fig04.png)
+![](../../images/nco/nco_fig04.png)
    
   + Para resolver isso, basta usar o comando abaixo. O `ncap2` faz parte do [nco](http://nco.sourceforge.net).
 
@@ -105,3 +105,13 @@ netCDF Operators (NCO)
   13 Remover os atributos globais.
 
   `ncatted -h -a history,global,d,, input.nc output.nc`
+
+14 Remover os atributos globais.
+
+Ao tentar manipular dados do ERA5 com o CDO em alguns casos surgirão alguns erros. Isso ocorre porque no NetCDF tem uma dimensão chamada `expver` que precisa ser removida. Isso é feito utilizando o nco conforme demonstrado na figura abaixo:
+
+![](../../images/nco/nco_fig05.png)
+
+Para remover esta dimensão basta utilizar o comando abaixo:
+
+`ncwa -O -a expver input.nc output.nc`
