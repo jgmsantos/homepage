@@ -1204,7 +1204,7 @@ Com o operador `deltat` (disponível somente a partir da versão 1.9) é possív
 
 ### Calculando percentil
 
-Para calcular o percentil 90, basta utiliza os comandos abaixo:
+Para calcular o percentil 90, basta utilizar os comandos abaixo:
 
 ```bash
 # Forma 1: utilizando o cálculo passo a passo.
