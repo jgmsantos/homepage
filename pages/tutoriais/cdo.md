@@ -1202,6 +1202,20 @@ Com o operador `deltat` (disponível somente a partir da versão 1.9) é possív
 
 `cdo deltat input.nc output.nc`
 
+### Calculando percentil
+
+Para calcular o percentil 90, basta utiliza os comandos abaixo:
+
+```bash
+# Forma 1: utilizando o cálculo passo a passo.
+# Basta alterar o valor (timpctl,90) de acordo com a sua necessidade.
+cdo timmin input.nc min.nc
+cdo timmax input.nc max.nc
+cdo timpctl,90 input.nc min.nc max.nc pct90.nc
+
+# Forma 2: utilizando a concatenação de operadores.
+cdo timpctl,90 input.nc -timmin input.nc -timmax input.nc pct90.nc
+```
 ### Vídeo aula de CDO
 
 + 2020
