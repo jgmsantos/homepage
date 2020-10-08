@@ -115,3 +115,28 @@ Ao tentar manipular dados do ERA5 com o CDO em alguns casos surgirão alguns err
 Para remover esta dimensão basta utilizar o comando abaixo:
 
 `ncwa -O -a expver input.nc output.nc`
+
+15 Adicionando atributos as coordenadas latitude e longitude de um arquivo
+
+Quando os atributos `degrees north` e `degrees east` não estão no arquivo e ao tentar realizar alguma manipulação no mesmo, será retornado erro. Um exemplo pode ser visto na figura abaixo. 
+
+As informações do conteúdo do arquivo foram visualizadas com o comando `ncdump -h teste_file.nc`. Nota-se que não há esses atributos, e para resolver isso, basta utilizar o comando abaixo.
+
+
+![](../../images/nco/nco_fig06a.png)
+
+Comando para resolver esse problema:
+
+```bash
+ncatted -O -a units,lat,o,c,"degrees north" -a units,lon,o,c,"degrees east" test_file.nc output.nc
+```
+
+Nota-se que o `output.nc` possui os atributos mencionados anteriormente conforme a figura abaixo. Com isso, é possível manipular adequadamente o seu arquivo.
+
+![](../../images/nco/nco_fig06b.png)
+
+**Importante:** O nome das coordenadas são `lat` e `lon` por isso foi utilizado esse nome no comando acima. Caso no seu arquivo o nome seja `latitude` e `longitude`, altere para o nome correto. O comando ficaria da seguinte forma:
+
+```bash
+ncatted -O -a units,latitude,o,c,"degrees north" -a units,longitude,o,c,"degrees east" test_file.nc output.nc
+```
