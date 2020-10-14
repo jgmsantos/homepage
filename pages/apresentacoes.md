@@ -3,6 +3,8 @@ Apresentações
 
 2020
 
++ [Produtos de Monitoramento de Queimadas e Risco de Fogo do INPE](https://docs.google.com/presentation/d/1ih32msQ1hhXZV760RJwqetd59-ELYOypp6BbrTPHtkg/edit?usp=sharing). Outubro/2020.
+
 + [Curso de CDO](https://docs.google.com/presentation/d/1jEMmVpfD4H8CB1TGuW-j5wuOhbU8uoCB4w-mi2XlxfI/edit?usp=sharing). Setembro/2020.
 
 + [Temporada de queimadas 2020 no bioma Amazônia](https://docs.google.com/presentation/d/1HLVjWAS03nlCoNtLHgoqefcRNjTw7i_VLusVVfRupgk/edit?usp=sharing). Agosto/2020.
