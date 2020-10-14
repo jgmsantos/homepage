@@ -7,6 +7,8 @@ Apresentações
 
 + [Curso de CDO](https://docs.google.com/presentation/d/1jEMmVpfD4H8CB1TGuW-j5wuOhbU8uoCB4w-mi2XlxfI/edit?usp=sharing). Setembro/2020.
 
++ [Introdução aos Dados Ambientais](https://docs.google.com/presentation/d/1P72ZNO1yj0VcpNX9LEpXRvc-J4PUG67VcpFIpHB5ZQU/edit?usp=sharing). Agosto/2020.
+
 + [Temporada de queimadas 2020 no bioma Amazônia](https://docs.google.com/presentation/d/1HLVjWAS03nlCoNtLHgoqefcRNjTw7i_VLusVVfRupgk/edit?usp=sharing). Agosto/2020.
 
 + [Temporada de queimadas 2020 no bioma Pantanal](https://docs.google.com/presentation/d/1sZj30o1fEWU6PHd69-6rYyItpTDQGuM3bnp6XCMcYjk/edit?usp=sharing). Agosto/2020.
