@@ -5,6 +5,8 @@ Como passatempo, eu gosto de viajar, conhecer novos lugares e pessoas, além de 
 
 ### Vídeos de viagens
 
++ [Passeio pela cidade de Socorro/SP](https://youtu.be/Lg9no7VTdo8)
+
 + [Ecoparque Cassorova em Brotas](https://www.youtube.com/watch?v=l5_m1oW_Q4g)
 
 + [Rapel no Ecoparque Cassorova em Brotas](https://www.youtube.com/watch?v=z2SOVaBZHZ8)
