@@ -3,6 +3,8 @@ Apresentações
 
 2020
 
++ [Monitoramento de Queimadas no Brasil a partir dos Produtos do INPE](https://docs.google.com/presentation/d/1dsF5-dKfz9BLlp1MC9RmVCnvH172M_QDHfIcv-3hFww/edit?usp=sharing). Outubro/2020.
+
 + [Produtos de Monitoramento de Queimadas e Risco de Fogo do INPE](https://docs.google.com/presentation/d/1ih32msQ1hhXZV760RJwqetd59-ELYOypp6BbrTPHtkg/edit?usp=sharing). [Vídeo da apresentação](https://youtu.be/-a_qlDjaqTY). Outubro/2020.
 
 + [Vídeo sobre Como tudo começou - Minha vida acadêmica](https://youtu.be/jIRlQgz59-A). Setembro/2020.
