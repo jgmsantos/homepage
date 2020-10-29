@@ -7,7 +7,7 @@ Como passatempo, eu gosto de viajar, conhecer novos lugares e pessoas, além de 
 
 + Minas Gerias
 
-  + [Ouro Preto em Minas Gerais](https://www.youtube.com/watch?v=HsQzaZmNhG8)
+  + [Ouro Preto](https://www.youtube.com/watch?v=HsQzaZmNhG8)
 
 + São Paulo
 
