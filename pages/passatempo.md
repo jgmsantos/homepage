@@ -5,7 +5,7 @@ Como passatempo, eu gosto de viajar, conhecer novos lugares e pessoas, além de 
 
 ### Vídeos de viagens
 
-+ Minas Gerias
++ Minas Gerais
 
   + [Ouro Preto](https://www.youtube.com/watch?v=HsQzaZmNhG8)
 
