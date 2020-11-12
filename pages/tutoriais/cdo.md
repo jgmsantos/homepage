@@ -4,7 +4,7 @@ Climate Data Operators (CDO)
 ### Tutorias
 
 + [Introdução ao Climate Data Operators (CDO). Autor: Guilherme Martins. Versão oficial](http://mtc-m21b.sid.inpe.br/col/sid.inpe.br/mtc-m21b/2016/11.18.17.34/doc/publicacao.pdf)
-  + [Download alternativo para o tutorial acima. **Versão sendo atualizada constantemente**](https://drive.google.com/open?id=15UT8bdlLlwxwazTvRk2IK28oys89Z4nl)
+  + [**Utilize sempre esta versão**. Download alternativo para o tutorial acima.](https://drive.google.com/open?id=15UT8bdlLlwxwazTvRk2IK28oys89Z4nl)
 
 + [CDO Reference Card](https://code.zmaw.de/projects/cdo/embedded/cdo_refcard.pdf)
 
