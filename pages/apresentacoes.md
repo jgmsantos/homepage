@@ -3,6 +3,8 @@ Apresentações
 
 2020
 
++ [Roda de Conversa Agroecológica - Observando queimadas e uso do solo para agricultura familiar na Amazônia](https://docs.google.com/presentation/d/1Y7VZrwZSRbAEkqWZMUmyjNAHPA8Z00vjoeEzoRZZKY4/edit?usp=sharing). Novembro/2020.
+
 + [Mudanças Climáticas e Queimadas no contexto Brasileiro](https://docs.google.com/presentation/d/18fWDvSW3QVyGN6anFrDbf6fO_lFXmuk19IZor8NiW2I/edit?usp=sharing). Novembro/2020.
 
 + [Monitoramento de Queimadas no Brasil a partir dos Produtos do INPE](https://docs.google.com/presentation/d/1dsF5-dKfz9BLlp1MC9RmVCnvH172M_QDHfIcv-3hFww/edit?usp=sharing). Outubro/2020.
