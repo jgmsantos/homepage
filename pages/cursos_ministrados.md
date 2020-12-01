@@ -55,6 +55,8 @@ Cursos ministrados
 
 2020
 
++ Avaliação do curso de CDO realizado virtualmente - UNIFEI -  Novembro/2020. Total de participantes = 5.
+
 + [Avaliação do curso de CDO realizado virtualmente - Setembro/2020](https://docs.google.com/presentation/d/1aLl4GPoaYYxIb2lAB9U-q1-tfGGYj-SXwe2Zhq1u7CU/edit?usp=sharing). Total de participantes = 44.
   + Para ver o levantamento dos inscritos [clique aqui](https://drive.google.com/file/d/1hazZpPBzSF7G0R095smo7WvV_Q8UuNr4/view?usp=sharing).
 
