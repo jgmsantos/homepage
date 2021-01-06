@@ -1232,9 +1232,9 @@ Para executar o script utilizando os dados, basta clicar [aqui](https://github.c
 # na resolução espacial de 0.50º ou 50km.
 # Guilherme Martins - jgmsantos@gmail.com - 06/01/2021.
 
-DIR_INPUT="input/csv"      # Diretório do arquivo de entrada no formato ".csv".
-DIR_OUTPUT="output/netcdf" # Diretório do arquivo de saída no formato NetCDF.
-DIR_TMP="tmp"              # Diretório temporário.
+DIR_INPUT="../input/csv"      # Diretório do arquivo de entrada no formato ".csv".
+DIR_OUTPUT="../output/netcdf" # Diretório do arquivo de saída no formato NetCDF.
+DIR_TMP="../tmp"              # Diretório temporário.
 
 # Definição do domínio espacial (grade do dado).
 cat << EOF > $DIR_TMP/gridfile.txt
