@@ -55,6 +55,8 @@ Resultado:
 convert -units PixelsPerInch input -density 300 output.jpg
 ```
 
+O "input" é o nome da sua imagem que está no seu computador.
+
 Para visualizar a saída, basta digitar:
 
 ```
