@@ -48,3 +48,17 @@ Outra forma:
 Resultado:
 
 ![](../../images/imagemagick/painel.png)
+
+3 Convertendo uma imagem para 300dpi.
+
+```
+convert -units PixelsPerInch input -density 300 output.jpg
+```
+
+Para visualizar a saída, basta digitar:
+
+```
+magick identify -verbose output.jpg
+```
+
+E verifique a linha 6 (Resolution:) do comando acima.
