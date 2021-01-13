@@ -1,4 +1,5 @@
-### Imagemagick
+Imagemagick
+=================================
 
 O Imagemagick é muito bom para processar imagens.
 
