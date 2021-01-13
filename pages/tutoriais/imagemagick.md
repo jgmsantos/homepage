@@ -4,7 +4,7 @@ O Imagemagick é muito bom para processar imagens.
 
 Link oficial: [https://imagemagick.org/index.php](https://imagemagick.org/index.php)
 
-1 Remover espaços excedentes na figura.
+### Remover espaços excedentes na figura.
 
 A figura01a.png possui espaços excedentes e o objetivo consiste em removê-los.
 
@@ -31,7 +31,7 @@ Resultado:
 
 ![](../../images/imagemagick/fig01c.png)
 
-2 Criando painel de figuras.
+### Criando painel de figuras.
 
 São utilizados 4 arquivos separados: `fig01.png`, `fig02.png`, `fig03.png` e `fig04.png`. Após remover os espaços excedentes com o  `trim`, cria-se o painel.
 - O `-tile 2x2` diz para gerar 2 linhas por 2 colunas.
@@ -49,7 +49,7 @@ Resultado:
 
 ![](../../images/imagemagick/painel.png)
 
-3 Convertendo uma imagem para 300dpi.
+### Convertendo uma imagem para 300dpi.
 
 ```
 convert -units PixelsPerInch input -density 300 output.jpg
