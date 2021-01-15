@@ -38,7 +38,7 @@ Climate Data Operators (CDO)
 
 O resultado pode ser visualizado abaixo:
 
-![](../../images/cdo_fig01_MT.png)
+![](../../images/cdo/cdo_fig01_MT.png)
 
 2 Alterar o nome da variável de vários arquivos em lote no formato NetCDF. É feito um loop utilizando o `for` em todos os arquivos NetCDF (`*.nc`), em seguida, com o uso do CDO por meio do operador `chname` altera-se o nome da variável do arquivo de `nome_antigo` para `nome_novo`. 
 
@@ -287,7 +287,7 @@ Antes de tudo, escolha adequadamente consultando a tabela abaixo o melhor índic
 
 **Importante2:** Os exemplos abaixo foram aplicados em uma série temporal. Os índices podem ser utilizados em um arquivo espacial.
 
-![](../../images/tabela.png)
+![](../../images/cdo/tabela.png)
 
 + [Clique aqui](https://code.mpimet.mpg.de/projects/cdo/embedded/cdo_eca.pdf) para realizar o download da documentação sobre os índices climáticos.
 

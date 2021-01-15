@@ -12,7 +12,7 @@ gdal
 
 `sudo apt install gdal-bin`
 
-### Exemplos de uso do gdal.
+### Exemplos de uso do gdal
 
 1 Convertendo um arquivo NetCDF para o formato binário.
 
