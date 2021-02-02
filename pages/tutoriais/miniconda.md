@@ -23,6 +23,8 @@ Basta aceitar todas as opções que vão aparecendo no processo de instalação.
 
 ## Criar um ambiente
 
+O `<nome_ambiente>` é o nome do ambiente que se deseja criar.
+
 ```bash
 conda create --name <nome_ambiente>
 ```
@@ -42,6 +44,12 @@ conda activate <nome_ambiente>
 ```bash
 conda env remove --name <nome_ambiente>
 ```
+
+## Atualização de um pacote:
+```bash
+conda update <nome_pacote>
+```
+
 ## Instalação de pacotes
 
 ### Instalação do NCL
@@ -88,9 +96,3 @@ conda install -c conda-forge parallel
 ```bash
 conda install -c conda-forge nco
 ```
-
-### Atualização de um pacote:
-```bash
-conda update <nome_pacote>
-```
-
