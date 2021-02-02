@@ -11,6 +11,7 @@ Tutoriais
    gdal
    imagemagick
    meteorologia
+   miniconda
    nco
    ncl
    python
