@@ -45,7 +45,7 @@ conda activate <nome_ambiente>
 conda env remove --name <nome_ambiente>
 ```
 
-## Atualização de um pacote:
+## Atualização de um pacote
 ```bash
 conda update <nome_pacote>
 ```
