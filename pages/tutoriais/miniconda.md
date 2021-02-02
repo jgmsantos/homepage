@@ -64,7 +64,7 @@ conda install -c conda-forge ncl
 conda install -c conda-forge gdal
 ```
 
-### Instalação do CDO:
+### Instalação do CDO
 
 ```bash
 conda install -c conda-forge cdo
