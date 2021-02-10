@@ -1,6 +1,10 @@
 Apresentações
 =============
 
+2021
+
++ [Análise meteorológica entre os meses de julho a outubro de 2020 - Serra do Cipó/MG](https://docs.google.com/presentation/d/15voJX3syUKD6dpXyp0Md64jmv8JOgrGmUMKpGvYTPe0/edit?usp=sharing). Fevereiro/2021.
+
 2020
 
 + [Roda de Conversa Agroecológica - Observando queimadas e uso do solo para agricultura familiar na Amazônia](https://docs.google.com/presentation/d/1Y7VZrwZSRbAEkqWZMUmyjNAHPA8Z00vjoeEzoRZZKY4/edit?usp=sharing). Novembro/2020.
