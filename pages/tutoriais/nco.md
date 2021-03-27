@@ -140,3 +140,9 @@ Nota-se que o `output.nc` possui os atributos mencionados anteriormente conforme
 ```bash
 ncatted -O -a units,latitude,o,c,"degrees north" -a units,longitude,o,c,"degrees east" test_file.nc output.nc
 ```
+
+16 Apagar a dimensão time_bnds
+
+```bash
+ncks -C -x -v time_bnds input.nc output.nc
+```
