@@ -3,6 +3,8 @@ Apresentações
 
 2021
 
++ [Dados e metodologias do Programa Queimadas](https://docs.google.com/presentation/d/1sY9p1c1vreEropUCkDgn8aq7AGkVttx-O1khtdxj9xA/edit?usp=sharing). Abril/2021.
+
 + [Análise da climatologia de precipitação 2021 para avaliação dos períodos de limpezas das linhas monitoradas pelo Sistema GGT](https://docs.google.com/presentation/d/1y7lukypmMqdTeWhXuek_sd-t-dFp4XR2yjBeeGMPPSg/edit?usp=sharing). Abril/2021.
 
 + [A Serra do Cipó/MG a partir de uma percepção meteorológica](https://docs.google.com/presentation/d/182hHG2zgOGZeBMjZGJhVEfAPB3zrOi5hPpLIyGIrkBs/edit?usp=sharing). Março/2021.
