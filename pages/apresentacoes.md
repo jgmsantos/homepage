@@ -3,7 +3,7 @@ Apresentações
 
 2021
 
-+ [Como os satélites monitoram as queimadas no Brasil? Esses dados também estão disponíveis se eu quiser usar ou verificar?](https://docs.google.com/presentation/d/1p2FrGgce6ageySdGZlFlF1BJsNMhCqIC-TNz9f5_J_o/edit?usp=sharing). Maio/2021.
++ [Como os satélites monitoram as queimadas no Brasil? Esses dados também estão disponíveis se eu quiser usar ou verificar?](https://docs.google.com/presentation/d/1p2FrGgce6ageySdGZlFlF1BJsNMhCqIC-TNz9f5_J_o/edit?usp=sharing) Maio/2021.
 
 + [Dados e metodologias do Programa Queimadas](https://docs.google.com/presentation/d/1sY9p1c1vreEropUCkDgn8aq7AGkVttx-O1khtdxj9xA/edit?usp=sharing). Abril/2021.
 
