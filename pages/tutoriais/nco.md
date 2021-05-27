@@ -146,3 +146,25 @@ ncatted -O -a units,latitude,o,c,"degrees north" -a units,longitude,o,c,"degrees
 ```bash
 ncks -C -x -v time_bnds input.nc output.nc
 ```
+
+17 Adicionando informações ao atributo glogbal do arquivo NetCDF
+
+Será criado "Informações" no atributo "global", e os valores associados a ele são: Autor:Guilherme Martins e E-mail:teste@gmail.com. O "\n" quer dizer, a próxima linha. O "-O" sobrescreve o arquivo caso ele exista.
+
+```
+ncatted -a Informações,global,a,c,"Autor:Guilherme Martins\n E-mail:jgmsantos@gmail.com" input.nc
+```
+
+Outra forma de fazer a mesma atividade. Sempre que alguma informação a ser inserida tiver espaço, coloque toda a expressão entre aspas.
+
+```
+ncatted -a Autor,global,a,c,"Guilherme Martins" -a "E-mail para contato",global,a,c,"jgmsantos@gmail.com" -a Site,global,a,c,"www.teste.com.br" input.nc
+```
+
+18 Deletar atributos globais
+
+Deseja-se deletar a variável "history" e "CDI" do atributo global.
+
+```
+ncatted -a history,global,d,, -a CDI,global,d,, input.nc
+```
