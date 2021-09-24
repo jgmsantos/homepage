@@ -42,7 +42,7 @@ Pois é, apresentei um breve resumo sobre a história de como cheguei até aqui 
 
 Divirta-se!
 
-Última atualização: 07/08/2021.
+Última atualização: 24/09/2021.
 
 .. toctree::
    :hidden:

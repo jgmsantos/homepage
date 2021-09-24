@@ -3,6 +3,8 @@ Apresentações
 
 2021
 
++ [O Modelo de Risco de Fogo na vegetação do Programa Queimadas do INPE e Meteorologia](https://docs.google.com/presentation/d/1safWNuBhGeqEGyt3_LKk6Jb4QNNDh-aSEwRVDiqbfnU/edit?usp=sharing). Setembro/2021.
+
 + [Sistema de monitoramento de detecção de focos de fogo ativo do Programa Queimadas do INPE](https://docs.google.com/presentation/d/1K3xtFQoWubA6QiBfzxUx2bR6vIGRXVNRa7S4Z-ptXYs/edit?usp=sharing). Agosto/2021.
 
 + [Como os satélites monitoram as queimadas no Brasil? Esses dados também estão disponíveis se eu quiser usar ou verificar?](https://docs.google.com/presentation/d/1p2FrGgce6ageySdGZlFlF1BJsNMhCqIC-TNz9f5_J_o/edit?usp=sharing). Maio/2021.
