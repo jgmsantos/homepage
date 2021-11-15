@@ -39,7 +39,6 @@ Apresentações
 
 + [Temporada de queimadas 2020 no bioma Pantanal](https://docs.google.com/presentation/d/1sZj30o1fEWU6PHd69-6rYyItpTDQGuM3bnp6XCMcYjk/edit?usp=sharing). Agosto/2020.
 
-
 + [Live - Período Seco e Queimadas](https://www.youtube.com/watch?v=Saw1SaVfg7w&t=8s). Agosto/2020.
 
 + [Live - Computação aplicada à Meteorologia](https://youtu.be/68Gf1hYNacQ). Julho/2020.
@@ -75,7 +74,6 @@ Apresentações
 2013
 
 + [Curso básico de Linux](https://drive.google.com/open?id=1ju1bNWycTJ-eF__81VPpLMl3LxMNunB3). Julho/2013.
-
 
 2011
 
