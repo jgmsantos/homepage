@@ -3,8 +3,6 @@ Apresentações
 
 2021
 
-+ [Manipulação de dados atmosféricos utilizando o Climate Data Operators (CDO)](https://docs.google.com/presentation/d/1jkAvWMw5KLdl9EYShFsVtrqr0qJ4B9LVcqtuOAa3MaQ/edit?usp=sharing). Novembro/2021.
-
 + [O Modelo de Risco de Fogo na vegetação do Programa Queimadas do INPE e Meteorologia](https://docs.google.com/presentation/d/1safWNuBhGeqEGyt3_LKk6Jb4QNNDh-aSEwRVDiqbfnU/edit?usp=sharing). Setembro/2021.
 
 + [Sistema de monitoramento de detecção de focos de fogo ativo do Programa Queimadas do INPE](https://docs.google.com/presentation/d/1K3xtFQoWubA6QiBfzxUx2bR6vIGRXVNRa7S4Z-ptXYs/edit?usp=sharing). Agosto/2021.
