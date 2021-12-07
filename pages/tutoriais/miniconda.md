@@ -7,7 +7,7 @@ O miniconda ajuda bastante na hora de instalar um programa porque ele resolve to
 
 A criação de um ambiente virtual facilita porque caso seja feita alguma instalação de programa e ele passe por alguma instabilidade, basta remover o ambiente virtual e criar um novo sem danificar o sistema operacional.
 
-## 2. Instalação do miniconda no Linux por meio do site oficial:
+## 2. Instalação do miniconda no Linux por meio do site oficial
 
 [https://docs.conda.io/en/latest/miniconda.html](https://docs.conda.io/en/latest/miniconda.html)
 
