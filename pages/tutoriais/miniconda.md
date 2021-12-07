@@ -205,19 +205,19 @@ Onde: `/home/queimadas/miniconda3/envs/risco_fogo/lib/libnetcdf.so.19` represent
 
 E `/home/queimadas/miniconda3/envs/risco_fogo/lib/libnetcdf.so.13` representa o link simbólico que será a biblioteca criada, a que foi mostrada no erro.
 
-## 10.10. Instalação de uma versão especifica de um programa 
+## 10.10. Instalação de uma versão específica de um programa 
 
 ```bash
 conda install <nome_programa>=<versão_programa>
 ```
 
-Exemplo: Instalar a versão do cdo 1.9.9.
+Exemplo: Instalar a versão do `cdo 1.9.9`.
 
 ```bash
 conda install cdo=1.9.9
 ```
 
-## 11. Para atualizar um pacote:
+## 11. Para atualizar um pacote
 
 ```bash
 conda update <nome_pacote>
@@ -262,3 +262,4 @@ conda remove --force cdo
 + [https://www.facebook.com/guilherme.martins.77398](https://www.facebook.com/guilherme.martins.77398)
 + [https://www.researchgate.net/profile/Guilherme-Martins-18](https://www.researchgate.net/profile/Guilherme-Martins-18)
 
+última atualização: 07/12/2021.
