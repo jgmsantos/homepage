@@ -205,7 +205,7 @@ Onde: `/home/queimadas/miniconda3/envs/risco_fogo/lib/libnetcdf.so.19` represent
 
 E `/home/queimadas/miniconda3/envs/risco_fogo/lib/libnetcdf.so.13` representa o link simbólico que será a biblioteca criada, a que foi mostrada no erro.
 
-## 10.10. Instalação de uma versão específica de um programa 
+### 10.10. Instalação de uma versão específica de um programa 
 
 ```
 conda install <nome_programa>=<versão_programa>
