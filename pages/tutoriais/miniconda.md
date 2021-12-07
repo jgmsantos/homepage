@@ -15,13 +15,13 @@ A criação de um ambiente virtual facilita porque caso seja feita alguma instal
 
 + Digitar no seu terminal Linux o comando:
 
-```bash
+```
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 ```
 
 + Executar o instalador
 
-```bash
+```
 bash Miniconda3-latest-Linux-x86_64.sh
 ```
 
@@ -31,7 +31,7 @@ Após a instalação é necessário reiniciar o terminal do Linux para que as mu
 
 Após reiniciar o terminal, ele ficará assim:
 
-```bash
+```
 (base) guilherme@DESKTOP-LD7TCRV:~$ 
 ```
 
@@ -39,30 +39,30 @@ Note o nome `(base)` na frente do nome do usuário.
 
 ## 4. Para atualizar o conda
 
-```bash
+```
 conda update -n base -c defaults conda
 ```
 
 ## 5. Criar um novo ambiente virtual
 
-```bash
+```
 conda create --name <nome_ambiente>
 ```
 
 Exemplo: Criação do ambiente virtual chamado `inpe`.
 
-```bash
+```
 conda create --name inpe
 ```
 ## 6. Ver a lista de programas instalados
 
-```bash
+```
 conda list
 ```
 
 ## 7. Desativar um ambiente virtual
 
-```bash
+```
 conda deactivate
 ```
 
@@ -70,36 +70,36 @@ Ao fazer isso, o usuário sairá do ambiente virtual corrente e mudará para o a
 
 ## 8. Ativar um ambiente
 
-```bash
+```
 conda activate <nome_ambiente>
 ```
 
 Exemplo: 
 
-```bash
+```
 conda activate inpe
 ```
 Antes o ambiente era o `(base)`.
 
-```bash
+```
 (base) guilherme@DESKTOP-LD7TCRV:~$
 ```
 
 Após o comando, ficará assim:
 
-```bash
+```
 (inpe) guilherme@DESKTOP-LD7TCRV:~$
 ```
 
 ## 9. Remover um ambiente
 
-```bash
+```
 conda env remove --name <nome_ambiente>
 ```
 
 Exemplo: 
 
-```bash
+```
 conda env remove --name inpe
 ```
 
@@ -113,7 +113,7 @@ OBS: A instalação é feita considerando sempre a versão mais recente do progr
 
 Aparecerá a imagem abaixo, basta copiar e colar a primeira linha da imagem no terminal do Linux,  ou seja:
 
-```bash
+```
 conda install -c conda-forge cdo
 ```
 
@@ -122,66 +122,66 @@ conda install -c conda-forge cdo
 
 ### 10.1 Instalação do NCL
 
-```bash
+```
 conda install -c conda-forge ncl
 ```
 
 ### 10.2 Instalação do gdal
 
-```bash
+```
 conda install -c conda-forge gdal
 ```
 
 ### 10.3 Instalação do CDO
 
-```bash
+```
 conda install -c conda-forge cdo
 ```
 
 ### 10.4 Instalação do imagemagick
 
-```bash
+```
 conda install -c conda-forge imagemagick
 ```
 
 ### 10.5 Instalação do ncview
 
-```bash
+```
 conda install -c conda-forge ncview
 ```
 ### 10.6 Instalação do htop
 
-```bash
+```
 conda install -c conda-forge htop
 ```
 
 ### 10.7 Instalação do parallel
 
-```bash
+```
 conda install -c conda-forge parallel
 ```
 
-### 10.8 Instalação do parallel
+### 10.8 Instalação do nco
 
-```bash
+```
 conda install -c conda-forge nco
 ```
 
 ### 10.9 Instalação do wgrib2
 
-```bash
+```
 conda install -c conda-forge wgrib2
 ```
 
 Ao executar o wgrib2 e aparecer o erro abaixo:
 
-```bash
+```
 wgrib2: error while loading shared libraries: libjasper.so.1: cannot open shared object file: No such file or directory
 ```
 
 Basta criar um link simbólico de acordo com o comando abaixo. Tudo isso é uma linha. Altere os caminhos de acordo com o seu usuário (`queimadas`) e ambiente virtual (`risco_fogo`):
 
-```bash
+```
 ln -s /home/queimadas/miniconda3/envs/risco_fogo/lib/libjasper.so.4 /home/queimadas/miniconda3/envs/risco_fogo/lib/libjasper.so.1
 ```
 
@@ -191,13 +191,13 @@ E `/home/queimadas/miniconda3/envs/risco_fogo/lib/libjasper.so.1` representa o l
 
 Outro possível erro que pode aparecer:
 
-```bash
+```
 wgrib2: error while loading shared libraries: libnetcdf.so.13: cannot open shared object file: No such file or directory
 ```
 
 Basta criar um link simbólico de acordo com o comando abaixo. Tudo isso é uma linha. Altere os caminhos de acordo com o seu usuário (`queimadas`) e ambiente virtual (`risco_fogo`):
 
-```bash
+```
 ln -s /home/queimadas/miniconda3/envs/risco_fogo/lib/libnetcdf.so.19 /home/queimadas/miniconda3/envs/risco_fogo/lib/libnetcdf.so.13
 ```
 
@@ -207,46 +207,46 @@ E `/home/queimadas/miniconda3/envs/risco_fogo/lib/libnetcdf.so.13` representa o 
 
 ## 10.10. Instalação de uma versão específica de um programa 
 
-```bash
+```
 conda install <nome_programa>=<versão_programa>
 ```
 
 Exemplo: Instalar a versão do `cdo 1.9.9`.
 
-```bash
+```
 conda install cdo=1.9.9
 ```
 
 ## 11. Para atualizar um pacote
 
-```bash
+```
 conda update <nome_pacote>
 ```
 Exemplo:
 
-```bash
+```
 conda update cdo
 ```
 ## 12. Desinstalar pacote
 
-```bash
+```
 conda remove <nome_pacote>
 ````
 
 Caso não funcione, pode-se usar o `--force` para forçar a desinstalação:
 
-```bash
+```
 conda remove --force <nome_pacote>
 ```
 
 Exemplo: Desinstalar o cdo.
 
-```bash
+```
 conda remove cdo
 ```
 E para forçar a desinstalação do CDO caso o comando acima não funcione:
 
-```bash
+```
 conda remove --force cdo
 ```
 
