@@ -3,6 +3,8 @@ Apresentações
 
 2021
 
++ [Monitoramento de Queimadas no Cerrado](https://docs.google.com/presentation/d/1NURJYC-KgP1WmfZtUqaYMDtX3NZKa6JDLCWf8ZT9DHM/edit?usp=sharing). Dezembro/2021.
+
 + [Análise das condições ambientais na Serra do Cipó como ferramenta para o combate aos incêndios florestais](https://docs.google.com/presentation/d/1bvpdLw55WuvnJNoRrFDVpgNXz5s87rnWbxNCuAgwsLQ/edit?usp=sharing). Novembro/2021.
 
 + [Manipulação de dados atmosféricos utilizando o Climate Data Operators (CDO)](https://docs.google.com/presentation/d/1jkAvWMw5KLdl9EYShFsVtrqr0qJ4B9LVcqtuOAa3MaQ/edit?usp=sharing). [Avaliação feita pelos participantes](https://docs.google.com/presentation/d/1KBsT7J1dSrE7nMNEaeibKYIemx08jPu2G6Lf3Sp7Gpg/edit?usp=sharing). Novembro/2021.
