@@ -26,6 +26,8 @@ Climate Data Operators (CDO)
 
 + [CDO on speed](https://code.mpimet.mpg.de/boards/53/topics/6672)
 
++ [Climate Unboxed](https://www.youtube.com/channel/UC94xkaJn1NkxR4trAfVArbg)
+
 ### Exemplos de uso com o CDO
 
 1 O exemplo abaixo compara dois conjunto de dados espaciais (temperatura [ºC] e precipitação [mm/dia]) que possuem o mesmo domínio espacial, isto é, o mesmo número de pontos de latitude e longitude no intervalo de 28 dias. Lembrando que esse arquivo é apenas um exemplo, ele poderia ter qualquer comprimento temporal. Quando a precipitação for menor ou igual (`lec`) a 10 mm/dia, o conjunto de dados será convertido para valores 1 (condição verdadeira) e 0 (condição falsa). O mesmo ocorre com o operador `gec`, isto é, quando a temperatura for maior igual a 30C, o conjunto de dados receberá o valor 1, caso contrário, receberá o valor 0. Em outras palavras, serão criados dois conjuntos de dados com valores 0 e 1. O operador `mul` multiplicará os dois conjunto de dados, isto é, a matriz de dados de 0 e 1, e por fim, somará todos os 28 dias ou tempos gerando assim um arquivo com o total de dias quando a condição acima for satisfeita simultaneamente.
