@@ -1289,14 +1289,14 @@ rm -f $DIR_TMP/tmp.nc \
 
 + 2020
 
-  + [Curso Básico de Climate Data Operatros (CDO)](https://youtu.be/UengFa5BGP0). Setembro de 2020.
+  + [Curso Básico de Climate Data Operatros (CDO)](https://www.youtube.com/watch?v=vyINIM-EmsQ&list=PLH7uULWpqu1wJiLhSkkn9Lh0hfVgLOQR7&index=22&ab_channel=CursosLibertatem). Setembro de 2020.
 
-  + [Playlists de CDO](https://www.youtube.com/playlist?list=PLGveZDDSWu_7G2ZrM_u8AQD8KNzd1vSwT). Julho de 2020.
+  + [Playlists de CDO](https://www.youtube.com/watch?v=UIeSuoXIMfs&list=PLH7uULWpqu1wJiLhSkkn9Lh0hfVgLOQR7&ab_channel=CursosLibertatem). Julho de 2020.
 
 + 2018
-  + [Dia 1 - 25 Outubro de 2018](https://www.youtube.com/watch?v=9IQ9fNlnkUo&t=1232s)
+  + [Dia 1 - 25 Outubro de 2018](https://youtu.be/_z7TxNri3Hc)
 
-   + [Dia 2 - 26 Outubro de 2018](https://www.youtube.com/watch?v=VSPjY2GaX1M&t=27s)
+   + [Dia 2 - 26 Outubro de 2018](https://youtu.be/wGouTqMiP9I)
 
 ### Podcast
 
