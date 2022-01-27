@@ -7,8 +7,6 @@ Apresentações
 
 + [Análise das condições ambientais na Serra do Cipó como ferramenta para o combate aos incêndios florestais](https://docs.google.com/presentation/d/1bvpdLw55WuvnJNoRrFDVpgNXz5s87rnWbxNCuAgwsLQ/edit?usp=sharing). Novembro/2021.
 
-+ [Manipulação de dados atmosféricos utilizando o Climate Data Operators (CDO)](https://docs.google.com/presentation/d/1jkAvWMw5KLdl9EYShFsVtrqr0qJ4B9LVcqtuOAa3MaQ/edit?usp=sharing). [Avaliação feita pelos participantes](https://docs.google.com/presentation/d/1KBsT7J1dSrE7nMNEaeibKYIemx08jPu2G6Lf3Sp7Gpg/edit?usp=sharing). Novembro/2021.
-
 + [O Modelo de Risco de Fogo na vegetação do Programa Queimadas do INPE e Meteorologia](https://docs.google.com/presentation/d/1safWNuBhGeqEGyt3_LKk6Jb4QNNDh-aSEwRVDiqbfnU/edit?usp=sharing). Setembro/2021.
 
 + [Sistema de monitoramento de detecção de focos de fogo ativo do Programa Queimadas do INPE](https://docs.google.com/presentation/d/1K3xtFQoWubA6QiBfzxUx2bR6vIGRXVNRa7S4Z-ptXYs/edit?usp=sharing). Agosto/2021.

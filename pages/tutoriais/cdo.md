@@ -1289,6 +1289,10 @@ rm -f $DIR_TMP/tmp.nc \
 
 ### Vídeo aula de CDO
 
++ 2021
+
+  + [Manipulação de dados atmosféricos utilizando o Climate Data Operators (CDO)](https://docs.google.com/presentation/d/1jkAvWMw5KLdl9EYShFsVtrqr0qJ4B9LVcqtuOAa3MaQ/edit?usp=sharing). Novembro/2021.
+
 + 2020
 
   + [Curso Básico de Climate Data Operatros (CDO)](https://www.youtube.com/watch?v=vyINIM-EmsQ&list=PLH7uULWpqu1wJiLhSkkn9Lh0hfVgLOQR7&index=22&ab_channel=CursosLibertatem). Setembro de 2020.
@@ -1298,7 +1302,7 @@ rm -f $DIR_TMP/tmp.nc \
 + 2018
   + [Dia 1 - 25 Outubro de 2018](https://youtu.be/_z7TxNri3Hc)
 
-   + [Dia 2 - 26 Outubro de 2018](https://youtu.be/wGouTqMiP9I)
+  + [Dia 2 - 26 Outubro de 2018](https://youtu.be/wGouTqMiP9I)
 
 ### Podcast
 

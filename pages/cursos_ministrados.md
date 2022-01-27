@@ -51,7 +51,11 @@ Cursos ministrados
 
 ## Avaliação dos cursos
 
-**Total de participantes capacitados = 299**
+**Total de participantes capacitados = 352**
+
+2021
+
++ [Avaliação do curso de CDO realizado virtualmente - Novembro/2020](https://docs.google.com/presentation/d/1KBsT7J1dSrE7nMNEaeibKYIemx08jPu2G6Lf3Sp7Gpg/edit?usp=sharing). Total de participantes = 53.
 
 2020
 
