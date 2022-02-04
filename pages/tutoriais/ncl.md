@@ -3,9 +3,9 @@ NCAR Command Language (NCL)
 
 + [Introdução ao NCAR Command Language (NCL). Autor: Guilherme Martins](http://urlib.net/rep/8JMKD3MGP3W34R/3S3JFKL?ibiurl.language=pt-BR) 
 
-+ [Introdução ao NCAR Command Language - Módulo 1. Autor: Guilherme Martins](https://drive.google.com/file/d/1brPCb4TBTSSum8F0zJJYAwWl0_AU-t8i/view?usp=sharing)
++ [Curso de NCL: Introdução ao NCAR Command Language - Módulo 1. Autor: Guilherme Martins](https://drive.google.com/file/d/1brPCb4TBTSSum8F0zJJYAwWl0_AU-t8i/view?usp=sharing)
 
-+ [Introdução ao NCAR Command Language - Módulo 2. Autor: Guilherme Martins](https://drive.google.com/file/d/1ax5XWyzKEIXFxuRdg_Eg5QOqAaxpe_EX/view?usp=sharing)
++ [Curso de NCL: Introdução ao NCAR Command Language - Módulo 2. Autor: Guilherme Martins](https://drive.google.com/file/d/1ax5XWyzKEIXFxuRdg_Eg5QOqAaxpe_EX/view?usp=sharing)
 
 + [Introdução ao NCAR Command Langue (NCL), com aplicações em Meteorologia. Autor: Mateus Teixeira](http://www.ncl.ucar.edu/Document/Manuals/ncl_ptBR.pdf)
 
