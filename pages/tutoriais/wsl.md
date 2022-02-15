@@ -63,4 +63,20 @@ Não aparecerá nenhuma mensagem, mas note a imagem abaixo. Antes estava `PS D:\
 
 ![](../../images/wsl/fig03.jpg)
 
+O passo final é criar um usuário para não ter que ficar utilizando a conta de superusuário root.
+
+`sudo useradd -m usuario`
+
+Eu vou criar com o nome de `guilherme`.
+
+`sudo useradd -m -s bash guilherme`
+
+Crie uma senha para o usuário criado (`guilherme`):
+
+`sudo passwd guilherme`
+
+Adicionar o usuário ao grupo `sudo`.
+
+`sudo usermod -a -G sudo guilherme`
+
 Aproveite a sua distribuição e não tenha mais dor de cabeça com problema de espaço em disco.
