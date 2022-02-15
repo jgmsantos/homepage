@@ -1,4 +1,5 @@
-# Mover a instalação do Windows Subsystem for Linux (WSL) para outro disco
+Mover a instalação do Windows Subsystem for Linux (WSL) para outro disco
+=================================
 
 Recentemente passei por um problema. O notebook que trabalho tem dois discos, um (`C:`) de 128Gb SSD, e outro (`D:`) de 1Tb. Toda a instalação é feita no "`C:`". E como é de se esperar, o disco "`C:`" encheu, e com isso, os problemas começaram a surgir, principalmente com a instalação do WSL onde executo o Linux e os demais programas que utilizo para trabalhar.
 
