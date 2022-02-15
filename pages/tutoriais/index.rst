@@ -18,3 +18,4 @@ Tutoriais
    processamento_texto
    shell
    wgrib2
+   wsl
