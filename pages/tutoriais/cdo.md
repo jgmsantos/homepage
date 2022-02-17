@@ -1287,6 +1287,22 @@ rm -f $DIR_TMP/tmp.nc \
       $DIR_TMP/atributos.txt
 ```
 
+### Calcular a diferença de temperatura entre dois níveis verticais
+
+O objetivo consiste em calcular a diferença da temperatura entre dois níveis verticais (hPa), isto é, a temperatura entre 500hPa e 850hPa. 
+
+O arquivo de entrada é o `input.nc` e o de saída, o `output.nc`. 
+
+Caso o arquivo possua outras variáveis, o operador `selname` seleciona a variável de interesse. O nome `t` é o nome da variável do arquivo `input.nc`. Caso o arquivo seja de temperatura, basta remover o `selname`.
+
+```bash
+cdo -sub -sellevel,500 -selname,t input.nc -sellevel,850 -selname,t input.nc output.nc
+```
+
+OBS: A dica acima foi extraída do link abaixo: 
+
+[https://code.mpimet.mpg.de/boards/2/topics/12326](https://code.mpimet.mpg.de/boards/2/topics/12326)
+
 ### Vídeo aula de CDO
 
 + 2021
