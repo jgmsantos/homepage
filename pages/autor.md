@@ -17,16 +17,18 @@ Atualmente, trabalho no [Programa de Monitoramento de Queimadas](http://queimada
 
 **Interesses profissionais:**
 
-+ NCAR Command Language (NCL)
++ Data Science
++ Python
 + Climate Data Operators (CDO)
 + Shell (Bash)
++ Focos de queimadas na vegetação
++ NCAR Command Language (NCL)
 + Fortran 90
 + GrADS
 + Unix
 + Coupled Model Intercomparison Project Phase 5 (CMIP5)
-+ Python
 + NetCDF Operators (NCO)
 + LATEX
 + Processamento e visualização de dados atmosféricos
 + Sensoriamento remoto da atmosfera
-+ Focos de queimadas na vegetação
+

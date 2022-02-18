@@ -5,6 +5,7 @@ Tutoriais
 
    variados
    cdo
+   dicas_python
    fortran90
    git_github
    grads
