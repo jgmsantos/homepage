@@ -1,5 +1,7 @@
-Manipulação de data e tempo usando Pandas
-==========================
+Dicas de Python
+=========================
+
+### Manipulação de data e tempo
 
 Site oficial do DateOffset:
 
@@ -58,7 +60,7 @@ Ao executar o código acima, o resultado será:
 4 2022-01-01           12
 ```
 
-#### Criação de uma nova coluna no DataFrame adicionando 6 meses a coluna já existente de datas.
+### Criação de uma nova coluna no DataFrame adicionando 6 meses a coluna já existente de datas.
 
 Neste exemplo, será criada uma nova coluna chamada ´Date2´.
 
@@ -81,7 +83,7 @@ O resultado será:
 
 Note que houve um incremento de 6 meses na variável `Date`.
 
-#### Adicionando incremento
+### Adicionando incremento
 
 Os valores que estão sendo trabalhados na coluna `Date` são do tipo `datetime`, portanto é possível adicionar incrementos ou intervalos.
 
@@ -93,7 +95,7 @@ print(df)
 
 Neste caso, foi adicionado o intervalo a cada 2 horas.
 
-#### Manipulação do Datetime utilizando Timedelta
+### Manipulação do Datetime utilizando Timedelta
 
 O `Timedelta` é útil para somar datas e tempos. A sua declaração é um pouco diferente da função `DateOffset`.
 
@@ -134,7 +136,7 @@ df["Date2"] = df["Date"] + pd.Timedelta("3 days")
 print(df)
 ```
 
-#### Extraindo informação do objeto datetime
+### Extraindo informação do objeto datetime
 
 O objeto datetime possui vários pedaços de informações que podem ser utilizadas, por exemplo: year, month, day, week, hour, microsecond, detre outras possibilidades.
 
@@ -192,7 +194,7 @@ O resultado será:
 Name: Date, dtype: int64
 ```
 
-#### Função isocalendar
+### Função isocalendar
 
 Retorna de uma vez as informações de year, week e day.
 
@@ -211,7 +213,7 @@ O resultado será:
 4  2021    52    6
 ```
 
-#### Diferença entre datas
+### Diferença entre datas
 
 Neste exemplo, será mostrado como calcular a diferença entre duas datas. Essa tarefa pode ser feita por meio do `datetime`.
 
