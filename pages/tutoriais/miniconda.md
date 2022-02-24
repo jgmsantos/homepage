@@ -105,6 +105,8 @@ conda env remove --name inpe
 
 ## 10. Instalação de programas
 
+A descrição abaixo é um exemplo de procura e instalação do programa CDO.
+
 Caso seja necessário instalar um programa, mas não se sabe como fazê-lo, basta pesquisar no google, por exemplo, `cdo instalação conda`. Ao clicar na imagem abaixo:
 
 OBS: A instalação é feita considerando sempre a versão mais recente do programa.
