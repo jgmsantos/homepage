@@ -263,5 +263,3 @@ conda remove --force cdo
 + [https://www.instagram.com/jgmsantos](https://www.instagram.com/jgmsantos)
 + [https://www.facebook.com/guilherme.martins.77398](https://www.facebook.com/guilherme.martins.77398)
 + [https://www.researchgate.net/profile/Guilherme-Martins-18](https://www.researchgate.net/profile/Guilherme-Martins-18)
-
-última atualização: 07/12/2021.
