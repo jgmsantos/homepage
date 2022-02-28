@@ -251,15 +251,3 @@ E para forçar a desinstalação do CDO caso o comando acima não funcione:
 ```
 conda remove --force cdo
 ```
-
-## 13. Links interessantes
-+ [https://guilherme.readthedocs.io/en/latest](https://guilherme.readthedocs.io/en/latest)
-+ [https://guilherme.readthedocs.io/en/latest/pages/tutoriais/index.html](https://guilherme.readthedocs.io/en/latest/pages/tutoriais/index.html)
-+ [https://docs.conda.io/en/latest/miniconda.html](https://docs.conda.io/en/latest/miniconda.html)
-
-## 14. Rede Sociais
-+ [https://github.com/jgmsantos/Scripts](https://github.com/jgmsantos/Scripts)
-+ [https://www.linkedin.com/in/guilherme-martins-7239241a5](https://www.linkedin.com/in/guilherme-martins-7239241a5)
-+ [https://www.instagram.com/jgmsantos](https://www.instagram.com/jgmsantos)
-+ [https://www.facebook.com/guilherme.martins.77398](https://www.facebook.com/guilherme.martins.77398)
-+ [https://www.researchgate.net/profile/Guilherme-Martins-18](https://www.researchgate.net/profile/Guilherme-Martins-18)
