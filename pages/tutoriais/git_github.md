@@ -13,7 +13,7 @@ Durante o desenvolvimento de um software queremos saber:
 4. Quem fez a mudança?
 5. Podemos reproduzir esta mudança?
 
-É o Git tem essa funcionalidade de realizar todo este rastreamento.
+E o Git tem essa funcionalidade de realizar todo este rastreamento.
 
 ### Diferença entre Git e Github
 
@@ -55,6 +55,42 @@ A versão utilizada nesta instalação é a:
 git version 2.17.1
 ```
 
+### Registrando um usuário e o seu e-mail
+
++ Uma boa prática a ser feita é registrar um nome de usuário e o seu e-mail. 
+
++ Estas informações são utilizadas para saber quem está trabalhando em um determinado projeto. 
+
++ Caso essas informações não sejam fornecidas, no momento de enviar as alterações para o Github, será retornado erro, por isso, a importância de realizar essa criação.
+
++ Há duas manerias de fazer esse registro, isto é, **local** (necessidade de autenticação) ou **global** (não há necessidade de autenticação).
+
++ E quando usar um ou outro? Caso seja utilizado um computador público, utiliza-se o `git config`. Por outro lado, caso o computador seja particular, utiliza-se o `git config --global`.
+
++ Vamos que ao interessa. Lembrando que foi criado um diretório chamado `projeto` e os comandos abaixo sáo digitados dentro dele.
+
+**1. Para configurar localmente um repositório:**
+```
+git config user.name "Guilherme Martins"
+```
+```
+git config user.email "jgmsantos@gmail.com"
+```
+**2. Para configurar globalmente um repositório:**
+
+Toda vez que o usuário criar um repositório, o mesmo será reconhecido pelo Git não sendo necessário toda vez que criar um repositório inserir as informações de usuário e e-mail.
+
+```
+git config --global user.name "Curupira de Jesus"
+```
+```
+git config --global user.email "Curupira de Jesus"
+```
+
+### O que é um repositório?
+
+É onde os arquivos do Projeto ficam armazenados. Ao iniciar um projeto com o `git` cria-se um repositório para aquele projeto. Posteriormente, envia-se o repositório para alguns servidores específicos para o seu gerenciamento, como por exemplo, GitHub.
+
 ### Inicializando um repositório Git
 
 + O `git init` é utilizado para inicializar o Git em um determinado repositório. Por exemplo, crie um diretório onde será armazenado o repositório a ser trabalhado.
@@ -88,37 +124,13 @@ Será mostrada a imagem abaixo:
 
 Isso significa que que está tudo certo.
 
-### Registrando um usuário e o seu e-mail
+### Enviar um repositório local para o GitHub (remoto).
 
-+ Uma boa prática a ser feita é registrar um nome de usuário e o seu e-mail. 
+Antes de fazer este passo, no site do GitHub crie o reposítório para enviar do local para o remoto.
 
-+ Estas informações são utilizadas para saber quem está trabalhando em um determinado projeto. 
-
-+ Caso essas informações não sejam fornecidas, no momento de enviar as alterações para o Github, será retornado erro, por isso, a importância de realizar essa criação.
-
-+ Há duas manerias de fazer esse registro, isto é, **local** (necessidade de autenticação) ou **global** (não há necessidade de autenticação).
-
-+ E quando usar um ou outro? Caso seja utilizado um computador público, utiliza-se o `git config`. Por outro lado, caso o computador seja particular, utiliza-se o `git config --global`.
-
-+ Vamos que ao interessa. Lembrando que foi criado um diretório chamado `projeto` e os comandos abaixo sáo digitados dentro dele.
-
-**1. Para configurar localmente um repositório:**
-```
-git config user.name "Guilherme Martins"
-```
-```
-git config user.email "jgmsantos@gmail.com"
-```
-**2. Para configurar globalmente um repositório:**
-
-Toda vez que o usuário criar um repositório, o mesmo será reconhecido pelo Git não sendo necessário toda vez que criar um repositório inserir as informações de usuário e e-mail.
-
-```
-git config --global user.name "Curupira de Jesus"
-```
-```
-git config --global user.email "Curupira de Jesus"
-```
+git remote add origin https://github.com/usuario/<NomeDoRepositorio>.git 
+git branch -M main
+git push -u origin master
 
 ### Criando o arquivo .gitignore
 
@@ -222,6 +234,77 @@ git status
 git remote -v
 ```
 
+### Visualizar as branchs
+
+```
+git branch
+```
+
+### Criar uma nova branch
+
+```
+git branch <NomeDaBranch>
+
+git branch
+```
+### Mudar para uma nova branch
+
+```
+git checkout <NomeDaBranch>
+
+git branch
+```
+
+>**Importante**: Cuidado ao criar uma nova branch! É aconselhável que a criação dela seja feita a partir do main.
+
+### Remover uma branch
+
+```
+git checkout main
+
+git branch
+
+git branch -d <NomeDaBranch>
+
+git branch
+```
+### Cria uma nova branch e entra nela diretamente
+
+```
+git chekout -b "<NomeDaBranch>"
+```
+
+### Merge de branch
+
+```
+git branch
+```
+
+A partir da branch main:
+
+```
+git merge <NomeDaBranch>
+```
+
+E depois de unir, enviar para o GitHub.
+
+```
+git push
+```
+
+### Comparação entre arquivos locais e remotos
+
+Útil para comparar apenas um arquivo.
+
+```
+git diff HEAD: <NomeArquivo>
+```
+
+Caso fosse uma pasta:
+
+```
+git diff HEAD: /<Diretorio>/<NomeArquivo>
+```
 
 ### Instalando o Visual Studio Code no Windows
 
@@ -240,4 +323,3 @@ Execute o arquivo salvo no seu computador e clique em `Next` e quando aparecer a
 ![](../../images/gitfig/instalacao_vsc01.png)
 
 Selecione as opções destacadas em vermelho e clique em `Próximo` até finalizar a instalação.
-
