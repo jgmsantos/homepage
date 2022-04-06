@@ -274,3 +274,70 @@ O resultado será:
 4    5.946734
 Name: diff, dtype: float64
 ```
+
+### Visualizando gráficos no Jupyter Notebook
+
+Caso esteja trabalhando com o Jupyter Notebook, para visualizar as figuras, basta adicionar a linha abaixo 
+logo após a importação das suas bibliotecas.
+
+```
+%matplotlib inline
+```
+
+Exemplo:
+
+```python
+import pandas as pd
+import xarray as xr
+import matplotlib.pylab as plt
+import numpy as np
+%matplotlib inline
+```
+
+### Agrupamento de séries temporais
+
+Estava trabalhando com duas séries temporais no formato NetCDF em arquivos separados, isto é, `var(time, lat, lon)`. Eu precisava juntar as duas variáveis em um DataFrame. Eu usei a dica abaixo que me ajudou.
+
+https://numpy.org/doc/stable/reference/generated/numpy.column_stack.html
+
+### Manipulação da dimensão tempo
+
+Trabalhar com a dimensão tempo às vezes nos proporciona muitas horas de pesquisa e dor de cabeça. Abaixo, separeia alguns links úteis para trabalhar com essa dimensão.
+
+[https://www.dataquest.io/blog/python-datetime-tutorial](https://www.dataquest.io/blog/python-datetime-tutorial)
+
+[https://stackoverflow.com/questions/57703538/typeerror-only-valid-with-datetimeindex-timedeltaindex-or-periodindex-but-got](https://stackoverflow.com/questions/57703538/typeerror-only-valid-with-datetimeindex-timedeltaindex-or-periodindex-but-got)
+
+[https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.resample.html](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.resample.html)
+
+### Resetar index do DataFrame
+
+Às vezes, você tem interesse em que uma coluna que está definida como index seja convertida para coluna para fins de manipulação. O link aabaixo faz isso de forma simples e fácil.
+
+[https://datagy.io/pandas-drop-index-column/](https://datagy.io/pandas-drop-index-column/)
+
+### Geração gráfica de um Histograma
+
+[https://chartio.com/learn/charts/histogram-complete-guide/](https://chartio.com/learn/charts/histogram-complete-guide/)
+
+[https://www150.statcan.gc.ca/n1/edu/power-pouvoir/ch9/histo/5214822-eng.htm](https://www150.statcan.gc.ca/n1/edu/power-pouvoir/ch9/histo/5214822-eng.htm)
+
+[https://datatofish.com/plot-histogram-python/](https://datatofish.com/plot-histogram-python/)
+
+
+### Erro no Jupyter Notebook
+
+Dica disponível em: [https://github.com/PayneLab/cptac/issues/3](Solução: https://github.com/PayneLab/cptac/issues/3)
+
+Caso apareça o erro abaixo:
+
+>ModuleNotFoundError: No module named 'packaging'
+
+Basta fazer:
+
+`pip3 install packaging`
+
+ou
+
+`conda install packaging`
+
