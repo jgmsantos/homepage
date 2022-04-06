@@ -298,16 +298,14 @@ import numpy as np
 
 Estava trabalhando com duas séries temporais no formato NetCDF em arquivos separados, isto é, `var(time, lat, lon)`. Eu precisava juntar as duas variáveis em um DataFrame. Eu usei a dica abaixo que me ajudou.
 
-https://numpy.org/doc/stable/reference/generated/numpy.column_stack.html
+[https://numpy.org/doc/stable/reference/generated/numpy.column_stack.html](https://numpy.org/doc/stable/reference/generated/numpy.column_stack.html)
 
 ### Manipulação da dimensão tempo
 
 Trabalhar com a dimensão tempo às vezes nos proporciona muitas horas de pesquisa e dor de cabeça. Abaixo, separeia alguns links úteis para trabalhar com essa dimensão.
 
 [https://www.dataquest.io/blog/python-datetime-tutorial](https://www.dataquest.io/blog/python-datetime-tutorial)
-
 [https://stackoverflow.com/questions/57703538/typeerror-only-valid-with-datetimeindex-timedeltaindex-or-periodindex-but-got](https://stackoverflow.com/questions/57703538/typeerror-only-valid-with-datetimeindex-timedeltaindex-or-periodindex-but-got)
-
 [https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.resample.html](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.resample.html)
 
 ### Resetar index do DataFrame
@@ -319,11 +317,8 @@ Trabalhar com a dimensão tempo às vezes nos proporciona muitas horas de pesqui
 ### Geração gráfica de um Histograma
 
 [https://chartio.com/learn/charts/histogram-complete-guide/](https://chartio.com/learn/charts/histogram-complete-guide/)
-
 [https://www150.statcan.gc.ca/n1/edu/power-pouvoir/ch9/histo/5214822-eng.htm](https://www150.statcan.gc.ca/n1/edu/power-pouvoir/ch9/histo/5214822-eng.htm)
-
 [https://datatofish.com/plot-histogram-python/](https://datatofish.com/plot-histogram-python/)
-
 
 ### Erro no Jupyter Notebook
 
@@ -331,7 +326,7 @@ Dica disponível em: [https://github.com/PayneLab/cptac/issues/3](Solução: htt
 
 Caso apareça o erro abaixo:
 
->ModuleNotFoundError: No module named 'packaging'
+`ModuleNotFoundError: No module named 'packaging'`
 
 Basta fazer:
 
