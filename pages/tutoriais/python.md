@@ -3,7 +3,7 @@ Python
 
 ### Tutorial de Python em Português
 
-[Aplicações de Python em Geociências](https://drive.google.com/drive/folders/1kWCxZWMTcqRa7CQ6RhVgglx4lTgIiMMg?usp=sharing)
+[Aplicações de Python em Geociências](https://drive.google.com/file/d/15_62F9lb21XDhCsYL_YoKIuuAATNWpNw/view)
 
 Como Referenciar este Documento no Padrão INPE (Formato BibINPE)
 
