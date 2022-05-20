@@ -1,6 +1,29 @@
 Python
 =================================
 
+### Tutorial de Python em Português
+
+[Clique aqui](https://drive.google.com/drive/folders/1kWCxZWMTcqRa7CQ6RhVgglx4lTgIiMMg?usp=sharing)
+
+Como Referenciar este Documento no Padrão INPE (Formato BibINPE)
+
+1. Citação a ser feita dentro de um documento dentro da rede IBI† (use um vínculo relativo para garantir um acesso estritamente persistente):
+
+SANTOS, J. G. M.; SIMÕES, J. L. D. R.; RAMOS, D. N. S.; EICHHOLZ, C. W. Aplicações de Python em geociências. São José dos Campos: INPE, 2022. 174 p. IBI: <8JMKD3MGP3W34T/46RTMU5>. (sid.inpe.br/mtc-m21d/2022/05.10.16.53-PUD). Disponível em: <ibi:8JMKD3MGP3W34T/46RTMU5>.
+
+2. Citação a ser feita dentro de um documento fora da rede IBI (use um vínculo absoluto):
+
+SANTOS, J. G. M.; SIMÕES, J. L. D. R.; RAMOS, D. N. S.; EICHHOLZ, C. W. Aplicações de Python em geociências. São José dos Campos: INPE, 2022. 174 p. IBI: <8JMKD3MGP3W34T/46RTMU5>. (sid.inpe.br/mtc-m21d/2022/05.10.16.53-PUD). Disponível em: <http://urlib.net/ibi/8JMKD3MGP3W34T/46RTMU5>.
+
+† isto é, um documento depositado num Arquivo da rede IBI.
+
+Como Fazer a Citação no Texto (por autor/ano)
+
+... como proposto por Santos et al. (2022).
+... pode ser encontrada na literatura (SANTOS et al., 2022).
+
+
+
 ### Instalando o Python no Windows
 
 [https://www.python.org/downloads/](https://www.python.org/downloads/)
