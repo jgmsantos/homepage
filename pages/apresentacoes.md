@@ -2,6 +2,8 @@ Apresentações
 =============
 2022
 
++ [Informações do sistema de monitoramento de detecção de focos de fogo ativo do Programa Queimadas do INPE](https://docs.google.com/presentation/d/1QCKUckX9yEjp9-q5MvVLCjqCfyQsp7S2Z1e3YRlE80Y/edit?usp=sharing). Agosto/2022.
+
 + [Visualização das Projeções Climáticas](https://docs.google.com/presentation/d/1sc_xflJUNiuEvWL-JNi4YxXJ7ksbzrw19iDG7njZyt0/edit?usp=sharing). Maio/2022.
 
 2021
