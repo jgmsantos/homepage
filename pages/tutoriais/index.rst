@@ -18,5 +18,6 @@ Tutoriais
    python
    processamento_texto
    shell
+   wgrib
    wgrib2
    wsl
