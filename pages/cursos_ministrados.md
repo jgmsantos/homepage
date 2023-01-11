@@ -3,6 +3,9 @@ Cursos ministrados
 
 ## Locais ministrados
 
++ **Congresso Brasileiro de Meteorologia (CBMET) 2022 - Edição XXII**
+  + Curso ministrado para estudantes e profissionais.  
+
 + **Universidade Estadual Paulista  "Júlio de Mesquita Filho" (UNESP)**
   + Curso ministrado para estudantes de graduação em Meteorologia.  
   + Curso ministrado para professores de graduação em Meteorologia.
