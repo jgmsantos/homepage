@@ -1,7 +1,7 @@
 Instalação do wgrib
 ========================
 
-1. Acessar o site abaixo:
+Acessar o site abaixo:
 
 [https://www.cpc.ncep.noaa.gov/products/wesley/wgrib.html](https://www.cpc.ncep.noaa.gov/products/wesley/wgrib.html)
 
@@ -19,7 +19,7 @@ no terminal do Linux, digitar o comando abaixo para realizar o download do arqui
 wget https://ftp.cpc.ncep.noaa.gov/wd51we/wgrib/wgrib.tar
 ```
 
-2. Criar o diretório ```local``` no ```/home/ubuntu```
+Criar o diretório ```local``` no ```/home/ubuntu```
 
 Essa instalação é feita quando o **usuário não tem permissão** de instalar programas na máquina.
 
@@ -27,7 +27,7 @@ Essa instalação é feita quando o **usuário não tem permissão** de instalar
 mkdir local
 ```
 
-3. Criar o diretório ```wgrib``` dentro do diretório ```local```
+Criar o diretório ```wgrib``` dentro do diretório ```local```
 
 ```
 cd /home/ubuntu/local
@@ -37,19 +37,19 @@ cd /home/ubuntu/local
 mkdir wgrib
 ```
 
-4. Instalar o gcc
+Instalar o gcc
 
 ```
 sudo apt install gcc
 ```
 
-5. Instalar o ```make```
+Instalar o ```make```
 
 ```
 sudo apt install make
 ```
 
-6. Mover o arquivo ```wgrib.tar``` para o diretório ```wgrib```
+Mover o arquivo ```wgrib.tar``` para o diretório ```wgrib```
 
 Lembrando que ```wgrib.tar``` é o arquivo que foi baixado pelo ```wget```.
 
@@ -57,13 +57,13 @@ Lembrando que ```wgrib.tar``` é o arquivo que foi baixado pelo ```wget```.
 mv wgrib.tar /home/ubuntu/local/wgrib
 ```
 
-7. Descompactar o arquivo ```wgrib.tar``` dentro do diretório ```wgrib```
+Descompactar o arquivo ```wgrib.tar``` dentro do diretório ```wgrib```
 
 ```
 tar -xvf wgrib.tar
 ```
 
-8. Digitar o comando ```make``` dentro do diretório ```wgrib```
+Digitar o comando ```make``` dentro do diretório ```wgrib```
 
 ```
 make
@@ -75,7 +75,7 @@ Ao digitar este comando, será criado o executável ```wgrib``` dentro de:
 /home/ubuntu/local/wgrib
 ```
 
-9. Copiar o executável criado para o diratório bin
+Copiar o executável criado para o diratório bin
 
 Dentro do diretório wgrib, copiar o executável criado (```wgrib```) para:
 
@@ -89,7 +89,7 @@ Por meio do comando:
 cp wgrib /home/ubuntu/anaconda3/envs/meteo/bin/
 ```
 
-10. Links adicionais:
+Links adicionais:
 
 * [https://www.cpc.ncep.noaa.gov/products/wesley/wgrib.html](https://www.cpc.ncep.noaa.gov/products/wesley/wgrib.html)
 * [https://ftp.cpc.ncep.noaa.gov/wd51we/wgrib](https://ftp.cpc.ncep.noaa.gov/wd51we/wgrib)
