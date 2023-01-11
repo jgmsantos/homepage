@@ -1,4 +1,5 @@
-# Passos para instalar o wgrib no Linux
+Instalação do wgrib
+========================
 
 ## Acessar o site abaixo:
 

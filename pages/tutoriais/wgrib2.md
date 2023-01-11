@@ -1,5 +1,5 @@
-wgrib2
-===================
+Instalação do wgrib2
+========================
 
 Vá para o diretório `Downloads` e digite: 
 
@@ -32,7 +32,7 @@ Adicione o caminho onde está o executável `wgrib2` na sua variável de ambient
 
 	+ [http://www.ftp.cpc.ncep.noaa.gov/wd51we/wgrib2/tricks.wgrib2](http://www.ftp.cpc.ncep.noaa.gov/wd51we/wgrib2/tricks.wgrib2)
 
-#### Exemplos de uso do wgrib2
+Exemplos de uso do wgrib2
 
 1. Visualizar informações sobre o arquivo:
 
