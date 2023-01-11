@@ -1,6 +1,3 @@
-Instalação do wgrib
-=================================
-
 # Passos para instalar o wgrib no Linux
 
 ## Acessar o site abaixo:
@@ -22,6 +19,8 @@ wget https://ftp.cpc.ncep.noaa.gov/wd51we/wgrib/wgrib.tar
 ```
 
 ## Criar o diretório ```local``` no ```/home/ubuntu```
+
+Essa instalação é feita quando o **usuário não tem permissão** de instalar programas na máquina.
 
 ```
 mkdir local
