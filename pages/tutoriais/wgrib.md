@@ -92,5 +92,5 @@ cp wgrib /home/ubuntu/anaconda3/envs/meteo/bin/
 Links adicionais:
 
 * [https://www.cpc.ncep.noaa.gov/products/wesley/wgrib.html](https://www.cpc.ncep.noaa.gov/products/wesley/wgrib.html)
+* [https://ftp.cpc.ncep.noaa.gov/wd51we/wgrib/grib2ieee.txt](https://ftp.cpc.ncep.noaa.gov/wd51we/wgrib/grib2ieee.txt)
 * [https://ftp.cpc.ncep.noaa.gov/wd51we/wgrib](https://ftp.cpc.ncep.noaa.gov/wd51we/wgrib)
-* [https://ftp.cpc.ncep.noaa.gov/wd51we/wgrib](https://ftp.cpc.ncep.noaa.gov/wd51we/wgrib/grib2ieee.txt)
