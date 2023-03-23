@@ -122,9 +122,9 @@ Onde:
   + 327° - 240° = 87°/0.25° = 348 + 1 = 349, que corresponde ao número de pontos de longitude desejado
   + 56°S + 33°N = 89°/0.25° = 356 + 1 = 357, que corresponde ao número de pontos de latitude desejado
 
-#### Outras aplicações
+### Outras aplicações
 
-###### Arquivo de exemplo
+##### Arquivo de exemplo
 
 Para baixar os dois arquivos para a variável TMP (temperatura), basta executar a linha de comando abaixo, não esquecendo de alterar a data ```20230322```.
 
