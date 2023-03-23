@@ -82,7 +82,7 @@ E `/home/queimadas/miniconda3/envs/risco_fogo/lib/libnetcdf.so.13` representa o 
 
 `wgrib2 gfs.t18z.pgrb2.0p25.anl -netcdf output.nc`
 
-#### Selecionar uma variável `(‘:TMP:’)` de interesse e salva no formato NetCDF:
+#### Selecionar uma variável `(‘:TMP:’)` de interesse e salvar no formato NetCDF:
 
 ` wgrib2 -match ':TMP:' gfs.t18z.pgrb2.0p25.anl -netcdf output.nc`
 
