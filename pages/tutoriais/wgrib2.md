@@ -227,7 +227,7 @@ Geração do arquivo no formato ".csv".
 
 Outra possibilidade:
 
-```wgrib2 tmp.1000mb.f001.grib2 -csv_long siada.csv```
+```wgrib2 tmp.1000mb.f001.grib2 -csv_long saida.csv```
 
 ##### Calcula a direção do vento (em graus) a partir de u e de v
 
