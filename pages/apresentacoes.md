@@ -36,7 +36,7 @@ Apresentações
 
 + [Produtos de Monitoramento de Queimadas e Risco de Fogo do INPE](https://docs.google.com/presentation/d/1ih32msQ1hhXZV760RJwqetd59-ELYOypp6BbrTPHtkg/edit?usp=sharing). [Vídeo da apresentação](https://youtu.be/-a_qlDjaqTY). Outubro/2020.
 
-+ [Vídeo sobre Como tudo começou - Minha vida acadêmica](https://youtu.be/jIRlQgz59-A). Setembro/2020.
++ [Vídeo sobre Como tudo começou - Minha vida acadêmica](https://www.youtube.com/watch?v=EnLqg47IPh0&t=143s&ab_channel=CursosLibertatem). Setembro/2020.
 
 + [Curso de CDO](https://docs.google.com/presentation/d/1jEMmVpfD4H8CB1TGuW-j5wuOhbU8uoCB4w-mi2XlxfI/edit?usp=sharing). Setembro/2020.
 
@@ -46,9 +46,9 @@ Apresentações
 
 + [Temporada de queimadas 2020 no bioma Pantanal](https://docs.google.com/presentation/d/1sZj30o1fEWU6PHd69-6rYyItpTDQGuM3bnp6XCMcYjk/edit?usp=sharing). Agosto/2020.
 
-+ [Live - Período Seco e Queimadas](https://www.youtube.com/watch?v=Saw1SaVfg7w&t=8s). Agosto/2020.
++ [Live - Período Seco e Queimadas](https://www.youtube.com/watch?v=NRS0y7j40Aw&ab_channel=CursosLibertatem). Agosto/2020.
 
-+ [Live - Computação aplicada à Meteorologia](https://youtu.be/68Gf1hYNacQ). Julho/2020.
++ [Live - Computação aplicada à Meteorologia](https://www.youtube.com/watch?v=05Ifbt2DCto&ab_channel=CursosLibertatem). Julho/2020.
 
 + [Análise da Climatologia de Precipitação para Avaliação dos Períodos de Limpeza das Linhas de Transmissão](https://drive.google.com/open?id=1LlUwsHfh8eW26WJ-_7roawsKSD9I6-5IeUdPOPUYjzM). [Fotos do evento](https://photos.app.goo.gl/S62FGUYBu2pAxMhe9). Fevereiro/2020.
 

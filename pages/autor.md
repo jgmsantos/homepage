@@ -9,7 +9,7 @@ Participei de projetos no Instituto de Astronomia, Geofísica e Ciências Atmosf
 
 Desenvolvi habilidades em manipulação e visualização de saídas dos modelos numéricos do [CMIP5](https://esgf-node.llnl.gov/projects/cmip5) utilizando as ferramentas [NCL](http://www.ncl.ucar.edu) e [CDO](https://code.mpimet.mpg.de/projects/cdo/wiki/Cdo#Documentation). Tenho interesse em trabalhar em grupos de pesquisa onde possa contribuir com a minha experiência em processamento e visualização de dados atmosféricos como também em pesquisa.  
 
-Atualmente, trabalho no [Programa de Monitoramento de Queimadas](http://queimadas.dgi.inpe.br/queimadas/portal) do Instituto Nacional de Pesquisas Espaciais ([INPE](http://www.inpe.br/)) e sou responsável pelo desenvolvimento e melhorias do modelo de risco diário de fogo para América do Sul, criação de boletins meteorológicos mensais e geração de avisos meteorológicos.
+Trabalhei no período de julho de 2016 a dezembro de 2022 no [Programa de Monitoramento de Queimadas](http://queimadas.dgi.inpe.br/queimadas/portal) do Instituto Nacional de Pesquisas Espaciais ([INPE](http://www.inpe.br/)). Estava responsável pelo desenvolvimento e melhorias do modelo de risco diário de fogo para América do Sul, criação de boletins meteorológicos mensais e geração de avisos meteorológicos.
 
 [Clica aqui](https://github.com/jgmsantos/homepage/blob/master/images/minha_historia.pdf) para ver um resumo da minha trajetória profissional desde a época da faculdade até os dias atuais.
 
