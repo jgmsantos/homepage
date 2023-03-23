@@ -1,7 +1,7 @@
 Instalação do wgrib2
 ========================
 
-# Passos para instalar o wgrib2
+# Opção 1: Instalação na mão
 
 Vá para o diretório `Downloads` e digite: 
 
@@ -33,6 +33,44 @@ Adicione o caminho onde está o executável `wgrib2` na sua variável de ambient
 	+ [http://www.cpc.ncep.noaa.gov/products/wesley/wgrib2/netcdf.html](http://www.cpc.ncep.noaa.gov/products/wesley/wgrib2/netcdf.html)
 
 	+ [http://www.ftp.cpc.ncep.noaa.gov/wd51we/wgrib2/tricks.wgrib2](http://www.ftp.cpc.ncep.noaa.gov/wd51we/wgrib2/tricks.wgrib2)
+
+# Opção 2: Instalação via conda
+
+```
+conda install -c conda-forge wgrib2
+```
+
+Ao executar o wgrib2 e aparecer o erro abaixo:
+
+```
+wgrib2: error while loading shared libraries: libjasper.so.1: cannot open shared object file: No such file or directory
+```
+
+Basta criar um link simbólico de acordo com o comando abaixo. Tudo isso é uma linha. Altere os caminhos de acordo com o seu usuário (`queimadas`) e ambiente virtual (`risco_fogo`):
+
+```
+ln -s /home/queimadas/miniconda3/envs/risco_fogo/lib/libjasper.so.4 /home/queimadas/miniconda3/envs/risco_fogo/lib/libjasper.so.1
+```
+
+Onde: `/home/queimadas/miniconda3/envs/risco_fogo/lib/libjasper.so.4` representa a biblioteca que está no computador.
+
+E `/home/queimadas/miniconda3/envs/risco_fogo/lib/libjasper.so.1` representa o link simbólico que será a biblioteca a ser criada no seu computador, a que foi mostrada no erro.
+
+Outro possível erro que pode aparecer:
+
+```
+wgrib2: error while loading shared libraries: libnetcdf.so.13: cannot open shared object file: No such file or directory
+```
+
+Basta criar um link simbólico de acordo com o comando abaixo. Tudo isso é uma linha. Altere os caminhos de acordo com o seu usuário (`queimadas`) e ambiente virtual (`risco_fogo`):
+
+```
+ln -s /home/queimadas/miniconda3/envs/risco_fogo/lib/libnetcdf.so.19 /home/queimadas/miniconda3/envs/risco_fogo/lib/libnetcdf.so.13
+```
+
+Onde: `/home/queimadas/miniconda3/envs/risco_fogo/lib/libnetcdf.so.19` representa a biblioteca que está no computador.
+
+E `/home/queimadas/miniconda3/envs/risco_fogo/lib/libnetcdf.so.13` representa o link simbólico que será a biblioteca criada, a que foi mostrada no erro.
 
 # Exemplos de uso do wgrib2
 
