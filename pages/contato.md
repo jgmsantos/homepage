@@ -3,7 +3,7 @@ Contato
 
 Para dúvidas, sugestões ou críticas:
 
-+ E-mail: <jgmsantos@gmail.com> ou <guilherme.martins@inpe.br>
++ E-mail: <jgmsantos@gmail.com>
 
 + Skype: guilherme.martins.
 
@@ -15,6 +15,6 @@ Para dúvidas, sugestões ou críticas:
 
 + [Researchgate](https://www.researchgate.net/profile/Guilherme_Martins6)
 
-+ [YouTube](https://www.youtube.com/channel/UC0kPlByyzQsyJd9iXqlOxcQ?view_as=subscriber)
++ [YouTube](https://www.youtube.com/@CursosLibertatem/about)
 
 + [Twitter](https://twitter.com/Guilher91294960)
