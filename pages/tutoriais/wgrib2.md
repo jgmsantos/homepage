@@ -223,7 +223,7 @@ Geração do arquivo de TMP paRA 1000mb:
 
 Geração do arquivo no formato ".csv".
 
-```wgrib2 tmp.1000mb.f001.grib2 -csv siada.csv```
+```wgrib2 tmp.1000mb.f001.grib2 -csv saida.csv```
 
 Outra possibilidade:
 
