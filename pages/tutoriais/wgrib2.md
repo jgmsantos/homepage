@@ -150,24 +150,24 @@ curl "https://nomads.ncep.noaa.gov/cgi-bin/filter_gfs_0p25.pl?file=gfs.t00z.pgrb
 
 O comando acima gera o arquivo: ```uv.grib2```
 
-##### Mostra o domínio espacial do arquivo
+##### Mostrar o domínio espacial do arquivo
 
 ```wgrib2 -domain tmp.f001.grib2```
 
-##### Mosta o nome da variável do arquivo
+##### Mostar o nome da variável do arquivo
 
 ```wgrib2 -ext_name tmp.f001.grib2```
 
 
-##### Mostra informações sobre o domínio espacial do arquivo
+##### Mostrar informações sobre o domínio espacial do arquivo
 
 ```wgrib2 -grid tmp.f001.grib2```
 
-##### Mostra os níveis verticais do arquivo:
+##### Mostrar os níveis verticais do arquivo:
 
 ```wgrib2 -lev tmp.f001.grib2```
 
-##### Mostra o valor da variável em uma determinada longitude/latitude
+##### Mostrar o valor da variável em uma determinada longitude/latitude
 
 A conversão será sempre: 
 
@@ -177,7 +177,7 @@ Exemplo:
 
 ```wgrib2 -lon -60 -30 tmp.f001.grib2```
 
-##### Mostra o valor máximo
+##### Mostrar o valor máximo
 
 ```wgrib2 -max tmp.f001.grib2```
 
@@ -185,11 +185,11 @@ Exemplo:
 
 ```wgrib2 -min tmp.f001.grib2```
 
-##### Mostra o número de pontos de grade
+##### Mostrar o número de pontos de grade
 
 ```wgrib2 -nxny tmp.f001.grib2```
 
-##### Mostra as informações do arquivo
+##### Mostrar as informações do arquivo
 
 ```wgrib2 -s tmp.f001.grib2```
 
@@ -197,15 +197,15 @@ Ou, mais completa:
 
 ```wgrib2 -S tmp.f001.grib2```
 
-##### Mostra estatística do arquivo
+##### Mostrar estatística do arquivo
 
 ```wgrib2 -stats tmp.f001.grib2 ```
 
-##### Mostra a saída diagnóstica
+##### Mostrar a saída diagnóstica
 
 ```wgrib2 -V tmp.f001.grib2```
 
-##### Mostra o nome da variável
+##### Mostrar o nome da variável
 
 ```wgrib2 -var tmp.f001.grib2```
 
@@ -215,7 +215,7 @@ Ou, mais completa:
 
 **Opções**: v, v0, v1, ..., v99
 
-##### Gera um arquivo csv
+##### Gerar um arquivo csv
 
 Geração do arquivo de TMP paRA 1000mb:
 
@@ -229,7 +229,7 @@ Outra possibilidade:
 
 ```wgrib2 tmp.1000mb.f001.grib2 -csv_long saida.csv```
 
-##### Calcula a direção do vento (em graus) a partir de u e de v
+##### Calcular a direção do vento (em graus) a partir de u e de v
 
 ```wgrib2 uv.grib2 -wind_dir direcao.grb -wind_speed direcao.grb -match "(UGRD|VGRD)"```
 
@@ -239,7 +239,7 @@ Onde:
 
 **direcao.grb** : é o arquivo que será gerado com a direção do vento. Altere o nome de acordo com a sua necessidade.
 
-##### Calcula a velocidade do vento (em m/s) a partir de u e de v
+##### Calcular a velocidade do vento (em m/s) a partir de u e de v
 
 ```wgrib2 uv.grib2 -wind_speed velocidade.grb -wind_speed velocidade.grb -match "(UGRD|VGRD)"```
 
@@ -248,3 +248,57 @@ Onde:
 **uv.grib2**: é o seu arquivo grib2
 
 **velocidade.grb**: é o arquivo que será gerado com a velocidade do vento. Altere o nome de acordo com a sua necessidade.
+
+##### Selecionar os níveis verticais de um arquivo
+
+A partir de um arquivo de uma simulação do modelo GFS, deseja-se visualizar as variáveis que estão nele:
+
+```wgrib2 gfs.0p25.2018042200.f006.grib2```
+
+SupondO que deseja-se trabalhar com a variável ```TMP```. O objetivo consiste em salvar apenas esta variável no formato NetCDF. Para isso, basta digitar o comando abaixo:
+
+```wgrib2 -match 'TMP' gfs.0p25.2018042200.f006.grib2 -netcdf out.TMP.nc```
+
+O problema é que são geradas muitas ocorrências que contém a variável ```TMP```. 
+
+Neste caso, imagina-se que se deseja apena a ```TMP a 2 metros```. O comando a ser utilizado será:
+
+```wgrib2 -match ':TMP:2 m above ground:' gfs.0p25.2018042200.f006.grib2 -netcdf out.TMP.nc```
+
+O arquivo gerado contém apenas a variável ```TMP a 2 metros```. Como sabemos disso? Basta digitar o comando abaixo:
+
+```ncdump -h out.TMP.nc```
+
+Há um trecho do comando acima que mostrará a seguinte informação:
+
+```float TMP_2maboveground(time, latitude, longitude)```
+
+Aqui, foi tranquilo. Agora, vamos dificultar um pouco. Supondo que se deseja obter a ```TMP``` somente para todos os níveis verticais. E agora? Basta usar o comando abaixo:
+
+```wgrib2 gfs.0p25.2018042200.f006.grib2 -match "(:TMP:[0-9]* mb:)" -netcdf out.TMP.nc```
+
+O que foi gerado? Ao digitar o comando abaixo:
+
+```ncdump -h out.TMP.nc```
+
+Nota-se que, a variável ```TMP``` veio com os níveis verticais separados. Como se fossem variáveis independentes, e não é isso que se deseja. O objetivo, é ter a variável ```TMP``` com todos os níveis verticais juntos, e não separados. Para isso, utiliza-se o mesmo comando com o parâmetro ```-nc_nlev```.
+
+```wgrib2 gfs.0p25.2018042200.f006.grib2 -nc_nlev 31 -match "(:TMP:[0-9]* mb:)" -netcdf out.TMP.nc```
+
+O parâmetro ```-nc_nlev 31``` diz que são 31 níveis verticais que estão no arquivo.
+
+Agora, eu deseja-se selecionar alguns níveis verticais em particular. Basta fazer:
+
+```wgrib2 gfs.0p25.2018042200.f006.grib2 -nc_nlev 5 -match "(:TMP:(600|650|700|750|800) mb:)" -netcdf out.TMP.nc```
+
+Lembrando que foram selecionados apenas 5 níveis verticais, por isso, ```-nc_nlev 5```.
+
+Digite o comando:
+
+```ncdump -c out.TMP.nc```
+
+Na última linha, terá a seguinte informação:
+
+```plevel = 600, 650, 700, 750, 800 ;```
+
+São os níveis verticais selecionados.
