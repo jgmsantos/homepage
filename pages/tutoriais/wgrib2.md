@@ -217,7 +217,7 @@ Ou, mais completa:
 
 ##### Gerar um arquivo csv
 
-Geração do arquivo de TMP paRA 1000mb:
+Geração do arquivo de TMP para 1000mb:
 
 ```wgrib2 -match ":TMP:1000 mb:" tmp.f001.grib2 -grib tmp.1000mb.f001.grib2```
 
