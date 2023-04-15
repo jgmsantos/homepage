@@ -231,23 +231,33 @@ Outra possibilidade:
 
 ##### Calcular a direção do vento (em graus) a partir de u e de v
 
-```wgrib2 uv.grib2 -wind_dir direcao.grb -wind_speed direcao.grb -match "(UGRD|VGRD)"```
+Neste exemplo, as componentes do vento são extraídas no nível de 850 mb para calcular a direção do vento.
+
+```wgrib2 -match ':(UGRD|VGRD):850 mb' gfs_f001_20230414.grib2 -wind_dir dir850hpa.grib2```
 
 Onde: 
 
-**uv.grib2**: é o seu arquivo grib2
+**gfs_f001_20230414.grib2**: é o seu arquivo grib2
 
-**direcao.grb** : é o arquivo que será gerado com a direção do vento. Altere o nome de acordo com a sua necessidade.
+**dir850hpa.grib2** : é o arquivo que será gerado com a direção do vento. Altere o nome de acordo com a sua necessidade.
 
 ##### Calcular a velocidade do vento (em m/s) a partir de u e de v
 
-```wgrib2 uv.grib2 -wind_speed velocidade.grb -wind_speed velocidade.grb -match "(UGRD|VGRD)"```
+Neste exemplo, as componentes do vento são extraídas no nível de 850 mb para calcular a velocidade do vento.
+
+```wgrib2 -match ':(UGRD|VGRD):850 mb' gfs_f001_20230414.grib2 -wind_speed vel850hpa.grib2```
 
 Onde: 
 
-**uv.grib2**: é o seu arquivo grib2
+**gfs_f001_20230414.grib2**: é o seu arquivo grib2
 
-**velocidade.grb**: é o arquivo que será gerado com a velocidade do vento. Altere o nome de acordo com a sua necessidade.
+**vel850hpa.grib2**: é o arquivo que será gerado com a velocidade do vento. Altere o nome de acordo com a sua necessidade.
+
+Caso seja necessário gerar a velocidade e a direção do vento no mesmo arquivo, basta fazer:
+
+``` wgrib2 -match ':(UGRD|VGRD):850 mb' gfs_f001_20230414.grib2 -wind_dir dir_vel850hpa.grib2 -wind_speed dir_vel850hpa.grib2```
+
+Nota-se que, o **arquivo a ser gerado é o mesmo** na função ```-wind_dir``` e ```-wind_speed```, isto é, ```dir_vel850hpa.grib2```. Isso ocorre para que os resultados sejam armazenados no mesmo arquivo.
 
 ##### Selecionar os níveis verticais de um arquivo
 
