@@ -255,7 +255,7 @@ A partir de um arquivo de uma simulação do modelo GFS, deseja-se visualizar as
 
 ```wgrib2 gfs.0p25.2018042200.f006.grib2```
 
-SupondO que deseja-se trabalhar com a variável ```TMP```. O objetivo consiste em salvar apenas esta variável no formato NetCDF. Para isso, basta digitar o comando abaixo:
+Supondo que deseja-se trabalhar com a variável ```TMP```. O objetivo consiste em salvar apenas esta variável no formato NetCDF. Para isso, basta digitar o comando abaixo:
 
 ```wgrib2 -match 'TMP' gfs.0p25.2018042200.f006.grib2 -netcdf out.TMP.nc```
 
@@ -287,9 +287,9 @@ Nota-se que, a variável ```TMP``` veio com os níveis verticais separados. Como
 
 O parâmetro ```-nc_nlev 31``` diz que são 31 níveis verticais que estão no arquivo.
 
-Agora, eu deseja-se selecionar alguns níveis verticais em particular. Basta fazer:
+Agora, deseja-se selecionar alguns níveis verticais em particular. Basta fazer:
 
-```wgrib2 gfs.0p25.2018042200.f006.grib2 -nc_nlev 5 -match "(:TMP:(600|650|700|750|800) mb:)" -netcdf out.TMP.nc```
+```wgrib2 gfs.0p25.2018042200.f006.grib2 -nc_nlev 5 -match ":TMP:(600|650|700|750|800) mb:" -netcdf out.TMP.nc```
 
 Lembrando que foram selecionados apenas 5 níveis verticais, por isso, ```-nc_nlev 5```.
 
@@ -302,3 +302,20 @@ Na última linha, terá a seguinte informação:
 ```plevel = 600, 650, 700, 750, 800 ;```
 
 São os níveis verticais selecionados.
+
+##### Selecionar mais de uma variável e vários níveis verticais de um arquivo
+
+Agora, deseja-se selecionar alguns níveis verticais em particular. Basta fazer:
+
+```wgrib2 gfs.0p25.2018042200.f006.grib2 -nc_nlev 5 -match ":(TMP|RH):(600|650|700|750|800) mb:" -netcdf out.TMP.nc```
+
+Onde:
+
+* TMP: é a temperatura
+* RH: é a umidade relativa
+
+Para adicionar mais variáveis, basta fazer:
+
+```wgrib2 gfs.0p25.2018042200.f006.grib2 -nc_nlev 5 -match ":(TMP|RH|HGT):(600|650|700|750|800) mb:" -netcdf out.TMP.nc```
+
+Neste novo exemplo, adicionou-se a variável ```HGT```.
