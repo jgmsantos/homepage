@@ -20,4 +20,5 @@ Tutoriais
    shell
    wgrib
    wgrib2
-   wsl
+   wsl1
+   wsl2
