@@ -118,13 +118,15 @@ Se aparecer uma janela com dois olhos, tudo está funcionando perfeitamente. Pod
 
 ![](../../images/wsl/fig14.PNG)
 
-## Lista distribuições instaladas
+## Listar distribuições instaladas
 
 Neste caso, foi instalada apenas a distribuição Ubuntu-22.04. Nota-se a versão do WSL, isto é, a versão 2.
 
+```wsl --list --verbose```
+
 ![](../../images/wsl/fig13.PNG)
 
-## Para desinstalar uma distribuição
+## Desinstalar uma distribuição
 
 **Importante**: O comando abaixo apaga tudo da distribuição. Por isso, use com cuidado e antes faça backup.
 
