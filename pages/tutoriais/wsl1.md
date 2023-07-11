@@ -100,7 +100,7 @@ Após todos esses passos, o seu Linux já estará funcionando normalmente no seu
 
 Será solicitada a senha do usuário que foi criado.
 
-Eu sugiro instalar o ```xeyes``` para saber se o ambiente gráfico foi instalado corretamente porque a wsl 2 já vem com este suporte. Basta digitar o comando abaixo.
+Eu sugiro instalar o ```xeyes``` para saber se o ambiente gráfico foi instalado corretamente porque a WSL 2 já vem com este suporte. Basta digitar o comando abaixo.
 
 ```sudo apt install x11-apps```
 
@@ -114,7 +114,7 @@ Se aparecer uma janela com dois olhos, tudo está funcionando perfeitamente. Pod
 
 ![](../../images/wsl/fig12.PNG)
 
-**Importante5**: Ao clicar no menu iniciar do Windows terá um ícone chamado ```Ubuntu-22.04 LTS```. Utilize este ícone para abrir o terminal do Linux. Ao abrir esse ícone, note que o Linux já abre com o nome do usuário que foi criado. Neste caso, usuário ```guilherme```.
+**Importante5**: Ao clicar no menu iniciar do Windows terá um ícone chamado ```Ubuntu-22.04.2 LTS```. Utilize este ícone para abrir o terminal do Linux. Ao abrir esse ícone, note que o Linux já abre com o nome do usuário que foi criado. Neste caso, usuário ```guilherme```.
 
 ![](../../images/wsl/fig14.PNG)
 

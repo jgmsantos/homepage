@@ -6,7 +6,7 @@
 Guilherme Martins
 =================
 
-.. figure:: images/gui.jpg
+.. figure:: images/gui1.jpg
    :width: 250
    :align: Center
    :alt: Guilherme Martins
@@ -42,7 +42,7 @@ Pois é, apresentei um breve resumo sobre a história de como cheguei até aqui 
 
 Divirta-se!
 
-Última atualização: 10/07/2023.
+Última atualização: 11/07/2023.
 
 .. toctree::
    :hidden:
