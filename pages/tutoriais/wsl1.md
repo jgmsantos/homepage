@@ -40,13 +40,19 @@ Sera feito o download do arquivo abaixo no diretório Download do Windows. Poste
 
 **Importante**: Abra o ```Windows PowerShell``` como *administrador* para executar os comandos abaixo.
 
+![](../../images/wsl/fig04.PNG)
+
 ## Atualizar o WSL
 
 ```wsl --update```
 
+![](../../images/wsl/fig05.PNG)
+
 ## Verificar a versão do WSL
 
 ```wsl --version```
+
+![](../../images/wsl/fig06.PNG)
 
 ## Listar as distribuições Linux instaladas
 
@@ -54,11 +60,15 @@ Inicialmente, não será mostrado nada porque não tem nenhum distribuição ins
 
 ```wsl --list --verbose```
 
+![](../../images/wsl/fig07.PNG)
+
 ## Listar as distribuições disponíveis para instalação
 
 Nesta parte do tutorial, o usuário irá escolher qual versão do Linux será instalada.
 
 ```wsl --list --online```
+
+![](../../images/wsl/fig08.PNG)
 
 Após digitar o comando acima, serão mostradas duas colunas: ```1) NAME``` e ```2) FRIENDLY NAME```. Utilize a coluna ```NAME``` para escolher a distribuição de interesse.
 
@@ -72,27 +82,47 @@ Após digitar o comando acima, serão mostradas duas colunas: ```1) NAME``` e ``
 
 ```wsl --install Ubuntu-22.04```
 
-Será necessário criar um ```usuário``` e ```senha``` para logar no Linux. Esta etapa será solicitada durante a instalação.
+![](../../images/wsl/fig09.PNG)
+
+Será necessário criar um ```usuário``` e ```senha``` para logar no Linux. Esta etapa será solicitada durante a instalação. Neste exemplo, foi criado o usuário ```guilherme```.
 
 **Importante2**: O ```usuário``` e a ```senha``` não são as mesmas utilizadas no Windows, pode ser um nome de usuário/senha qualquer. Ficará a seu critério escolher o nome e a senha.
 
-Após todos esses passos, o seu Linux já estará funcionando normalmente no seu computador.
+**Importante3**: Note que após a instalação, aparece no fim do processo uma linha verde (```guilherme@DESKTOP-LD7TCRV```), esta linha indica que o Linux já foi instalado.
 
-**Importante3**: Ao clicar no menu iniciar do Windows terá um ícone chamado ```Ubuntu-22.04```. Utilize este ícone para abrir o terminal do Linux. Ao abrir esse ícone, note que o Linux já abre com o nome do usuário que foi criado.
+Após todos esses passos, o seu Linux já estará funcionando normalmente no seu computador.
 
 **Importante4**: Sugiro atualizar o seu Linux com o comando abaixo.
 
 ```sudo apt-get update```
 
+![](../../images/wsl/fig10.PNG)
+
+Será solicitada a senha do usuário que foi criado.
+
 Eu sugiro instalar o ```xeyes``` para saber se o ambiente gráfico foi instalado corretamente porque a wsl 2 já vem com este suporte. Basta digitar o comando abaixo.
 
 ```sudo apt install x11-apps```
+
+![](../../images/wsl/fig11.PNG)
 
 E depois, digitar no terminal do Linux:
 
 ```xeyes```
 
 Se aparecer uma janela com dois olhos, tudo está funcionando perfeitamente. Pode fechar esta janela e ser feliz com o seu Linux.
+
+![](../../images/wsl/fig12.PNG)
+
+**Importante5**: Ao clicar no menu iniciar do Windows terá um ícone chamado ```Ubuntu-22.04 LTS```. Utilize este ícone para abrir o terminal do Linux. Ao abrir esse ícone, note que o Linux já abre com o nome do usuário que foi criado. Neste caso, usuário ```guilherme```.
+
+![](../../images/wsl/fig14.PNG)
+
+## Lista distribuições instaladas
+
+Neste caso, foi instalada apenas a distribuição Ubuntu-22.04. Nota-se a versão do WSL, isto é, a versão 2.
+
+![](../../images/wsl/fig13.PNG)
 
 ## Para desinstalar uma distribuição
 
