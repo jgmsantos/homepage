@@ -38,7 +38,7 @@ Sera feito o download do arquivo abaixo no diretório Download do Windows. Poste
 
 ```wsl_update_x64.msi```
 
-> **Importante**: Abra o ```Windows PowerShell``` como *administrador* para executar os comandos abaixo.
+**Importante**: Abra o ```Windows PowerShell``` como *administrador* para executar os comandos abaixo.
 
 ## Atualizar o WSL
 
@@ -64,7 +64,7 @@ Após digitar o comando acima, serão mostradas duas colunas: ```1) NAME``` e ``
 
 ## Instalar uma distribuição Linux
 
-> **Importante**: Neste tutorial será instalado o ```Ubuntu-22.04```. A versão a ser instalada ficará a critério de cada um.
+**Importante1**: Neste tutorial será instalado o ```Ubuntu-22.04```. A versão a ser instalada ficará a critério de cada um.
 
 ```wsl --install <Distribuicao_Linux>```
 
@@ -74,13 +74,13 @@ Após digitar o comando acima, serão mostradas duas colunas: ```1) NAME``` e ``
 
 Será necessário criar um ```usuário``` e ```senha``` para logar no Linux. Esta etapa será solicitada durante a instalação.
 
-> **Importante**: O ```usuário``` e a ```senha``` não são as mesmas utilizadas no Windows, pode ser um nome de usuário/senha qualquer. Ficará a seu critério escolher o nome e a senha.
+**Importante2**: O ```usuário``` e a ```senha``` não são as mesmas utilizadas no Windows, pode ser um nome de usuário/senha qualquer. Ficará a seu critério escolher o nome e a senha.
 
 Após todos esses passos, o seu Linux já estará funcionando normalmente no seu computador.
 
-> **Importante1**: Ao clicar no menu iniciar do Windows terá um ícone chamado ```Ubuntu-22.04```. Utilize este ícone para abrir o terminal do Linux. Ao abrir esse ícone, note que o Linux já abre com o nome do usuário que foi criado.
+**Importante3**: Ao clicar no menu iniciar do Windows terá um ícone chamado ```Ubuntu-22.04```. Utilize este ícone para abrir o terminal do Linux. Ao abrir esse ícone, note que o Linux já abre com o nome do usuário que foi criado.
 
-> **Importante2**: Sugiro atualizar o seu Linux com o comando abaixo.
+**Importante4**: Sugiro atualizar o seu Linux com o comando abaixo.
 
 ```sudo apt-get update```
 
@@ -96,7 +96,7 @@ Se aparecer uma janela com dois olhos, tudo está funcionando perfeitamente. Pod
 
 ## Para desinstalar uma distribuição
 
-> **Importante2**: O comando abaixo apaga tudo da distribuição. Por isso, use com cuidado e antes faça backup.
+**Importante**: O comando abaixo apaga tudo da distribuição. Por isso, use com cuidado e antes faça backup.
 
 Caso seja necessário desinstalar uma distribuição, inicialmente listam-se as possíveis distribuções instaladas com o comando abaixo.
 
