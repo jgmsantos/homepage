@@ -77,8 +77,6 @@ Como passatempo, eu gosto de viajar, conhecer novos lugares e pessoas, além de 
 
     + [Rio de Janeiro](https://photos.google.com/share/AF1QipOgvkCxOcwuTK3C81A4klALTZv35nlO4KoNoF-4Q39_Nm_Jsrpen0-hG940jIc1fA?key=OEpvSDh2NUFlNVVzb0R2X1RKbEVyekhjem0zdlFB)
 
-+ Tocantins
-    + [Palmas e Jalapão](https://photos.google.com/share/AF1QipM5B4K3BcLkjbPCNh81bujig3XHm4V-wmfCOfj-sQUCgXOFfAw9V3tP8ODNBP_NqQ)
 + São Paulo
 
     + [Guaratinguetá](https://photos.google.com/share/AF1QipNytXAfXQIw5WLgRe2iNtW7F8tuQQnHo9riIWQtrpKv4XC9NIV47GsoBySDxAs9-w?key=cU5rS2NkN1hkUW5VNGFHdXZsQXpfMWxsMmtTOVFn)
