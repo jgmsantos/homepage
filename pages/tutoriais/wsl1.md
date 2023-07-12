@@ -96,9 +96,13 @@ Após todos esses passos, o seu Linux já estará funcionando normalmente no seu
 
 ```sudo apt-get update```
 
+Será solicitada a senha do usuário que foi criado.
+
 ![](../../images/wsl/fig10.PNG)
 
-Será solicitada a senha do usuário que foi criado.
+E em seguida:
+
+```sudo apt-get upgrade```
 
 Eu sugiro instalar o ```xeyes``` para saber se o ambiente gráfico foi instalado corretamente porque a WSL 2 já vem com este suporte. Basta digitar o comando abaixo.
 
