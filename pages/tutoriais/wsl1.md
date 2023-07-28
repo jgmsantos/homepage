@@ -100,7 +100,7 @@ Será solicitada a senha do usuário que foi criado.
 
 ![](../../images/wsl/fig10.PNG)
 
-E em seguida:
+**O comando abaixo somente deverá ser digitado se a sua instalação for nova, caso contrário, não precisa digitar.**
 
 ```sudo apt-get upgrade```
 
