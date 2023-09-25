@@ -1,5 +1,8 @@
 Apresentações
 =============
+2023
++ [Monitoramento de queimadas](https://docs.google.com/presentation/d/1NK1wUsxc5Wg4xiyoGBLdHyu7zUb0g6u_OYs0pHUEUDs/edit?usp=sharing). Setembro/2022.
+
 2022
 
 + [Informações do sistema de monitoramento de detecção de focos de fogo ativo do Programa Queimadas do INPE](https://docs.google.com/presentation/d/1QCKUckX9yEjp9-q5MvVLCjqCfyQsp7S2Z1e3YRlE80Y/edit?usp=sharing). Agosto/2022.
