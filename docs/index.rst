@@ -6,7 +6,7 @@
 Guilherme Martins
 =================
 
-.. figure:: images/gui1.jpg
+.. figure:: ../images/gui1.jpg
    :width: 250
    :align: Center
    :alt: Guilherme Martins
