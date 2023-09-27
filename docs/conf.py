@@ -24,7 +24,7 @@ author = 'Guilherme Martins'
 # The full version, including alpha/beta/rc tags
 release = ''
 
-master_doc = 'index'
+master_doc = 'docs/index'
 
 # -- General configuration ---------------------------------------------------
 
