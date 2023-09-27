@@ -47,58 +47,58 @@ Divirta-se!
 .. toctree::
    :hidden:
    
-   pages/autor
+   ../pages/autor
    :hidden:
 
 .. toctree::
    :hidden:
 
-   pages/consultoria
+   ../pages/consultoria
    :hidden:
 
 .. toctree::
    :hidden:
 
-   pages/climatologia
+   ../pages/climatologia
    :hidden:
 
 .. toctree::
    :hidden:
 
-   pages/cvlattes
+   ../pages/cvlattes
    :hidden:
    
 .. toctree::
    :hidden:
 
-   pages/apresentacoes
+   ../pages/apresentacoes
    :hidden:
 
 .. toctree::
    :hidden:
    
-   pages/cursos_ministrados
+   ../pages/cursos_ministrados
    :hidden:
 
 .. toctree::
    :hidden:
    
-   pages/tutoriais/index
+   ../pages/tutoriais/index
    :hidden:
 
 .. toctree::
    :hidden:
    
-   pages/scripts
+   ../pages/scripts
    :hidden:
 
 .. toctree::
    :hidden:
    
-   pages/passatempo
+   ../pages/passatempo
 
 .. toctree::
    :hidden:
    
-   pages/contato
+   ../pages/contato
    :hidden:
