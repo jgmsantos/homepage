@@ -6,7 +6,7 @@
 Guilherme Martins
 =================
 
-.. figure:: images/gui1.jpg
+.. figure:: ../images/gui1.jpg
    :width: 250
    :align: Center
    :alt: Guilherme Martins
@@ -42,63 +42,63 @@ Pois é, apresentei um breve resumo sobre a história de como cheguei até aqui 
 
 Divirta-se!
 
-Última atualização: 25/09/2023.
+Última atualização: 27/09/2023.
 
 .. toctree::
    :hidden:
    
-   pages/autor
+   ../pages/autor
    :hidden:
 
 .. toctree::
    :hidden:
 
-   pages/consultoria
+   ../pages/consultoria
    :hidden:
 
 .. toctree::
    :hidden:
 
-   pages/climatologia
+   ../pages/climatologia
    :hidden:
 
 .. toctree::
    :hidden:
 
-   pages/cvlattes
+   ../pages/cvlattes
    :hidden:
    
 .. toctree::
    :hidden:
 
-   pages/apresentacoes
-   :hidden:
-
-.. toctree::
-   :hidden:
-   
-   pages/cursos_ministrados
+   ../pages/apresentacoes
    :hidden:
 
 .. toctree::
    :hidden:
    
-   pages/tutoriais/index
+   ../pages/cursos_ministrados
    :hidden:
 
 .. toctree::
    :hidden:
    
-   pages/scripts
+   ../pages/tutoriais/index
    :hidden:
 
 .. toctree::
    :hidden:
    
-   pages/passatempo
+   ../pages/scripts
+   :hidden:
 
 .. toctree::
    :hidden:
    
-   pages/contato
+   ../pages/passatempo
+
+.. toctree::
+   :hidden:
+   
+   ../pages/contato
    :hidden:
