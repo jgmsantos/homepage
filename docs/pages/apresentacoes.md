@@ -2,7 +2,7 @@ Apresentações
 =============
 2023
 
-+ [Monitoramento de queimadas](https://docs.google.com/presentation/d/1NK1wUsxc5Wg4xiyoGBLdHyu7zUb0g6u_OYs0pHUEUDs/edit?usp=sharing). Setembro/2022.
++ [Monitoramento de queimadas](https://docs.google.com/presentation/d/1NfKLoQH67J7yv4opPWEKjthSnJu1UDcc4RkSACwc8dY/edit?usp=sharing). Setembro/2023.
 
 2022
 
