@@ -3,6 +3,9 @@ Cursos ministrados
 
 ## Locais ministrados
 
++ **Congresso Brasileiro de Agrometeorologia (CBAGRO) 2023 - Edição XXII**
+  + Curso ministrado para estudantes e profissionais.
+
 + **Congresso Brasileiro de Meteorologia (CBMET) 2022 - Edição XXII**
   + Curso ministrado para estudantes e profissionais.  
 
