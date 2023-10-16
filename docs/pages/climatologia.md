@@ -33,7 +33,7 @@ A imagem abaixo mostra apenas a localização média dos focos de queimadas do s
 
 #### Número de dias com focos de queimadas
 
-A partir dos dados diários de focos de queimadas no período de 2003 a 2018, o píxel com foco recebe o valor 1. Em seguida, realiza-se a contabilização dos dias com focos no mês, e posteriormente, calcula-se a sua média mensal. A partir disso, foi possível contabilizar o número médio de dias com focos de queimadas para cada mês. Os focos são do satélite AQUA e os mesmo foram reamostrados para uma grade regular de 25 km x 25 km.
+A partir dos dados diários de focos de queimadas no período de 2003 a 2018, o píxel com foco recebe o valor 1. Em seguida, realiza-se a contabilização dos dias com focos no mês, e posteriormente, calcula-se a sua média mensal. A partir disso, foi possível contabilizar o número médio de dias com focos de queimadas para cada mês. Os focos são do satélite AQUA e eles foram reamostrados para uma grade regular de 25 km x 25 km.
 
 ![](../images/climatologia/fig05.png)
 
