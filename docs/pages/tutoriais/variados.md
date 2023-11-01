@@ -143,6 +143,42 @@ done
 2020010900
 2020011000
 ```
+5 Loop ao longo das previsões do modelo GFS.
+
+```bash
+#!/bin/bash
+
+# Ajuste os parâmetros abaixo de acordo com as suas necessidades.
+PREV=0    # Horário que começa a previsão de interesse (f000).
+PRAZO=384 # Quantidade de previsões em horas desejadas. São 384 horas.
+dPREV=3   # Intervalo temporal em horas entre cada previsão desejada.
+
+while [[ ${PREV} -le ${PRAZO} ]]
+do
+	fcst=`echo ${PREV} | awk '{printf("%.3d",$1)}'`
+
+    # Adicione suas instruções.
+	echo "Arquivo: gfs.t00z.pgrb2.0p25.${fcst}"
+
+	let PREV=${PREV}+${dPREV}
+done
+
+# A saída será da seguinte forma:
+
+# Arquivo: gfs.t00z.pgrb2.0p25.000
+# Arquivo: gfs.t00z.pgrb2.0p25.003
+# Arquivo: gfs.t00z.pgrb2.0p25.006
+# Arquivo: gfs.t00z.pgrb2.0p25.009
+# Arquivo: gfs.t00z.pgrb2.0p25.012
+# Arquivo: gfs.t00z.pgrb2.0p25.015
+# Arquivo: gfs.t00z.pgrb2.0p25.018
+# Arquivo: gfs.t00z.pgrb2.0p25.021
+.
+.
+.
+# Arquivo: gfs.t00z.pgrb2.0p25.381
+# Arquivo: gfs.t00z.pgrb2.0p25.384
+```
 
 ### Remover caracteres estranhos no Linux
 
