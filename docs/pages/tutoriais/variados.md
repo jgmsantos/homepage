@@ -155,12 +155,12 @@ dPREV=3   # Intervalo temporal em horas entre cada previsão desejada.
 
 while [[ ${PREV} -le ${PRAZO} ]]
 do
-	fcst=`echo ${PREV} | awk '{printf("%.3d",$1)}'`
-
+    fcst=`echo ${PREV} | awk '{printf("%.3d",$1)}'`
+    
     # Adicione suas instruções.
-	echo "Arquivo: gfs.t00z.pgrb2.0p25.${fcst}"
-
-	let PREV=${PREV}+${dPREV}
+    echo "Arquivo: gfs.t00z.pgrb2.0p25.${fcst}"
+    
+    let PREV=${PREV}+${dPREV}
 done
 
 # A saída será da seguinte forma:
