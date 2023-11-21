@@ -216,7 +216,7 @@ conda install -c conda-forge netCDF4
 ### 10.11 Instalação de uma versão específica de um programa 
 
 ```
-conda install <nome_programa>=<versão_programa>
+conda install <nome_programa>==<versão_programa>
 ```
 
 Exemplo: Instalar a versão do `cdo 1.9.9`.
