@@ -2,6 +2,7 @@ Apresentações
 =============
 2023
 
++ [Análise Diagnóstica Dos Focos De Queimada No Estado De São Paulo](https://docs.google.com/presentation/d/1FckLnnzTofp4LGHHhx8-pst1DU1MwTMPRGD1Jc7hJnY/edit?usp=sharing). Outubro/2023.
 + [Monitoramento de queimadas](https://docs.google.com/presentation/d/1NfKLoQH67J7yv4opPWEKjthSnJu1UDcc4RkSACwc8dY/edit?usp=sharing). Setembro/2023.
 
 2022
