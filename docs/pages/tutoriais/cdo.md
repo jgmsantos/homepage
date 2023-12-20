@@ -1303,6 +1303,46 @@ OBS: A dica acima foi extraída do link abaixo:
 
 [https://code.mpimet.mpg.de/boards/2/topics/12326](https://code.mpimet.mpg.de/boards/2/topics/12326)
 
+### Calcular a umidade relativa do ar
+
+```bash
+#!/bin/bash
+
+# Calcula a Umidade Relativa diária (%) usando Temperatura e Temperatura do Ponto de Orvalho, ambas em Celsius.
+# A metodologia utiliza a equação de Tetens.
+# Neste exemplo, são usados os dados do ERA5 e as duas variáveis (d2m e t2m) estão no memso arquivo para cada ano.
+
+# Tempo de execução: ~5 minutos.
+
+DIR_INPUT="../input/T_Td_2m_horario"
+DIR_TMP="../tmp"
+DIR_OUTPUT="../output/UR"
+
+rm -f ${DIR_TMP}/script.sh
+
+for ano in {2003..2022}
+do
+     echo "Processando: ${ano}"
+     cmd="cdo -s --no_history -b F32 -subc,273.15 -daymean ${DIR_INPUT}/ERA5_Superficie_T_Td_horario_2m_${ano}.nc ${DIR_TMP}/tmp01_${ano}.nc"
+     cmd="${cmd} && cdo -s --no_history expr,'e=6.1078*10^((7.5*d2m)/(237.3+d2m)) ; es=6.1078*10^((7.5*t2m)/(237.3+t2m))' ${DIR_TMP}/tmp01_${ano}.nc ${DIR_TMP}/tmp02_${ano}.nc"
+     cmd="${cmd} && cdo -s --no_history -setmissval,-999 -setattribute,rh@units='%' -setattribute,rh@long_name='Umidade Relativa a 2 metros' -expr,'rh=(e/es)*100' ${DIR_TMP}/tmp02_${ano}.nc ${DIR_OUTPUT}/RH_Diario_${ano}.nc"
+     echo ${cmd} >> ${DIR_TMP}/script.sh
+done
+
+# Executa em paralelo em blocos de 4 arquivos.
+parallel -j 4 < ${DIR_TMP}/script.sh
+
+# Junta todos os arquivos em um único arquivão com a umidade relativa diária.
+cdo -s -O --no_history -mergetime ${DIR_OUTPUT}/RH_Diario_????.nc ${DIR_OUTPUT}/RH_Diaria.nc
+
+# Junta todos os arquivos em um único arquivão e faz a média mensal.
+cdo -s -O --no_history -monmean ${DIR_OUTPUT}/RH_Diaria.nc ${DIR_OUTPUT}/RH_Mensal.nc
+
+# Limpa o diretório.
+rm -f ${DIR_TMP}/*
+
+```
+
 ### Vídeo aula de CDO
 
 + 2021
