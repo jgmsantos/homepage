@@ -62,6 +62,7 @@ Basta digitar o comando abaixo para ver o conteúdo do arquivo `VENTO_UV.tif`.
 #### Reclassificar as classes do  MapBiomas
 
 O objetivo consiste em reclassificar as 38 classes da coleção 8 do MapBiomas para 6 classes, isto é:
+
 * Classe 1: Floresta
 * Classe 2: Formação Natural não Florestal
 * Classe 3: Agropecuária
@@ -76,6 +77,10 @@ Os links abaixo mostram todas as classes da coleção 8 do MapBiomas:
 * [As 38 classes](https://brasil.mapbiomas.org/wp-content/uploads/sites/4/2023/08/Legenda-Colecao-8-LEGEND-CODE.pdf)
 
 * [Descrição detalhada das 38 classes](https://brasil.mapbiomas.org/wp-content/uploads/sites/4/2023/09/Legenda-Colecao-8-Descricao-Detalhada-PDF-PT-3-1.pdf)
+
+Para recortar o mapa de uso e cobertura da terra do MapBiomas, basta seguir a dica do link abaixo. Lembrando que a resolução original é de 30 metros.
+
+[Recortar um arquivo GeoTIFF utilizando shapefile](https://www.youtube.com/watch?v=tiCxRcr4q3Q&t=4s&ab_channel=CursosLibertatem)
 
 Script em Shell para realizar a reclassificação:
 
