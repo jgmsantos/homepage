@@ -121,3 +121,12 @@ Explicação do comando:
   * 1*(A==1)+1*(A==3)+1*(A==4)+1*(A==5)+1*(A==6)+1*(A==49) significa que do arquivo `A` (sao_paulo_2022.tif), os pixeis com as classes 1, 3, 4, 5, 6, e 49 serão substituídos pelo valor 1.
   * 2*(A==10)+2*(A==11)+2*(A==12)+2*(A==32)+2*(A==29)+2*(A==50)+2*(A==13). Neste caso, as classes 10, 11, 12, 32, 29, 50, 13 terão valor 2.
   * Para as demais classes o raciocínio é o mesmo.
+
+As figuras abaixo mostram o antes e o depois da reclassificação.
+
+* Antes:
+![](../../images/gdal/mapbiomas/antes.JPG)
+
+* Depois:
+![](../../images/gdal/mapbiomas/depois.JPG)
+
