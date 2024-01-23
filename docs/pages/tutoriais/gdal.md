@@ -82,6 +82,8 @@ Para recortar o mapa de uso e cobertura da terra do MapBiomas, basta seguir a di
 
 [Recortar um arquivo GeoTIFF utilizando shapefile](https://www.youtube.com/watch?v=tiCxRcr4q3Q&t=4s&ab_channel=CursosLibertatem)
 
+Para fazer a reclassificação, utiliza-se o `gdal_calc.py`.
+
 Script em Shell para realizar a reclassificação:
 
 Para executar o script, basta abrir o seu terminal e digitar o comando abaixo:
@@ -108,8 +110,6 @@ gdal_calc.py -A ${Arquivo_Input} --outfile ${Arquivo_Output} --NoDataValue=0 --c
   5*(A==26)+5*(A==33)+5*(A==31)+\
   6*(A==27)"
 ```
-
-Para fazer a reclassificação, utiliza-se o `gdal_calc.py`.
 
 Explicação do comando:
 
