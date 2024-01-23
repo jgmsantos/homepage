@@ -124,9 +124,9 @@ Explicação do comando:
 
 As figuras abaixo mostram o antes e o depois da reclassificação.
 
-* Antes:
+* Antes com as 38 classes:
 ![](../../images/gdal/mapbiomas/antes.JPG)
 
-* Depois:
+* Depois com as 6 classes:
 ![](../../images/gdal/mapbiomas/depois.JPG)
 
