@@ -1,5 +1,10 @@
 Apresentações
 =============
+
+2024
+
++ [Queimadas em Roraima: Fevereiro de 2024](https://drive.google.com/file/d/1ttGqxgRrLp0E6FxkPmsoBQ5G3b5XM0Js/view?usp=drive_link). Fevereiro/2024.
+
 2023
 
 + [Análise Diagnóstica Dos Focos De Queimada No Estado De São Paulo](https://docs.google.com/presentation/d/1FckLnnzTofp4LGHHhx8-pst1DU1MwTMPRGD1Jc7hJnY/edit?usp=sharing). Outubro/2023.
