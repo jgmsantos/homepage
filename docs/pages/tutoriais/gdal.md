@@ -130,3 +130,70 @@ As figuras abaixo mostram o antes e o depois da reclassificação.
 * Depois com as 6 classes:
 ![](../../images/gdal/mapbiomas/depois.JPG)
 
+### Download de dados do modelo GFS
+
+O objetivo consiste em selecionar um horário de simulação do modelo GFS e sem realizar o download dele, selecionar algumas variáveis de interesse e salvar esta seleção localmente.
+
+Selecionar variáveis de interesse:
+
+Basta visualizar um dos arquivos com a extensão ```.idx```. Exemplo: ```gfs.t00z.pgrb2.0p50.f012.idx```.
+
+Uma vez selecionada as variáveis, nota-se que tem um número para cada linha do arquivo ```.idx```, este é o número que será utilizado para selecionar as variáveis.
+
+Exemplo: Serão selecionadas as variáveis abaixo: TMP, UGRD, VGRD e APCP que possuem a seguinte númeração: 581, 588, 589 e 596, respectivamente. Lembrando que essa informação veio do arquivo ```.idx```
+
+```bash
+581:127174079:d=2024032800:TMP:2 m above ground:12 hour fcst:
+588:128579005:d=2024032800:UGRD:10 m above ground:12 hour fcst:
+589:128863326:d=2024032800:VGRD:10 m above ground:12 hour fcst:
+596:431949438:d=2024032800:APCP:surface:0-3 hour acc fcst:
+```
+
+A linha de comando abaixo selecionará essas variáveis e o resultado será guardado no arquivo ```gfs.t00z.pgrb2.0p25.f002.nc```.
+
+```bash
+gdal_translate /vsicurl/https://www.ftp.ncep.noaa.gov/data/nccf/com/gfs/prod/gfs.20240328/00/atmos/gfs.t00z.pgrb2.0p50.f012 -b 581 -b 588 -b 589 -b 596 -projwin -58 2 -46 -9 -of netcdf -co "FORMAT=NC" gfs.t00z.pgrb2.0p25.f002.nc
+```
+
+Explicando o comando:
+* Faz o download do arquivo de interesse: 
+  * /vsicurl/https://www.ftp.ncep.noaa.gov/data/nccf/com/gfs/prod/gfs.20240328/00/atmos/gfs.t00z.pgrb2.0p50.f012 
+* Seleciona as bandas (variáveis) de interesse a partir do arquivo ```.idx```: 
+  * -b 581 -b 588 -b 589 -b 596
+* Recorta o dado na área de interesse. Convenção: longitude oeste (-58), latitude norte (2), longitude leste (-46) e latitude sul (-9):
+  * -projwin -58 2 -46 -9
+* Salva o arquivo no formato NetCDF:
+  * -of netcdf -co "FORMAT=NC"
+* Nome do arquivo a ser gerado no computador. É nome definido pelo usuário:
+  * gfs.t00z.pgrb2.0p25.f002.nc
+
+Para salvar no formato GeoTIFF:
+
+```bash
+gdal_translate /vsicurl/https://www.ftp.ncep.noaa.gov/data/nccf/com/gfs/prod/gfs.20240328/00/atmos/gfs.t00z.pgrb2.0p50.f012 -b 581 -b 588 -b 589 -b 596 -projwin -58 2 -46 -9 gfs.t00z.pgrb2.0p25.f002.tif
+```
+
+Para salvar todo o domínio, sem recortar o dado, basta remover o parâmetro ```-projwin -58 2 -46 -9```.
+
+```bash
+gdal_translate /vsicurl/https://www.ftp.ncep.noaa.gov/data/nccf/com/gfs/prod/gfs.20240328/00/atmos/gfs.t00z.pgrb2.0p50.f012 -b 581 -b 588 -b 589 -b 596 -of netcdf -co "FORMAT=NC" gfs.t00z.pgrb2.0p25.f002.nc
+```
+
+Para visualizar o conteúdo do arquivo (ver o nome das bandas ou variáveis), basta fazer:
+
+```bash
+gdalinfo gfs.t00z.pgrb2.0p25.f002.nc
+```
+
+ou
+
+```bash
+gdalinfo gfs.t00z.pgrb2.0p25.f002.tif
+```
+
+#### Calcular a velocidade do vento
+
+```bash
+gdal_calc.py -U gfs.t00z.pgrb2.0p25.f002.tif --U_band=2 -V gfs.t00z.pgrb2.0p25.f002.tif --V_band=3 --calc="sqrt(U*U+V*V)" --NoDataValue=-999 --format=netcdf --overwrite --outfile velocidade.nc
+```
+
