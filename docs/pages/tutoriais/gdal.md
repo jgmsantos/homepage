@@ -191,7 +191,7 @@ ou
 gdalinfo gfs.t00z.pgrb2.0p25.f002.tif
 ```
 
-#### Calcular a velocidade do vento
+Calcular a velocidade do vento
 
 ```bash
 gdal_calc.py -U gfs.t00z.pgrb2.0p25.f002.tif --U_band=2 -V gfs.t00z.pgrb2.0p25.f002.tif --V_band=3 --calc="sqrt(U*U+V*V)" --NoDataValue=-999 --format=netcdf --overwrite --outfile velocidade.nc
