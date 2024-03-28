@@ -130,7 +130,7 @@ As figuras abaixo mostram o antes e o depois da reclassificação.
 * Depois com as 6 classes:
 ![](../../images/gdal/mapbiomas/depois.JPG)
 
-### Download de dados do modelo GFS
+#### Download de dados do modelo GFS
 
 O objetivo consiste em selecionar um horário de simulação do modelo GFS e sem realizar o download dele, selecionar algumas variáveis de interesse e salvar esta seleção localmente.
 
