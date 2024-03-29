@@ -132,7 +132,7 @@ As figuras abaixo mostram o antes e o depois da reclassificação.
 
 #### Download de dados do modelo GFS
 
-O objetivo consiste em selecionar um horário de simulação do modelo GFS e sem realizar o download dele, selecionar algumas variáveis de interesse e salvar esta seleção localmente.
+O objetivo consiste em selecionar um horário de simulação do modelo americano Global Forecast System (GFS) sem realizar o download dele na máquina, selecionar algumas variáveis de interesse e salvar apenas as variáveis selecionadas localmente no formato NetCDF.
 
 Selecionar variáveis de interesse:
 
@@ -148,15 +148,14 @@ Exemplo: Serão selecionadas as variáveis abaixo: TMP, UGRD, VGRD e APCP que po
 589:128863326:d=2024032800:VGRD:10 m above ground:12 hour fcst:
 596:431949438:d=2024032800:APCP:surface:0-3 hour acc fcst:
 ```
-
-A linha de comando abaixo selecionará essas variáveis e o resultado será guardado no arquivo ```gfs.t00z.pgrb2.0p25.f002.nc```.
+A linha de comando abaixo selecionará essas variáveis de interesse e o resultado será armazenado no arquivo ```gfs.t00z.pgrb2.0p25.f002.nc```.
 
 ```bash
 gdal_translate /vsicurl/https://www.ftp.ncep.noaa.gov/data/nccf/com/gfs/prod/gfs.20240328/00/atmos/gfs.t00z.pgrb2.0p50.f012 -b 581 -b 588 -b 589 -b 596 -projwin -58 2 -46 -9 -of netcdf -co "FORMAT=NC" gfs.t00z.pgrb2.0p25.f002.nc
 ```
 
 Explicando o comando:
-* Faz o download do arquivo de interesse: 
+* Faz o download do horário de simulação (f012) de interesse:
   * /vsicurl/https://www.ftp.ncep.noaa.gov/data/nccf/com/gfs/prod/gfs.20240328/00/atmos/gfs.t00z.pgrb2.0p50.f012 
 * Seleciona as bandas (variáveis) de interesse a partir do arquivo ```.idx```: 
   * -b 581 -b 588 -b 589 -b 596
@@ -164,16 +163,16 @@ Explicando o comando:
   * -projwin -58 2 -46 -9
 * Salva o arquivo no formato NetCDF:
   * -of netcdf -co "FORMAT=NC"
-* Nome do arquivo a ser gerado no computador. É nome definido pelo usuário:
+* Nome do arquivo a ser gerado no computador. É o nome definido pelo usuário:
   * gfs.t00z.pgrb2.0p25.f002.nc
 
-Para salvar no formato GeoTIFF:
+Para salvar no formato GeoTIFF, basta remover o trecho ```-of netcdf -co "FORMAT=NC``` do comando acima:
 
 ```bash
 gdal_translate /vsicurl/https://www.ftp.ncep.noaa.gov/data/nccf/com/gfs/prod/gfs.20240328/00/atmos/gfs.t00z.pgrb2.0p50.f012 -b 581 -b 588 -b 589 -b 596 -projwin -58 2 -46 -9 gfs.t00z.pgrb2.0p25.f002.tif
 ```
 
-Para salvar todo o domínio, sem recortar o dado, basta remover o parâmetro ```-projwin -58 2 -46 -9```.
+Para salvar todo o domínio espacial, sem recortar o dado, basta remover o parâmetro ```-projwin -58 2 -46 -9```.
 
 ```bash
 gdal_translate /vsicurl/https://www.ftp.ncep.noaa.gov/data/nccf/com/gfs/prod/gfs.20240328/00/atmos/gfs.t00z.pgrb2.0p50.f012 -b 581 -b 588 -b 589 -b 596 -of netcdf -co "FORMAT=NC" gfs.t00z.pgrb2.0p25.f002.nc
@@ -191,9 +190,59 @@ ou
 gdalinfo gfs.t00z.pgrb2.0p25.f002.tif
 ```
 
-Calcular a velocidade do vento
+Calcular a velocidade do vento.
+
+Antes precisamos saber o nome das bandas ou componentes do vento (u [zonal] e v [meridional]). Para isso, será utilizado o comando ```gdalinfo```.
+
+Exemplo:
+
+```bash
+gdalinfo gfs.t00z.pgrb2.0p25.f002.tif
+```
+
+Parte do resultado do comando acima é mostrado abaixo. O arquivo ```gfs.t00z.pgrb2.0p25.f002.tif``` possui 4 bandas ou variáveis (TMP, UGRD, VGRD e APCP).
+
+```bash
+Band 2 Block=720x1 Type=Float64, ColorInterp=Undefined
+  Description = UGRD:10 m above ground:12 hour fcst
+  Metadata:
+    GRIB_COMMENT=u-component of wind [m/s]
+    GRIB_DISCIPLINE=0(Meteorological)
+    GRIB_ELEMENT=UGRD
+    GRIB_FORECAST_SECONDS=43200
+
+Band 3 Block=720x1 Type=Float64, ColorInterp=Undefined
+  Description = VGRD:10 m above ground:12 hour fcst
+  Metadata:
+    GRIB_COMMENT=v-component of wind [m/s]
+    GRIB_DISCIPLINE=0(Meteorological)
+    GRIB_ELEMENT=VGRD
+    GRIB_FORECAST_SECONDS=43200
+```
+A componente u representa a variável UGRD que é a banda 2 (```Band 2```). A componente v, é representada pela variável VGRD que é a banda 3 (```Band 3```). Esses valores 2 e 3 serão utilizados para calcular a velocidade do vento nos parâmetros ```--U_band=2``` e ```--V_band=3```.
+
+O comando para calcular a velocidade é:
 
 ```bash
 gdal_calc.py -U gfs.t00z.pgrb2.0p25.f002.tif --U_band=2 -V gfs.t00z.pgrb2.0p25.f002.tif --V_band=3 --calc="sqrt(U*U+V*V)" --NoDataValue=-999 --format=netcdf --overwrite --outfile velocidade.nc
 ```
 
+Explicando o comando acima:
+* -U gfs.t00z.pgrb2.0p25.f002.tif
+  * -U é um nome qualquer que aponta para o arquivo ```gfs.t00z.pgrb2.0p25.f002.tif```, neste caso, a componente u do vento.
+* --U_band=2
+  * Correspondente a variável u do vento. O valor 2 quer dizer que a variável u é representada pelo nome ```Band 2``` que está no arquivo (verificado com o gdalinfo).
+* -V gfs.t00z.pgrb2.0p25.f002.tif 
+  * -V é um nome qualquer que aponta para o arquivo ```gfs.t00z.pgrb2.0p25.f002.tif```, neste caso, a componente v do vento.
+* --V_band=3
+  * Correspondente a variável v do vento. O valor 3 quer dizer que a variável v é representada pelo nome ```Band 3``` que está no arquivo (verificado com o gdalinfo).
+* --calc=sqrt(U\*U+V\*V)"
+  * É o calculo da velocidade do vento em m/s.
+* --NoDataValue=-999
+  * Define o valor ausente ou undef.
+* --format=netcdf
+  * Salva o arquivo no format NetCDF.
+* --overwrite
+  * No caso de executar o mesmo comando, sobreescreve o arquivo.
+* --outfile velocidade.nc
+  * É o nome do arquivo que contém a velocidade do vento (m/s).
