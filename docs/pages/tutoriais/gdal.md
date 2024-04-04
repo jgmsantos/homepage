@@ -130,6 +130,47 @@ As figuras abaixo mostram o antes e o depois da reclassificação.
 * Depois com as 6 classes:
 ![](../../images/gdal/mapbiomas/depois.JPG)
 
+#### Recortar um arquivo GeoTIFF utilizando shapefile
+
+A figura abaixo representa o mapa de uso e cobertura da terra.
+
+![](../../images/gdal//fig01_sp.JPG)
+
+Será utilizado o shapefile do Estado de São Paulo, como mostrado abaixo para recortar o mapa acima exatamente no domínio deste estado..
+
+![](../../images/gdal//fig02_sp.JPG)
+
+O resultado será:
+
+![](../../images/gdal//fig03_sp.JPG)
+
+O trecho abaixo mostra como realizar este procedimento.
+
+```bash
+# Para instalar o gdal:
+# conda install -c conda-forge gdal
+
+from osgeo import gdal
+
+# 'sao_paulo.tif': É o arquivo a ser gerado no computador. 
+# 'GeoTIFF/brasil_coverage_2022.tif': É o arquivo a ser recortado. 
+# 'SP_UF_2021/SP_UF_2021.shp': Máscara utilizada para recortar o dado.
+# 'SP_UF_2021': Arquivo shapefile sem extensão.
+# cropToCutline=True: Recorta exatamente no contorno do shapefile.
+
+# Documentação do gdal (Warp):
+# https://gdal.org/api/python/osgeo.gdal.html#osgeo.gdal.Warp
+
+gdal.Warp(
+    destNameOrDestDS='sao_paulo.tif', 
+    srcDSOrSrcDSTab='GeoTIFF/brasil_coverage_2022.tif', 
+    cutlineDSName='SP_UF_2021/SP_UF_2021.shp', 
+    cutlineLayer='SP_UF_2021', 
+    cropToCutline=True,
+)
+```
+
+
 #### Download de dados do modelo GFS
 
 O objetivo consiste em selecionar um horário de simulação do modelo americano Global Forecast System (GFS) sem realizar o download dele na máquina, selecionar algumas variáveis de interesse e salvar apenas as variáveis selecionadas localmente no formato NetCDF.
