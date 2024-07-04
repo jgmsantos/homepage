@@ -287,3 +287,104 @@ Explicando o comando acima:
   * No caso de executar o mesmo comando, sobreescreve o arquivo.
 * --outfile velocidade.nc
   * É o nome do arquivo que contém a velocidade do vento (m/s).
+
+#### Extrair uma variável de interesse do International Geosphere-Biosphere Programme (IGBP)
+
+O objetivo consiste em converter do formato HDF4 para o formato NetCDF a variável de uso e cobertura da terra chamada de ```Majority_Land_Cover_Type_1``` que encontra-se no arquivo de interesse. Será utilizado o arquivo referente ao ano 2022.
+
+Nome do arquivo do ano 2022: ```MCD12C1.A2022001.061.2023244164746.hdf```
+
+#### Link para os dados
+
+* Fonte de dados:
+  * [https://lpdaac.usgs.gov/products/mcd12c1v061](https://lpdaac.usgs.gov/products/mcd12c1v061)
+
+* Descrição do produto:
+  * [https://lpdaac.usgs.gov/products/mcd12c1v061](https://e4ftl01.cr.usgs.gov/MOTA/MCD12C1.061/)
+
+* Link para o download dos arquivos:
+  * [https://e4ftl01.cr.usgs.gov/MOTA/MCD12C1.061](https://e4ftl01.cr.usgs.gov/MOTA/MCD12C1.061)
+
+* Tabela com as classes de uso e cobertura da terra:
+ 
+![](../../images/gdal/tabela3_classes_igbp.JPG)
+
+#### Informações da variável de interesse Majority_Land_Cover_Type_1
+
+* Variável usada: ```Majority_Land_Cover_Type_1```
+
+```
+SDS Name: Majority_Land_Cover_Type_1
+Description: Most likely IGBP class for each 0.05 degree pixel
+Unbits: Class
+Data Type: 8-bit unsigned intege
+Fill Value: 255
+No Data Value: N/A
+Valida Range: 0 to 16
+Scale Factor: N/A
+```
+
+#### Obter as informações do arquivo e conversão para o fomato NetCDF
+
+Será usado o ```gdalinfo``` para ver o conteúdo do arquivo. Para ver o conteúdo, basta digitar o comando abaixo:
+
+```
+gdalinfo MCD12C1.A2022001.061.2023244164746.hdf
+```
+
+Parte da saída é mostrada abaixo:
+
+```
+Subdatasets:
+  SUBDATASET_1_NAME=HDF4_EOS:EOS_GRID:"MCD12C1.A2022001.061.2023244164746.hdf":MOD12C1:Majority_Land_Cover_Type_1
+  SUBDATASET_1_DESC=[3600x7200] Majority_Land_Cover_Type_1 MOD12C1 (8-bit unsigned integer)
+  SUBDATASET_2_NAME=HDF4_EOS:EOS_GRID:"MCD12C1.A2022001.061.2023244164746.hdf":MOD12C1:Majority_Land_Cover_Type_1_Assessment
+  SUBDATASET_2_DESC=[3600x7200] Majority_Land_Cover_Type_1_Assessment MOD12C1 (8-bit unsigned integer)
+  SUBDATASET_3_NAME=HDF4_EOS:EOS_GRID:"MCD12C1.A2022001.061.2023244164746.hdf":MOD12C1:Land_Cover_Type_1_Percent
+  SUBDATASET_3_DESC=[3600x7200x17] Land_Cover_Type_1_Percent MOD12C1 (8-bit unsigned integer)
+  SUBDATASET_4_NAME=HDF4_EOS:EOS_GRID:"MCD12C1.A2022001.061.2023244164746.hdf":MOD12C1:Majority_Land_Cover_Type_2
+  SUBDATASET_4_DESC=[3600x7200] Majority_Land_Cover_Type_2 MOD12C1 (8-bit unsigned integer)
+  SUBDATASET_5_NAME=HDF4_EOS:EOS_GRID:"MCD12C1.A2022001.061.2023244164746.hdf":MOD12C1:Majority_Land_Cover_Type_2_Assessment
+  SUBDATASET_5_DESC=[3600x7200] Majority_Land_Cover_Type_2_Assessment MOD12C1 (8-bit unsigned integer)
+  SUBDATASET_6_NAME=HDF4_EOS:EOS_GRID:"MCD12C1.A2022001.061.2023244164746.hdf":MOD12C1:Land_Cover_Type_2_Percent
+  SUBDATASET_6_DESC=[3600x7200x14] Land_Cover_Type_2_Percent MOD12C1 (8-bit unsigned integer)
+  SUBDATASET_7_NAME=HDF4_EOS:EOS_GRID:"MCD12C1.A2022001.061.2023244164746.hdf":MOD12C1:Majority_Land_Cover_Type_3
+  SUBDATASET_7_DESC=[3600x7200] Majority_Land_Cover_Type_3 MOD12C1 (8-bit unsigned integer)
+  SUBDATASET_8_NAME=HDF4_EOS:EOS_GRID:"MCD12C1.A2022001.061.2023244164746.hdf":MOD12C1:Majority_Land_Cover_Type_3_Assessment
+  SUBDATASET_8_DESC=[3600x7200] Majority_Land_Cover_Type_3_Assessment MOD12C1 (8-bit unsigned integer)
+  SUBDATASET_9_NAME=HDF4_EOS:EOS_GRID:"MCD12C1.A2022001.061.2023244164746.hdf":MOD12C1:Land_Cover_Type_3_Percent
+  SUBDATASET_9_DESC=[3600x7200x11] Land_Cover_Type_3_Percent MOD12C1 (8-bit unsigned integer)
+Corner Coordinates:
+Upper Left  (    0.0,    0.0)
+Lower Left  (    0.0,  512.0)
+Upper Right (  512.0,    0.0)
+Lower Right (  512.0,  512.0)
+Center      (  256.0,  256.0)
+```
+
+No nosso caso, estamos interessados no nome ```SUBDATASET_1_NAME```, ou seja, no valor que está a direita do sinal de igualdade e que contém o nome ```Majority_Land_Cover_Type_1``` que é a nossa variável de interesse.
+
+```
+HDF4_EOS:EOS_GRID:"MCD12C1.A2022001.061.2023244164746.hdf":MOD12C1:Majority_Land_Cover_Type_1
+```
+
+Este nome será usado para converter para o formato NetCDF com o comando abaixo:
+
+```
+gdal_translate -of netcdf -co "FORMAT=NC4" -projwin -90 15 -30 -60 HDF4_EOS:EOS_GRID:"MCD12C1.A2022001.061.2023244164746.hdf":MOD12C1:Majority_Land_Cover_Type_1 LUCC_2022.nc
+```
+
+Recorta o dado na área de interesse (```-projwin -90 15 -30 -60```). Convenção: longitude oeste (-90), latitude norte (15), longitude leste (-30) e latitude sul (-60).
+
+O nome ```LUCC_2022.nc``` é definido pelo usuário e este arquivo será gerado no computador.
+
+Ao executar o comando acima irá aparecer a seguinte mensagem:
+
+```
+0ERROR 1: netcdf error #-59 : NetCDF: Name contains illegal characters . 
+at (netcdfdataset.cpp,NCDFPutAttr,10484)
+```
+
+**Tentei achar a solução para esta mensagem, mas não encontrei. Se alguém souber, compartilhe conosco.**
+
+Eu comparei o arquivo ```LUCC_2022.nc``` com o arquivo ```MCD12C1.A2022001.061.2023244164746.hdf``` no QGIS e eles são extamente iguais.
