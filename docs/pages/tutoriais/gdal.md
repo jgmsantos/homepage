@@ -306,6 +306,7 @@ Nome do arquivo do ano 2022: ```MCD12C1.A2022001.061.2023244164746.hdf```
   * [https://e4ftl01.cr.usgs.gov/MOTA/MCD12C1.061](https://e4ftl01.cr.usgs.gov/MOTA/MCD12C1.061)
 
 * Tabela com as classes de uso e cobertura da terra:
+  * Link para a documentação: [Clique aqui](https://lpdaac.usgs.gov/documents/1409/MCD12_User_Guide_V61.pdf)
  
 ![](../../images/gdal/tabela3_classes_igbp.JPG)
 
