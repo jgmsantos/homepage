@@ -294,7 +294,7 @@ O objetivo consiste em converter do formato HDF4 para o formato NetCDF a variáv
 
 Nome do arquivo do ano 2022: ```MCD12C1.A2022001.061.2023244164746.hdf```
 
-#### Link para os dados
+##### Link para os dados
 
 * Fonte de dados:
   * [https://lpdaac.usgs.gov/products/mcd12c1v061](https://lpdaac.usgs.gov/products/mcd12c1v061)
@@ -309,7 +309,7 @@ Nome do arquivo do ano 2022: ```MCD12C1.A2022001.061.2023244164746.hdf```
  
 ![](../../images/gdal/tabela3_classes_igbp.JPG)
 
-#### Informações da variável de interesse Majority_Land_Cover_Type_1
+##### Informações da variável de interesse Majority_Land_Cover_Type_1
 
 * Variável usada: ```Majority_Land_Cover_Type_1```
 
@@ -324,7 +324,7 @@ Valida Range: 0 to 16
 Scale Factor: N/A
 ```
 
-#### Obter as informações do arquivo e conversão para o fomato NetCDF
+##### Obter as informações do arquivo e conversão para o fomato NetCDF
 
 Será usado o ```gdalinfo``` para ver o conteúdo do arquivo. Para ver o conteúdo, basta digitar o comando abaixo:
 
