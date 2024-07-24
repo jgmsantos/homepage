@@ -1,7 +1,7 @@
 Consultoria
 ================
 
-Você já pensou na possibilidade de colaborar para a continuidade desse trabalho antes de pedir um programa pronto para resolver as suas tarefas? Pois é, gerar toda essa informação requer um esforço tremendo porque está associado diretamente com fato de que tenho que estudar muito, e além disso, pagar pessoas e cursos para me atualizar e sempre disponibilizar informações relevantes. Pense nisso!
+Você já pensou na possibilidade de colaborar fazendo um pix (12981114292) para a continuidade desse trabalho antes de pedir um programa pronto para resolver as suas tarefas? Pois é, gerar toda essa informação requer um esforço tremendo porque está associado diretamente com fato de que tenho que estudar muito, e além disso, pagar pessoas e cursos para me atualizar e sempre disponibilizar informações relevantes. Pense nisso!
 
 ### Curso de Climate Data Operators (CDO)
 

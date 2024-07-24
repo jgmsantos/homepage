@@ -11,6 +11,8 @@ Desenvolvi habilidades em manipulação e visualização de saídas dos modelos 
 
 Trabalhei no período de julho de 2016 a dezembro de 2022 no [Programa de Monitoramento de Queimadas](http://queimadas.dgi.inpe.br/queimadas/portal) do Instituto Nacional de Pesquisas Espaciais ([INPE](http://www.inpe.br/)). Estava responsável pelo desenvolvimento e melhorias do modelo de risco diário de fogo para América do Sul, criação de boletins meteorológicos mensais e geração de avisos meteorológicos.
 
+Atualmente, trabalho no setor privado, na empresa chamada Nottus Meteorologia, desde 12/12/2022. É uma empresa sediada em São Paulo que trabalha com inteligência de dados e consultória meteorológica para negócios. Estou responsável pela área de desenvolvimento, inovação e tecnologia.
+
 [Clica aqui](https://github.com/jgmsantos/homepage/blob/master/images/minha_historia.pdf) para ver um resumo da minha trajetória profissional desde a época da faculdade até os dias atuais.
 
 [Neste vídeo](https://www.youtube.com/watch?v=EnLqg47IPh0&t=648s&ab_channel=CursosLibertatem) eu relato toda a minha experiência acadêmica desde a graduação até o doutorado.
