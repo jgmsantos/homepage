@@ -3,6 +3,8 @@ Apresentações
 
 2024
 
++ [Monitoramento de queimadas](https://docs.google.com/presentation/d/1GzuagGBayMBfvQu2469NQ13G-XSYDGfNcRYkWeBVET8/edit?usp=sharing). Agosto/2024.
+
 + [Queimadas em Roraima: Fevereiro de 2024](https://drive.google.com/file/d/1ttGqxgRrLp0E6FxkPmsoBQ5G3b5XM0Js/view?usp=drive_link). Fevereiro/2024.
 
 2023
