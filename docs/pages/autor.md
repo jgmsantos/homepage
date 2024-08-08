@@ -3,7 +3,11 @@ Sobre mim
 
 ![](../images/gui2.jpg)
 
-Sou natural da cidade de [Belém-Pará](https://pt.wikipedia.org/wiki/Bel%C3%A9m_(Par%C3%A1)). Graduado em Meteorologia pela Universidade Federal do Pará ([UFPa](https://portal.ufpa.br), 2002), mestre em Meteorologia pela Universidade Federal de Pelotas ([UFPel](http://portal.ufpel.edu.br), 2005) e doutor em Ciência do Sistema Terrestre ([CST](http://www.ccst.inpe.br)) pelo Instituto Nacional de Pesquisas Espaciais ([INPE](http://www.inpe.br/), 2015).  
+Sou natural da cidade de [Belém-Pará](https://pt.wikipedia.org/wiki/Bel%C3%A9m_(Par%C3%A1)). 
+  * Graduado em Meteorologia pela Universidade Federal do Pará ([UFPa](https://portal.ufpa.br), 2002)
+  * Mestre em Meteorologia pela Universidade Federal de Pelotas ([UFPel](http://portal.ufpel.edu.br), 2005).
+  * Doutor em Ciência do Sistema Terrestre ([CST](http://www.ccst.inpe.br)) pelo Instituto Nacional de Pesquisas Espaciais ([INPE](http://www.inpe.br/), 2015).  
+  * MBA em Data Science e Analytics pela USP/Esalq ([USP/Esalq](https://mbauspesalq.com/?gad_source=1&gclid=CjwKCAjw2dG1BhB4EiwA998cqCLQCZyCQXqIo5PQmdo-Ge4iuWWeO2ILQeJ4bNPWM4ypBQ15WkA2rxoCg-YQAvD_BwE), 2023).
 
 Durante a graduação participei dos experimentos de campo "Large Scale Biosphere-Atmosphere Experiment in Amazonia (LBA)", "South American Low-Level Jet (SALLJEX)" e em algumas disciplinas do curso. Fui estagiário no Instituto Nacional de Meteorologia - [INMET](http://www.inmet.gov.br/portal)/2°DISME na área de consistência de dados e na seção de Previsão de Tempo.  Tive a oportunidade de realizar estágio no exterior na Universidade Nacional Autônoma do México ([UNAM](https://www.unam.mx)) onde desenvolvi atividades sobre Meteorologia Tropical.  
 
