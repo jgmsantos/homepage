@@ -5,6 +5,8 @@ Apresentações
 
 + [Monitoramento de queimadas](https://docs.google.com/presentation/d/1GzuagGBayMBfvQu2469NQ13G-XSYDGfNcRYkWeBVET8/edit?usp=sharing). Agosto/2024.
   + [Vídeo sobre a palestra](https://www.youtube.com/watch?v=laqrI5uj7Vk)
+  + [Resolução do exercício 1](https://youtu.be/3GAwktJNoM8)
+  + [Resolução do exercício 2](https://youtu.be/laqrI5uj7Vk)
 
 + [Queimadas em Roraima: Fevereiro de 2024](https://drive.google.com/file/d/1ttGqxgRrLp0E6FxkPmsoBQ5G3b5XM0Js/view?usp=drive_link). Fevereiro/2024.
 
