@@ -3,6 +3,7 @@ Apresentações
 
 2024
 
++ [Fogo na região tropical: Análise diagnóstica do Bioma Amazônia](https://drive.google.com/file/d/1QwwtsYltSIW7yucJz4tLxowf9xT3Oi2A/view?usp=sharing). Agosto/2024.
 + [Monitoramento de queimadas](https://docs.google.com/presentation/d/1GzuagGBayMBfvQu2469NQ13G-XSYDGfNcRYkWeBVET8/edit?usp=sharing). Agosto/2024.
   + [Vídeo sobre a palestra](https://www.youtube.com/watch?v=laqrI5uj7Vk)
   + [Resolução do exercício 1](https://youtu.be/3GAwktJNoM8)
