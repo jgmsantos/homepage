@@ -1348,6 +1348,12 @@ O objetivo do script consiste em calcular o percentil 95% e comparar este result
 
 Foi feita uma função para deixar o cálculo mais genérico possível.
 
+O script (``percentil.sh``) e o arquivo (``CPC-1981.nc``) para teste encontram-se em:
+
+[https://github.com/jgmsantos/Scripts/tree/master/CDO/percentil](https://github.com/jgmsantos/Scripts/tree/master/CDO/percentil)
+
+
+
 ```bash
 #!/bin/bash
 
