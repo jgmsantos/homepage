@@ -1410,7 +1410,7 @@ function calcula_percentil() {
     
     echo "Removendo arquivos desnecessários."
     # Remove arquivos temporários.
-    # Para ver os passos intermediários, descomente a linha abaixo.
+    # Para ver os passos intermediários, comente a linha abaixo.
     rm -f tmp??.nc p95.nc merge.nc
 }
 #-Fim da função -----------------------------------------------------------------------------------------------------
