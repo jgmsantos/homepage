@@ -1342,7 +1342,7 @@ cdo -s -O --no_history -monmean ${DIR_OUTPUT}/RH_Diaria.nc ${DIR_OUTPUT}/RH_Mens
 rm -f ${DIR_TMP}/*
 
 ```
-### Cálculo do percentil 95 usando dados de precipitação
+### Cálculo o total de chuva anual a partir do percentil
 
 O objetivo do script consiste em calcular o percentil 95% e comparar este resultado com os dados diários de chuva previamente selecionados com valores iguais e maiores que 1 mm/dia (dias chuvosos) para um determinado ano e depois gerar a chuva acumulada para este ano a partir dos dias em que a chuva foi maior que o percentil 95%. O resultado é um arquivo NetCDF com apenas um tempo referente a soma de todos os dias em que a chuva (mm/dia) foi maior que o percentil 95.
 
