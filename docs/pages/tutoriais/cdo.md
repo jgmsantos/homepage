@@ -1344,14 +1344,14 @@ rm -f ${DIR_TMP}/*
 ```
 ### Cálculo do percentil 95 usando dados de precipitação
 
-O objetivo do script consiste em calcular o percentil 95 e comparar este resultado com os dados diários de chuva previamente selecionados com valores iguais e maiores que 1 mm/dia para um determinado ano e depois gerar o total de chuva para este ano usando os dias em que a chuva foi maior que o percentil 95. O resultado é um arquivo NetCDF com apenas um tempo referente a soma de todos os dias em que a chuva foi maior que o percentil 95.
+O objetivo do script consiste em calcular o percentil 95% e comparar este resultado com os dados diários de chuva previamente selecionados com valores iguais e maiores que 1 mm/dia (dias chuvosos) para um determinado ano e depois gerar a chuva acumulada para este ano a partir dos dias em que a chuva foi maior que o percentil 95%. O resultado é um arquivo NetCDF com apenas um tempo referente a soma de todos os dias em que a chuva (mm/dia) foi maior que o percentil 95.
 
-**Desafio feito pelo amigo Prof. Dr. Augusto Veiga da UEA.**
+Foi feita uma função para deixar o cálculo mais genérico possível.
 
 ```bash
 #!/bin/bash
 
-# -Início da função --------------------------------------------------------------------------------------------------
+#-Início da função --------------------------------------------------------------------------------------------------
 # Função que calcula o percentil.
 function calcula_percentil() {
 
@@ -1413,15 +1413,15 @@ function calcula_percentil() {
     # Para ver os passos intermediários, descomente a linha abaixo.
     rm -f tmp??.nc p95.nc merge.nc
 }
-# -Fim da função -----------------------------------------------------------------------------------------------------
+#-Fim da função -----------------------------------------------------------------------------------------------------
 
 # Programa principal. Declara algumas variáveis.
 Nome_Do_Arquivo_Diario_De_Chuva="CPC-1981.nc" # Em mm/dia.
-percentil="80" # Percentil de interesse. Intervalo válido: 0-100.
-Nome_Da_Variavel_Arquivo_De_Chuva="pr" # Nome da variável que está no NetCDF do arquivo "Nome_Do_Arquivo_Diario_De_Chuva".
+percentil="95" # Percentil de interesse. Intervalo válido: 0-100.
+Nome_Da_Variavel_Arquivo_De_Chuva="pr" # Nome da variável que está no arquivo NetCDF.
 Nome_Do_Arquivo_Gerado="chuva_p${percentil}_1981.nc" # Arquivo que será gerado na sua máquina.
 
-# Chama a função.
+# Chama a função para calcular o percentil.
 # Ordem dos parâmetros de acordo com a função. São 4 no total.
 #                                $1                        $2                      $3                            $4
 calcula_percentil "$Nome_Do_Arquivo_Diario_De_Chuva" "$percentil" "${Nome_Da_Variavel_Arquivo_De_Chuva}" "${Nome_Do_Arquivo_Gerado}"
