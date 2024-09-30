@@ -1400,30 +1400,30 @@ function calcula_percentil() {
     cdo -s -O --no_history merge tmp02.nc p95.nc merge.nc
     
     echo "Selecionando os pontos de grade onde a precipitação é maior que o percentil $2%."
-    # (chuva>p95)?pr:-999 = Quando a chuva for maior que o percentil 95% , recebe o valor 
-    # de chuva , caso contrário, recebe o valor "-999".
+    # (chuva>p95)?pr:-999 = Quando a chuva for maior que o percentil 95%, recebe o valor 
+    # de "pr", caso contrário, recebe o valor "-999".
     # Depois converte o valor "-999" para undef (-setmissval).
-    # ppt é um nome qualquer definido pelo usuário.
-    # Neste arquivo (tmp03.nc) terão todos os dias em que a chuva foi maior que o percentil 95.
+    # "ppt" é um nome qualquer definido pelo usuário.
+    # Neste arquivo (tmp03.nc) terão todos os dias em que a chuva foi maior que o percentil 95%.
     cdo -s --no_history -setmissval,-999 -expr,"ppt=($3>p$2)?$3:-999" merge.nc tmp03.nc
     
     echo "Somando todos os dias onde a chuva foi maior que o percentil $2%."
-    # Soma os dias de um determinado ano em que a chuva foi maior que o p95.
-    # chuva_p95_2023.nc = É o arquivo final.
+    # Soma os dias de um determinado ano em que a chuva foi maior que o percentil 95%.
     cdo -s --no_history timsum tmp03.nc $4
 
     echo "Arquivo gerado: $4"
     
     echo "Removendo arquivos desnecessários."
     # Remove arquivos temporários.
-    # Para ver os passos intermediários, comente a linha abaixo.
+    # Para visualizar os resultados intermediários, comente a linha abaixo.
+    # E no seu visualizador de preferência, analise os arquivos abaixo.
     rm -f tmp??.nc p95.nc merge.nc
 }
 #-Fim da função -----------------------------------------------------------------------------------------------------
 
 # Programa principal. Declara algumas variáveis.
 Nome_Do_Arquivo_Diario_De_Chuva="CPC-1981.nc" # Em mm/dia.
-percentil="95" # Percentil de interesse. Intervalo válido: 0-100.
+percentil="95" # Valor do percentil de interesse. Intervalo válido: 0-100.
 Nome_Da_Variavel_Arquivo_De_Chuva="pr" # Nome da variável que está no arquivo NetCDF.
 Nome_Do_Arquivo_Gerado="chuva_p${percentil}_1981.nc" # Arquivo que será gerado na sua máquina.
 
@@ -1431,6 +1431,9 @@ Nome_Do_Arquivo_Gerado="chuva_p${percentil}_1981.nc" # Arquivo que será gerado 
 # Ordem dos parâmetros de acordo com a função. São 4 no total.
 #                                $1                        $2                      $3                            $4
 calcula_percentil "$Nome_Do_Arquivo_Diario_De_Chuva" "$percentil" "${Nome_Da_Variavel_Arquivo_De_Chuva}" "${Nome_Do_Arquivo_Gerado}"
+
+# Para executar o script, basta digitar no seu terminal:
+bash percentil.sh
 
 ```
 
