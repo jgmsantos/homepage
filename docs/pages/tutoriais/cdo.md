@@ -1437,6 +1437,53 @@ bash percentil.sh
 
 ```
 
+### Obter o índice ou o tempo de maior valor da série temporal
+
+**Importante**: O exemplo abaixo poderia ser aplicado em um dado espacial. Foi feito para uma série temporal somente para facilitar o entendimento.
+
+Dada a série temporal abaixo com 12 tempos ou meses de temperatura. A pergunta é, qual é o índice ou tempo ou mês em que ocorreu a maior temperatura? A resposta é o índice 6 que tem temperatura igual a 29.6. Como fazer isso no CDO? Neste caso, estamos trabalhando com meses, de janeiro até dezembro, ou seja, 1 a 12.
+
+Caso seu arquivo tenha 30 tempos, ele vai extrair o índice máximo considerando os 30 tempos. Tenha cuidado com a forma de utilizar este procedimento.
+
+![](../../images/cdo/fig01.JPG)
+
+Para achar o índice de maior valor, basta usar o operador ```timmaxidx```.
+
+```bash
+cdo -s timmaxidx temp.nc maximo.nc
+```
+
+Lembrando: 
+* -s: é o modo silencioso do CDO, isto é, ele não mostra na tela o que está sendo feito.
+* temp.nc:  é o seu arquivo que está no computador.
+* maximo.nc: é o arquivo que será gerado no seu computador.
+
+Ao realizar o comando acima, será gerado o arquivo ```maximo.nc```.
+
+Agora, vamos checar se está tudo certo digitando o comando a seguir, ou seja, se o resultado está correto por meio da figura abaixo:
+
+```bash
+cdo infon maximo.nc
+```
+
+![](../../images/cdo/fig02.JPG)
+
+Nota-se que destacado em amarelo está o resultado, isto é, 5. Ou seja, esse seria o índice desejado. 
+
+Ao verificar a figura inicial, o índice 5 tem como valor de temperatura 25.5. Algo está errado, pois a resposta deveria ser 6 e não 5. O índice 6 é o que tem o maior valor, ou seja, 29.6. 
+
+Como resolver isso? Basta somar 1 ao arquivo usando o operador ```addc``` que soma um valor constante ao arquivo, no nosso caso, será 1.
+
+O comando corrigido é:
+
+```bash
+cdo -s -addc,1 -timmaxidx temp.nc maximo.nc
+```
+
+![](../../images/cdo/fig03.JPG)
+
+Agora, está tudo correto. A resposta certa é o índice 6 (destacado em amarelo) que tem valor de 29.6.
+
 ### Vídeo aula de CDO
 
 + 2021
