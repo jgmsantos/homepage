@@ -1484,6 +1484,8 @@ cdo -s -addc,1 -timmaxidx temp.nc maximo.nc
 
 Agora, está tudo correto. A resposta certa é o índice 6 (destacado em amarelo) que tem valor de 29.6.
 
+Para finalizar, imagina que você aplica isso em um dado espacial de precipitação que tem 12 meses. O resultado será um arquivo espacial com apenas um tempo mostrando os pontos de grade onde ocorreu o mês de maior valor de chuva, neste caso. Em outras, será visto um mapa que mostra os meses de maior ocorrência de chuva.
+
 ### Vídeo aula de CDO
 
 + 2021
