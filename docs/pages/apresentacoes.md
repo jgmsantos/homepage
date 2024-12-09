@@ -3,7 +3,7 @@ Apresentações
 
 2024
 
-+ [Uso dos focos de queimadas no monitoramento ambiental: Bioma Caatinga ](https://docs.google.com/presentation/d/1EqdXV8Cp_m249wCvnnruufXbMGlcgpVn03bl7CO5F6w/edit?usp=sharing). Dezembro/2024.
++ [Uso dos focos de queimadas no monitoramento ambiental: Bioma Caatinga ](https://docs.google.com/presentation/d/1iRjLzCKkfqo6dYnRKOAVK_DrhhMgra-oduVQSG_gATg/edit?usp=sharing). Dezembro/2024.
 + [Fogo na região tropical: Análise diagnóstica do Bioma Amazônia](https://drive.google.com/file/d/1bHOL4nCz8uouGfdf3H3UlvVtd6BBZm70/view?usp=sharing). Agosto/2024.
 + [Monitoramento de queimadas](https://docs.google.com/presentation/d/1GzuagGBayMBfvQu2469NQ13G-XSYDGfNcRYkWeBVET8/edit?usp=sharing). Agosto/2024.
   + [Vídeo sobre a palestra](https://www.youtube.com/watch?v=laqrI5uj7Vk)
