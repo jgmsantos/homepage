@@ -441,12 +441,10 @@ NETCDF:"/vsicurl/https://ftp.cptec.inpe.br/modelos/tempo/SAMeT/DAILY/TMAX/2025/0
 O comando final somente com a variável ``tmax`` ficará assim:
 
 ```
-gdal_translate NETCDF:"/vsicurl/https://ftp.cptec.inpe.br/modelos/tempo/SAMeT/DAILY/TMAX/2025/01/SAMeT_CPTEC_TMAX_20250105.nc":tmax -b 1 -of netCDF tmp01.nc
+gdal_translate NETCDF:"/vsicurl/https://ftp.cptec.inpe.br/modelos/tempo/SAMeT/DAILY/TMAX/2025/01/SAMeT_CPTEC_TMAX_20250105.nc":tmax -of netCDF tmp01.nc
 ```
 
 * ``tmp01.nc`` é o nome que será salvo no seu diretório. Altere o nome e o local (diretório) a ser armazenado de acordo com as suas necessidades.
-
-O parâmetro ``-b 1`` representa a posição da variável ``tmax``. Se fossse ``nobs``, seria ``-b 2``.
 
 Outra situação, seria realizar um recorte em uma área de interesse, uma vez que este arquivo engloba toda a América do Sul. Para isso, basta usar o parâmetro abaixo:
 
@@ -455,5 +453,5 @@ Outra situação, seria realizar um recorte em uma área de interesse, uma vez q
 * Convenção: longitude oeste, latitude norte, longitude leste e latitude sul.
 
 ```
-gdal_translate NETCDF:"/vsicurl/https://ftp.cptec.inpe.br/modelos/tempo/SAMeT/DAILY/TMAX/2025/01/SAMeT_CPTEC_TMAX_20250105.nc":tmax -b 1 -projwin -75 7 -34 -35 -of netCDF tmp01.nc
+gdal_translate NETCDF:"/vsicurl/https://ftp.cptec.inpe.br/modelos/tempo/SAMeT/DAILY/TMAX/2025/01/SAMeT_CPTEC_TMAX_20250105.nc":tmax -projwin -75 7 -34 -35 -of netCDF tmp01.nc
 ```
