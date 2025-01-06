@@ -390,7 +390,7 @@ at (netcdfdataset.cpp,NCDFPutAttr,10484)
 
 Eu comparei o arquivo ```LUCC_2022.nc``` com o arquivo ```MCD12C1.A2022001.061.2023244164746.hdf``` no QGIS e eles são extamente iguais.
 
-##### Selecionar e recortar uma variável do SAMET/INPE
+#### Selecionar e recortar uma variável do SAMET/INPE
 
 O arquivo (``SAMeT_CPTEC_TMAX_20250105.nc``) do link abaixo possui duas variáveis, ``tmax`` e ``nobs``. O objetivo consiste em salvar no formato NetCDF apenas a variável ``tmax``.
 
