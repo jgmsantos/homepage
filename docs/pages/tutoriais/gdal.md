@@ -427,8 +427,10 @@ Center      (  256.0,  256.0)
 
 Onde tem: ```Subdatasets:```, há duas informações:
 
-* SUBDATASET_1_NAME=NETCDF:"/vsicurl/https://ftp.cptec.inpe.br/modelos/tempo/SAMeT/DAILY/TMAX/2025/01/SAMeT_CPTEC_TMAX_20250105.nc":tmax
-* SUBDATASET_2_NAME=NETCDF:"/vsicurl/https://ftp.cptec.inpe.br/modelos/tempo/SAMeT/DAILY/TMAX/2025/01/SAMeT_CPTEC_TMAX_20250105.nc":nobs
+```
+SUBDATASET_1_NAME=NETCDF:"/vsicurl/https://ftp.cptec.inpe.br/modelos/tempo/SAMeT/DAILY/TMAX/2025/01/SAMeT_CPTEC_TMAX_20250105.nc":tmax
+SUBDATASET_2_NAME=NETCDF:"/vsicurl/https://ftp.cptec.inpe.br/modelos/tempo/SAMeT/DAILY/TMAX/2025/01/SAMeT_CPTEC_TMAX_20250105.nc":nobs
+```
 
 No fim cada linha tem o nome ``tmax`` e ``nobs``. A informação que será utilizada será ``tmax``.
 
