@@ -390,9 +390,9 @@ at (netcdfdataset.cpp,NCDFPutAttr,10484)
 
 Eu comparei o arquivo ```LUCC_2022.nc``` com o arquivo ```MCD12C1.A2022001.061.2023244164746.hdf``` no QGIS e eles são extamente iguais.
 
-##### Selecionar e recortar uma variável da fonte SAMET/INPE
+##### Selecionar e recortar uma variável do SAMET/INPE
 
-O arquivo do link abaixo possui duas variáveis, ``tmax`` e ``nobs``. O objetivo consiste em salvar no formato NetCDF apenas a variável ``tmax``.
+O arquivo (``SAMeT_CPTEC_TMAX_20250105.nc``) do link abaixo possui duas variáveis, ``tmax`` e ``nobs``. O objetivo consiste em salvar no formato NetCDF apenas a variável ``tmax``.
 
 https://ftp.cptec.inpe.br/modelos/tempo/SAMeT/DAILY/TMAX/2025/01/SAMeT_CPTEC_TMAX_20250105.nc
 
@@ -443,6 +443,8 @@ O comando final somente com a variável ``tmax`` ficará assim:
 ```
 gdal_translate NETCDF:"/vsicurl/https://ftp.cptec.inpe.br/modelos/tempo/SAMeT/DAILY/TMAX/2025/01/SAMeT_CPTEC_TMAX_20250105.nc":tmax -b 1 -of netCDF tmp01.nc
 ```
+
+* ``tmp01.nc`` é o nome que será salvo no seu diretório. Altere o nome e o local (diretório) a ser armazenado de acordo com as suas necessidades.
 
 O parâmetro ``-b 1`` representa a posição da variável ``tmax``. Se fossse ``nobs``, seria ``-b 2``.
 
