@@ -389,3 +389,69 @@ at (netcdfdataset.cpp,NCDFPutAttr,10484)
 **Tentei achar a solução para esta mensagem, mas não encontrei. Se alguém souber, compartilhe conosco.**
 
 Eu comparei o arquivo ```LUCC_2022.nc``` com o arquivo ```MCD12C1.A2022001.061.2023244164746.hdf``` no QGIS e eles são extamente iguais.
+
+##### Selecionar e recortar uma variável da fonte SAMET/INPE
+
+O arquivo do link abaixo possui duas variáveis, ``tmax`` e ``nobs``. O objetivo consiste em salvar no formato NetCDF apenas a variável ``tmax``.
+
+https://ftp.cptec.inpe.br/modelos/tempo/SAMeT/DAILY/TMAX/2025/01/SAMeT_CPTEC_TMAX_20250105.nc
+
+Para sabe o nome das variáveis e as informações necessárias para fazer isso, basta digitar no seu terminal o comando abaixo:
+
+```
+gdalinfo /vsicurl/https://ftp.cptec.inpe.br/modelos/tempo/SAMeT/DAILY/TMAX/2025/01/SAMeT_CPTEC_TMAX_20250105.nc
+```
+
+E serão mostradas as seguintes informações:
+
+```
+Driver: netCDF/Network Common Data Format
+Files: /vsicurl/https://ftp.cptec.inpe.br/modelos/tempo/SAMeT/DAILY/TMAX/2025/01/SAMeT_CPTEC_TMAX_20250105.nc
+Size is 512, 512
+Metadata:
+  NC_GLOBAL#CDI=Climate Data Interface version 1.8.2 (http://mpimet.mpg.de/cdi)
+  NC_GLOBAL#CDO=Climate Data Operators version 1.8.2 (http://mpimet.mpg.de/cdo)
+  NC_GLOBAL#Conventions=CF-1.6
+Subdatasets:
+  SUBDATASET_1_NAME=NETCDF:"/vsicurl/https://ftp.cptec.inpe.br/modelos/tempo/SAMeT/DAILY/TMAX/2025/01/SAMeT_CPTEC_TMAX_20250105.nc":tmax
+  SUBDATASET_1_DESC=[1x1381x1001] tmax (64-bit floating-point)
+  SUBDATASET_2_NAME=NETCDF:"/vsicurl/https://ftp.cptec.inpe.br/modelos/tempo/SAMeT/DAILY/TMAX/2025/01/SAMeT_CPTEC_TMAX_20250105.nc":nobs
+  SUBDATASET_2_DESC=[1x1381x1001] nobs (64-bit floating-point)
+Corner Coordinates:
+Upper Left  (    0.0,    0.0)
+Lower Left  (    0.0,  512.0)
+Upper Right (  512.0,    0.0)
+Lower Right (  512.0,  512.0)
+Center      (  256.0,  256.0)
+```
+
+Onde tem: ```Subdatasets:```, há duas informações:
+
+* SUBDATASET_1_NAME=NETCDF:"/vsicurl/https://ftp.cptec.inpe.br/modelos/tempo/SAMeT/DAILY/TMAX/2025/01/SAMeT_CPTEC_TMAX_20250105.nc":tmax
+* SUBDATASET_2_NAME=NETCDF:"/vsicurl/https://ftp.cptec.inpe.br/modelos/tempo/SAMeT/DAILY/TMAX/2025/01/SAMeT_CPTEC_TMAX_20250105.nc":nobs
+
+No fim cada linha tem o nome ``tmax`` e ``nobs``. A informação que será utilizada será ``tmax``.
+
+Basta copiar toda a linha à direita do sinal de igualdade, isto é:
+
+```
+NETCDF:"/vsicurl/https://ftp.cptec.inpe.br/modelos/tempo/SAMeT/DAILY/TMAX/2025/01/SAMeT_CPTEC_TMAX_20250105.nc":tmax
+```
+
+O comando final somente com a variável ``tmax`` ficará assim:
+
+```
+gdal_translate NETCDF:"/vsicurl/https://ftp.cptec.inpe.br/modelos/tempo/SAMeT/DAILY/TMAX/2025/01/SAMeT_CPTEC_TMAX_20250105.nc":tmax -b 1 -of netCDF tmp01.nc
+```
+
+O parâmetro ``-b 1`` representa a posição da variável ``tmax``. Se fossse ``nobs``, seria ``-b 2``.
+
+Outra situação, seria realizar um recorte em uma área de interesse, uma vez que este arquivo engloba toda a América do Sul. Para isso, basta usar o parâmetro abaixo:
+
+``-projwin -75 7 -34 -35``
+
+* Convenção: longitude oeste, latitude norte, longitude leste e latitude sul.
+
+```
+gdal_translate NETCDF:"/vsicurl/https://ftp.cptec.inpe.br/modelos/tempo/SAMeT/DAILY/TMAX/2025/01/SAMeT_CPTEC_TMAX_20250105.nc":tmax -b 1 -projwin -75 7 -34 -35 -of netCDF tmp01.nc
+```
