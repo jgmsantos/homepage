@@ -50,7 +50,9 @@ netCDF Operators (NCO)
 
 9 Criar vários atributos (`standard_name`, `missing_value`, `_FillValue`,`precip` e `units`) de uma só vez para a variável `precip`.
 
-`ncatted -O -a standard_name,precip,c,c,"Precipitacao" -O -a missing_value,precip,c,f,-999 -O -a _FillValue,precip,c,f,-999 -O -a units,precip,c,c,"mm/day" input.nc output.nc`
+```bash
+ncatted -O -a standard_name,precip,c,c,"Precipitacao" -O -a missing_value,precip,c,f,-999 -O -a _FillValue,precip,c,f,-999 -O -a units,precip,c,c,"mm/day" input.nc output.nc
+```
 
 10 Apagar a variável e a dimensão `time` do arquivo.
 
@@ -72,7 +74,9 @@ netCDF Operators (NCO)
 
   + Para consertar o arquivo, basta fazer:
 
-`ncatted -O -a positive,lev,c,c,"down" -a units,lev,c,c,"millibar" -a long_name,lev,c,c,"Level"  ATM.perfil.nc tmp.nc`
+```bash
+ncatted -O -a positive,lev,c,c,"down" -a units,lev,c,c,"millibar" -a long_name,lev,c,c,"Level"  ATM.perfil.nc tmp.nc
+```
 
   + O resultado é mostrado na figura abaixo:
 
@@ -90,7 +94,9 @@ netCDF Operators (NCO)
    
   + Para resolver isso, basta usar o comando abaixo. O `ncap2` faz parte do [nco](http://nco.sourceforge.net).
 
-`ncap2 -s 'defdim("lon",1);lon[lon]=-60;lon@units="degrees_east";lon@axis="X";lon@long_name="longitude";defdim("lat",1);lat[lat]=-10;lat@units="degrees_north";lat@axis="Y";lat@long_name="latitude"' maosodarS1.b1.20140301.000000.cdf output.nc`
+```bash
+ncap2 -s 'defdim("lon",1);lon[lon]=-60;lon@units="degrees_east";lon@axis="X";lon@long_name="longitude";defdim("lat",1);lat[lat]=-10;lat@units="degrees_north";lat@axis="Y";lat@long_name="latitude"' maosodarS1.b1.20140301.000000.cdf output.nc
+```
 
   + `maosodarS1.b1.20140301.000000.cdf` é o arquivo de entrada e `output.`nc é o arquivo de saída. O `output.nc` é um nome qualquer definido pelo usuário.
   
@@ -157,7 +163,7 @@ ncatted -a Informações,global,a,c,"Autor:Guilherme Martins\n E-mail:jgmsantos@
 
 Há outra forma de fazer a mesma atividade. Serão inseridas as informações: "Autor", "E-mail" e "Site". Sempre que alguma informação a ser inserida tiver espaço, coloque toda a expressão entre aspas.
 
-```
+```bash
 ncatted -a Autor,global,a,c,"Guilherme Martins" -a "E-mail para contato",global,a,c,"jgmsantos@gmail.com" -a Site,global,a,c,"www.teste.com.br" input.nc
 ```
 
