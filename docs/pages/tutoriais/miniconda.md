@@ -274,7 +274,7 @@ conda env export > environment.yml
 
 Isso criará o arquivo chamado `environment.yml` no diretório atual. Ele contém as bibliotecas instaladas via conda. Além disso, também são disponibilizadas as bibliotecas instaladas com pip, tudo num só arquivo. No arquivo `environment.yml`, tem uma seção chamada pip (dentro de dependencies), que lista os pacotes instalados pelo pip.
 
-Algo parecido com o trecho abaixo. O `name: teste` é o nome do ambiente virtual.
+Algo parecido com o trecho abaixo. O `name: teste` é o nome do ambiente virtual e `prefix: /home/gui/anaconda3/envs/teste` é onde está instalado o ambiente virtual `teste`.
 
 ```yaml	
 name: teste
@@ -297,6 +297,7 @@ dependencies:
       - anyio==4.2.0
       - appdirs==1.4.4
       - asttokens==2.2.1
+prefix: /home/gui/anaconda3/envs/teste
 ```
 
 Como recriar o ambiente?
