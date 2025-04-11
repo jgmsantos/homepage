@@ -257,3 +257,76 @@ E para forçar a desinstalação do CDO caso o comando acima não funcione:
 ```
 conda remove --force cdo
 ```
+
+## 13. Instalação de pacotes utilizando o environment.yml
+
+O `environment.yml` é um arquivo que contém as dependências necessárias para criar um ambiente virtual. 
+
+Supondo que o usuário queira instalar as mesmas bibliotecas de um colega, basta pedir para ele enviar o arquivo `environment.yml` gerado pelo comando abaixo.
+
+Antes de executar o comando, ative o ambiente virtual que se deseja exportar as dependências por meio do comando `conda activate <nome_ambiente>`.
+
+Eu fiz um teste, criei um ambiente virtual chamado `teste` com o comando `conda create --name teste`. Instalei algumas bibliotecas e depois exportei este ambiente virtual com o comando abaixo:
+
+```bash
+conda env export > environment.yml
+```
+
+Isso criará o arquivo chamado `environment.yml` no diretório atual. Ele contém as bibliotecas instaladas via conda. Além disso, também são disponibilizadas as bibliotecas instaladas com pip, tudo num só arquivo. No arquivo `environment.yml`, tem uma seção chamada pip (dentro de dependencies), que lista os pacotes instalados pelo pip.
+
+Algo parecido com o trecho abaixo. O `name: teste` é o nome do ambiente virtual.
+
+```yaml	
+name: teste
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1=conda_forge
+  - _openmp_mutex=4.5=2_kmp_llvm
+  .
+  .
+  .
+   - yaml=0.2.5=h7b6447c_0
+  - zict=2.1.0=py39h06a4308_0
+  - zipp=3.15.0=pyhd8ed1ab_0
+  - zlib=1.2.13=h166bdaf_4
+  - zstd=1.5.2=ha4553b6_0
+  - pip:
+      - affine==2.3.1
+      - anyio==4.2.0
+      - appdirs==1.4.4
+      - asttokens==2.2.1
+```
+
+Como recriar o ambiente?
+
+Quando você ou outra pessoa recriar o ambiente, o Conda instalará os pacotes instalados via Conda e o pip instalará as bibliotecas listadas na seção pip.
+
+Antes de digitar o comando abaixo, note que no arquivo `environment.yml` é mostrado o nome do ambiente virtual que foi exportado, isto é, `name: teste`. 
+
+Existe a possibilidade de criar o ambiente virtual com este nome (`name: teste`) ou com outro nome. Lembrando que foi o seu colega que enviou o arquivo `environment.yml`. 
+
+Caso queira criar o ambiente virtual com outro nome, basta alterar o nome do ambiente no arquivo `environment.yml` para o nome desejado, por exemplo, alterar de `name: teste` para `name: clima`. Ou seja, será criado o ambiente virtual chamado `clima` (poderia ser qualquer nome). Além disso, é necessário alterar a última linha do arquivo `environment.yml`:
+
+De:
+
+`prefix: /home/gui/anaconda3/envs/teste`
+
+Para:
+
+`prefix: /home/gui/anaconda3/envs/clima`
+
+Ou seja, onde tudo será instalado, como será criado o novo ambiente chamado clima, é importante alterar neste trecho o nome do ambiente virtual. Caso não altere o nome, o Conda dirá que já existe o ambiente virtual e não fará nada.
+
+Agora, basta digitar o comando abaixo para criar o ambiente virtual chamado `clima`:
+
+```bash
+conda env create -f environment.yml
+```
+
+O comando acima pode ser feito dentro de qualquer ambiente virtual.
+
+**Dica final:**
+
+Sempre use `conda install` para pacotes disponíveis no Conda e reserve `pip install` para bibliotecas que não estão disponíveis no repositório do Conda. Isso minimiza problemas de compatibilidade.
