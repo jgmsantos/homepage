@@ -20,5 +20,6 @@ Tutoriais
    shell
    wgrib
    wgrib2
+   venv_win
    wsl1
    wsl2
