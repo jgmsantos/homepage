@@ -1,129 +1,46 @@
-# Passos para criar ambiente virtual no Windows
+# Criar ambiente virtual no Windows
 
-## Instalação do terminal Git
+## Instalação usando Anaconda
 
-Este terminal Git Bash é um terminal que pode ser utilizado no Windows e no Linux.
+Acesse o link abaixo para baixar o Anaconda:
 
-O terminal Git Bash está disponível em:
+[https://www.anaconda.com](https://www.anaconda.com/)
 
-[https://git-scm.com/downloads](https://git-scm.com/downloads)
+No canto superior direito, clique em `Free Download`. Insira seu e-mail e clique em `Submit`. Você será direcionado para uma nova página que contém os executáveis para download. 
 
-Os passos abaixo usam este terminal Git.
+Há duas opções: 
 
-## Possibilidade 1: Usando venv
+* Anaconda Installers
+* Miniconda Installers 
+ 
+A diferença entre os dois é que o `Anaconda` já vem com uma série de pacotes pré-instalados (é mais pesado), enquanto o `Miniconda` é uma versão mais leve e permite que você instale apenas os pacotes que precisa. Para a maioria dos usuários, o Anaconda é a melhor opção.
 
-O `venv` é um módulo que já vem instalado com o Python. O `venv` é uma versão mais nova do `virtualenv`, mas o virtualenv ainda é muito utilizado. Funciona apenas no Python 3.3 e versões posteriores
-   
-```warning
-Aviso: Antes de tudo, instalar o Python no Windows via Microsoft Store.
-```
+Neste exemplo, será utilizado o `Miniconda Installers` para Windows. Basta clicar em `64-Bit Graphical Installer` para realizar o download do executável. Na pasta `Downloads`, clique duas vezes no arquivo `Miniconda3-latest-Windows-x86_64.exe` para iniciar a instalação. Basta seguir as instruções do instalador.
 
-Abra o terminal do Git e digite Python e uma janela será aberta solicitando a instalação do Python no Windows. Após a instalação, o terminal do Git irá reconhecer o Python.
+No menu Iniciar do Windows deve ter uma pasta assim:
 
-### Criar um ambiente virtual chamado venv
+`Anaconda (miniconda3)`
 
-Este nome `venv` já é um padrão quando se cria ambiente virtual. Poderia ser qualquer outro nome, mas o padrão é `venv`.
+Que contém os dois promptos de comando:
+* Anaconda Powershell Prompt
+* Anaconda Prompt
 
-Por padrão, o ambiente virtual é criado na pasta onde o comando é executado. Para criar o ambiente virtual, execute o comando abaixo:
+Ambos podem ser utilizados para criar ambientes virtuais e instalar/desinstalar pacotes. 
 
-Sintaxe:
+## Instalação de pacotes
 
-```bash
-python -m venv <nome_do_ambiente>
-```
+Eu particularmente gosto de usar o `Anaconda Prompt`, pois ele é mais leve.
 
-Exemplo: Criando o ambiente virtual chamado `venv`:
-
-```bash
-python -m venv venv
-```
-
-Onde: `-m` é o argumento que indica que o Python deve executar um módulo como um script e `venv` é o nome do módulo que será executado. O primeiro `venv` é o nome do módulo e o segundo `venv` é o nome do ambiente virtual que será criado.
-
-### Habilitar o ambiente virtual
-
-#### Via terminal do Linux
-
-Para habilitar o ambiente virtual, execute o comando abaixo:
+Ao abrir o `Anaconda Prompt`, você verá uma tela semelhante a esta:
 
 ```bash
-source venv/Scripts/activate
+(base) C:\Users\<seu_usuario> 
 ```
 
-### Desativar o ambiente virtual
+Terá o nome `(base)` do lado esquerdo, isso quer dizer que você está no ambiente base do Anaconda. 
 
-Para desativar o ambiente virtual, execute o comando abaixo:
+NUNCA use ou instale pacotes nesse ambiente, SEMPRE crie um novo ambiente virtual para instalar/desinstalar pacotes.
 
-```bash
-deactivate
-```
+Para criar um ambiente virtual e instalar pacotes, siga os passos abaixo:
 
-#### Via terminal do Windows
-
-Para o caso de tentar ativar o ambiente virtual pelo Windows e aparecer a mensagem de erro abaixo:
-
-```bash
-.\venv\Scripts\activate : O arquivo C:\Users\guilherme.martins\guilherme\coisas\venv\Scripts\Activate.ps1 não pode ser carregado porque a execução de       
-scripts foi desabilitada neste sistema. Para obter mais informações, consulte about_Execution_Policies em https://go.microsoft.com/fwlink/?LinkID=135170.
-```
-
-A solução está no link abaixo:
-
-[Clique aqui](https://pt.stackoverflow.com/questions/220078/o-que-significa-o-erro-execu%C3%A7%C3%A3o-de-scripts-foi-desabilitada-neste-sistema)
-
-Basta digitar o seguinte comando no terminal que está aberto no Windows:
-
-```bash
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-```
-
-Feito isso, basta executar o comando abaixo para ativar o ambiente virtual:
-
-```bash
-.\venv\Scripts\activate
-```
-
-Para desativar o ambiente virtual, execute o seguinte comando:
-
-```bash
-deactivate
-```
-
-Em ambos os casos, tanto no Linux quanto no Windows, o terminal irá mostrar o nome do ambiente virtual que foi ativado. No caso do Windows, o nome do ambiente virtual será exibido entre parênteses, como no exemplo abaixo:
-
-```bash
-(venv) PS C:\Users\guilherme.martins\guilherme
-```
-
-## Possibilidade 2: Usando Anaconda
-
-É a opção que mais gosto e uso. Isso é pessoal.
-
-Acessar o site abaixo para realizar o download do Anaconda:
-
-[https://www.anaconda.com/download](https://www.anaconda.com/download)
-
-
-Preecncher os dados solicitados para realizar o downalod do executável. Ele tem um nome parecido com o que é mostrado abaixo:
-
-```bash
-Anaconda3-2024.10-1-Windows-x86_64.exe
-```
-
-A instalação demora um pouco.
-
-Após a instalação finalizada, abra o terminal do Git Bash e digite:
-
-```bash
-conda --version
-```
-
-Quando fiz essa instalação, o comando acima retornou a versão do conda instalada:
-
-```bash
-conda 24.9.2
-```
-
-Depois, é só seguir os passos do 4 em diante para criar ambientes virtuais e instalar pacotes.
-
-[https://guilherme.readthedocs.io/en/latest/pages/tutoriais/miniconda.html](https://guilherme.readthedocs.io/en/latest/pages/tutoriais/miniconda.html)
+[https://guilherme.readthedocs.io/en/latest/pages/tutoriais/miniconda.html#para-atualizar-o-conda](https://guilherme.readthedocs.io/en/latest/pages/tutoriais/miniconda.html#para-atualizar-o-conda)
