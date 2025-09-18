@@ -2,7 +2,7 @@ Apresentações
 =============
 2025
 
-+ [Impacto das Queimadas nas Linhas De Transmissão do Sistema Interligado Nacional (Sin) - Diagnóstico e Recomendações](https://docs.google.com/presentation/d/1qAB3gK_ujFtoywf45I-0FDxwAe1C_mxty2SuxSOEmZU/edit?usp=sharing). Outubro/2025.
++ [Impacto das Queimadas nas Linhas De Transmissão do Sistema Interligado Nacional (SIN) - Diagnóstico e Recomendações](https://docs.google.com/presentation/d/1qAB3gK_ujFtoywf45I-0FDxwAe1C_mxty2SuxSOEmZU/edit?usp=sharing). Outubro/2025.
 
 2024
 
