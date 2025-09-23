@@ -348,6 +348,48 @@ Basta alterar `HEAD~1` para `HEAD~2` para pegar dois commit atrás.
 ``git log --oneline -n 5``
 
 
+### Passo a passo para enviar um repositório local para o GitHub
+
+- Ver status.
+
+``git status``
+
+- Adicionar as mudanças. Os arquivos ainda não foram enviados.
+
+``git add .``
+
+- Fazer commit. Nesta etapa é criada uma imagem (snapshot) das mudanças no Git. Cria um registro com todas as alterações a partir do comando acima (git add .).
+
+``git commit -m "sua mensagem de commit"``
+
+- Enviar para o GitHub.
+
+``git push origin main``
+
+- Opcional para conferir o que foi enviado. Mostra apenas as últimas 5 linhas.
+
+``git log --oneline -n 5``
+
+### Alguns comandos úteis
+
+- Ver o histótico de commit:
+
+``git log``
+
+- Recuperar o arquivo do penúltimo commit.
+
+``git checkout HEAD~1 -- roda_todos_script.sh``
+
+Basta alterar ``HEAD~1`` para ``HEAD~2`` para recuperar de dois commit atrás.
+
+- Desfazer os dois últimos commit
+
+``git reset --hard HEAD~2``
+
+- Exibe o nome da branch atual do seu repositório
+
+``git branch --show-current``
+
 ### Instalando o Visual Studio Code no Windows
 
 O Visual Studio Code é excelente para trabalhar em conjunto com o Git e Github pois fornece uma interface gráfica amigável.
