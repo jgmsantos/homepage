@@ -325,29 +325,6 @@ Basta alterar `HEAD~1` para `HEAD~2` para pegar dois commit atrás.
 
 `git branch --show-current`
 
-## Passo a passo para enviar um repositório local para o GitHub
-
-- Ver status.
-
-``git status``
-
-- Adicionar as mudanças. Os arquivos ainda não foram enviados.
-
-``git add .``
-
-- Fazer commit. Nesta etapa é criada uma imagem (snapshot) das mudanças no Git. Cria um registro com todas as alterações a partir do comando acima (``git add .``).
-
-``git commit -m "sua mensagem de commit"``
-
-- Enviar para o GitHub.
-
-``git push origin main``
-
-- Opcional para conferir o que foi enviado. Mostra apenas as últimas 5 linhas.
-
-``git log --oneline -n 5``
-
-
 ### Passo a passo para enviar um repositório local para o GitHub
 
 - Ver status.
