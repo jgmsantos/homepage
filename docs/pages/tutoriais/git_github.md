@@ -224,7 +224,7 @@ Se tudo ocorreu bem, será mostrada a imagem abaixo:
 
 + A imagem abaixo é referente ao repositório descrito acima. A ideia é baixar tudo que tem nele para a máquina local.
 
-![](../../images/gitfig/git08.png)
+![](../../images/gitfig/git08.PNG)
 
 ```
 git init
