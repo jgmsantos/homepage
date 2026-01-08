@@ -2,6 +2,8 @@ Apresentações
 =============
 2025
 
++ [Mudanças Climáticas e Queimadas no Brasil](https://docs.google.com/presentation/d/1WwbsRR1KfYDrK4f6qC1uQGaOK0tdHaZ5CTvlS7220eU/edit?usp=sharing). Novembro/2025.
+
 + [Impacto das Queimadas nas Linhas De Transmissão do Sistema Interligado Nacional (SIN) - Diagnóstico e Recomendações](https://docs.google.com/presentation/d/1qAB3gK_ujFtoywf45I-0FDxwAe1C_mxty2SuxSOEmZU/edit?usp=sharing). Outubro/2025.
 
 2024
