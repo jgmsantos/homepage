@@ -363,6 +363,6 @@ grib_to_netcdf s2s_sbsj_prod_enfo_2025120300_sl_000.grib2 -o s2s_sbsj_prod_enfo_
 ```
 
 onde:
-* s2s_sbsj_prod_enfo_2025120300_sl_000.grib2: arquivo que encontra-se na máquina local.
+* s2s_sbsj_prod_enfo_2025120300_sl_000.grib2: é o arquivo que encontra-se na máquina local.
 * -o: é parâmetro de saída (output).
 * s2s_sbsj_prod_enfo_2025120300_pl_000.nc: é o nome do arquivo definido pelo usuário.
