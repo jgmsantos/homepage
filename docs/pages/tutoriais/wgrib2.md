@@ -330,7 +330,7 @@ Para adicionar mais variáveis, basta fazer:
 
 Neste novo exemplo, adicionou-se a variável ```HGT```.
 
-##### Converter previsao subsazonal do CPTEC para NetCDF
+##### Converter arquivo de previsao subsazonal do CPTEC para NetCDF
 
 O objetivo consiste em converter de Grib2 para NetCDF os arquivos que estão em:
 
@@ -338,7 +338,7 @@ O objetivo consiste em converter de Grib2 para NetCDF os arquivos que estão em:
 
 Eles representam as previsões do modelo global do CPTEC.
 
-O formato dos diretório é AAAAMMDD00. Dentre dele estão vários arquivos mostrados abaixo:
+O formato do diretório é AAAAMMDD00. Dentre dele estão vários arquivos como mostrado abaixo:
 
 * s2s_sbsj_prod_enfo_AAAAMMDD00_pl_000.grib2
   * pl: pressure level (nível de pressão)
@@ -348,9 +348,9 @@ O formato dos diretório é AAAAMMDD00. Dentre dele estão vários arquivos most
   * Variando de 000 até 010 membros.
 
 
-Ao baixar o arquivo para sua máquina local, basta digitar os comandos abaixo. Lembrando que o arquivo abaixo deve ser alterado para o arquivo de interesse:
+Ao baixar o arquivo para sua máquina local, basta digitar os comandos abaixo. Lembrando que o arquivo deve ser alterado para o arquivo de interesse:
 
-A opção ```-I type``` agrupa as variáveis. Exemplo, as variáveis que possuem nível vertical (pl) são 6 no total. Com o comando abaixo, a variável TMP (temperatura), por exemplo, agrupará todos os níveis verticais (são 10 no total) na variável TMP. Isso será feito para as demais variáveis no arquivo.
+A opção ```-I type``` agrupa as variáveis. Exemplo, as variáveis que possuem nível vertical (pl) são 6 no total. Com o comando abaixo, a variável TMP (temperatura), por exemplo, agrupará todos os níveis verticais (são 10 no total) na variável TMP. Este mesmo procedimento será feito para as demais variáveis que estão no arquivo.
 
 ```bash
 grib_to_netcdf -I type s2s_sbsj_prod_enfo_2025120300_pl_000.grib2 -o s2s_sbsj_prod_enfo_2025120300_pl_000.nc
