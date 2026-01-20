@@ -330,15 +330,15 @@ Para adicionar mais variáveis, basta fazer:
 
 Neste novo exemplo, adicionou-se a variável ```HGT```.
 
-##### Converter arquivo de previsao subsazonal do CPTEC para NetCDF
+##### Converter arquivo de previsão subsazonal do CPTEC para NetCDF
 
-O objetivo consiste em converter de Grib2 para NetCDF os arquivos que estão em:
+O objetivo consiste em converter do formato Grib2 para NetCDF os arquivos que estão em:
 
 [https://dataserver.cptec.inpe.br/dataserver_subsaz/real_time_forecast_to_ecmwf](https://dataserver.cptec.inpe.br/dataserver_subsaz/real_time_forecast_to_ecmwf)
 
 Eles representam as previsões do modelo global do CPTEC.
 
-O formato do diretório é AAAAMMDD00. Dentre dele estão vários arquivos como mostrado abaixo:
+O formato do diretório é AAAAMMDD00. Dentro dele estão vários arquivos com os seguintes nomes:
 
 * s2s_sbsj_prod_enfo_AAAAMMDD00_pl_000.grib2
   * pl: pressure level (nível de pressão)
@@ -348,7 +348,7 @@ O formato do diretório é AAAAMMDD00. Dentre dele estão vários arquivos como 
   * Variando de 000 até 010 membros.
 
 
-Ao baixar o arquivo para sua máquina local, basta digitar os comandos abaixo. Lembrando que o arquivo deve ser alterado para o arquivo de interesse:
+Ao realizar o download do arquivo para sua máquina local, basta digitar os comandos abaixo. Lembrando que o arquivo deve ser alterado para a data de interesse:
 
 A opção ```-I type``` agrupa as variáveis. Exemplo, as variáveis que possuem nível vertical (pl) são 6 no total. Com o comando abaixo, a variável TMP (temperatura), por exemplo, agrupará todos os níveis verticais (são 10 no total) na variável TMP. Este mesmo procedimento será feito para as demais variáveis que estão no arquivo.
 

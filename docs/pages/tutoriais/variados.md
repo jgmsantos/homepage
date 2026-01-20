@@ -347,3 +347,77 @@ O `pwdx` é nativo do Linux e é excelente para identificar qual o diretório qu
     + `sudo pwdx 3859`
     + Será retornado o diretório do processo PID: 3859.
     + Exemplo de retorno: `/mnt/produtos/meteorologia`
+
+### Configurar OneDrive para receber arquivos de uma máquina externa
+
+Imagina transferir arquivos de uma máquina externa para o OneDrive para ser consumido por alguma aplicação. Pois é, o rclone realiza esta tarefa.
+
+#### Informações sobre o rclone
+
+[https://rclone.org/onedrive/](https://rclone.org/onedrive/)
+
+#### Serviços suportados (principais)
+
+Basta configurar cada serviço como um remote.
+
+* Google Drive
+* Dropbox
+* OneDrive
+* Box
+* Mega
+* Amazon S3
+* Google Cloud Storage
+* SFTP/FTP
+* WebDAV
+* Backblaze B2
+* e muitos outros
+
+#### Configurar o usuário remoto
+
+Vá para o seu home digitando ```cd``` no seu terminal Linux. Em seguida, digite ```pwd``` apenas para certificar que esta no home, deve aparecer algo assim ```/home/<usuario>```, em que ```<usuario>``` é o nome do usuário da sua máquina. Exemplo: ```/home/gui```.
+
+Agora, digite ```rclone listremotes``` para ver quais remotos já existem. Caso o seu remoto não esteja lista será necessário criar um. Os passos abaixo realizam esta tarefa.
+
+Se quiser criar um novo remote (por exemplo, para o OneDrive da conta gui), digite no terminal do Linux:
+
+```bash
+rclone config
+```
+
+No menu interativo do rclone que será aberto responda as perguntas abaixo:
+
+1. Escolha `n` (New remote)
+2. Em **Name**, escolha um nome para o remote, por exemplo: `OneDriveGui`. Este nome é definido pelo usuário.
+3. Em **Storage**, escolha o número 21 que corresponde a **Microsoft OneDrive**
+4. No campo **client_id** basta `pressionar enter`
+5. No campo **client_secret** basta `pressionar enter`
+6. No campo **Edit advanced config** digite `n`
+7. No campo **Remote config** digite `y`
+8. Será aberto um nagevador (será informado um link no terminal), entre com as suas credenciais (usuário e senha). Dependendo da conta, se for corporativa, será necessário falar com o administrador do sistema para autorizar o acesso.
+9. No terminal, será mostrado o campo **Choose a number from below, or type in an existing value**. Digite o número `1`.
+
+10. Será mostrada a mensagem
+
+* Found 1 drives, please select the one you want to use: 0: OneDrive (business) id=b!jk01SgWP5UadIh2_wO2aGOMcUl_ajgFJpH3P1Uwd1RVr1YbfvNOpSJBIbm8kZWej
+* Digite o número `0`
+
+11. No final, confirme e saia.
+
+E por fim, digite ```rclone listremotes``` para listar os remotes existentes.
+
+```bash
+OneDriveGui:
+```
+
+Depois disso, você poderá usar o novo remote no Linux, por exemplo. Copiar do computador para uma pasta no OneDrive.
+
+```bash
+rclone copy /caminho/arquivos OneDriveNottus:output/modelos/gfs
+```
+
+Onde: 
+
+* `/caminho/arquivos` é o arquivo que você deseja enviar
+* `output/modelos/gfs` é a pasta do OneDrive que você deseja salvar os seus arquivos. Basta colocar apenas o caminho relativo da pasta.
+
+> Observação: o rclone roda **no Linux** e fala diretamente com a nuvem do OneDrive.
