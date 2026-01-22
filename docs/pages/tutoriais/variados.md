@@ -412,7 +412,7 @@ OneDriveGui:
 Depois disso, você poderá usar o novo remote no Linux, por exemplo. Copiar do computador para uma pasta no OneDrive.
 
 ```bash
-rclone copy /caminho/arquivos OneDriveNottus:output/modelos/gfs
+rclone copy /caminho/arquivos OneDriveGui:output/modelos/gfs
 ```
 
 Onde: 
