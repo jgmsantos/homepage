@@ -398,8 +398,10 @@ No menu interativo do rclone que será aberto responda as perguntas abaixo:
 
 10. Será mostrada a mensagem
 
-* Found 1 drives, please select the one you want to use: 0: OneDrive (business) id=b!jk01SgWP5UadIh2_wO2aGOMcUl_ajgFJpH3P1Uwd1RVr1YbfvNOpSJBIbm8kZWej
-* Digite o número `0`
+Found 1 drives, please select the one you want to use: 
+`0: OneDrive (business)`
+
+Digite o número `0`
 
 11. No final, confirme e saia.
 
