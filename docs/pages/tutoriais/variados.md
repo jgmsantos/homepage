@@ -403,9 +403,22 @@ Found 1 drives, please select the one you want to use:
 
 Digite o número `0`
 
-11. No final, confirme e saia.
+No final, confirme e saia.
 
-E por fim, digite ```rclone listremotes``` para listar os remotes existentes.
+`Is that okay?`
+
+Digite `y`
+
+> 🚨 **Aviso importante**  
+> Provavelmente, será mostrado um erro, mas ele pode ser ignorado.
+
+E por fim,
+
+`Yes this is OK`
+
+Digite `y`
+
+Depois, digite ```rclone listremotes``` para listar os remotes existentes.
 
 ```bash
 OneDriveGui:
