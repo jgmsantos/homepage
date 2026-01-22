@@ -372,7 +372,7 @@ Basta configurar cada serviço como um remote.
 * Backblaze B2
 * e muitos outros
 
-#### Configurar o usuário remoto
+#### Configurar o usuário remote
 
 Vá para o seu home digitando ```cd``` no seu terminal Linux. Em seguida, digite ```pwd``` apenas para certificar que esta no home, deve aparecer algo assim ```/home/<usuario>```, em que ```<usuario>``` é o nome do usuário da sua máquina. Exemplo: ```/home/gui```.
 
