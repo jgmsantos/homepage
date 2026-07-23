@@ -4,6 +4,7 @@ Apresentações
 
 + [Minicurso de queimadas](https://docs.google.com/presentation/d/1gZ038LFTfQO3RoMc9QLi3PEwz8DN7XZn1-wCAGa8eRA/edit?usp=sharing). Julho/2026.
   + Scripts do curso: [Clique aqui](https://github.com/jgmsantos/minicurso_queimadas_2026)
+  + Repositório do minicurso: [Clique aqui](https://github.com/evmpython/Minicurso_queimadas_UNIFEI_INPE_NOTTUS_2026)
 
 
 2025
