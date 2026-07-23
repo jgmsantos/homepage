@@ -1,5 +1,11 @@
 Apresentações
 =============
+2026
+
++ [Minicurso de queimadas](https://docs.google.com/presentation/d/1gZ038LFTfQO3RoMc9QLi3PEwz8DN7XZn1-wCAGa8eRA/edit?usp=sharing). Julho/2026.
+  + Scripts do curso: [Clique aqui](https://github.com/jgmsantos/minicurso_queimadas_2026)
+
+
 2025
 
 + [Mudanças Climáticas e Queimadas no Brasil](https://docs.google.com/presentation/d/1WwbsRR1KfYDrK4f6qC1uQGaOK0tdHaZ5CTvlS7220eU/edit?usp=sharing). Novembro/2025.
