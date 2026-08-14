@@ -444,16 +444,6 @@ Está tudo certo com o recorte.
 
 O `out.grb2` foi gerado com o comando anterior.
 
-**IPC:** Se for para recortar o dado em uma área e depois converter para NetCDF no mesma linha de comando, não é possível fazer isso, tem que fazer dois passos: 1) fazer o recorte e 2) converter para NetCDF. 
-
-**O comando abaixo está errado.**
-
-`wgrib2 gfs.t00z.pgrb2.0p25.f024 -small_grib 285:330 -35:10 -netcdf out.nc`
-
-Retornará a seguinte mensagem:
-
-*** FATAL ERROR: too many grib files .. 1st=gfs.t00z.pgrb2.0p25.f024 2nd=out.nc ***
-
 **Agora, aça o teste passando diretamente os valores de longitude sem conversão:**
 
 `wgrib2 gfs.t00z.pgrb2.0p25.f024 -small_grib -75:-30 -35:10 out.grb2`
@@ -471,3 +461,14 @@ lon 285.000000 to 330.000000 by 0.250000 #points=32761
 ```
 
 Praticamente é o mesmo!
+
+**IPC:** Se for para recortar o dado em uma área e depois converter para NetCDF no mesma linha de comando, não é possível fazer isso, tem que fazer dois passos: 1) fazer o recorte e 2) converter para NetCDF. 
+
+**O comando abaixo está errado.**
+
+`wgrib2 gfs.t00z.pgrb2.0p25.f024 -small_grib 285:330 -35:10 -netcdf out.nc`
+
+Retornará a seguinte mensagem:
+
+*** FATAL ERROR: too many grib files .. 1st=gfs.t00z.pgrb2.0p25.f024 2nd=out.nc ***
+
