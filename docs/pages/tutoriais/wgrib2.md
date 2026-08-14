@@ -444,7 +444,7 @@ Está tudo certo com o recorte.
 
 O `out.grb2` foi gerado com o comando anterior.
 
-**Agora, aça o teste passando diretamente os valores de longitude sem conversão:**
+**Agora, faça o teste passando diretamente os valores de longitude sem conversão:**
 
 `wgrib2 gfs.t00z.pgrb2.0p25.f024 -small_grib -75:-30 -35:10 out.grb2`
 
