@@ -392,12 +392,82 @@ Onde: **d**: seleciona o registro, qual? o 6.
 
 e `-grib` diz para salvar no formato grib2.
 
-O nome **out.grb2** é o nome escolhido pelo usuário e representa o novo arquivo que será gerado no seu computador.
+O nome **out.grb2** é escolhido pelo usuário e representa o novo arquivo que será gerado no seu computador.
 
 - Salvar no formato NetCDF:
 
 `wgrib2 -d 6 gfs.t00z.pgrb2.0p25.f024 -netcdf out.nc`
 
-e `-netcdf` diz para salvar no formato NetCDF.
+O `-netcdf` diz para salvar no formato NetCDF.
 
-O nome **out.nc** é o nome escolhido pelo usuário e representa o novo arquivo que será gerado no seu computador.
+O nome **out.nc** é escolhido pelo usuário e representa o novo arquivo que será gerado no seu computador.
+
+#### Recortar o arquivo a partir de uma área de interesse
+
+O arquivo `gfs.t00z.pgrb2.0p25.f024` é global e a ideia é recortá-lo para uma área menor, por exemplo: 
+
+- longitude: -75 (75°W) a -30 (35°W) 
+- latitude: -35 (35°S) a +10 (10°N) 
+
+O parâmetro `-small_grib` até trabalha com o formato -180° a +180°, mas é aconselhavel converter a longitude para o formato 0° a 360°.
+
+- 360° - 75° = 285
+- 360° - 30° = 330
+
+Os valores utilizados no parâmetro serão: 285 e 330.
+
+O comando que realiza este recorte é:
+
+`wgrib2 gfs.t00z.pgrb2.0p25.f024 -small_grib 285:330 -35:10 out.grb2`
+
+O comando é assim porque o `-small_grib` já salva diretamente no formato grib2.
+
+Lembrando que `out.grb2` é o nome do arquivo definido pelo usuário.
+
+Para certificar que está tudo correto, digite o comando abaixo:
+
+`wgrib2 out.grb2 -grid`
+
+Serão retornadas as seguintes informações:
+
+```
+lat-lon grid:(181 x 181) units 1e-06 input WE:SN output WE:SN res 48
+lat -35.000000 to 10.000000 by 0.250000
+lon 285.000000 to 330.000000 by 0.250000 #points=32761
+```
+
+Está tudo certo com o recorte.
+
+**Opcional:** Se quiser converter para NetCDF:
+
+`wgrib2 out.grb2 -netcdf out.nc`
+
+O `out.grb2` foi gerado com o comando anterior.
+
+**IPC:** Se for para recortar o dado em uma área e depois converter para NetCDF no mesma linha de comando, não é possível fazer isso, tem que fazer dois passos: 1) fazer o recorte e 2) converter para NetCDF. 
+
+**O comando abaixo está errado.**
+
+`wgrib2 gfs.t00z.pgrb2.0p25.f024 -small_grib 285:330 -35:10 -netcdf out.nc`
+
+Retornará a seguinte mensagem:
+
+*** FATAL ERROR: too many grib files .. 1st=gfs.t00z.pgrb2.0p25.f024 2nd=out.nc ***
+
+**Agora, aça o teste passando diretamente os valores de longitude sem conversão:**
+
+`wgrib2 gfs.t00z.pgrb2.0p25.f024 -small_grib -75:-30 -35:10 out.grb2`
+
+Depois digite:
+
+`wgrib2 out.grb2 -grid`
+
+O resultado com o comando acima será:
+
+```
+lat-lon grid:(181 x 181) units 1e-06 input WE:SN output WE:SN res 48
+lat -35.000000 to 10.000000 by 0.250000
+lon 285.000000 to 330.000000 by 0.250000 #points=32761
+```
+
+Praticamente é o mesmo!
