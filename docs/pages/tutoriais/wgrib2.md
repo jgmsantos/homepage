@@ -366,3 +366,38 @@ onde:
 * s2s_sbsj_prod_enfo_2025120300_sl_000.grib2: é o arquivo que encontra-se na máquina local.
 * -o: é parâmetro de saída (output).
 * s2s_sbsj_prod_enfo_2025120300_pl_000.nc: é o nome do arquivo definido pelo usuário.
+
+##### Selecionar uma variável a partir de um registro
+
+A imagem abaixo foi obtida com o comando:
+
+`wgrib2 gfs.t00z.pgrb2.0p25.f024`
+
+O `gfs.t00z.pgrb2.0p25.f024` é o seu arquivo. Ele representa um arquivo de previsão do modelo americano GFS.
+
+![](../../images/fig_wgrib2_01.png)
+
+Nota-se que a primeira coluna mostra os valores entre 1 e 10, são os registros. A ideia é selecionar o **registro 6**, por exemplo, porque ele aparece duas vezes (variável APCP).
+
+5:3245611:d=2026081400:**APCP**:surface:18-24 hour acc fcst:\
+6:3630042:d=2026081400:**APCP**:surface:0-1 day acc fcst:
+
+O comando para a seleção é:
+
+- Salvar no formato grib2:
+
+`wgrib2 -d 6 gfs.t00z.pgrb2.0p25.f024 -grib out.grb2`
+
+Onde: **d**: seleciona o registro, qual? o 6.
+
+e `-grib` diz para salvar no formato grib2.
+
+O nome **out.grb2** é o nome escolhido pelo usuário e representa o novo arquivo que será gerado no seu computador.
+
+- Salvar no formato NetCDF:
+
+`wgrib2 -d 6 gfs.t00z.pgrb2.0p25.f024 -netcdf out.nc`
+
+e `-netcdf` diz para salvar no formato NetCDF.
+
+O nome **out.nc** é o nome escolhido pelo usuário e representa o novo arquivo que será gerado no seu computador.
