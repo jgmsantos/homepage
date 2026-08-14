@@ -402,6 +402,15 @@ O `-netcdf` diz para salvar no formato NetCDF.
 
 O nome **out.nc** é escolhido pelo usuário e representa o novo arquivo que será gerado no seu computador.
 
+É possível utilizar vários registros repetindo o `-d`:
+
+`wgrib2 -d 3 -d 6 -d 8 gfs.t00z.pgrb2.0p25.f024 -grib out.grb2`
+
+Pode-se também selecionar uma faixa de registros usando `for`. Exemplo, pegando dos registros 5 a 10.
+
+`wgrib2 gfs.t00z.pgrb2.0p25.f024 -for 5:10 -grib out.grb2`
+
+
 #### Recortar o arquivo a partir de uma área de interesse
 
 O arquivo `gfs.t00z.pgrb2.0p25.f024` é global e a ideia é recortá-lo para uma área menor, por exemplo: 
