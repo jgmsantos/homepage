@@ -408,6 +408,9 @@ O nome **out.nc** é escolhido pelo usuário e representa o novo arquivo que ser
 
 Pode-se também selecionar uma faixa de registros usando `for`. Exemplo, pegando dos registros 5 a 10.
 
+[!Warning]
+> Esta opção de seleção de registro considera que a ordem deles é imutável.
+
 `wgrib2 gfs.t00z.pgrb2.0p25.f024 -for 5:10 -grib out.grb2`
 
 
