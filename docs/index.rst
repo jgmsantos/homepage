@@ -42,12 +42,18 @@ Pois é, apresentei um breve resumo sobre a história de como cheguei até aqui 
 
 Divirta-se!
 
-Última atualização: 14/08/2026.
+Última atualização: 02/09/2026.
 
 .. toctree::
    :hidden:
    
    ./pages/autor
+   :hidden:
+
+.. toctree::
+   :hidden:
+   
+   ./pages/portifolio
    :hidden:
 
 .. toctree::

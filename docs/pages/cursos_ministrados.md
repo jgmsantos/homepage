@@ -1,8 +1,10 @@
 Cursos ministrados
 ==================
 
-## Locais ministrados
-
++ **Processamento e Visualização de Dados de Queimadas - 2026**
+  + O curso teve como objetivo ensinar como acessar e analisar dados de focos de calor e cicatrizes de queimadas detectadas por satélites polares e geoestacionários.
+  + Parceria: UNIFEI, INPE e Nottus Meteorologia
+  
 + **Congresso Brasileiro de Agrometeorologia (CBAGRO) 2023 - Edição XXII**
   + Curso ministrado para estudantes e profissionais.
 
