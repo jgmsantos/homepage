@@ -2,6 +2,8 @@ Apresentações
 =============
 2026
 
++ [Aplicações Práticas dos Dados de Queimadas do INPE: Do Monitoramento Orbital à Tomada de Decisão](https://docs.google.com/presentation/d/13U83jnC8Cbs8DP98tCitzydjtQVliuODt4o4IzrXXJ0/edit?usp=sharing). Setembro/2026.
+
 + [Focos de Queimadas do INPE](https://docs.google.com/presentation/d/1gZ038LFTfQO3RoMc9QLi3PEwz8DN7XZn1-wCAGa8eRA/edit?usp=sharing). Julho/2026.
   + Apresentação feita no minicurso "Processamento e Visualização de Dados de Queimadas"
   + Scripts do curso: [Clique aqui](https://github.com/jgmsantos/minicurso_queimadas_2026)
