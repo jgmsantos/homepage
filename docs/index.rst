@@ -42,7 +42,7 @@ Pois é, apresentei um breve resumo sobre a história de como cheguei até aqui 
 
 Divirta-se!
 
-Última atualização: 18/09/2026.
+Última atualização: 25/11/2026.
 
 .. toctree::
    :hidden:
@@ -71,9 +71,6 @@ Divirta-se!
 .. toctree::
    :hidden:
 
-   ./pages/cvlattes
-   :hidden:
-   
 .. toctree::
    :hidden:
 
@@ -97,11 +94,6 @@ Divirta-se!
    
    ./pages/scripts
    :hidden:
-
-.. toctree::
-   :hidden:
-   
-   ./pages/passatempo
 
 .. toctree::
    :hidden:
