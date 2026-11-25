@@ -59,12 +59,6 @@ Divirta-se!
 .. toctree::
    :hidden:
 
-   ./pages/consultoria
-   :hidden:
-
-.. toctree::
-   :hidden:
-
    ./pages/climatologia
    :hidden:
 
